@@ -1,0 +1,66 @@
+[
+  {
+    "slug": "full-groom",
+    "name": "Full Groom",
+    "summary": "Bath, blow-dry, clip & style, nails & ears — the complete package.",
+    "fromPrice": 40,
+    "duration": "1.5–3 hours",
+    "tiers": [
+      { "label": "Small dogs",        "from": 40 },
+      { "label": "Medium dogs",       "from": 50 },
+      { "label": "Large dogs / doodles", "from": 60 }
+    ],
+    "includes": ["Pre-groom check", "Warm bath with breed-appropriate shampoo", "Towel & blow-dry", "Clip & scissor finish", "Nail trim", "Ear clean", "Final brush-out"]
+  },
+  {
+    "slug": "puppy-first-groom",
+    "name": "Puppy First Groom",
+    "summary": "A gentle, reassuring introduction (up to ~6 months). Sets your pup up for a lifetime of stress-free grooming.",
+    "fromPrice": 25,
+    "duration": "45–60 minutes",
+    "tiers": [
+      { "label": "Puppy Intro Groom",     "from": 25 },
+      { "label": "Follow-up Puppy Groom", "from": 30 }
+    ],
+    "includes": ["Calm meet & sniff", "Sound desensitisation (clippers & dryer)", "Gentle bath", "Light tidy & nail trim", "Reward-led pace", "Aftercare chat"]
+  },
+  {
+    "slug": "nail-trim",
+    "name": "Nail Trim, Ear Clean & Tidy",
+    "summary": "Quick maintenance visit between full grooms — nails, ears, face & feet tidy.",
+    "fromPrice": 15,
+    "duration": "15–30 minutes",
+    "tiers": [
+      { "label": "Nails only",       "from": 10 },
+      { "label": "Nails + ear clean", "from": 15 },
+      { "label": "Tidy (face/feet/rear)", "from": 20 }
+    ],
+    "includes": ["Nail trim", "Ear check & clean", "Face & eye tidy", "Paw-pad trim", "Sanitary trim if needed"]
+  },
+  {
+    "slug": "de-matting",
+    "name": "De-matting & Coat Recovery",
+    "summary": "Careful, dog-first removal of mats. Severe matting assessed honestly on the day — coat health comes first.",
+    "fromPrice": 50,
+    "duration": "From 1 hour, +£10 per extra 30 mins",
+    "tiers": [
+      { "label": "Light matting (add to Full Groom)", "from": 10 },
+      { "label": "Moderate matting",                  "from": 50 },
+      { "label": "Severe matting (clip-down)",        "from": 60, "note": "Final price assessed in person — sometimes the kindest option is a fresh start." }
+    ],
+    "includes": ["Coat assessment", "De-matting spray & gentle line brushing", "Bath & blow-dry", "Strip clip if welfare requires", "Aftercare guidance to keep mats away"]
+  },
+  {
+    "slug": "hand-stripping",
+    "name": "Hand Stripping",
+    "summary": "Traditional hand stripping for wire-coated breeds — terriers, schnauzers, spaniels. Preserves coat colour & texture.",
+    "fromPrice": 50,
+    "duration": "1.5–2.5 hours",
+    "tiers": [
+      { "label": "Small wire-coat (Border, Norfolk)", "from": 50 },
+      { "label": "Medium (Mini Schnauzer, Cocker)",  "from": 60 },
+      { "label": "Standard Schnauzer & larger",       "from": 70 }
+    ],
+    "includes": ["Full coat assessment", "Hand stripping in stages (gentle on the skin)", "Bath & blow-dry", "Tidy & nail trim", "Schedule plan for next visit"]
+  }
+]

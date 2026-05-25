@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Self-host Inter via system stack first; can swap for fontsource later */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-white text-ink-900 antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display font-semibold tracking-tight text-ink-950;
+  }
+  ::selection {
+    @apply bg-coral-200 text-ink-950;
+  }
+}
+
+@layer components {
+  .container-tight {
+    @apply mx-auto max-w-5xl px-5 md:px-8;
+  }
+  .container-wide {
+    @apply mx-auto max-w-6xl px-5 md:px-8;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-coral-500 px-6 py-3 font-semibold text-white shadow-sm hover:bg-coral-600 focus:outline-none focus:ring-2 focus:ring-coral-400 focus:ring-offset-2 transition;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-teal-500 px-6 py-3 font-semibold text-teal-700 hover:bg-teal-50 transition;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 font-semibold text-teal-700 hover:text-teal-900 transition;
+  }
+  .section {
+    @apply py-16 md:py-24;
+  }
+}

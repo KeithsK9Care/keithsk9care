@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://keithsk9care.co.uk/sitemap-index.xml

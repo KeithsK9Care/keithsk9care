@@ -1,0 +1,63 @@
+---
+import site from '../data/site.json';
+const pathname = Astro.url.pathname;
+const isActive = (p: string) => pathname === p || (p !== '/' && pathname.startsWith(p));
+
+const links = [
+  { href: '/services/', label: 'Services' },
+  { href: '/pricing/',  label: 'Pricing' },
+  { href: '/areas/',    label: 'Areas' },
+  { href: '/about/',    label: 'About' },
+  { href: '/blog/',     label: 'Blog' },
+  { href: '/faq/',      label: 'FAQ' },
+];
+---
+<header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-ink-100">
+  <div class="container-wide flex items-center justify-between h-16 md:h-20">
+    <a href="/" class="flex items-center gap-3 shrink-0" aria-label="Keith's K9 Care — home">
+      <img src="/assets/logo.png" alt="" width="44" height="44" class="h-10 w-10 md:h-12 md:w-12" />
+      <span class="font-display font-bold text-lg md:text-xl text-teal-700 leading-tight">
+        Keith's <span class="text-coral-500">K9</span> Care
+      </span>
+    </a>
+
+    <nav class="hidden lg:flex items-center gap-7" aria-label="Main">
+      {links.map(({ href, label }) => (
+        <a href={href} class={`text-sm font-semibold transition ${isActive(href) ? 'text-coral-500' : 'text-ink-700 hover:text-teal-700'}`}>{label}</a>
+      ))}
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <a href={`tel:${site.phoneIntl}`} class="hidden md:inline-flex items-center gap-2 text-sm font-semibold text-teal-700 hover:text-teal-900">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+        {site.phone}
+      </a>
+      <a href="/book/" class="btn-primary !py-2 !px-5 text-sm">Book a Groom</a>
+      <button id="nav-toggle" class="lg:hidden p-2 -mr-2" aria-label="Open menu" aria-expanded="false" aria-controls="nav-drawer">
+        <svg class="w-6 h-6 text-ink-800" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile drawer -->
+  <div id="nav-drawer" class="lg:hidden hidden border-t border-ink-100 bg-white">
+    <nav class="container-wide py-4 flex flex-col gap-1" aria-label="Mobile">
+      {links.map(({ href, label }) => (
+        <a href={href} class={`py-3 px-2 font-semibold border-b border-ink-100 ${isActive(href) ? 'text-coral-500' : 'text-ink-800'}`}>{label}</a>
+      ))}
+      <div class="flex gap-3 pt-4">
+        <a href={`tel:${site.phoneIntl}`} class="flex-1 btn-secondary !py-2 text-sm">Call</a>
+        <a href={`https://wa.me/${site.whatsappIntl}`} target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-2 rounded-full bg-whatsapp px-5 py-2 font-semibold text-white text-sm">WhatsApp</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById('nav-toggle');
+  const drawer = document.getElementById('nav-drawer');
+  toggle?.addEventListener('click', () => {
+    const open = drawer?.classList.toggle('hidden');
+    toggle.setAttribute('aria-expanded', String(!open));
+  });
+</script>

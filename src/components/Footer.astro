@@ -1,0 +1,64 @@
+---
+import site from '../data/site.json';
+const year = new Date().getFullYear();
+---
+<footer class="bg-teal-700 text-teal-50 mt-24">
+  <div class="container-wide py-14 grid gap-10 md:grid-cols-4">
+    <div>
+      <div class="flex items-center gap-3 mb-3">
+        <img src="/assets/logo.png" alt="" width="48" height="48" class="h-12 w-12 bg-white rounded-full p-1" />
+        <span class="font-display font-bold text-xl text-white">Keith's K9 Care</span>
+      </div>
+      <p class="text-teal-100 text-sm leading-relaxed">{site.tagline}</p>
+      <p class="mt-4 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-coral-300">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+        IPET Qualified
+      </p>
+    </div>
+
+    <div>
+      <h4 class="font-display text-white text-lg mb-3">Contact</h4>
+      <address class="not-italic text-sm space-y-2 text-teal-100">
+        <p>{site.address.street}<br/>{site.address.locality}, {site.address.region}<br/>{site.address.postcode}</p>
+        <p><a href={`tel:${site.phoneIntl}`} class="hover:text-white">{site.phone}</a></p>
+        <p><a href={`https://wa.me/${site.whatsappIntl}`} target="_blank" rel="noopener" class="hover:text-white">WhatsApp Keith</a></p>
+        <p><a href={`mailto:${site.email}`} class="hover:text-white break-all">{site.email}</a></p>
+      </address>
+    </div>
+
+    <div>
+      <h4 class="font-display text-white text-lg mb-3">Explore</h4>
+      <ul class="text-sm space-y-2 text-teal-100">
+        <li><a href="/services/" class="hover:text-white">Services</a></li>
+        <li><a href="/pricing/" class="hover:text-white">Pricing</a></li>
+        <li><a href="/areas/" class="hover:text-white">Areas we cover</a></li>
+        <li><a href="/about/" class="hover:text-white">About Keith</a></li>
+        <li><a href="/blog/" class="hover:text-white">Blog</a></li>
+        <li><a href="/faq/" class="hover:text-white">FAQ</a></li>
+        <li><a href="/book/" class="hover:text-white">Book a groom</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="font-display text-white text-lg mb-3">Hours</h4>
+      <ul class="text-sm space-y-1 text-teal-100">
+        {site.hours.map(h => (
+          <li class="flex justify-between gap-4"><span>{h.day}</span><span>{h.open}–{h.close}</span></li>
+        ))}
+      </ul>
+      <p class="text-xs text-teal-200 mt-3">{site.hoursNote}</p>
+      <div class="mt-5 flex gap-3">
+        <a href={site.facebook} target="_blank" rel="noopener" aria-label="Facebook" class="bg-white/10 hover:bg-white/20 rounded-full p-2.5 transition">
+          <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12a10 10 0 10-11.563 9.876v-6.988H7.898V12h2.539V9.797c0-2.506 1.492-3.89 3.776-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.888h-2.33v6.988A10 10 0 0022 12z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="border-t border-teal-600">
+    <div class="container-wide py-5 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-teal-200">
+      <p>© {year} Keith's K9 Care. Friendly local grooming, done properly.</p>
+      <p>Built by <a href="https://rv-web.co.uk" class="underline hover:text-white">RV-Web</a></p>
+    </div>
+  </div>
+</footer>
