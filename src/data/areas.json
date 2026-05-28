@@ -5,8 +5,12 @@
     "postcodePrefix": "WF2",
     "distanceMiles": 0.5,
     "driveMinutes": 2,
-    "landmarks": ["Newmillerdam Country Park", "Newmillerdam Lake", "The Dam Inn"],
-    "blurb": "Keith's salon is on Castle Meadows — a short stroll from Newmillerdam Country Park. If you walk your dog round the lake, we're round the corner."
+    "landmarks": [
+      "Newmillerdam Country Park",
+      "Newmillerdam Lake",
+      "The Dam Inn"
+    ],
+    "blurb": "Our salon at 4 Castle Meadows is in neighbouring Hall Green — a short stroll from Newmillerdam Country Park. If you walk your dog round the lake, we're round the corner."
   },
   {
     "slug": "crigglestone",
@@ -14,7 +18,11 @@
     "postcodePrefix": "WF4",
     "distanceMiles": 1.4,
     "driveMinutes": 4,
-    "landmarks": ["High Street", "Crigglestone Cricket Club", "Cedar Park"],
+    "landmarks": [
+      "High Street",
+      "Crigglestone Cricket Club",
+      "Cedar Park"
+    ],
     "blurb": "Five minutes up the road from Crigglestone village. Easy parking outside the salon, no city-centre traffic."
   },
   {
@@ -23,7 +31,11 @@
     "postcodePrefix": "WF2",
     "distanceMiles": 2.2,
     "driveMinutes": 6,
-    "landmarks": ["Sandal Castle", "Pugneys Country Park", "Castle Grove Park"],
+    "landmarks": [
+      "Sandal Castle",
+      "Pugneys Country Park",
+      "Castle Grove Park"
+    ],
     "blurb": "Just south of Sandal — a quick run down the A61. We see plenty of Sandal regulars after their morning walk at Pugneys."
   },
   {
@@ -32,7 +44,11 @@
     "postcodePrefix": "WF2",
     "distanceMiles": 1.8,
     "driveMinutes": 5,
-    "landmarks": ["Walton Hall", "Anglers Country Park", "Walton Lane"],
+    "landmarks": [
+      "Walton Hall",
+      "Anglers Country Park",
+      "Walton Lane"
+    ],
     "blurb": "Five minutes from Walton village. If your dog comes back from Anglers covered in lake water, we'll have them dry and tidy by tea-time."
   },
   {
@@ -41,7 +57,11 @@
     "postcodePrefix": "WF4",
     "distanceMiles": 1.2,
     "driveMinutes": 4,
-    "landmarks": ["St James's Church", "Chapelthorpe Cricket Club", "Hall Green Lane"],
+    "landmarks": [
+      "St James's Church",
+      "Chapelthorpe Cricket Club",
+      "Hall Green Lane"
+    ],
     "blurb": "A short run from Chapelthorpe. Same WF4 postcode area — most of our Chapelthorpe customers walk down to us along the lanes."
   },
   {
@@ -50,7 +70,11 @@
     "postcodePrefix": "WF4",
     "distanceMiles": 1.8,
     "driveMinutes": 5,
-    "landmarks": ["Durkar Village", "Painthorpe Lane", "M1 J39"],
+    "landmarks": [
+      "Durkar Village",
+      "Painthorpe Lane",
+      "M1 J39"
+    ],
     "blurb": "Five minutes from Durkar via Painthorpe Lane. Handy if you're coming off the M1 at J39 for a groom."
   },
   {
@@ -59,7 +83,11 @@
     "postcodePrefix": "WF2",
     "distanceMiles": 2.5,
     "driveMinutes": 7,
-    "landmarks": ["Kettlethorpe High School", "Standbridge Lane", "Cock & Crown"],
+    "landmarks": [
+      "Kettlethorpe High School",
+      "Standbridge Lane",
+      "Cock & Crown"
+    ],
     "blurb": "A short drive from Kettlethorpe — straight down past Standbridge Lane and you're with us."
   },
   {
@@ -68,17 +96,24 @@
     "postcodePrefix": "WF4",
     "distanceMiles": 2.0,
     "driveMinutes": 6,
-    "landmarks": ["Denby Dale Road (A636)", "Calder Grove Working Men's Club", "Stocksmoor Lane"],
+    "landmarks": [
+      "Denby Dale Road (A636)",
+      "Calder Grove Working Men's Club",
+      "Stocksmoor Lane"
+    ],
     "blurb": "Five minutes off the A636. Convenient if you're on the Calder Grove side of Crigglestone."
   },
   {
     "slug": "hall-green",
     "name": "Hall Green",
     "postcodePrefix": "WF4",
-    "distanceMiles": 1.0,
-    "driveMinutes": 3,
-    "landmarks": ["Hall Green Lane", "Chapelthorpe boundary"],
-    "blurb": "Around the corner. Hall Green sits between Chapelthorpe and our salon — we're closer to you than most groomers in central Wakefield."
+    "distanceMiles": 0,
+    "driveMinutes": 0,
+    "landmarks": [
+      "Hall Green Lane",
+      "Chapelthorpe boundary"
+    ],
+    "blurb": "Hall Green is our home patch — the salon sits on Castle Meadows, your same WF4 3QJ postcode. No travel for you; we're just up the road. Plenty of Hall Green dogs walk down for their grooms."
   },
   {
     "slug": "west-bretton",
@@ -86,7 +121,11 @@
     "postcodePrefix": "WF4",
     "distanceMiles": 4.5,
     "driveMinutes": 11,
-    "landmarks": ["Yorkshire Sculpture Park", "Bretton Hall", "Bretton Lane"],
+    "landmarks": [
+      "Yorkshire Sculpture Park",
+      "Bretton Hall",
+      "Bretton Lane"
+    ],
     "blurb": "Ten minutes from West Bretton. If your dog has been racing round the Yorkshire Sculpture Park grounds, we'll have them dry, tidy and tired-out."
   },
   {
@@ -95,7 +134,11 @@
     "postcodePrefix": "WF4",
     "distanceMiles": 3.5,
     "driveMinutes": 10,
-    "landmarks": ["Horbury High Street", "St Peter's Church", "Horbury Bridge"],
+    "landmarks": [
+      "Horbury High Street",
+      "St Peter's Church",
+      "Horbury Bridge"
+    ],
     "blurb": "Ten minutes from Horbury. Plenty of Horbury customers prefer the quieter home setting over a busy high-street salon."
   },
   {
@@ -104,7 +147,11 @@
     "postcodePrefix": "WF4",
     "distanceMiles": 3.5,
     "driveMinutes": 9,
-    "landmarks": ["Notton Park", "Woolley village", "Notton Lane"],
+    "landmarks": [
+      "Notton Park",
+      "Woolley village",
+      "Notton Lane"
+    ],
     "blurb": "Ten minutes south through the lanes. Notton and Woolley share the same quiet, semi-rural character as our patch — your dog will feel at home."
   },
   {
@@ -113,7 +160,10 @@
     "postcodePrefix": "S75",
     "distanceMiles": 4.0,
     "driveMinutes": 10,
-    "landmarks": ["Haigh village", "Bank Lane"],
+    "landmarks": [
+      "Haigh village",
+      "Bank Lane"
+    ],
     "blurb": "Ten minutes south into Barnsley. We pick up a lot of Haigh customers — easy run up the lanes to our place."
   }
 ]

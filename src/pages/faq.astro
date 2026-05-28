@@ -1,14 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
-const title = "Faq | Keith's K9 Care";
-const description = "Coming soon — faq page for Keith's K9 Care.";
+import site from '../data/site.json';
+const title = "FAQ | Keith's K9 Care";
+const description = "Frequently asked questions about Keith's K9 Care dog grooming.";
 ---
-<Layout title={title} description={description}>
+<Layout title={title} description={description} noindex={true}>
   <section class="section">
     <div class="container-tight text-center">
-      <p class="text-sm font-semibold uppercase tracking-wider text-coral-500">Faq</p>
+      <p class="text-sm font-semibold uppercase tracking-wider text-coral-500">FAQ</p>
       <h1 class="mt-3 text-4xl md:text-5xl">Coming soon</h1>
-      <p class="mt-5 text-ink-700">This page is being built. In the meantime, give Keith a call on <a href="tel:+447926471552" class="text-teal-700 font-semibold">07926 471552</a>.</p>
+      <p class="mt-5 text-ink-700">This page is being built. In the meantime, give Keith a call on <a href={`tel:${site.phoneIntl}`} class="text-teal-700 font-semibold">{site.phone}</a>.</p>
       <a href="/" class="btn-secondary mt-8">Back to home</a>
     </div>
   </section>
