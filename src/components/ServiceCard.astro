@@ -1,0 +1,21 @@
+---
+export interface Props {
+  service: { slug: string; name: string; summary: string; fromPrice: number };
+  index: number;
+}
+const { service: s, index } = Astro.props;
+---
+<a href={`/services/${s.slug}/`} class="group rounded-2xl bg-white ring-1 ring-ink-100 p-6 hover:ring-coral-300 hover:shadow-lg hover:-translate-y-0.5 transition">
+  <div class="flex items-center justify-between">
+    <span class="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-coral-50 text-coral-500">
+      <span class="font-display font-bold">{index + 1}</span>
+    </span>
+    <span class="text-xs font-semibold uppercase tracking-wider text-ink-500">from £{s.fromPrice}</span>
+  </div>
+  <h3 class="mt-4 text-xl">{s.name}</h3>
+  <p class="mt-2 text-sm text-ink-600 leading-relaxed">{s.summary}</p>
+  <span class="inline-flex items-center gap-1 mt-5 text-sm font-semibold text-teal-700 group-hover:text-coral-500">
+    Details
+    <svg aria-hidden="true" class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+  </span>
+</a>

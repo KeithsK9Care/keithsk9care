@@ -1,0 +1,40 @@
+---
+import site from '../../data/site.json';
+---
+<section id="contact" class="section">
+  <div class="container-wide">
+    <div class="relative rounded-3xl overflow-hidden bg-gradient-to-br from-teal-700 to-teal-800 p-8 md:p-14 text-white">
+      <div class="absolute -top-20 -right-20 w-80 h-80 bg-coral-400/20 rounded-full blur-3xl"></div>
+      <div class="relative grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl text-white leading-tight">Ready to get your pup looking their best?</h2>
+          <p class="mt-4 text-teal-100 leading-relaxed">Give Keith a call or message — he's always happy to have a quick chat about your dog before booking. No bots, no answering service.</p>
+          <div class="mt-7 flex flex-col sm:flex-row gap-3">
+            <a href={`tel:${site.phoneIntl}`} class="inline-flex items-center justify-center gap-2 rounded-full bg-white text-teal-700 font-semibold px-6 py-3 hover:bg-coral-50 transition">
+              <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+              {site.phone}
+            </a>
+            <a href={`https://wa.me/${site.whatsappIntl}`} target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 rounded-full bg-whatsapp text-white font-semibold px-6 py-3 hover:bg-green-600 transition">
+              WhatsApp Keith
+            </a>
+          </div>
+          <p class="mt-5 text-sm text-teal-200">
+            Or email <a href={`mailto:${site.email}`} class="underline hover:text-white">{site.email}</a>
+          </p>
+        </div>
+        <div class="rounded-2xl bg-white/10 backdrop-blur ring-1 ring-white/20 p-6">
+          <p class="text-xs font-semibold uppercase tracking-wider text-coral-300 mb-2">Find us</p>
+          <address class="not-italic text-white text-lg leading-relaxed">
+            {site.address.street}<br/>
+            {site.address.locality}, {site.address.region}<br/>
+            {site.address.postcode}
+          </address>
+          <a href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(site.address.street + ', ' + site.address.postcode)}`} target="_blank" rel="noopener" class="inline-flex items-center gap-2 mt-4 text-coral-300 font-semibold hover:text-coral-200">
+            Get directions
+            <svg aria-hidden="true" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

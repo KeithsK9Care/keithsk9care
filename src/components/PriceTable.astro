@@ -1,0 +1,35 @@
+---
+import services from '../data/services.json';
+export interface Props {
+  detailed?: boolean;
+}
+const { detailed = false } = Astro.props;
+const padding = detailed ? 'p-6 md:p-8' : 'p-6 md:p-7';
+---
+<div class="rounded-3xl ring-1 ring-ink-100 bg-white overflow-hidden">
+  {services.map((s, i) => (
+    <div class={`${padding} ${i > 0 ? 'border-t border-ink-100' : ''}`}>
+      <div class="flex flex-wrap items-baseline justify-between gap-3">
+        {detailed
+          ? <h2 class="text-xl md:text-2xl font-display font-semibold text-ink-900">{s.name}</h2>
+          : <h3 class="text-lg font-display font-semibold text-ink-900">{s.name}</h3>}
+        <span class="text-sm text-ink-500">{s.duration}</span>
+      </div>
+      {detailed && (
+        <p class="mt-2 text-ink-700 leading-relaxed max-w-2xl">{s.summary}</p>
+      )}
+      <ul class={`${detailed ? 'mt-4' : 'mt-3'} grid sm:grid-cols-3 gap-2 text-sm`}>
+        {s.tiers.map(t => (
+          <li class="flex justify-between gap-3 rounded-lg bg-ink-50 px-3 py-2">
+            <span class="text-ink-700">{t.label}</span>
+            <span class="font-semibold text-teal-700">from £{t.from}</span>
+          </li>
+        ))}
+      </ul>
+      {detailed && s.includes && (
+        <p class="mt-3 text-xs text-ink-500">Includes: {s.includes.join(' · ')}</p>
+      )}
+    </div>
+  ))}
+  <slot name="surcharges" />
+</div>

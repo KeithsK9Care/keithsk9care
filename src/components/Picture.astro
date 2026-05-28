@@ -1,0 +1,27 @@
+---
+export interface Props {
+  src: string;        // filename stub, e.g. "cockapoo-after-groom"
+  alt: string;
+  width: number;
+  height: number;
+  size?: 800 | 1600; // pick a sized variant; omit for original
+  priority?: boolean; // hero image — eager + fetchpriority=high
+  class?: string;
+}
+const { src, alt, width, height, size, priority = false, class: cls = "w-full h-full object-cover" } = Astro.props;
+const suffix = size ? `-${size}` : "";
+const loading = priority ? "eager" : "lazy";
+---
+<picture>
+  <source srcset={`/assets/photos/${src}${suffix}.webp`} type="image/webp" />
+  <img
+    src={`/assets/photos/${src}${suffix}.jpg`}
+    alt={alt}
+    width={width}
+    height={height}
+    class={cls}
+    loading={loading}
+    decoding="async"
+    {...(priority ? { fetchpriority: "high" } : {})}
+  />
+</picture>

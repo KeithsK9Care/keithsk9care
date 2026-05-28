@@ -1,0 +1,17 @@
+---
+import services from '../../data/services.json';
+import ServiceCard from '../ServiceCard.astro';
+---
+<section class="section bg-teal-50/60">
+  <div class="container-wide">
+    <div class="max-w-2xl">
+      <p class="text-sm font-semibold uppercase tracking-wider text-coral-500">Services</p>
+      <h2 class="mt-3 text-3xl md:text-4xl">What we do — gently, properly, and at your dog's pace.</h2>
+      <p class="mt-4 text-ink-700 leading-relaxed">Cockapoos, doodles, terriers, retrievers, small breeds — every coat type welcome. From puppy first grooms to senior tidies and hand-stripping.</p>
+    </div>
+
+    <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      {services.map((s, i) => <ServiceCard service={s} index={i} />)}
+    </div>
+  </div>
+</section>

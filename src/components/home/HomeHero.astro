@@ -1,0 +1,54 @@
+---
+import site from '../../data/site.json';
+import Picture from '../Picture.astro';
+---
+<section class="relative overflow-hidden bg-gradient-to-b from-teal-50 via-white to-white">
+  <div class="absolute inset-0 pointer-events-none">
+    <div class="absolute -top-24 -right-24 w-96 h-96 bg-coral-100 rounded-full blur-3xl opacity-50"></div>
+    <div class="absolute top-32 -left-24 w-96 h-96 bg-teal-100 rounded-full blur-3xl opacity-40"></div>
+  </div>
+
+  <div class="container-wide relative pt-12 pb-20 md:pt-20 md:pb-28 grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <span class="inline-flex items-center gap-2 rounded-full bg-white shadow-sm ring-1 ring-ink-100 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-teal-700">
+        <span class="w-2 h-2 rounded-full bg-coral-500"></span>
+        Hall Green · WF4 3QJ
+      </span>
+      <h1 class="mt-6 text-4xl md:text-5xl lg:text-6xl leading-[1.05]">
+        Friendly dog grooming in <span class="text-teal-600">Newmillerdam</span>,<br class="hidden md:block" />
+        <span class="text-coral-500">Crigglestone</span> & across Wakefield.
+      </h1>
+      <p class="mt-6 text-lg md:text-xl text-ink-700 leading-relaxed max-w-xl">
+        Your dog deserves to look and feel their best. Whether they've been rolling through Newmillerdam Country Park or turned the garden into a mud bath — Keith's K9 Care is here to get them back to their brilliant best.
+      </p>
+      <p class="mt-4 text-base md:text-lg text-ink-700 leading-relaxed max-w-xl">
+        Friendly, professional, and passionate about dogs. This is grooming you can trust.
+      </p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="/book/" class="btn-primary">Book a Groom</a>
+        <a href="/pricing/" class="btn-secondary">See Prices</a>
+      </div>
+
+      <ul class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-xl">
+        {site.trustPoints.map(p => (
+          <li class="flex flex-col items-start">
+            <svg aria-hidden="true" class="w-5 h-5 text-coral-500 mb-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            <span class="text-sm font-semibold text-ink-800 leading-tight">{p}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <div class="relative">
+      <div class="relative rounded-3xl overflow-hidden ring-1 ring-ink-100 shadow-2xl shadow-teal-900/10 aspect-[4/5]">
+        <Picture src="golden-puppy-woodland-1" alt="Golden retriever puppy near Newmillerdam Country Park — Keith's K9 Care, Hall Green WF4" width={800} height={1000} priority />
+      </div>
+      <div class="absolute -bottom-6 -left-6 hidden md:block bg-white rounded-2xl shadow-xl ring-1 ring-ink-100 px-5 py-4 max-w-[200px]">
+        <div class="flex items-center gap-2 text-coral-500 mb-1">
+          {[1,2,3,4,5].map(() => <svg aria-hidden="true" class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.37 2.448a1 1 0 00-.364 1.118l1.287 3.958c.3.922-.755 1.688-1.539 1.118l-3.37-2.448a1 1 0 00-1.175 0l-3.371 2.448c-.783.57-1.838-.197-1.539-1.118l1.287-3.958a1 1 0 00-.364-1.118L2.05 9.385c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69l1.286-3.957z"/></svg>)}
+        </div>
+        <p class="text-sm font-semibold text-ink-900 leading-tight">IPET qualified · Mrs B's Grooming Academy, Leeds</p>
+      </div>
+    </div>
+  </div>
+</section>
