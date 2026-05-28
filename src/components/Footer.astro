@@ -17,7 +17,7 @@ const year = new Date().getFullYear();
     </div>
 
     <div>
-      <h4 class="font-display text-white text-lg mb-3">Contact</h4>
+      <h2 class="font-display text-white text-lg mb-3">Contact</h2>
       <address class="not-italic text-sm space-y-2 text-teal-100">
         <p>{site.address.street}<br/>{site.address.locality}, {site.address.region}<br/>{site.address.postcode}</p>
         <p><a href={`tel:${site.phoneIntl}`} class="hover:text-white">{site.phone}</a></p>
@@ -27,7 +27,7 @@ const year = new Date().getFullYear();
     </div>
 
     <div>
-      <h4 class="font-display text-white text-lg mb-3">Explore</h4>
+      <h2 class="font-display text-white text-lg mb-3">Explore</h2>
       <ul class="text-sm space-y-2 text-teal-100">
         <li><a href="/services/" class="hover:text-white">Services</a></li>
         <li><a href="/pricing/" class="hover:text-white">Pricing</a></li>
@@ -39,7 +39,7 @@ const year = new Date().getFullYear();
     </div>
 
     <div>
-      <h4 class="font-display text-white text-lg mb-3">Hours</h4>
+      <h2 class="font-display text-white text-lg mb-3">Hours</h2>
       <ul class="text-sm space-y-1 text-teal-100">
         {site.hours.map(h => (
           <li class="flex justify-between gap-4"><span>{h.day}</span><span>{h.open}–{h.close}</span></li>

@@ -20,7 +20,7 @@ const alignCls = align === 'center' ? 'text-center mx-auto' : '';
   <div class="container-tight">
     <div class:list={[alignCls, 'max-w-3xl']}>
       <slot name="before-eyebrow" />
-      <p class="text-sm font-semibold uppercase tracking-wider text-coral-500">{eyebrow}</p>
+      <p class="text-sm font-semibold uppercase tracking-wider text-coral-700">{eyebrow}</p>
       <h1 class="mt-3 text-4xl md:text-5xl lg:text-6xl leading-[1.05]">{heading}</h1>
       {body && <p class:list={['mt-6 text-lg text-ink-700 leading-relaxed', align === 'center' ? 'max-w-2xl mx-auto' : 'max-w-xl']}>{body}</p>}
       <div class:list={['mt-7 flex flex-wrap gap-3', align === 'center' ? 'justify-center' : '']}>
