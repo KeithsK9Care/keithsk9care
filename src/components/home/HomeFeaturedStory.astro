@@ -1,0 +1,49 @@
+---
+import stories from '../../data/groom-stories.json';
+import Picture from '../Picture.astro';
+import SectionIntro from '../SectionIntro.astro';
+import Reveal from '../Reveal.astro';
+
+const story = stories.find((s: any) => s.featured) || stories[0];
+if (!story) return;
+---
+{story && (
+  <section class="section">
+    <div class="container-wide">
+      <Reveal class="mb-10">
+        <SectionIntro
+          eyebrow="Groom Stories"
+          heading="Real grooms. Honest stories."
+          description="Before and after walk-throughs of the trickier visits — de-matting, hand-stripping comebacks, first puppy grooms."
+        />
+      </Reveal>
+
+      <Reveal delay={120}>
+        <a href={`/groom-stories/${story.slug}/`} class="group block rounded-3xl overflow-hidden ring-1 ring-ink-100 bg-white hover:ring-coral-300 hover:shadow-xl hover:-translate-y-0.5 transition">
+          <div class="grid md:grid-cols-2 gap-0">
+            <div class="relative aspect-[4/3] md:aspect-auto">
+              {story.afterPhoto && <Picture src={story.afterPhoto} size={800} alt={`${story.dog} after a ${story.service}`} width={800} height={800} />}
+              <span class="absolute top-4 left-4 rounded-full bg-coral-700 text-white px-3 py-1 text-xs font-semibold">Featured</span>
+            </div>
+            <div class="p-6 md:p-10 flex flex-col">
+              <p class="text-xs font-semibold uppercase tracking-wider text-coral-700">{story.service}</p>
+              <h3 class="mt-2 text-2xl md:text-3xl font-display font-semibold text-ink-900 group-hover:text-coral-700 transition">{story.dog} — {story.breed}</h3>
+              <p class="mt-4 text-ink-700 leading-relaxed">{story.lede}</p>
+              <p class="mt-6 text-xs text-ink-500">From {story.ownerArea}</p>
+              <span class="inline-flex items-center gap-1 mt-6 font-semibold text-teal-700 group-hover:text-coral-700">
+                Read the full story
+                <svg aria-hidden="true" class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+              </span>
+            </div>
+          </div>
+        </a>
+      </Reveal>
+
+      <Reveal delay={250}>
+        <p class="mt-8 text-sm text-ink-600">
+          <a href="/groom-stories/" class="text-teal-700 font-semibold hover:text-coral-700">See all groom stories →</a>
+        </p>
+      </Reveal>
+    </div>
+  </section>
+)}

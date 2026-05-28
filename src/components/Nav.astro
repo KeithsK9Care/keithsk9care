@@ -34,26 +34,50 @@ const links = [
         {site.phone}
       </a>
       <a href="/book/" class="hidden md:inline-flex btn-primary !py-2 !px-5 text-sm">Book a Groom</a>
-      <button id="nav-toggle" type="button" class="lg:hidden p-2 -mr-2 rounded-lg hover:bg-ink-50 focus:outline-none focus:ring-2 focus:ring-coral-400" aria-label="Open menu" aria-expanded="false" aria-controls="nav-drawer">
+      <button id="nav-toggle" type="button" class="lg:hidden p-2 -mr-2 rounded-lg hover:bg-ink-50 focus:outline-none focus:ring-2 focus:ring-coral-400 relative z-[60]" aria-label="Open menu" aria-expanded="false" aria-controls="nav-drawer">
         <svg id="nav-icon-open" aria-hidden="true" class="w-6 h-6 text-ink-800" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
         <svg id="nav-icon-close" aria-hidden="true" class="hidden w-6 h-6 text-ink-800" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
       </button>
     </div>
   </div>
-
-  <!-- Mobile drawer -->
-  <div id="nav-drawer" class="lg:hidden hidden border-t border-ink-100 bg-white/95 backdrop-blur-md">
-    <nav class="container-wide py-4 flex flex-col gap-1" aria-label="Mobile">
-      {links.map(({ href, label }) => (
-        <a href={href} data-nav-link class={`py-3 px-2 font-semibold border-b border-ink-100 ${isActive(href) ? 'text-coral-700' : 'text-ink-800 hover:text-teal-700'}`}>{label}</a>
-      ))}
-      <div class="flex gap-3 pt-4">
-        <a href={`tel:${site.phoneIntl}`} data-nav-link class="flex-1 btn-secondary !py-2 text-sm">Call</a>
-        <a href={`https://wa.me/${site.whatsappIntl}`} target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-2 rounded-full bg-whatsapp px-5 py-2 font-semibold text-white text-sm">WhatsApp</a>
-      </div>
-    </nav>
-  </div>
 </header>
+
+<!-- FULL-SCREEN MOBILE DRAWER (fades in/out) -->
+<div
+  id="nav-drawer"
+  class="lg:hidden fixed inset-0 z-50 print:hidden pointer-events-none opacity-0 transition-opacity duration-300 ease-out"
+  aria-hidden="true"
+>
+  <!-- Glass backdrop covers viewport including safe-areas (viewport-fit=cover is set in Layout) -->
+  <div class="absolute inset-0 bg-white/95 backdrop-blur-2xl backdrop-saturate-150"></div>
+
+  <!-- Close button -->
+  <button id="nav-drawer-close" type="button" class="absolute top-4 right-4 p-2 rounded-lg hover:bg-ink-50 focus:outline-none focus:ring-2 focus:ring-coral-400" aria-label="Close menu">
+    <svg aria-hidden="true" class="w-6 h-6 text-ink-800" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+  </button>
+
+  <!-- Logo at top -->
+  <div class="relative pt-6 pl-5">
+    <a href="/" data-nav-link class="inline-flex items-center gap-3" aria-label="Keith's K9 Care — home">
+      <img src="/assets/logo.png" alt="" width="40" height="40" class="h-10 w-10" />
+      <span class="font-display font-bold text-lg text-teal-700">Keith's <span class="text-coral-700">K9</span> Care</span>
+    </a>
+  </div>
+
+  <!-- Centred nav links -->
+  <nav class="relative h-full flex flex-col justify-center px-8 pb-32 pt-20" aria-label="Mobile">
+    <div class="space-y-1">
+      {links.map(({ href, label }) => (
+        <a href={href} data-nav-link class={`block py-3 text-3xl font-display font-semibold transition ${isActive(href) ? 'text-coral-700' : 'text-ink-800 hover:text-teal-700'}`}>{label}</a>
+      ))}
+    </div>
+    <div class="mt-10 flex flex-col sm:flex-row gap-3">
+      <a href="/book/" data-nav-link class="btn-primary justify-center">Book a Groom</a>
+      <a href={`tel:${site.phoneIntl}`} data-nav-link class="btn-secondary justify-center">Call {site.phone}</a>
+      <a href={`https://wa.me/${site.whatsappIntl}`} target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 rounded-full bg-whatsapp px-6 py-3 font-semibold text-white text-sm">WhatsApp</a>
+    </div>
+  </nav>
+</div>
 
 <script>
   function armNav() {
@@ -61,46 +85,47 @@ const links = [
     const drawer    = document.getElementById('nav-drawer');
     const iconOpen  = document.getElementById('nav-icon-open');
     const iconClose = document.getElementById('nav-icon-close');
+    const closeBtn  = document.getElementById('nav-drawer-close');
     if (!toggle || !drawer) return;
     if ((toggle as any)._armed) return;
     (toggle as any)._armed = true;
 
     function open() {
-      drawer.classList.remove('hidden');
+      drawer.classList.remove('pointer-events-none', 'opacity-0');
+      drawer.classList.add('opacity-100');
+      drawer.setAttribute('aria-hidden', 'false');
       toggle.setAttribute('aria-expanded', 'true');
       toggle.setAttribute('aria-label', 'Close menu');
       iconOpen?.classList.add('hidden');
       iconClose?.classList.remove('hidden');
+      document.documentElement.classList.add('overflow-hidden');
+      document.body.classList.add('overflow-hidden');
     }
     function close() {
-      drawer.classList.add('hidden');
+      drawer.classList.add('opacity-0');
+      drawer.classList.remove('opacity-100');
+      drawer.setAttribute('aria-hidden', 'true');
+      // After fade finishes, restore pointer-events so the page is clickable
+      setTimeout(() => drawer.classList.add('pointer-events-none'), 300);
       toggle.setAttribute('aria-expanded', 'false');
       toggle.setAttribute('aria-label', 'Open menu');
       iconOpen?.classList.remove('hidden');
       iconClose?.classList.add('hidden');
+      document.documentElement.classList.remove('overflow-hidden');
+      document.body.classList.remove('overflow-hidden');
     }
-    function toggleOpen() {
-      drawer.classList.contains('hidden') ? open() : close();
-    }
+    function isOpen() { return !drawer.classList.contains('opacity-0'); }
 
-    toggle.addEventListener('click', toggleOpen);
+    toggle.addEventListener('click', () => isOpen() ? close() : open());
+    closeBtn?.addEventListener('click', close);
 
-    // Close on link tap (so View Transitions navigation feels clean)
+    // Close on any link tap
     drawer.querySelectorAll('[data-nav-link]').forEach(a => a.addEventListener('click', close));
 
-    // Close on Escape
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
-
-    // Close when clicking outside the drawer + toggle
-    document.addEventListener('click', (e) => {
-      if (drawer.classList.contains('hidden')) return;
-      const t = e.target as Node;
-      if (!drawer.contains(t) && !toggle.contains(t)) close();
-    });
-
-    // Close when entering desktop breakpoint
+    // Esc + breakpoint cross
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && isOpen()) close(); });
     const mq = window.matchMedia('(min-width: 1024px)');
-    mq.addEventListener?.('change', e => { if (e.matches) close(); });
+    mq.addEventListener?.('change', e => { if (e.matches && isOpen()) close(); });
   }
   armNav();
   document.addEventListener('astro:page-load', armNav);
