@@ -8,6 +8,7 @@ import ContactCTACard from '../components/ContactCTACard.astro';
 import InfoCard from '../components/InfoCard.astro';
 import PhotoGrid from '../components/PhotoGrid.astro';
 import { buildPersonSchema, buildBreadcrumbSchema } from '../lib/schemas';
+import ReviewStrip from '../components/ReviewStrip.astro';
 
 const title = "Meet Keith Kershaw, IPET-qualified dog groomer | Keith's K9 Care";
 const description = "Meet Keith Kershaw — IPET-qualified dog groomer (Mrs B's Academy, Leeds). Home salon in Hall Green, Wakefield WF4. One dog at a time, in a quiet home.";
@@ -53,6 +54,8 @@ const breadcrumbSchema = buildBreadcrumbSchema([
       </Reveal>
     </div>
   </section>
+
+  <ReviewStrip />
 
   <!-- STORY -->
   <section class="section">

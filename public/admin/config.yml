@@ -1,0 +1,204 @@
+# Sveltia CMS — content editor for Keith's K9 Care
+# Logs in via GitHub (the repo owner / any collaborator).
+# Edits become git commits to main; Cloudflare Pages auto-rebuilds + deploys.
+
+backend:
+  name: github
+  repo: KeithsK9Care/keithsk9care
+  branch: main
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
+
+media_folder: public/assets/photos
+public_folder: /assets/photos
+
+site_url: https://keithsk9care.co.uk
+display_url: https://keithsk9care.co.uk
+logo_url: /assets/logo.png
+
+collections:
+  # ─────────────────────────────────────────────────────
+  - name: site
+    label: "Site settings"
+    files:
+      - file: src/data/site.json
+        label: "Contact, hours, brand"
+        name: site
+        fields:
+          - { name: name,       label: "Business name",         widget: string }
+          - { name: shortName,  label: "Short name",            widget: string }
+          - { name: tagline,    label: "Tagline",               widget: string }
+          - { name: url,        label: "Public URL",            widget: string }
+          - { name: owner,      label: "Owner name",            widget: string }
+          - { name: qualification,     label: "Qualification (short)",   widget: string }
+          - { name: qualificationFull, label: "Qualification (long)",    widget: string }
+          - name: address
+            label: "Address"
+            widget: object
+            fields:
+              - { name: street,    label: "Street",      widget: string }
+              - { name: locality,  label: "Locality",    widget: string }
+              - { name: region,    label: "Region",      widget: string }
+              - { name: postcode,  label: "Postcode",    widget: string }
+              - { name: country,   label: "Country",     widget: string, default: "GB" }
+              - { name: lat,       label: "Latitude",    widget: number, value_type: float }
+              - { name: lng,       label: "Longitude",   widget: number, value_type: float }
+          - { name: phone,         label: "Phone (display)",          widget: string }
+          - { name: phoneIntl,     label: "Phone (E.164, +44...)",    widget: string }
+          - { name: whatsappIntl,  label: "WhatsApp (intl, no +)",    widget: string }
+          - { name: email,         label: "Email",                    widget: string }
+          - { name: facebook,      label: "Facebook URL",             widget: string, required: false }
+          - { name: instagram,     label: "Instagram URL",            widget: string, required: false }
+          - { name: priceRange,    label: "Price range (£/££/£££)",   widget: string }
+          - name: hours
+            label: "Opening hours"
+            widget: list
+            fields:
+              - { name: day,   label: Day,   widget: string }
+              - { name: open,  label: Open,  widget: string }
+              - { name: close, label: Close, widget: string }
+          - { name: hoursNote, label: "Hours note", widget: text }
+          - name: serviceArea
+            label: "Service area (towns/villages)"
+            widget: list
+          - name: trustPoints
+            label: "Trust points (hero strip)"
+            widget: list
+
+  # ─────────────────────────────────────────────────────
+  - name: services
+    label: "Services (full grooming menu)"
+    files:
+      - file: src/data/services.json
+        label: "All services"
+        name: services
+        fields:
+          - name: services
+            label: "Services"
+            widget: list
+            fields:
+              - { name: slug,           label: Slug, widget: string }
+              - { name: name,           label: "Service name", widget: string }
+              - { name: summary,        label: "Summary (card text)", widget: text }
+              - { name: fromPrice,      label: "From £ (number)", widget: number, value_type: int }
+              - { name: duration,       label: Duration, widget: string }
+              - name: tiers
+                label: "Price tiers"
+                widget: list
+                fields:
+                  - { name: label, widget: string }
+                  - { name: from,  widget: number, value_type: int }
+                  - { name: note,  widget: string, required: false }
+              - name: includes
+                label: "What's included"
+                widget: list
+              - { name: heroPhoto,        label: "Hero photo (filename, no extension)", widget: string, required: false }
+              - { name: metaDescription,  label: "Meta description (SEO)", widget: text, required: false }
+              - name: body
+                label: "Body paragraphs"
+                widget: list
+                required: false
+              - name: faqs
+                label: "Service-specific FAQs"
+                widget: list
+                required: false
+                fields:
+                  - { name: q, widget: string }
+                  - { name: a, widget: text }
+              - name: relatedSlugs
+                label: "Related service slugs"
+                widget: list
+                required: false
+              - name: breedExamples
+                label: "Breed examples (for /pricing/)"
+                widget: list
+                required: false
+                fields:
+                  - { name: size, label: "Tier label", widget: string }
+                  - { name: from, label: "From £",    widget: number, value_type: int }
+                  - name: breeds
+                    label: "Breeds in this tier"
+                    widget: list
+
+  # ─────────────────────────────────────────────────────
+  - name: areas
+    label: "Areas covered"
+    files:
+      - file: src/data/areas.json
+        label: "All areas"
+        name: areas
+        fields:
+          - name: areas
+            widget: list
+            fields:
+              - { name: slug,            widget: string }
+              - { name: name,            widget: string }
+              - { name: postcodePrefix,  widget: string }
+              - { name: distanceMiles,   widget: number, value_type: float }
+              - { name: driveMinutes,    widget: number, value_type: int }
+              - name: landmarks
+                widget: list
+              - { name: blurb, widget: text }
+
+  # ─────────────────────────────────────────────────────
+  - name: faqs
+    label: "FAQs"
+    files:
+      - file: src/data/faqs.json
+        label: "All FAQs"
+        name: faqs
+        fields:
+          - name: faqs
+            widget: list
+            fields:
+              - { name: q, label: Question, widget: string }
+              - { name: a, label: Answer,   widget: text }
+              - name: tags
+                label: "Tags (home, puppy, nervous, pricing, contact, trust, about, general)"
+                widget: list
+
+  # ─────────────────────────────────────────────────────
+  - name: reviews
+    label: "Reviews"
+    files:
+      - file: src/data/reviews.json
+        label: "All reviews"
+        name: reviews
+        fields:
+          - name: reviews
+            widget: list
+            fields:
+              - { name: id,        widget: string }
+              - { name: author,    label: "Author name", widget: string }
+              - { name: location,  label: "Location",    widget: string, required: false }
+              - { name: dog,       label: "Dog (name + breed)", widget: string, required: false }
+              - { name: service,   label: "Service",     widget: string, required: false }
+              - { name: rating,    label: "Stars (1-5)", widget: number, min: 1, max: 5, value_type: int }
+              - { name: date,      label: "Date (YYYY-MM-DD)", widget: string }
+              - { name: body,      label: "Review text", widget: text }
+              - { name: featured,  label: "Show on every page?", widget: boolean, default: false }
+
+  # ─────────────────────────────────────────────────────
+  - name: groom-stories
+    label: "Groom Stories"
+    files:
+      - file: src/data/groom-stories.json
+        label: "All groom stories"
+        name: groom_stories
+        fields:
+          - name: stories
+            widget: list
+            fields:
+              - { name: slug,        widget: string }
+              - { name: dog,         widget: string }
+              - { name: breed,       widget: string }
+              - { name: service,     widget: string }
+              - { name: ownerArea,   widget: string }
+              - { name: date,        widget: string }
+              - { name: lede,        widget: text }
+              - name: story
+                label: "Body paragraphs"
+                widget: list
+              - { name: beforePhoto, label: "Before photo (filename, no extension)", widget: string, required: false }
+              - { name: afterPhoto,  label: "After photo (filename, no extension)",  widget: string, required: false }
+              - { name: featured,    label: "Featured on index?", widget: boolean, default: false }

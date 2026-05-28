@@ -8,6 +8,7 @@ import PageHero from '../components/PageHero.astro';
 import ContactCTACard from '../components/ContactCTACard.astro';
 import faqs from '../data/faqs.json';
 import { buildFAQSchema, buildBreadcrumbSchema } from '../lib/schemas';
+import ReviewStrip from '../components/ReviewStrip.astro';
 
 const title = "Frequently asked questions | Keith's K9 Care";
 const description = `Everything dog owners ask before their first appointment at Keith's K9 Care — pricing, puppy first grooms, nervous dogs, qualifications. Hall Green, Wakefield ${site.address.postcode}.`;
@@ -47,6 +48,8 @@ const breadcrumbSchema = buildBreadcrumbSchema([
     heading="Things people usually ask."
     body="Quick answers about pricing, qualifications, nervous dogs and puppy first grooms. Can't see your question? Drop Keith a message via the contact form."
   />
+
+  <ReviewStrip />
 
   <!-- GROUPED FAQS -->
   {grouped.map((g, gi) => (

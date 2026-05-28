@@ -206,3 +206,56 @@ export function buildServiceSchema(opts: {
     },
   };
 }
+
+
+/**
+ * Review schema for the /reviews/ page.
+ * Each review becomes one ItemListElement; AggregateRating is computed separately.
+ */
+export function buildReviewSchema(opts: {
+  url: string;
+  businessId: string;
+  businessName: string;
+  reviews: { id: string; author: string; date: string; rating: number; body: string; service?: string }[];
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": opts.reviews.map((r, i) => ({
+      "@type": "ListItem",
+      "position": i + 1,
+      "item": {
+        "@type": "Review",
+        "@id": `${opts.url}#${r.id}`,
+        "author": { "@type": "Person", "name": r.author },
+        "datePublished": r.date,
+        "reviewBody": r.body,
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": r.rating,
+          "bestRating": 5,
+          "worstRating": 1,
+        },
+        "itemReviewed": { "@id": opts.businessId, "@type": "LocalBusiness", "name": opts.businessName },
+      },
+    })),
+  };
+}
+
+export function buildAggregateRatingSchema(opts: {
+  businessId: string;
+  ratings: number[];
+}) {
+  const total = opts.ratings.reduce((a, b) => a + b, 0);
+  const avg = total / opts.ratings.length;
+  return {
+    "@context": "https://schema.org",
+    "@type": "AggregateRating",
+    "itemReviewed": { "@id": opts.businessId },
+    "ratingValue": Math.round(avg * 10) / 10,
+    "bestRating": 5,
+    "worstRating": 1,
+    "ratingCount": opts.ratings.length,
+    "reviewCount": opts.ratings.length,
+  };
+}

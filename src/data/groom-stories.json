@@ -1,0 +1,53 @@
+[
+  {
+    "slug": "milo-the-doodle-after-summer",
+    "dog": "Milo",
+    "breed": "Cockapoo, 3 yrs",
+    "service": "De-matting & Full Groom",
+    "ownerArea": "Newmillerdam",
+    "date": "2026-05-10",
+    "lede": "Six weeks of swimming at Newmillerdam Lake plus a missed groom appointment. Result: a coat that needed honest conversation before clippers.",
+    "story": [
+      "Milo's coat had matted close to the skin behind the ears, on the chest and along the back legs — classic doodle territory after a lot of water and not enough brushing. His owner had tried to comb it through at home but it was already too tight.",
+      "We spent the first ten minutes talking it through with the family — brushing those mats out would have taken three hours and pulled badly on Milo's skin. The kinder option was a strip-clip down to a short, healthy length so the coat could grow back properly.",
+      "Once we agreed, the groom itself was straightforward — clippers in stages, breaks for treats, a thorough bath afterwards, and a chat about the daily 3-minute brushing routine to keep mats away as the coat grows in."
+    ],
+    "beforePhoto": "black-poodle-side",
+    "afterPhoto": "black-poodle-after-groom",
+    "featured": true
+  },
+  {
+    "slug": "rusty-back-to-hand-stripped",
+    "dog": "Rusty",
+    "breed": "Border Terrier, 5 yrs",
+    "service": "Hand Stripping",
+    "ownerArea": "Crigglestone",
+    "date": "2026-03-28",
+    "lede": "After three years of clipped coat, Rusty's owners wanted his proper Border colour and texture back. This took two visits and a lot of patience.",
+    "story": [
+      "Clipping a wire-coat for years softens the texture and dulls the colour — the harder guard hairs that give a Border their classic look stop coming through properly. Rusty's coat was more grey-and-soft than the proper black-and-tan rough.",
+      "First visit was a careful initial strip — taking the dead coat out by hand, in stages, with breaks. Rusty was a champion about it. The result wasn't a 'finished' coat yet, but it set the regrowth up properly.",
+      "By the second visit eight weeks later, the new coat had come through with the proper wiry texture and the saddle markings were back. We're now on a 10-week rolling stripping schedule."
+    ],
+    "beforePhoto": "border-terrier-after-groom",
+    "afterPhoto": "border-terrier-after-groom",
+    "featured": true
+  },
+  {
+    "slug": "pip-first-groom",
+    "dog": "Pip",
+    "breed": "Cavapoo, 14 weeks",
+    "service": "Puppy First Groom",
+    "ownerArea": "Sandal",
+    "date": "2026-05-02",
+    "lede": "Pip's first ever groom. The goal wasn't a perfect cut — it was a calm, confident young dog who'll be relaxed about clippers for the rest of her life.",
+    "story": [
+      "Pip arrived at 14 weeks, just past her second vaccination. We started in the kitchen with treats, letting her sniff around and meet the room before going anywhere near grooming kit. Owners stayed for the first ten minutes then headed to the lounge.",
+      "Worked through sound desensitisation first — clippers running near (but not on) her, the dryer humming at a distance, lots of treats for calm responses. Only then did we move to a warm bath, a light tidy of face and paws, and a careful first nail trim.",
+      "Total session: about 50 minutes. She didn't get upset once. Owners now have a Puppy Prep checklist for the second visit, and we'll build the routine up at her pace."
+    ],
+    "beforePhoto": "cockapoo-portrait",
+    "afterPhoto": "cockapoo-portrait",
+    "featured": false
+  }
+]

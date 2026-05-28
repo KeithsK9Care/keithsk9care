@@ -1,0 +1,32 @@
+---
+import reviews from '../data/reviews.json';
+import ReviewCard from './ReviewCard.astro';
+import Reveal from './Reveal.astro';
+
+const featured = reviews.filter(r => r.featured).slice(0, 3);
+if (featured.length === 0) featured.push(...reviews.slice(0, 3));
+const avg = (reviews.reduce((a, r) => a + r.rating, 0) / reviews.length).toFixed(1);
+---
+{featured.length > 0 && (
+  <section class="py-8 md:py-12 bg-teal-50/40">
+    <div class="container-wide">
+      <Reveal class="mb-6 flex flex-wrap items-baseline justify-between gap-4">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-wider text-coral-700">What dogs' owners say</p>
+          <p class="mt-1 text-sm text-ink-600">
+            <span class="text-coral-500 mr-1">★★★★★</span>
+            <strong class="text-ink-900">{avg}</strong> from {reviews.length} reviews ·
+            <a href="/reviews/" class="text-teal-700 font-semibold hover:text-coral-700 ml-1">Read all</a>
+          </p>
+        </div>
+      </Reveal>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {featured.map((r, i) => (
+          <Reveal delay={i * 70}>
+            <ReviewCard review={r} compact />
+          </Reveal>
+        ))}
+      </div>
+    </div>
+  </section>
+)}

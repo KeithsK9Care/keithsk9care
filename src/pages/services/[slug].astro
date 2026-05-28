@@ -8,6 +8,7 @@ import Reveal from '../../components/Reveal.astro';
 import FAQItem from '../../components/FAQItem.astro';
 import ContactCTACard from '../../components/ContactCTACard.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
+import ReviewStrip from '../../components/ReviewStrip.astro';
 import { buildServiceSchema, buildFAQSchema, buildBreadcrumbSchema } from '../../lib/schemas';
 
 export function getStaticPaths() {
@@ -76,6 +77,8 @@ const breadcrumbSchema = buildBreadcrumbSchema([
       </Reveal>
     </div>
   </section>
+
+  <ReviewStrip />
 
   <!-- BODY -->
   {s.body && s.body.length > 0 && (

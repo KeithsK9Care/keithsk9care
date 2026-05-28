@@ -1,0 +1,102 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import site from '../../data/site.json';
+import stories from '../../data/groom-stories.json';
+import services from '../../data/services.json';
+import Picture from '../../components/Picture.astro';
+import SectionIntro from '../../components/SectionIntro.astro';
+import Reveal from '../../components/Reveal.astro';
+import ContactCTACard from '../../components/ContactCTACard.astro';
+import { buildBreadcrumbSchema } from '../../lib/schemas';
+
+export function getStaticPaths() {
+  return stories.map((s: any) => ({ params: { slug: s.slug }, props: { story: s } }));
+}
+
+const { story } = Astro.props;
+const s = story;
+const matchedService = services.find((sv: any) => sv.name === s.service);
+
+const title = `${s.dog} — ${s.service} | Keith's K9 Care`;
+const description = `Groom story: ${s.dog} (${s.breed}). ${s.lede}`;
+
+const breadcrumbSchema = buildBreadcrumbSchema([
+  { name: "Home", url: `${site.url}/` },
+  { name: "Groom Stories", url: `${site.url}/groom-stories/` },
+  { name: `${s.dog} — ${s.service}`, url: `${site.url}/groom-stories/${s.slug}/` },
+]);
+---
+<Layout title={title} description={description} ogImage={s.afterPhoto ? `/assets/photos/${s.afterPhoto}.jpg` : undefined}>
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <!-- HERO -->
+  <section class="section bg-gradient-to-b from-teal-50 via-white to-white">
+    <div class="container-wide grid md:grid-cols-2 gap-12 items-center">
+      <Reveal>
+        <p class="text-sm font-semibold uppercase tracking-wider text-coral-700">
+          <a href="/groom-stories/" class="hover:text-coral-800">← All groom stories</a>
+        </p>
+        <h1 class="mt-3 text-4xl md:text-5xl lg:text-6xl leading-[1.05]">{s.dog}</h1>
+        <p class="mt-2 text-lg text-ink-600">{s.breed} · {s.ownerArea}</p>
+        <p class="mt-6 text-lg md:text-xl text-ink-700 leading-relaxed max-w-xl">{s.lede}</p>
+        <div class="mt-7 flex flex-wrap gap-3">
+          {matchedService && <a href={`/services/${matchedService.slug}/`} class="btn-secondary">More on {s.service}</a>}
+          <a href="/book/" class="btn-primary">Book your dog in</a>
+        </div>
+      </Reveal>
+      <Reveal delay={120}>
+        <div class="relative rounded-3xl overflow-hidden ring-1 ring-ink-100 shadow-xl shadow-teal-900/10 aspect-[4/5]">
+          {s.afterPhoto && <Picture src={s.afterPhoto} size={800} alt={`${s.dog} after a ${s.service}`} width={800} height={1000} priority />}
+        </div>
+      </Reveal>
+    </div>
+  </section>
+
+  <!-- BEFORE / AFTER -->
+  {s.beforePhoto && s.afterPhoto && (
+    <section class="section">
+      <div class="container-wide">
+        <Reveal>
+          <SectionIntro eyebrow="Before & after" heading={`${s.service}`} description={s.lede} />
+        </Reveal>
+        <div class="mt-10 grid sm:grid-cols-2 gap-5">
+          <Reveal>
+            <div class="relative rounded-2xl overflow-hidden aspect-square ring-1 ring-ink-100">
+              <span class="absolute top-3 left-3 z-10 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-ink-800 ring-1 ring-ink-100">Before</span>
+              <Picture src={s.beforePhoto} size={800} alt={`${s.dog} before — ${s.service}`} width={800} height={800} />
+            </div>
+          </Reveal>
+          <Reveal delay={100}>
+            <div class="relative rounded-2xl overflow-hidden aspect-square ring-1 ring-ink-100">
+              <span class="absolute top-3 left-3 z-10 rounded-full bg-coral-700 text-white px-3 py-1 text-xs font-semibold">After</span>
+              <Picture src={s.afterPhoto} size={800} alt={`${s.dog} after — ${s.service}`} width={800} height={800} />
+            </div>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- BODY -->
+  {s.story && s.story.length > 0 && (
+    <section class="section">
+      <div class="container-tight">
+        <Reveal>
+          <SectionIntro eyebrow="The story" heading={`What we did for ${s.dog}`} />
+        </Reveal>
+        <Reveal class="mt-8 space-y-5 text-lg text-ink-700 leading-relaxed max-w-2xl" delay={100}>
+          {s.story.map((p: string) => <p>{p}</p>)}
+        </Reveal>
+      </div>
+    </section>
+  )}
+
+  <!-- CTA -->
+  <section class="section">
+    <div class="container-wide">
+      <Reveal>
+        <ContactCTACard heading={`Got a dog like ${s.dog}?`} body="Send Keith a photo and a quick note about the coat or behaviour. He'll come back honestly with what to expect before you book." />
+      </Reveal>
+    </div>
+  </section>
+</Layout>

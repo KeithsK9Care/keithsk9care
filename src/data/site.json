@@ -22,22 +22,56 @@
   "facebook": "https://www.facebook.com/share/17gGULvoGV/?mibextid=wwXIfr",
   "priceRange": "££",
   "hours": [
-    { "day": "Tuesday",   "open": "09:00", "close": "17:00" },
-    { "day": "Wednesday", "open": "09:00", "close": "17:00" },
-    { "day": "Thursday",  "open": "09:00", "close": "17:00" },
-    { "day": "Friday",    "open": "09:00", "close": "17:00" },
-    { "day": "Saturday",  "open": "09:00", "close": "14:00" }
+    {
+      "day": "Tuesday",
+      "open": "09:00",
+      "close": "17:00"
+    },
+    {
+      "day": "Wednesday",
+      "open": "09:00",
+      "close": "17:00"
+    },
+    {
+      "day": "Thursday",
+      "open": "09:00",
+      "close": "17:00"
+    },
+    {
+      "day": "Friday",
+      "open": "09:00",
+      "close": "17:00"
+    },
+    {
+      "day": "Saturday",
+      "open": "09:00",
+      "close": "14:00"
+    }
   ],
   "hoursNote": "Closed Sundays & Mondays. Hours flexible — call or message.",
   "serviceArea": [
-    "Newmillerdam", "Crigglestone", "Sandal", "Walton", "Chapelthorpe",
-    "Durkar", "Kettlethorpe", "Calder Grove", "Hall Green", "West Bretton",
-    "Horbury", "Notton", "Woolley", "Haigh"
+    "Newmillerdam",
+    "Crigglestone",
+    "Sandal",
+    "Walton",
+    "Chapelthorpe",
+    "Durkar",
+    "Kettlethorpe",
+    "Calder Grove",
+    "Hall Green",
+    "West Bretton",
+    "Horbury",
+    "Notton",
+    "Woolley",
+    "Haigh"
   ],
   "trustPoints": [
     "IPET qualified",
     "Home salon",
     "One dog at a time",
     "Hall Green · WF4"
-  ]
+  ],
+  "surchargesNote": "Surcharges where applicable — matted coats from £10 (severe assessed on the day) · nervous, anxious or reactive dogs +£10–£20 · extra time may apply for heavy coats or long gaps between grooms.",
+  "instagram": "",
+  "academyName": "Mrs B's Grooming Academy, Leeds"
 }

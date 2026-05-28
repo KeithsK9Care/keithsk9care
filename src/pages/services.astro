@@ -8,6 +8,7 @@ import ServiceCard from '../components/ServiceCard.astro';
 import PageHero from '../components/PageHero.astro';
 import ContactCTACard from '../components/ContactCTACard.astro';
 import { buildBreadcrumbSchema } from '../lib/schemas';
+import ReviewStrip from '../components/ReviewStrip.astro';
 
 const title = "Dog grooming services in Hall Green, Wakefield | Keith's K9 Care";
 const description = `Full grooms, puppy first grooms, bath & tidy, nail trims, de-matting and hand stripping. IPET-qualified, one dog at a time in Hall Green, Wakefield ${site.address.postcode}.`;
@@ -25,6 +26,8 @@ const breadcrumbSchema = buildBreadcrumbSchema([
     heading="What we do."
     body="Six core services — from a 45-minute puppy intro right through to a full hand-stripped terrier groom. Every coat type welcome, every dog at their own pace."
   />
+
+  <ReviewStrip />
 
   <!-- SERVICES GRID -->
   <section class="section">

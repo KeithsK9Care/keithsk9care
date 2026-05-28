@@ -1,14 +1,17 @@
 ---
 import site from '../data/site.json';
 ---
-<div transition:persist class="md:hidden fixed bottom-0 inset-x-0 z-30 bg-white/95 backdrop-blur border-t border-ink-100 print:hidden" style="padding-bottom: env(safe-area-inset-bottom);">
-  <div class="grid grid-cols-2 gap-3 px-4 py-3">
-    <a href={`tel:${site.phoneIntl}`} class="inline-flex items-center justify-center gap-2 rounded-full border-2 border-teal-500 py-2.5 font-semibold text-teal-700 text-sm">
-      <svg aria-hidden="true" class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
-      Call Keith
-    </a>
-    <a href="/book/" class="inline-flex items-center justify-center rounded-full bg-coral-700 py-2.5 font-semibold text-white text-sm hover:bg-coral-800 transition">Book a Groom</a>
+<div transition:persist class="md:hidden fixed bottom-0 inset-x-0 z-30 print:hidden">
+  <!-- glass surface: more transparent + heavier blur, ring on top edge -->
+  <div class="bg-white/60 backdrop-blur-xl backdrop-saturate-150 border-t border-white/40 ring-1 ring-ink-900/5" style="padding-bottom: env(safe-area-inset-bottom);">
+    <div class="grid grid-cols-2 gap-3 px-4 py-3">
+      <a href={`tel:${site.phoneIntl}`} class="inline-flex items-center justify-center gap-2 rounded-full bg-white/80 border-2 border-teal-500 py-2.5 font-semibold text-teal-700 text-sm hover:bg-white transition">
+        <svg aria-hidden="true" class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+        Call Keith
+      </a>
+      <a href="/book/" class="inline-flex items-center justify-center rounded-full bg-coral-700 hover:bg-coral-800 py-2.5 font-semibold text-white text-sm transition">Book a Groom</a>
+    </div>
   </div>
 </div>
-<!-- Space so content doesn't sit under the sticky bar -->
-<div class="md:hidden h-16" aria-hidden="true"></div>
+<!-- Spacer so body content doesn't sit under the sticky bar -->
+<div class="md:hidden h-[calc(theme(spacing.16)+env(safe-area-inset-bottom))]" aria-hidden="true"></div>

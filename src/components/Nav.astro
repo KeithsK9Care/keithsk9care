@@ -4,14 +4,16 @@ const pathname = Astro.url.pathname;
 const isActive = (p: string) => pathname === p || (p !== '/' && pathname.startsWith(p));
 
 const links = [
-  { href: '/services/', label: 'Services' },
-  { href: '/pricing/',  label: 'Pricing' },
-  { href: '/areas/',    label: 'Areas' },
-  { href: '/about/',    label: 'About' },
-  { href: '/faq/',      label: 'FAQ' },
+  { href: '/services/',       label: 'Services' },
+  { href: '/pricing/',        label: 'Pricing' },
+  { href: '/areas/',          label: 'Areas' },
+  { href: '/groom-stories/',  label: 'Groom Stories' },
+  { href: '/reviews/',        label: 'Reviews' },
+  { href: '/about/',          label: 'About' },
+  { href: '/faq/',            label: 'FAQ' },
 ];
 ---
-<header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-ink-100">
+<header class="sticky top-0 z-40 bg-white/85 backdrop-blur-md backdrop-saturate-150 border-b border-ink-100/70">
   <div class="container-wide flex items-center justify-between h-16 md:h-20">
     <a href="/" class="flex items-center gap-3 shrink-0" aria-label="Keith's K9 Care — home">
       <img src="/assets/logo.png" alt="" width="44" height="44" class="h-10 w-10 md:h-12 md:w-12" />
@@ -20,9 +22,9 @@ const links = [
       </span>
     </a>
 
-    <nav class="hidden lg:flex items-center gap-7" aria-label="Main">
+    <nav class="hidden lg:flex items-center gap-6" aria-label="Main">
       {links.map(({ href, label }) => (
-        <a href={href} class={`text-sm font-semibold transition ${isActive(href) ? 'text-coral-500' : 'text-ink-700 hover:text-teal-700'}`}>{label}</a>
+        <a href={href} class={`text-sm font-semibold transition ${isActive(href) ? 'text-coral-700' : 'text-ink-700 hover:text-teal-700'}`}>{label}</a>
       ))}
     </nav>
 
@@ -32,20 +34,21 @@ const links = [
         {site.phone}
       </a>
       <a href="/book/" class="btn-primary !py-2 !px-5 text-sm">Book a Groom</a>
-      <button id="nav-toggle" class="lg:hidden p-2 -mr-2" aria-label="Open menu" aria-expanded="false" aria-controls="nav-drawer">
-        <svg aria-hidden="true" class="w-6 h-6 text-ink-800" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      <button id="nav-toggle" type="button" class="lg:hidden p-2 -mr-2 rounded-lg hover:bg-ink-50 focus:outline-none focus:ring-2 focus:ring-coral-400" aria-label="Open menu" aria-expanded="false" aria-controls="nav-drawer">
+        <svg id="nav-icon-open" aria-hidden="true" class="w-6 h-6 text-ink-800" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg id="nav-icon-close" aria-hidden="true" class="hidden w-6 h-6 text-ink-800" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
       </button>
     </div>
   </div>
 
   <!-- Mobile drawer -->
-  <div id="nav-drawer" class="lg:hidden hidden border-t border-ink-100 bg-white">
+  <div id="nav-drawer" class="lg:hidden hidden border-t border-ink-100 bg-white/95 backdrop-blur-md">
     <nav class="container-wide py-4 flex flex-col gap-1" aria-label="Mobile">
       {links.map(({ href, label }) => (
-        <a href={href} class={`py-3 px-2 font-semibold border-b border-ink-100 ${isActive(href) ? 'text-coral-500' : 'text-ink-800'}`}>{label}</a>
+        <a href={href} data-nav-link class={`py-3 px-2 font-semibold border-b border-ink-100 ${isActive(href) ? 'text-coral-700' : 'text-ink-800 hover:text-teal-700'}`}>{label}</a>
       ))}
       <div class="flex gap-3 pt-4">
-        <a href={`tel:${site.phoneIntl}`} class="flex-1 btn-secondary !py-2 text-sm">Call</a>
+        <a href={`tel:${site.phoneIntl}`} data-nav-link class="flex-1 btn-secondary !py-2 text-sm">Call</a>
         <a href={`https://wa.me/${site.whatsappIntl}`} target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-2 rounded-full bg-whatsapp px-5 py-2 font-semibold text-white text-sm">WhatsApp</a>
       </div>
     </nav>
@@ -54,16 +57,50 @@ const links = [
 
 <script>
   function armNav() {
-    const toggle = document.getElementById('nav-toggle');
-    const drawer = document.getElementById('nav-drawer');
+    const toggle    = document.getElementById('nav-toggle');
+    const drawer    = document.getElementById('nav-drawer');
+    const iconOpen  = document.getElementById('nav-icon-open');
+    const iconClose = document.getElementById('nav-icon-close');
     if (!toggle || !drawer) return;
-    // Guard against double-binding when astro:page-load re-fires
     if ((toggle as any)._armed) return;
     (toggle as any)._armed = true;
-    toggle.addEventListener('click', () => {
-      const isHidden = drawer.classList.toggle('hidden');
-      toggle.setAttribute('aria-expanded', String(!isHidden));
+
+    function open() {
+      drawer.classList.remove('hidden');
+      toggle.setAttribute('aria-expanded', 'true');
+      toggle.setAttribute('aria-label', 'Close menu');
+      iconOpen?.classList.add('hidden');
+      iconClose?.classList.remove('hidden');
+    }
+    function close() {
+      drawer.classList.add('hidden');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'Open menu');
+      iconOpen?.classList.remove('hidden');
+      iconClose?.classList.add('hidden');
+    }
+    function toggleOpen() {
+      drawer.classList.contains('hidden') ? open() : close();
+    }
+
+    toggle.addEventListener('click', toggleOpen);
+
+    // Close on link tap (so View Transitions navigation feels clean)
+    drawer.querySelectorAll('[data-nav-link]').forEach(a => a.addEventListener('click', close));
+
+    // Close on Escape
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+
+    // Close when clicking outside the drawer + toggle
+    document.addEventListener('click', (e) => {
+      if (drawer.classList.contains('hidden')) return;
+      const t = e.target as Node;
+      if (!drawer.contains(t) && !toggle.contains(t)) close();
     });
+
+    // Close when entering desktop breakpoint
+    const mq = window.matchMedia('(min-width: 1024px)');
+    mq.addEventListener?.('change', e => { if (e.matches) close(); });
   }
   armNav();
   document.addEventListener('astro:page-load', armNav);

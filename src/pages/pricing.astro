@@ -8,6 +8,7 @@ import Reveal from '../components/Reveal.astro';
 import InfoCard from '../components/InfoCard.astro';
 import ContactCTACard from '../components/ContactCTACard.astro';
 import { buildBreadcrumbSchema } from '../lib/schemas';
+import ReviewStrip from '../components/ReviewStrip.astro';
 
 const title = "Dog grooming prices in Hall Green | Keith's K9 Care";
 const description = "Full published price guide with breed examples — small dogs from £40, medium from £50, large or doodles from £60 for a full groom. Hall Green, Wakefield WF4.";
@@ -34,6 +35,8 @@ const addOns = [
     heading="No surprises. Prices on the page."
     body="Most local groomers won't tell you what they charge until you ring. We will. Prices start from the figures shown and may vary a little by breed, coat condition and behaviour — Keith will always confirm before he starts."
   />
+
+  <ReviewStrip />
 
   <!-- BREED-BY-BREED MATRIX per service -->
   {services.map((s, si) => (
