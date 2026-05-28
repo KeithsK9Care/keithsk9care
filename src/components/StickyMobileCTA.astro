@@ -3,27 +3,29 @@ import site from '../data/site.json';
 ---
 <!--
   Two-layer pattern:
-  1) A glass strip fixed to viewport-bottom that fills exactly the safe-area zone.
-     Uses the same translucent bg as the floating card above, so the home-
-     indicator area visually matches.
-  2) A floating card with the Call + Book buttons that sits above the safe-area.
+  1) A glass strip fixed to viewport-bottom that fills the area under the
+     floating card. Uses solid translucent rgba (not backdrop-blur, which
+     fails when there's no page content behind it in the iPhone safe-area).
+     Same opacity as the card so they read as the same surface.
+  2) The floating card with the buttons (translucent bg + blur over content
+     that's actually behind it).
 -->
 
-<!-- Safe-area glass extension -->
+<!-- Bottom strip — bg uses same white/70 alpha as the card, plus blur where it helps -->
 <div
   transition:persist
-  class="md:hidden fixed bottom-0 inset-x-0 z-20 print:hidden bg-white/70 backdrop-blur-2xl backdrop-saturate-200"
-  style="height: env(safe-area-inset-bottom);"
+  class="md:hidden fixed bottom-0 inset-x-0 z-20 print:hidden"
+  style="height: max(env(safe-area-inset-bottom), 0.5rem); background: rgba(255, 255, 255, 0.7); -webkit-backdrop-filter: blur(20px) saturate(180%); backdrop-filter: blur(20px) saturate(180%);"
   aria-hidden="true"
 ></div>
 
-<!-- Floating card with the buttons -->
+<!-- Floating card with buttons -->
 <div
   transition:persist
   class="md:hidden fixed inset-x-3 z-30 print:hidden"
   style="bottom: max(env(safe-area-inset-bottom), 0.5rem);"
 >
-  <div class="rounded-2xl bg-white/70 backdrop-blur-2xl backdrop-saturate-200 ring-1 ring-ink-900/10 shadow-xl shadow-ink-900/10">
+  <div class="rounded-2xl ring-1 ring-ink-900/10 shadow-xl shadow-ink-900/10 overflow-hidden" style="background: rgba(255, 255, 255, 0.7); -webkit-backdrop-filter: blur(20px) saturate(180%); backdrop-filter: blur(20px) saturate(180%);">
     <div class="grid grid-cols-2 gap-2 p-2">
       <a href={`tel:${site.phoneIntl}`} class="inline-flex items-center justify-center gap-2 rounded-xl bg-white/70 border-2 border-teal-500 py-2.5 font-semibold text-teal-700 text-sm hover:bg-white transition">
         <svg aria-hidden="true" class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
