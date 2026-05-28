@@ -58,6 +58,49 @@
       "bath-and-tidy",
       "de-matting",
       "hand-stripping"
+    ],
+    "breedExamples": [
+      {
+        "size": "Small",
+        "from": 40,
+        "breeds": [
+          "Shih-tzu",
+          "Bichon Frise",
+          "Yorkshire Terrier",
+          "Cavalier KCS",
+          "Westie",
+          "Maltese",
+          "Lhasa Apso",
+          "Cairn Terrier"
+        ]
+      },
+      {
+        "size": "Medium",
+        "from": 50,
+        "breeds": [
+          "Cockapoo",
+          "Cavapoo",
+          "Cocker Spaniel",
+          "Miniature Schnauzer",
+          "Miniature Poodle",
+          "Schnoodle",
+          "Tibetan Terrier",
+          "Springer Spaniel"
+        ]
+      },
+      {
+        "size": "Large / doodle",
+        "from": 60,
+        "breeds": [
+          "Labradoodle",
+          "Goldendoodle",
+          "Bernedoodle",
+          "Standard Poodle",
+          "Golden Retriever",
+          "Old English Sheepdog",
+          "Briard"
+        ]
+      }
     ]
   },
   {
@@ -118,6 +161,22 @@
       "full-groom",
       "nail-trim",
       "bath-and-tidy"
+    ],
+    "breedExamples": [
+      {
+        "size": "Puppy intro (up to ~6 months)",
+        "from": 25,
+        "breeds": [
+          "All breeds welcome — calm 45 min introduction with bath, light tidy, paw-pad trim and a careful first nail trim."
+        ]
+      },
+      {
+        "size": "Follow-up puppy groom",
+        "from": 30,
+        "breeds": [
+          "Second and subsequent appointments up to about 6 months — extends the routine gently, building confidence."
+        ]
+      }
     ]
   },
   {
@@ -174,6 +233,43 @@
       "full-groom",
       "nail-trim",
       "puppy-first-groom"
+    ],
+    "breedExamples": [
+      {
+        "size": "Small",
+        "from": 30,
+        "breeds": [
+          "Shih-tzu",
+          "Bichon Frise",
+          "Yorkshire Terrier",
+          "Cavalier KCS",
+          "Maltese",
+          "Westie"
+        ]
+      },
+      {
+        "size": "Medium",
+        "from": 40,
+        "breeds": [
+          "Cockapoo",
+          "Cavapoo",
+          "Cocker Spaniel",
+          "Mini Schnauzer",
+          "Mini Poodle",
+          "Springer Spaniel"
+        ]
+      },
+      {
+        "size": "Large / doodle",
+        "from": 50,
+        "breeds": [
+          "Labradoodle",
+          "Goldendoodle",
+          "Golden Retriever",
+          "Standard Poodle",
+          "Bernedoodle"
+        ]
+      }
     ]
   },
   {
@@ -229,6 +325,29 @@
       "full-groom",
       "bath-and-tidy",
       "puppy-first-groom"
+    ],
+    "breedExamples": [
+      {
+        "size": "Nails only",
+        "from": 10,
+        "breeds": [
+          "~15 minutes — for between-groom maintenance"
+        ]
+      },
+      {
+        "size": "Nails + ear clean",
+        "from": 15,
+        "breeds": [
+          "~20 minutes — adds a gentle ear check and clean"
+        ]
+      },
+      {
+        "size": "Full tidy (face / feet / rear / pads)",
+        "from": 20,
+        "breeds": [
+          "~25-30 minutes — maintenance lap between full grooms"
+        ]
+      }
     ]
   },
   {
@@ -290,6 +409,29 @@
       "full-groom",
       "bath-and-tidy",
       "nail-trim"
+    ],
+    "breedExamples": [
+      {
+        "size": "Light matting",
+        "from": 10,
+        "breeds": [
+          "Small mats that work through a normal full groom — added to the standard appointment time"
+        ]
+      },
+      {
+        "size": "Moderate matting",
+        "from": 50,
+        "breeds": [
+          "Dedicated de-matting session, 1-2 hours, spray + line brushing"
+        ]
+      },
+      {
+        "size": "Severe matting (strip-clip)",
+        "from": 60,
+        "breeds": [
+          "When the kindest option is a fresh start. Coat clipped to a short, healthy length and grown back properly."
+        ]
+      }
     ]
   },
   {
@@ -350,6 +492,40 @@
       "full-groom",
       "de-matting",
       "nail-trim"
+    ],
+    "breedExamples": [
+      {
+        "size": "Small wire-coat",
+        "from": 50,
+        "breeds": [
+          "Border Terrier",
+          "Norfolk Terrier",
+          "Norwich Terrier",
+          "Cairn Terrier",
+          "West Highland (Westie)"
+        ]
+      },
+      {
+        "size": "Medium",
+        "from": 60,
+        "breeds": [
+          "Miniature Schnauzer",
+          "Working Cocker Spaniel",
+          "Lakeland Terrier",
+          "Welsh Terrier",
+          "Sealyham"
+        ]
+      },
+      {
+        "size": "Standard Schnauzer & larger",
+        "from": 70,
+        "breeds": [
+          "Standard Schnauzer",
+          "Giant Schnauzer",
+          "Airedale Terrier",
+          "Wirehaired Pointer"
+        ]
+      }
     ]
   }
 ]

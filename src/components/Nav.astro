@@ -53,10 +53,18 @@ const links = [
 </header>
 
 <script>
-  const toggle = document.getElementById('nav-toggle');
-  const drawer = document.getElementById('nav-drawer');
-  toggle?.addEventListener('click', () => {
-    const open = drawer?.classList.toggle('hidden');
-    toggle.setAttribute('aria-expanded', String(!open));
-  });
+  function armNav() {
+    const toggle = document.getElementById('nav-toggle');
+    const drawer = document.getElementById('nav-drawer');
+    if (!toggle || !drawer) return;
+    // Guard against double-binding when astro:page-load re-fires
+    if ((toggle as any)._armed) return;
+    (toggle as any)._armed = true;
+    toggle.addEventListener('click', () => {
+      const isHidden = drawer.classList.toggle('hidden');
+      toggle.setAttribute('aria-expanded', String(!isHidden));
+    });
+  }
+  armNav();
+  document.addEventListener('astro:page-load', armNav);
 </script>

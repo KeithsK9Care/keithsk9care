@@ -11,7 +11,6 @@ export default defineConfig({
       // All other pages — home, about, faq, services index + 6 detail pages — are indexable.
       filter: (page) => {
         const noindex = [
-          'https://keithsk9care.co.uk/pricing/',
           'https://keithsk9care.co.uk/book/',
           'https://keithsk9care.co.uk/areas/',
           'https://keithsk9care.co.uk/thanks/',

@@ -17,7 +17,7 @@ const breadcrumbSchema = buildBreadcrumbSchema([
   { name: "Services", url: `${site.url}/services/` },
 ]);
 ---
-<Layout title={title} description={description}>
+<Layout title={title} description={description} ogImage="/assets/photos/cockapoo-after-groom.jpg">
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
 
   <PageHero

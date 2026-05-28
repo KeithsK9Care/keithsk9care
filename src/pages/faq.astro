@@ -38,7 +38,7 @@ const breadcrumbSchema = buildBreadcrumbSchema([
   { name: "FAQ", url: `${site.url}/faq/` },
 ]);
 ---
-<Layout title={title} description={description}>
+<Layout title={title} description={description} ogImage="/assets/photos/cockapoo-portrait.jpg">
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
 

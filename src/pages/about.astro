@@ -28,7 +28,7 @@ const breadcrumbSchema = buildBreadcrumbSchema([
   { name: "About Keith", url: `${site.url}/about/` },
 ]);
 ---
-<Layout title={title} description={description}>
+<Layout title={title} description={description} ogImage="/assets/photos/keith-with-cocker-spaniel.jpg">
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(personSchema)} />
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
 
