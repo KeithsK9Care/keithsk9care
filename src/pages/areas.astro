@@ -1,16 +1,30 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import site from '../data/site.json';
+import areas from '../data/areas.json';
+import PageHero from '../components/PageHero.astro';
+import Reveal from '../components/Reveal.astro';
+import AreaPill from '../components/AreaPill.astro';
+
 const title = "Areas we cover | Keith's K9 Care";
-const description = "Areas served by Keith's K9 Care — full guide coming soon.";
+const description = `Keith's K9 Care serves ${areas.length} villages around Hall Green, near Newmillerdam, Wakefield WF4 — from Crigglestone and Sandal to Horbury, Haigh and Notton.`;
 ---
 <Layout title={title} description={description} noindex={true}>
+  <PageHero
+    eyebrow="Areas we cover"
+    heading="Local to Hall Green, serving the wider Wakefield area."
+    body={`Most of our customers live within a 5-minute drive — but we pick up regulars from across the Wakefield villages and into north Barnsley. Detail pages for each area are coming soon; in the meantime, here's the list with drive times.`}
+  />
+
   <section class="section">
-    <div class="container-tight text-center">
-      <p class="text-sm font-semibold uppercase tracking-wider text-coral-500">Areas</p>
-      <h1 class="mt-3 text-4xl md:text-5xl">Coming soon</h1>
-      <p class="mt-5 text-ink-700">This page is being built. In the meantime, give Keith a call on <a href={`tel:${site.phoneIntl}`} class="text-teal-700 font-semibold">{site.phone}</a>.</p>
-      <a href="/" class="btn-secondary mt-8">Back to home</a>
+    <div class="container-tight">
+      <Reveal class="flex flex-wrap gap-2">
+        {areas.map(a => <AreaPill area={a} />)}
+      </Reveal>
+
+      <Reveal delay={200} class="mt-10 text-center">
+        <a href="/book/" class="btn-primary">Get in touch</a>
+      </Reveal>
     </div>
   </section>
 </Layout>

@@ -23,6 +23,8 @@ const style = delay ? `--reveal-delay:${delay}ms` : '';
     transition: opacity 600ms ease-out var(--reveal-delay, 0ms), transform 600ms ease-out var(--reveal-delay, 0ms);
     will-change: opacity, transform;
   }
+  /* When Reveal is a grid item, let its child fill the row height */
+  .reveal { height: 100%; }
   .reveal.in-view {
     opacity: 1;
     transform: translateY(0);

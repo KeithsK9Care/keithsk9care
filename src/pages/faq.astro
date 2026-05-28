@@ -4,6 +4,7 @@ import site from '../data/site.json';
 import SectionIntro from '../components/SectionIntro.astro';
 import Reveal from '../components/Reveal.astro';
 import FAQItem from '../components/FAQItem.astro';
+import PageHero from '../components/PageHero.astro';
 import ContactCTACard from '../components/ContactCTACard.astro';
 import faqs from '../data/faqs.json';
 import { buildFAQSchema, buildBreadcrumbSchema } from '../lib/schemas';
@@ -41,19 +42,11 @@ const breadcrumbSchema = buildBreadcrumbSchema([
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
 
-  <!-- HERO -->
-  <section class="section bg-gradient-to-b from-teal-50 via-white to-white">
-    <div class="container-tight text-center">
-      <Reveal>
-        <p class="text-sm font-semibold uppercase tracking-wider text-coral-500">FAQ</p>
-        <h1 class="mt-3 text-4xl md:text-5xl lg:text-6xl leading-[1.05]">Things people usually ask.</h1>
-        <p class="mt-6 text-lg text-ink-700 leading-relaxed max-w-xl mx-auto">
-          Quick answers about pricing, qualifications, nervous dogs and puppy first grooms.
-          Can't see your question? <a href="/book/" class="text-teal-700 font-semibold hover:text-coral-500">Drop Keith a message</a>.
-        </p>
-      </Reveal>
-    </div>
-  </section>
+  <PageHero
+    eyebrow="FAQ"
+    heading="Things people usually ask."
+    body="Quick answers about pricing, qualifications, nervous dogs and puppy first grooms. Can't see your question? Drop Keith a message via the contact form."
+  />
 
   <!-- GROUPED FAQS -->
   {grouped.map((g, gi) => (

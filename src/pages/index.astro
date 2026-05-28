@@ -14,8 +14,8 @@ import { buildFAQSchema } from '../lib/schemas';
 const homepageFaqs = faqs.filter((f: any) => f.tags.includes('home')).slice(0, 5);
 const faqSchema = buildFAQSchema(homepageFaqs);
 
-const title = "Dog Grooming in Newmillerdam, Crigglestone & Wakefield | Keith's K9 Care";
-const description = "Friendly, professional dog grooming from an IPET-qualified groomer's home salon in Hall Green by Newmillerdam, WF4. One dog at a time, in a quiet home — not a busy salon. Serving Wakefield, Crigglestone, Sandal, Horbury and surrounding villages.";
+const title = "Dog Grooming in Newmillerdam & Hall Green | Keith's K9 Care";
+const description = "IPET-qualified home dog grooming in Hall Green, near Newmillerdam, Wakefield WF4. One dog at a time, in a quiet home. Serving Crigglestone, Sandal, Horbury & beyond.";
 ---
 <Layout title={title} description={description}>
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(faqSchema)} />

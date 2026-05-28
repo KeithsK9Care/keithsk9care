@@ -1,0 +1,31 @@
+---
+/**
+ * Repeating hero pattern: eyebrow → H1 → body paragraph → optional CTAs.
+ * Used on /about/, /faq/, /services/, /book/, /pricing/ and the service detail pages.
+ * The HOMEPAGE hero is bespoke (multi-color H1, trust pill, trust strip) and
+ * stays inline in HomeHero.astro.
+ */
+export interface Props {
+  eyebrow: string;
+  heading: string;
+  body?: string;
+  align?: 'left' | 'center';
+  surface?: 'gradient' | 'plain';
+}
+const { eyebrow, heading, body, align = 'center', surface = 'gradient' } = Astro.props;
+const surfaceCls = surface === 'gradient' ? 'bg-gradient-to-b from-teal-50 via-white to-white' : '';
+const alignCls = align === 'center' ? 'text-center mx-auto' : '';
+---
+<section class:list={['section', surfaceCls]}>
+  <div class="container-tight">
+    <div class:list={[alignCls, 'max-w-3xl']}>
+      <slot name="before-eyebrow" />
+      <p class="text-sm font-semibold uppercase tracking-wider text-coral-500">{eyebrow}</p>
+      <h1 class="mt-3 text-4xl md:text-5xl lg:text-6xl leading-[1.05]">{heading}</h1>
+      {body && <p class:list={['mt-6 text-lg text-ink-700 leading-relaxed', align === 'center' ? 'max-w-2xl mx-auto' : 'max-w-xl']}>{body}</p>}
+      <div class:list={['mt-7 flex flex-wrap gap-3', align === 'center' ? 'justify-center' : '']}>
+        <slot />
+      </div>
+    </div>
+  </div>
+</section>
