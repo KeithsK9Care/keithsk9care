@@ -7,6 +7,7 @@ import StickyMobileCTA from '../components/StickyMobileCTA.astro';
 import site from '../data/site.json';
 import services from '../data/services.json';
 import { buildLocalBusinessSchema } from '../lib/schemas';
+import { ClientRouter } from 'astro:transitions';
 
 export interface Props {
   title: string;
@@ -57,6 +58,7 @@ const localBusiness = buildLocalBusinessSchema(site, services);
   <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content={new URL(ogImage, Astro.site).toString()} />
 
+  <ClientRouter />
   <slot name="head" />
 
   <script type="application/ld+json" set:html={JSON.stringify(localBusiness)} />

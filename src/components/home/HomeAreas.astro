@@ -1,22 +1,28 @@
 ---
 import areas from '../../data/areas.json';
 import AreaPill from '../AreaPill.astro';
+import SectionIntro from '../SectionIntro.astro';
+import Reveal from '../Reveal.astro';
 ---
 <section class="section">
   <div class="container-wide">
-    <div class="max-w-2xl">
-      <p class="text-sm font-semibold uppercase tracking-wider text-coral-500">Areas we cover</p>
-      <h2 class="mt-3 text-3xl md:text-4xl">Local to Hall Green & Newmillerdam, serving the wider Wakefield area.</h2>
-      <p class="mt-4 text-ink-700 leading-relaxed">Most of our customers live within a 5-minute drive — but we pick up regulars from across the Wakefield villages and into north Barnsley.</p>
-    </div>
+    <Reveal>
+      <SectionIntro
+        eyebrow="Areas we cover"
+        heading="Local to Hall Green & Newmillerdam, serving the wider Wakefield area."
+        description="Most of our customers live within a 5-minute drive — but we pick up regulars from across the Wakefield villages and into north Barnsley."
+      />
+    </Reveal>
 
-    <div class="mt-10 flex flex-wrap gap-2">
+    <Reveal class="mt-10 flex flex-wrap gap-2" delay={120}>
       {areas.map(a => <AreaPill area={a} />)}
-    </div>
+    </Reveal>
 
-    <a href="/areas/" class="btn-ghost mt-8">
-      See all areas and what we do there
-      <svg aria-hidden="true" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-    </a>
+    <Reveal delay={200}>
+      <a href="/areas/" class="btn-ghost mt-8">
+        See all areas and what we do there
+        <svg aria-hidden="true" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      </a>
+    </Reveal>
   </div>
 </section>

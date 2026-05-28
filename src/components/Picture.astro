@@ -19,9 +19,20 @@ const loading = priority ? "eager" : "lazy";
     alt={alt}
     width={width}
     height={height}
-    class={cls}
+    class:list={[cls, "img-fade"]}
     loading={loading}
     decoding="async"
+    onload="this.classList.add('img-loaded')"
     {...(priority ? { fetchpriority: "high" } : {})}
   />
 </picture>
+
+<style is:global>
+  .img-fade { opacity: 0; transition: opacity 500ms ease-out; }
+  .img-fade.img-loaded { opacity: 1; }
+  /* Eager hero images shouldn't fade in — too noticeable */
+  img[fetchpriority="high"].img-fade { opacity: 1; transition: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .img-fade { opacity: 1; transition: none; }
+  }
+</style>

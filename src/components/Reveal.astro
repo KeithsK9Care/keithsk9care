@@ -1,0 +1,55 @@
+---
+/**
+ * Wraps content with a subtle fade + translate-up that triggers when the element
+ * enters the viewport. Respects prefers-reduced-motion. Hooked to astro:page-load
+ * so it re-arms on View Transitions navigations.
+ */
+export interface Props {
+  delay?: number;       // ms
+  as?: string;          // wrapper tag, default 'div'
+  class?: string;
+}
+const { delay = 0, as: As = 'div', class: cls = '' } = Astro.props;
+const style = delay ? `--reveal-delay:${delay}ms` : '';
+---
+<As class:list={['reveal', cls]} style={style}>
+  <slot />
+</As>
+
+<style>
+  .reveal {
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 600ms ease-out var(--reveal-delay, 0ms), transform 600ms ease-out var(--reveal-delay, 0ms);
+    will-change: opacity, transform;
+  }
+  .reveal.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+  }
+</style>
+
+<script>
+  function armReveal() {
+    const els = document.querySelectorAll('.reveal:not(.in-view)');
+    if (!('IntersectionObserver' in window) || els.length === 0) {
+      els.forEach(el => el.classList.add('in-view'));
+      return;
+    }
+    const io = new IntersectionObserver((entries) => {
+      for (const e of entries) {
+        if (e.isIntersecting) {
+          e.target.classList.add('in-view');
+          io.unobserve(e.target);
+        }
+      }
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    els.forEach(el => io.observe(el));
+  }
+  armReveal();
+  // Re-arm after Astro view-transitions navigations
+  document.addEventListener('astro:page-load', armReveal);
+</script>
