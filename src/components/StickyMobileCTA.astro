@@ -2,11 +2,22 @@
 import site from '../data/site.json';
 ---
 <!--
-  Floating card pattern: bar sits above the safe-area with a margin, so the
-  iPhone home-indicator zone shows page bg (content scrolling beneath, then
-  the spacer at the end of body). Avoids the "bar bg can't extend into
-  safe-area because backdrop-blur has nothing to blur" iOS Safari quirk.
+  Two-layer pattern:
+  1) A glass strip fixed to viewport-bottom that fills exactly the safe-area zone.
+     Uses the same translucent bg as the floating card above, so the home-
+     indicator area visually matches.
+  2) A floating card with the Call + Book buttons that sits above the safe-area.
 -->
+
+<!-- Safe-area glass extension -->
+<div
+  transition:persist
+  class="md:hidden fixed bottom-0 inset-x-0 z-20 print:hidden bg-white/70 backdrop-blur-2xl backdrop-saturate-200"
+  style="height: env(safe-area-inset-bottom);"
+  aria-hidden="true"
+></div>
+
+<!-- Floating card with the buttons -->
 <div
   transition:persist
   class="md:hidden fixed inset-x-3 z-30 print:hidden"
@@ -22,5 +33,6 @@ import site from '../data/site.json';
     </div>
   </div>
 </div>
-<!-- Spacer so body content scrolls clear of the floating card -->
+
+<!-- Spacer so body content scrolls clear of the floating card + safe-area strip -->
 <div class="md:hidden" style="height: calc(theme(spacing.20) + env(safe-area-inset-bottom));" aria-hidden="true"></div>
