@@ -16,6 +16,7 @@ export interface Props {
   ogImage?: string;
   noindex?: boolean;
   hideWhatsApp?: boolean;
+  heroPreload?: string;   // path under /assets/photos/ — preloads webp + jpg for the LCP image
 }
 
 const {
@@ -25,6 +26,7 @@ const {
   ogImage = '/assets/photos/golden-puppy-woodland-1.jpg',
   noindex = false,
   hideWhatsApp = false,
+  heroPreload,
 } = Astro.props;
 
 const localBusiness = buildLocalBusinessSchema(site, services);
@@ -65,7 +67,18 @@ const localBusiness = buildLocalBusinessSchema(site, services);
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet" />
+  {/* Non-blocking font load: preload as style, then activate. NoScript fallback for crawlers/JS-off. */}
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" /></noscript>
+
+  {/* Preload the hero image (LCP) — only if the page passes a heroPreload */}
+  {heroPreload && (
+    <>
+      <link rel="preload" as="image" type="image/webp" href={`/assets/photos/${heroPreload}.webp`} fetchpriority="high" />
+      <link rel="preload" as="image" type="image/jpeg" href={`/assets/photos/${heroPreload}.jpg`} fetchpriority="high" />
+    </>
+  )}
 </head>
 <body class="font-sans">
   <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:px-4 focus:py-2 focus:bg-coral-500 focus:text-white focus:rounded-md">Skip to content</a>
