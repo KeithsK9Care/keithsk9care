@@ -14,6 +14,7 @@ export default defineConfig({
           'https://keithsk9care.co.uk/pricing/',
           'https://keithsk9care.co.uk/book/',
           'https://keithsk9care.co.uk/areas/',
+          'https://keithsk9care.co.uk/thanks/',
         ];
         return !noindex.includes(page);
       },
