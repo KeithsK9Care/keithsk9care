@@ -134,3 +134,75 @@ export function buildBreadcrumbSchema(crumbs: { name: string; url: string }[]) {
     })),
   };
 }
+
+
+/**
+ * Person schema for the /about/ page — Keith's profile.
+ */
+export function buildPersonSchema(opts: {
+  url: string;
+  name: string;
+  jobTitle: string;
+  alumniOf: string;
+  worksFor: string;
+  worksForUrl: string;
+  image?: string;
+  knowsAbout?: string[];
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": opts.name,
+    "jobTitle": opts.jobTitle,
+    "url": opts.url,
+    ...(opts.image ? { "image": opts.image } : {}),
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": opts.alumniOf,
+    },
+    "worksFor": {
+      "@type": "LocalBusiness",
+      "name": opts.worksFor,
+      "url": opts.worksForUrl,
+    },
+    ...(opts.knowsAbout ? { "knowsAbout": opts.knowsAbout } : {}),
+  };
+}
+
+/**
+ * Service schema for /services/[slug]/ pages.
+ */
+export function buildServiceSchema(opts: {
+  url: string;
+  name: string;
+  description: string;
+  fromPrice: number;
+  businessId: string; // e.g. https://keithsk9care.co.uk/#business
+  areaServed: string[];
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Dog grooming",
+    "name": opts.name,
+    "description": opts.description,
+    "url": opts.url,
+    "provider": { "@id": opts.businessId },
+    "areaServed": opts.areaServed.map((name) => ({
+      "@type": "Place",
+      "name": name,
+    })),
+    "offers": {
+      "@type": "Offer",
+      "price": opts.fromPrice,
+      "priceCurrency": "GBP",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "price": opts.fromPrice,
+        "priceCurrency": "GBP",
+        "valueAddedTaxIncluded": true,
+        "description": `From £${opts.fromPrice}`,
+      },
+    },
+  };
+}

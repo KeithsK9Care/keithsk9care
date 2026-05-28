@@ -1,16 +1,167 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import site from '../data/site.json';
-const title = "About Keith | Keith's K9 Care";
-const description = `Meet Keith Kershaw — IPET-qualified dog groomer at Keith's K9 Care, ${site.address.locality}, Wakefield ${site.address.postcode}.`;
+import Picture from '../components/Picture.astro';
+import SectionIntro from '../components/SectionIntro.astro';
+import Reveal from '../components/Reveal.astro';
+import ContactCTACard from '../components/ContactCTACard.astro';
+import { buildPersonSchema, buildBreadcrumbSchema } from '../lib/schemas';
+
+const title = "Meet Keith Kershaw, IPET-qualified dog groomer | Keith's K9 Care";
+const description = "From a career in law to a home grooming salon. Keith Kershaw is IPET-qualified at Mrs B's Grooming Academy, Leeds — he grooms one dog at a time in a quiet home in Hall Green, Wakefield WF4.";
+
+const personSchema = buildPersonSchema({
+  url: `${site.url}/about/`,
+  name: site.owner,
+  jobTitle: "IPET-qualified dog groomer",
+  alumniOf: "Mrs B's Grooming Academy, Leeds",
+  worksFor: site.name,
+  worksForUrl: site.url,
+  image: `${site.url}/assets/photos/keith-with-cocker-spaniel-800.jpg`,
+  knowsAbout: ["Dog grooming", "Puppy grooming", "Hand stripping", "De-matting", "Nervous dog handling", "Doodle and cockapoo grooming"],
+});
+
+const breadcrumbSchema = buildBreadcrumbSchema([
+  { name: "Home", url: `${site.url}/` },
+  { name: "About Keith", url: `${site.url}/about/` },
+]);
 ---
-<Layout title={title} description={description} noindex={true}>
-  <section class="section">
-    <div class="container-tight text-center">
-      <p class="text-sm font-semibold uppercase tracking-wider text-coral-500">About</p>
-      <h1 class="mt-3 text-4xl md:text-5xl">Coming soon</h1>
-      <p class="mt-5 text-ink-700">Keith's full story is being written. In the meantime, give him a call on <a href={`tel:${site.phoneIntl}`} class="text-teal-700 font-semibold">{site.phone}</a> or read the short version on the <a href="/" class="text-teal-700 font-semibold">homepage</a>.</p>
-      <a href="/" class="btn-secondary mt-8">Back to home</a>
+<Layout title={title} description={description}>
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(personSchema)} />
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <!-- HERO -->
+  <section class="section bg-gradient-to-b from-teal-50 via-white to-white">
+    <div class="container-tight grid md:grid-cols-5 gap-10 md:gap-14 items-center">
+      <Reveal class="md:col-span-2">
+        <div class="relative rounded-3xl overflow-hidden ring-1 ring-ink-100 shadow-xl shadow-teal-900/10 aspect-[4/5]">
+          <Picture src="keith-with-cocker-spaniel" size={800} alt="Keith Kershaw, IPET-qualified dog groomer at Keith's K9 Care, Hall Green" width={800} height={1000} priority />
+        </div>
+      </Reveal>
+      <Reveal class="md:col-span-3" delay={120}>
+        <p class="text-sm font-semibold uppercase tracking-wider text-coral-500">About</p>
+        <h1 class="mt-3 text-4xl md:text-5xl lg:text-6xl leading-[1.05]">Meet Keith.</h1>
+        <p class="mt-6 text-lg md:text-xl text-ink-700 leading-relaxed max-w-xl">
+          IPET-qualified dog groomer, ex-lawyer, and the only person your dog will see during a groom at Keith's K9 Care. One dog. One groomer. One quiet room.
+        </p>
+        <div class="mt-7 flex flex-wrap gap-3">
+          <a href="/book/" class="btn-primary">Book a Groom</a>
+          <a href="/services/" class="btn-secondary">See Services</a>
+        </div>
+      </Reveal>
     </div>
   </section>
+
+  <!-- STORY -->
+  <section class="section">
+    <div class="container-tight">
+      <Reveal>
+        <SectionIntro
+          eyebrow="The story"
+          heading="From the law to the grooming table."
+        />
+      </Reveal>
+      <Reveal class="mt-8 prose-style space-y-5 text-lg text-ink-700 leading-relaxed max-w-2xl" delay={120}>
+        <p>For decades, Keith worked in law — meticulous, careful, used to getting the details right under pressure. It's the kind of work that teaches you to listen properly before you act. Two qualities, it turns out, that translate unusually well to dog grooming.</p>
+        <p>During lockdown, Keith and his wife welcomed two golden retriever brothers — Ringo and Rolo — into their lives. What followed was a crash course in just how much mischief two exuberant retrievers can find: mud, puddles, unidentifiable countryside discoveries, and more baths than anyone had bargained for.</p>
+        <p>Somewhere in all that, Keith discovered he loved the grooming process — the calm of it, the care, the transformation at the end. He went on to qualify with the IPET Network at Mrs B's Grooming Academy in Leeds, where his trainers noted his natural ability to put dogs at ease. (It turns out a courtroom voice, used gently, is also a very good "stay still while I do your nails" voice.)</p>
+        <p>Keith brings the same professionalism and attention to detail to every groom that he has applied throughout his working life. Whether it's a cockapoo's first groom, a senior schnauzer who's a bit grumpy about clippers, or a retriever who's been swimming again — your dog is in safe, experienced hands.</p>
+      </Reveal>
+    </div>
+  </section>
+
+  <!-- QUALIFICATIONS -->
+  <section class="section bg-teal-50/60">
+    <div class="container-wide">
+      <Reveal>
+        <SectionIntro
+          eyebrow="Qualifications & insurance"
+          heading="Properly trained. Properly insured."
+        />
+      </Reveal>
+      <div class="mt-10 grid md:grid-cols-2 gap-6">
+        <Reveal>
+          <div class="rounded-2xl bg-white ring-1 ring-ink-100 p-6">
+            <p class="text-xs font-semibold uppercase tracking-wider text-coral-500">Training</p>
+            <h3 class="mt-2 text-xl">IPET Network qualified</h3>
+            <p class="mt-3 text-ink-700 leading-relaxed">Keith completed his iPET Network qualification at <strong>Mrs B's Grooming Academy in Leeds</strong> — one of West Yorkshire's most respected practical training schools. The iPET Network is an Ofqual-regulated awarding body for the UK pet industry; certificates aren't pieces of paper, they're verifiable.</p>
+          </div>
+        </Reveal>
+        <Reveal delay={100}>
+          <div class="rounded-2xl bg-white ring-1 ring-ink-100 p-6">
+            <p class="text-xs font-semibold uppercase tracking-wider text-coral-500">Insurance</p>
+            <h3 class="mt-2 text-xl">Fully insured</h3>
+            <p class="mt-3 text-ink-700 leading-relaxed">Public liability and care, custody & control cover for every dog in the salon. Happy to share certificate details on request before your first booking.</p>
+          </div>
+        </Reveal>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE SALON -->
+  <section class="section">
+    <div class="container-wide">
+      <Reveal>
+        <SectionIntro
+          eyebrow="The salon"
+          heading="A home, not a clinic."
+          description="The salon is a fully equipped, purpose-built converted garage at our home in Hall Green — a quiet street between Newmillerdam and Chapelthorpe. No barking neighbours. No queue. Your dog gets the whole room."
+        />
+      </Reveal>
+      <div class="mt-10 grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-5">
+        {[
+          { src: 'cockapoo-after-groom', alt: "Cockapoo after a full groom in Keith's K9 Care home salon, Hall Green WF4" },
+          { src: 'keith-with-grey-schnauzer', alt: 'Keith with a freshly-groomed grey schnauzer' },
+          { src: 'black-poodle-after-groom', alt: 'Black miniature poodle after a full groom' },
+          { src: 'keith-with-border-terrier', alt: 'Keith with a hand-stripped border terrier' },
+          { src: 'cocker-spaniel-after-groom', alt: 'Cocker spaniel after a hand-stripped groom' },
+          { src: 'keith-with-chihuahua', alt: 'Keith with a chihuahua, gently doing a small-dog tidy' },
+        ].map((p, i) => (
+          <Reveal delay={i * 70}>
+            <div class="relative rounded-2xl overflow-hidden aspect-square ring-1 ring-ink-100">
+              <Picture src={p.src} size={800} alt={p.alt} width={800} height={800} />
+            </div>
+          </Reveal>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- PHILOSOPHY -->
+  <section class="section bg-ink-50/60">
+    <div class="container-tight">
+      <Reveal>
+        <p class="text-sm font-semibold uppercase tracking-wider text-coral-500">How we work</p>
+        <h2 class="mt-3 text-3xl md:text-4xl leading-tight">Calm pace. Clear pricing. No surprises.</h2>
+      </Reveal>
+      <div class="mt-8 grid md:grid-cols-3 gap-5">
+        {[
+          { t: "One dog at a time", b: "No kennel, no shared dryer noise, no dogs barking through the wall. Your dog has Keith's full attention from arrival to handover." },
+          { t: "Honest about coats", b: "If a coat is heavily matted, the kindest thing is sometimes a fresh start. We'll talk you through it before we pick up the clippers." },
+          { t: "Pace led by the dog", b: "Nervous dogs and first-time puppies get breaks, treats, and as much sniff-around time as they need. The bill reflects the real time, but never a surprise." },
+        ].map((card, i) => (
+          <Reveal delay={i * 100}>
+            <div class="rounded-2xl bg-white ring-1 ring-ink-100 p-6 h-full">
+              <h3 class="text-lg">{card.t}</h3>
+              <p class="mt-3 text-ink-700 leading-relaxed">{card.b}</p>
+            </div>
+          </Reveal>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT CTA -->
+  <section class="section">
+    <div class="container-wide">
+      <Reveal>
+        <ContactCTACard heading="Like the sound of how Keith works?" body="Drop him a message — he prefers a quick chat about your dog before booking the first appointment." />
+      </Reveal>
+    </div>
+  </section>
+
 </Layout>
+
+<style>
+  .prose-style p { /* leave the Reveal class transforms intact */ }
+</style>

@@ -1,0 +1,180 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import site from '../../data/site.json';
+import services from '../../data/services.json';
+import Picture from '../../components/Picture.astro';
+import SectionIntro from '../../components/SectionIntro.astro';
+import Reveal from '../../components/Reveal.astro';
+import FAQItem from '../../components/FAQItem.astro';
+import ContactCTACard from '../../components/ContactCTACard.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import { buildServiceSchema, buildFAQSchema, buildBreadcrumbSchema } from '../../lib/schemas';
+
+export function getStaticPaths() {
+  return services.map((s: any) => ({
+    params: { slug: s.slug },
+    props: { service: s },
+  }));
+}
+
+const { service } = Astro.props;
+const s = service;
+
+const title = `${s.name} — dog grooming in Hall Green, Wakefield WF4 | Keith's K9 Care`;
+const description = s.metaDescription || `${s.name} from £${s.fromPrice} at Keith's K9 Care, Hall Green Wakefield WF4. ${s.summary}`;
+
+// Find related services
+const related = (s.relatedSlugs || []).map((slug: string) => services.find((x: any) => x.slug === slug)).filter(Boolean);
+
+// Schemas
+const serviceSchema = buildServiceSchema({
+  url: `${site.url}/services/${s.slug}/`,
+  name: s.name,
+  description: s.summary,
+  fromPrice: s.fromPrice,
+  businessId: `${site.url}/#business`,
+  areaServed: site.serviceArea,
+});
+
+const faqSchema = s.faqs && s.faqs.length ? buildFAQSchema(s.faqs) : null;
+
+const breadcrumbSchema = buildBreadcrumbSchema([
+  { name: "Home", url: `${site.url}/` },
+  { name: "Services", url: `${site.url}/services/` },
+  { name: s.name, url: `${site.url}/services/${s.slug}/` },
+]);
+---
+<Layout title={title} description={description} ogImage={s.heroPhoto ? `/assets/photos/${s.heroPhoto}.jpg` : undefined}>
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+  {faqSchema && <script slot="head" type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <!-- HERO -->
+  <section class="section bg-gradient-to-b from-teal-50 via-white to-white">
+    <div class="container-wide grid md:grid-cols-2 gap-12 items-center">
+      <Reveal>
+        <p class="text-sm font-semibold uppercase tracking-wider text-coral-500">
+          <a href="/services/" class="hover:text-coral-600">← All services</a>
+        </p>
+        <h1 class="mt-3 text-4xl md:text-5xl lg:text-6xl leading-[1.05]">{s.name}.</h1>
+        <p class="mt-6 text-lg md:text-xl text-ink-700 leading-relaxed max-w-xl">{s.summary}</p>
+        <div class="mt-7 flex flex-wrap gap-x-6 gap-y-2 items-baseline">
+          <p class="text-3xl font-display font-semibold text-teal-700">from £{s.fromPrice}</p>
+          <p class="text-sm text-ink-500">{s.duration}</p>
+        </div>
+        <div class="mt-7 flex flex-col sm:flex-row gap-3">
+          <a href="/book/" class="btn-primary">Book a Groom</a>
+          <a href="/pricing/" class="btn-secondary">See all prices</a>
+        </div>
+      </Reveal>
+      <Reveal delay={120}>
+        <div class="relative rounded-3xl overflow-hidden ring-1 ring-ink-100 shadow-xl shadow-teal-900/10 aspect-[4/5]">
+          {s.heroPhoto && (
+            <Picture src={s.heroPhoto} size={800} alt={`${s.name} at Keith's K9 Care, Hall Green WF4`} width={800} height={1000} priority />
+          )}
+        </div>
+      </Reveal>
+    </div>
+  </section>
+
+  <!-- BODY -->
+  {s.body && s.body.length > 0 && (
+    <section class="section">
+      <div class="container-tight">
+        <Reveal>
+          <SectionIntro eyebrow="The detail" heading={`What's involved in a ${s.name.toLowerCase()}.`} />
+        </Reveal>
+        <Reveal class="mt-8 space-y-5 text-lg text-ink-700 leading-relaxed max-w-2xl" delay={120}>
+          {s.body.map((p: string) => <p>{p}</p>)}
+        </Reveal>
+      </div>
+    </section>
+  )}
+
+  <!-- WHAT'S INCLUDED + PRICING TIERS -->
+  <section class="section bg-teal-50/60">
+    <div class="container-wide grid md:grid-cols-2 gap-10 md:gap-14">
+      <Reveal>
+        <p class="text-sm font-semibold uppercase tracking-wider text-coral-500">What's included</p>
+        <h2 class="mt-3 text-3xl md:text-4xl leading-tight">Every {s.name.toLowerCase()} includes:</h2>
+        <ul class="mt-6 space-y-3">
+          {s.includes && s.includes.map((item: string) => (
+            <li class="flex gap-3">
+              <svg aria-hidden="true" class="w-5 h-5 text-coral-500 mt-1 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              <span class="text-ink-800">{item}</span>
+            </li>
+          ))}
+        </ul>
+      </Reveal>
+      <Reveal delay={120}>
+        <p class="text-sm font-semibold uppercase tracking-wider text-coral-500">Pricing</p>
+        <h2 class="mt-3 text-3xl md:text-4xl leading-tight">{s.duration}.</h2>
+        <ul class="mt-6 grid gap-2">
+          {s.tiers && s.tiers.map((t: any) => (
+            <li class="flex justify-between items-baseline gap-3 rounded-xl bg-white ring-1 ring-ink-100 px-5 py-4">
+              <span class="text-ink-800">{t.label}</span>
+              <span class="font-semibold text-teal-700 text-lg">from £{t.from}</span>
+            </li>
+          ))}
+        </ul>
+        <p class="mt-5 text-sm text-ink-600">
+          Surcharges where applicable — matted coats from £10 · nervous, anxious or reactive dogs +£10–£20. <a href="/pricing/" class="text-teal-700 font-semibold hover:text-coral-500">Full price guide</a>.
+        </p>
+      </Reveal>
+    </div>
+  </section>
+
+  <!-- SERVICE-SPECIFIC FAQ -->
+  {s.faqs && s.faqs.length > 0 && (
+    <section class="section">
+      <div class="container-tight">
+        <Reveal>
+          <SectionIntro eyebrow="Frequently asked" heading={`About ${s.name.toLowerCase()}`} />
+        </Reveal>
+        <div class="mt-8 space-y-3">
+          {s.faqs.map((f: any, i: number) => (
+            <Reveal delay={i * 50}>
+              <FAQItem faq={f} open={i === 0} />
+            </Reveal>
+          ))}
+        </div>
+        <Reveal delay={200}>
+          <p class="mt-8 text-sm text-ink-600">
+            More general questions on the <a href="/faq/" class="text-teal-700 font-semibold hover:text-coral-500">full FAQ page</a>.
+          </p>
+        </Reveal>
+      </div>
+    </section>
+  )}
+
+  <!-- RELATED SERVICES -->
+  {related.length > 0 && (
+    <section class="section bg-ink-50/60">
+      <div class="container-wide">
+        <Reveal>
+          <SectionIntro eyebrow="Also offered" heading="Related services." />
+        </Reveal>
+        <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {related.map((r: any, i: number) => {
+            const ix = services.findIndex((x: any) => x.slug === r.slug);
+            return (
+              <Reveal delay={i * 80}>
+                <ServiceCard service={r} index={ix} />
+              </Reveal>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- CONTACT CTA -->
+  <section class="section">
+    <div class="container-wide">
+      <Reveal>
+        <ContactCTACard heading={`Book a ${s.name.toLowerCase()} for your dog`} body="Keith likes a quick chat first — coat, age, any nerves — so he can pick the right slot." />
+      </Reveal>
+    </div>
+  </section>
+
+</Layout>
