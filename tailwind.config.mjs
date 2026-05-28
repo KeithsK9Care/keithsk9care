@@ -8,31 +8,31 @@ export default {
         display: ['"Fraunces"', 'Georgia', 'serif'],
       },
       colors: {
-        // Brand teal — sampled from logo wordmark & business card banner
+        // Brand teal — sampled directly from logo wordmark (Designer.png)
         teal: {
-          50:  '#ebf8fb',
-          100: '#cdebf2',
-          200: '#9bd6e4',
-          300: '#5cbed1',
-          400: '#2ea7bf',
-          500: '#1899b5',  // wordmark
-          600: '#067e98',
-          700: '#08667a',
-          800: '#0c5060',
-          900: '#0c3e4b',
+          50:  '#eef5f8',
+          100: '#d6eaf0',
+          200: '#a8d2dd',
+          300: '#6db4c7',
+          400: '#2f93ad',
+          500: '#007090',  // wordmark — brand anchor
+          600: '#005c79',
+          700: '#004862',
+          800: '#01374c',
+          900: '#022836',
         },
-        // Brand coral — sampled from logo paw print & business card accents
+        // Brand coral/orange — sampled directly from logo paw print (Designer.png)
         coral: {
-          50:  '#fef3ee',
-          100: '#fde0d0',
-          200: '#fabea0',
-          300: '#f69566',
-          400: '#f37334',
-          500: '#f26522',  // logo paw / business card accents
-          600: '#d44e10',
-          700: '#ae3c0e',
-          800: '#8a3210',
-          900: '#702b11',
+          50:  '#fef4ee',
+          100: '#fce0cd',
+          200: '#fac0a0',
+          300: '#f99670',
+          400: '#fa7838',
+          500: '#f86018',  // logo paw — brand anchor
+          600: '#dd4d0a',
+          700: '#b13d0c',
+          800: '#883110',
+          900: '#6b2811',
         },
         // Warm neutrals to feel "home salon" not "clinic"
         ink: {
