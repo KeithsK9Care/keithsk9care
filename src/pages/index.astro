@@ -9,18 +9,10 @@ import HomeAreas from '../components/home/HomeAreas.astro';
 import HomeFAQ from '../components/home/HomeFAQ.astro';
 import HomeContactCTA from '../components/home/HomeContactCTA.astro';
 import faqs from '../data/faqs.json';
+import { buildFAQSchema } from '../lib/schemas';
 
 const homepageFaqs = faqs.filter((f: any) => f.tags.includes('home')).slice(0, 5);
-
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": homepageFaqs.map((f: any) => ({
-    "@type": "Question",
-    "name": f.q,
-    "acceptedAnswer": { "@type": "Answer", "text": f.a }
-  }))
-};
+const faqSchema = buildFAQSchema(homepageFaqs);
 
 const title = "Dog Grooming in Newmillerdam, Crigglestone & Wakefield | Keith's K9 Care";
 const description = "Friendly, professional dog grooming from an IPET-qualified groomer's home salon in Hall Green by Newmillerdam, WF4. One dog at a time, in a quiet home — not a busy salon. Serving Wakefield, Crigglestone, Sandal, Horbury and surrounding villages.";

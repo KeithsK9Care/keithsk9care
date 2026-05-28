@@ -6,6 +6,7 @@ import WhatsAppPopup from '../components/WhatsAppPopup.astro';
 import StickyMobileCTA from '../components/StickyMobileCTA.astro';
 import site from '../data/site.json';
 import services from '../data/services.json';
+import { buildLocalBusinessSchema } from '../lib/schemas';
 
 export interface Props {
   title: string;
@@ -25,67 +26,7 @@ const {
   hideWhatsApp = false,
 } = Astro.props;
 
-// Site-wide LocalBusiness + AnimalCareService JSON-LD
-const localBusiness = {
-  "@context": "https://schema.org",
-  "@type": ["LocalBusiness", "AnimalCareService"],
-  "@id": `${site.url}/#business`,
-  "name": site.name,
-  "description": site.tagline,
-  "url": site.url,
-  "telephone": site.phoneIntl,
-  "email": site.email,
-  "image": `${site.url}/assets/logo.png`,
-  "logo": `${site.url}/assets/logo.png`,
-  "priceRange": site.priceRange,
-  "currenciesAccepted": "GBP",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": site.address.street,
-    "addressLocality": site.address.locality,
-    "addressRegion": site.address.region,
-    "postalCode": site.address.postcode,
-    "addressCountry": site.address.country
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": site.address.lat,
-    "longitude": site.address.lng
-  },
-  "areaServed": site.serviceArea.map((name: string) => ({
-    "@type": "Place",
-    "name": name
-  })),
-  "openingHoursSpecification": site.hours.map((h: any) => ({
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": `https://schema.org/${h.day}`,
-    "opens": h.open,
-    "closes": h.close
-  })),
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Dog Grooming Services",
-    "itemListElement": services.map((s: any) => ({
-      "@type": "Offer",
-      "itemOffered": {
-        "@type": "Service",
-        "name": s.name,
-        "description": s.summary,
-        "url": `${site.url}/services/${s.slug}/`
-      },
-      "price": s.fromPrice,
-      "priceCurrency": "GBP",
-      "priceSpecification": {
-        "@type": "PriceSpecification",
-        "price": s.fromPrice,
-        "priceCurrency": "GBP",
-        "valueAddedTaxIncluded": true,
-        "description": `From £${s.fromPrice}`
-      }
-    }))
-  },
-  "sameAs": [site.facebook]
-};
+const localBusiness = buildLocalBusinessSchema(site, services);
 ---
 <!DOCTYPE html>
 <html lang="en-GB">
