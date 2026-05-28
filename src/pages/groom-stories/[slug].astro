@@ -18,7 +18,7 @@ const s = story;
 const matchedService = services.find((sv: any) => sv.name === s.service);
 
 const title = `${s.dog} — ${s.service} | Keith's K9 Care`;
-const description = `Groom story: ${s.dog} (${s.breed}). ${s.lede}`;
+const description = `Groom story: ${s.dog} (${s.breed}). ${s.summary}`;
 
 const breadcrumbSchema = buildBreadcrumbSchema([
   { name: "Home", url: `${site.url}/` },
@@ -37,8 +37,8 @@ const breadcrumbSchema = buildBreadcrumbSchema([
           <a href="/groom-stories/" class="hover:text-coral-800">← All groom stories</a>
         </p>
         <h1 class="mt-3 text-4xl md:text-5xl lg:text-6xl leading-[1.05]">{s.dog}</h1>
-        <p class="mt-2 text-lg text-ink-600">{s.breed} · {s.ownerArea}</p>
-        <p class="mt-6 text-lg md:text-xl text-ink-700 leading-relaxed max-w-xl">{s.lede}</p>
+        <p class="mt-2 text-lg text-ink-600">{s.breed} · {s.area}</p>
+        <p class="mt-6 text-lg md:text-xl text-ink-700 leading-relaxed max-w-xl">{s.summary}</p>
         <div class="mt-7 flex flex-wrap gap-3">
           {matchedService && <a href={`/services/${matchedService.slug}/`} class="btn-secondary">More on {s.service}</a>}
           <a href="/book/" class="btn-primary">Book your dog in</a>
@@ -57,7 +57,7 @@ const breadcrumbSchema = buildBreadcrumbSchema([
     <section class="section">
       <div class="container-wide">
         <Reveal>
-          <SectionIntro eyebrow="Before & after" heading={`${s.service}`} description={s.lede} />
+          <SectionIntro eyebrow="Before & after" heading={`${s.service}`} description={s.summary} />
         </Reveal>
         <div class="mt-10 grid sm:grid-cols-2 gap-5">
           <Reveal>
@@ -85,7 +85,7 @@ const breadcrumbSchema = buildBreadcrumbSchema([
           <SectionIntro eyebrow="The story" heading={`What we did for ${s.dog}`} />
         </Reveal>
         <Reveal class="mt-8 space-y-5 text-lg text-ink-700 leading-relaxed max-w-2xl" delay={100}>
-          {s.story.map((p: string) => <p>{p}</p>)}
+          {s.story.split('\n\n').map((p: string) => <p>{p}</p>)}
         </Reveal>
       </div>
     </section>

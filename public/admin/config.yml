@@ -166,17 +166,20 @@ collections:
         name: reviews
         fields:
           - name: reviews
+            label: "Reviews"
             widget: list
+            summary: "{{fields.author}} — {{fields.dog}}"
             fields:
-              - { name: id,        widget: string }
-              - { name: author,    label: "Author name", widget: string }
-              - { name: location,  label: "Location",    widget: string, required: false }
-              - { name: dog,       label: "Dog (name + breed)", widget: string, required: false }
-              - { name: service,   label: "Service",     widget: string, required: false }
-              - { name: rating,    label: "Stars (1-5)", widget: number, min: 1, max: 5, value_type: int }
-              - { name: date,      label: "Date (YYYY-MM-DD)", widget: string }
-              - { name: body,      label: "Review text", widget: text }
-              - { name: featured,  label: "Show on every page?", widget: boolean, default: false }
+              - { name: author,    label: "Customer name",     widget: string,  hint: "e.g. Sarah M." }
+              - { name: location,  label: "Where they live",   widget: string,  required: false, hint: "e.g. Newmillerdam" }
+              - { name: dog,       label: "Dog's name + breed", widget: string, required: false, hint: "e.g. Bella (cockapoo)" }
+              - { name: service,   label: "Service",           widget: select, required: false,
+                  options: ["Full Groom","Puppy First Groom","Bath & Tidy","Nail Trim, Ear Clean & Tidy","De-matting & Coat Recovery","Hand Stripping"] }
+              - { name: rating,    label: "Stars (1–5)",       widget: number,  min: 1, max: 5, value_type: int, default: 5 }
+              - { name: date,      label: "Date",              widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, picker_utc: false }
+              - { name: body,      label: "Review",            widget: text,    hint: "What the customer said." }
+              - { name: featured,  label: "Show on every page?", widget: boolean, default: false, hint: "Featured reviews appear in the strip under every page hero. Pick your 3 best." }
+              - { name: id,        label: "Internal ID",       widget: string,  hint: "Any short unique id, e.g. r6" }
 
   # ─────────────────────────────────────────────────────
   - name: groom-stories
@@ -187,18 +190,19 @@ collections:
         name: groom_stories
         fields:
           - name: stories
+            label: "Groom stories"
             widget: list
+            summary: "{{fields.dog}} — {{fields.service}}"
             fields:
-              - { name: slug,        widget: string }
-              - { name: dog,         widget: string }
-              - { name: breed,       widget: string }
-              - { name: service,     widget: string }
-              - { name: ownerArea,   widget: string }
-              - { name: date,        widget: string }
-              - { name: lede,        widget: text }
-              - name: story
-                label: "Body paragraphs"
-                widget: list
-              - { name: beforePhoto, label: "Before photo (filename, no extension)", widget: string, required: false }
-              - { name: afterPhoto,  label: "After photo (filename, no extension)",  widget: string, required: false }
-              - { name: featured,    label: "Featured on index?", widget: boolean, default: false }
+              - { name: dog,         label: "Dog's name",        widget: string,  hint: "e.g. Milo" }
+              - { name: breed,       label: "Breed & age",       widget: string,  hint: "e.g. Cockapoo, 3 years" }
+              - { name: service,     label: "Service",           widget: select,
+                  options: ["Full Groom","Puppy First Groom","Bath & Tidy","Nail Trim, Ear Clean & Tidy","De-matting & Coat Recovery","Hand Stripping","De-matting & Full Groom"] }
+              - { name: area,        label: "Where they live",   widget: string,  hint: "e.g. Newmillerdam" }
+              - { name: date,        label: "Date of groom",     widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, picker_utc: false }
+              - { name: summary,     label: "Short preview",     widget: text,    hint: "1–2 sentences shown on the card." }
+              - { name: story,       label: "Full story",        widget: markdown, hint: "Write the story in paragraphs. Leave a blank line between paragraphs." }
+              - { name: beforePhoto, label: "Before photo",      widget: string, required: false, hint: "Photo filename without extension (e.g. black-poodle-side). Upload photos in the Photos folder first." }
+              - { name: afterPhoto,  label: "After photo",       widget: string, required: false, hint: "Same — filename without extension." }
+              - { name: featured,    label: "Highlight on homepage?", widget: boolean, default: false }
+              - { name: slug,        label: "URL ending",        widget: string,  hint: "Short, lower-case, hyphen-separated. e.g. milo-after-summer" }
