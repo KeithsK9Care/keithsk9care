@@ -4,7 +4,7 @@ import Logo from './Logo.astro';
 const waText = encodeURIComponent("Hi Keith, I'd like to book a groom for my dog.");
 const waUrl = `https://wa.me/${site.whatsappIntl}?text=${waText}`;
 ---
-<div id="wa-root" transition:persist class="fixed right-4 z-50 print:hidden bottom-[calc(theme(spacing.24)+env(safe-area-inset-bottom))] md:bottom-5">
+<div id="wa-root" transition:persist class="fixed right-4 z-50 print:hidden bottom-[calc(theme(spacing.20)+env(safe-area-inset-bottom))] md:bottom-5">
   <!-- Bubble button stays WhatsApp green so users recognise it as the WhatsApp action -->
   <button id="wa-toggle" class="group flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-full bg-whatsapp shadow-lg shadow-whatsapp/30 hover:scale-105 transition-transform" aria-label="Chat with Keith on WhatsApp" aria-expanded="false" aria-controls="wa-card">
     <svg aria-hidden="true" class="w-7 h-7 md:w-8 md:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
