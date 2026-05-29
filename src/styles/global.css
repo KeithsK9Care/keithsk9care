@@ -9,11 +9,7 @@
     -webkit-text-size-adjust: 100%;
   }
   body {
-    @apply text-ink-900 antialiased;
-    /* Subtle white→teal-50 gradient at the bottom so backdrop-blur in the
-       sticky mobile CTA has actual colour to blur (otherwise it renders as
-       solid white because there's nothing behind it). */
-    background: linear-gradient(to bottom, #ffffff 0%, #ffffff 75%, theme(colors.teal.50) 100%) fixed;
+    @apply bg-white text-ink-900 antialiased;
     min-height: 100vh;
     min-height: 100dvh;
     text-rendering: optimizeLegibility;
