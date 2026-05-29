@@ -6,9 +6,10 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "node scripts/generate-photo-variants.mjs && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "photos:variants": "node scripts/generate-photo-variants.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "3.2.1",
