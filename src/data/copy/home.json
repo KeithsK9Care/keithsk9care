@@ -11,33 +11,33 @@
     "ipetBadge": "IPET qualified · Mrs B's Grooming Academy, Leeds"
   },
   "images": {
-    "heroPhoto": "golden-puppy-woodland-1",
+    "heroPhoto": "/assets/photos/golden-puppy-woodland-1.jpg",
     "heroPhotoAlt": "Golden retriever puppy near Newmillerdam Country Park — Keith's K9 Care, Hall Green WF4",
-    "aboutPhoto": "keith-with-cocker-spaniel",
+    "aboutPhoto": "/assets/photos/keith-with-cocker-spaniel.jpg",
     "aboutPhotoAlt": "Keith Kershaw with a cocker spaniel in his home grooming salon",
     "salonPhotos": [
       {
-        "src": "cockapoo-after-groom",
+        "src": "/assets/photos/cockapoo-after-groom.jpg",
         "alt": "Cockapoo after a full groom on the table in Keith's K9 Care home salon, Castle Meadows WF4"
       },
       {
-        "src": "keith-with-grey-schnauzer",
+        "src": "/assets/photos/keith-with-grey-schnauzer.jpg",
         "alt": "Keith with a freshly-groomed grey schnauzer in the home salon"
       },
       {
-        "src": "black-poodle-after-groom",
+        "src": "/assets/photos/black-poodle-after-groom.jpg",
         "alt": "Black miniature poodle after a full groom at Keith's K9 Care, Hall Green WF4"
       },
       {
-        "src": "keith-with-border-terrier",
+        "src": "/assets/photos/keith-with-border-terrier.jpg",
         "alt": "Keith finishing a border terrier groom in the home salon"
       },
       {
-        "src": "cocker-spaniel-after-groom",
+        "src": "/assets/photos/cocker-spaniel-after-groom.jpg",
         "alt": "Cocker spaniel after a hand-stripped groom"
       },
       {
-        "src": "cockapoo-portrait",
+        "src": "/assets/photos/cockapoo-portrait.jpg",
         "alt": "Bright-coated cockapoo after a full groom at Keith's K9 Care"
       }
     ]

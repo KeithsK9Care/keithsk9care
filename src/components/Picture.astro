@@ -1,6 +1,9 @@
 ---
+import fs from 'node:fs';
+import path from 'node:path';
+
 export interface Props {
-  src: string;        // filename stub, e.g. "cockapoo-after-groom"
+  src: string;        // either a filename stub ("cockapoo-after-groom") OR a full path ("/assets/photos/MyDog.jpeg")
   alt: string;
   width: number;
   height: number;
@@ -9,13 +12,46 @@ export interface Props {
   class?: string;
 }
 const { src, alt, width, height, size, priority = false, class: cls = "w-full h-full object-cover" } = Astro.props;
-const suffix = size ? `-${size}` : "";
 const loading = priority ? "eager" : "lazy";
+
+// Build-time scan of the photo library — used to detect which images have pre-optimised
+// -800.webp / -1200.jpg variants vs which are freshly uploaded originals (e.g. from Sveltia CMS).
+// Computed once per build, not per render.
+const PHOTOS_DIR = path.join(process.cwd(), 'public/assets/photos');
+let availableFiles: Set<string>;
+try {
+  availableFiles = new Set(fs.readdirSync(PHOTOS_DIR));
+} catch {
+  availableFiles = new Set();
+}
+
+// Accept both formats:
+//   - stub:      "cockapoo-after-groom"      → use pre-optimised variants
+//   - full path: "/assets/photos/MyDog.jpeg" → strip prefix + extension, fall back if no variants
+let stub = src;
+let originalExt = 'jpg';
+let originalPath: string | null = null;
+if (src.startsWith('/')) {
+  originalPath = src;
+  const fname = src.replace(/^\/assets\/photos\//, '');
+  const m = fname.match(/^(.+)\.([^.]+)$/);
+  if (m) { stub = m[1]; originalExt = m[2].toLowerCase(); }
+}
+
+const suffix = size ? `-${size}` : "";
+const webpName = `${stub}${suffix}.webp`;
+const jpgName  = `${stub}${suffix}.jpg`;
+const hasWebpVariant = availableFiles.has(webpName);
+const hasJpgVariant  = availableFiles.has(jpgName);
+
+// Fallback path for the <img> tag if no variants exist
+const fallbackSrc = originalPath ?? `/assets/photos/${jpgName}`;
+const imgSrc = hasJpgVariant ? `/assets/photos/${jpgName}` : fallbackSrc;
 ---
 <picture>
-  <source srcset={`/assets/photos/${src}${suffix}.webp`} type="image/webp" />
+  {hasWebpVariant && <source srcset={`/assets/photos/${webpName}`} type="image/webp" />}
   <img
-    src={`/assets/photos/${src}${suffix}.jpg`}
+    src={imgSrc}
     alt={alt}
     width={width}
     height={height}

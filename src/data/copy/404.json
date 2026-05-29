@@ -2,7 +2,7 @@
   "meta": {
     "title": "Page not found | Keith's K9 Care",
     "description": "The page you're looking for doesn't exist. Browse our services, see the price guide, or get in touch with Keith.",
-    "ogImage": "golden-puppy-woodland-1"
+    "ogImage": "/assets/photos/golden-puppy-woodland-1.jpg"
   },
   "hero": {
     "eyebrow": "404",

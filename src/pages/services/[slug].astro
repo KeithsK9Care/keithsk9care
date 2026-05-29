@@ -45,7 +45,7 @@ const breadcrumbSchema = buildBreadcrumbSchema([
   { name: s.name, url: `${site.url}/services/${s.slug}/` },
 ]);
 ---
-<Layout title={title} description={description} ogImage={s.heroPhoto ? `/assets/photos/${s.heroPhoto}.jpg` : undefined}>
+<Layout title={title} description={description} ogImage={s.heroPhoto ?? undefined}>
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
   {faqSchema && <script slot="head" type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />

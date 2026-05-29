@@ -2,7 +2,7 @@
   "meta": {
     "title": "Meet Keith Kershaw, IPET-qualified dog groomer | Keith's K9 Care",
     "description": "Meet Keith Kershaw — IPET-qualified dog groomer (Mrs B's Academy, Leeds). Home salon in Hall Green, Wakefield WF4. One dog at a time, in a quiet home.",
-    "ogImage": "keith-with-cocker-spaniel"
+    "ogImage": "/assets/photos/keith-with-cocker-spaniel.jpg"
   },
   "hero": {
     "eyebrow": "About",
@@ -12,7 +12,7 @@
     "ctaPrimaryHref": "/book/",
     "ctaSecondary": "See Services",
     "ctaSecondaryHref": "/services/",
-    "photo": "keith-with-cocker-spaniel",
+    "photo": "/assets/photos/keith-with-cocker-spaniel.jpg",
     "photoAlt": "Keith Kershaw, IPET-qualified dog groomer at Keith's K9 Care, Hall Green"
   },
   "story": {
@@ -82,27 +82,27 @@
     "description": "The salon is a fully equipped, purpose-built converted garage at our home in Hall Green — a quiet street between Newmillerdam and Chapelthorpe. No barking neighbours. No queue. Your dog gets the whole room.",
     "photos": [
       {
-        "src": "cockapoo-after-groom",
+        "src": "/assets/photos/cockapoo-after-groom.jpg",
         "alt": "Cockapoo after a full groom in Keith's K9 Care home salon, Hall Green WF4"
       },
       {
-        "src": "keith-with-grey-schnauzer",
+        "src": "/assets/photos/keith-with-grey-schnauzer.jpg",
         "alt": "Keith with a freshly-groomed grey schnauzer"
       },
       {
-        "src": "black-poodle-after-groom",
+        "src": "/assets/photos/black-poodle-after-groom.jpg",
         "alt": "Black miniature poodle after a full groom"
       },
       {
-        "src": "keith-with-border-terrier",
+        "src": "/assets/photos/keith-with-border-terrier.jpg",
         "alt": "Keith with a hand-stripped border terrier"
       },
       {
-        "src": "cocker-spaniel-after-groom",
+        "src": "/assets/photos/cocker-spaniel-after-groom.jpg",
         "alt": "Cocker spaniel after a hand-stripped groom"
       },
       {
-        "src": "keith-with-chihuahua",
+        "src": "/assets/photos/keith-with-chihuahua.jpg",
         "alt": "Keith with a chihuahua, gently doing a small-dog tidy"
       }
     ]
