@@ -1,0 +1,48 @@
+{
+  "meta": {
+    "title": "Frequently asked questions | Keith's K9 Care",
+    "description": "Everything dog owners ask before their first appointment at Keith's K9 Care — pricing, puppy first grooms, nervous dogs, qualifications. Hall Green, Wakefield WF4.",
+    "ogImage": "/assets/photos/cockapoo-portrait.jpg"
+  },
+  "hero": {
+    "eyebrow": "FAQ",
+    "heading": "Things people usually ask.",
+    "body": "Quick answers about pricing, qualifications, nervous dogs and puppy first grooms. Can't see your question? Drop Keith a message via the contact form."
+  },
+  "groups": [
+    {
+      "eyebrow": "Where & when",
+      "tag": "contact",
+      "heading": "Where, when, and how to book"
+    },
+    {
+      "eyebrow": "Qualifications",
+      "tag": "trust",
+      "heading": "Trust & qualifications"
+    },
+    {
+      "eyebrow": "Pricing",
+      "tag": "pricing",
+      "heading": "How pricing works"
+    },
+    {
+      "eyebrow": "Puppies",
+      "tag": "puppy",
+      "heading": "Puppies and first grooms"
+    },
+    {
+      "eyebrow": "Nervous dogs",
+      "tag": "nervous",
+      "heading": "Nervous, rescue & older dogs"
+    }
+  ],
+  "generalGroup": {
+    "eyebrow": "General",
+    "tag": "general",
+    "heading": "Other questions"
+  },
+  "contactCta": {
+    "heading": "Still got a question?",
+    "body": "Keith is happy to answer anything about your dog — coat, age, behaviour, breed — before you book."
+  }
+}

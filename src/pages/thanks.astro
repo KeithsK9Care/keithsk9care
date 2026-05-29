@@ -1,23 +1,25 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import site from '../data/site.json';
+import copy from '../data/copy/thanks.json';
 import PageHero from '../components/PageHero.astro';
 
-const title = "Thanks — we'll be in touch | Keith's K9 Care";
-const description = "Thanks for your booking enquiry. Keith will reply personally, usually within an hour during opening times.";
+const m = copy.meta;
+const h = copy.hero;
+const body = `${h.body} For anything urgent, call or WhatsApp ${site.phone}.`;
 ---
-<Layout title={title} description={description} noindex={true} hideWhatsApp={true} ogImage="/assets/photos/golden-puppy-woodland-2.jpg">
+<Layout title={m.title} description={m.description} noindex={true} hideWhatsApp={true} ogImage={m.ogImage}>
   <PageHero
-    eyebrow="Thanks!"
-    heading="Message received."
-    body={`Keith will reply personally — usually within an hour during opening times (Tuesday to Saturday). For anything urgent, call or WhatsApp ${site.phone}.`}
+    eyebrow={h.eyebrow}
+    heading={h.heading}
+    body={body}
   >
     <span slot="before-eyebrow" class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-coral-50 text-coral-500 mb-6">
       <svg aria-hidden="true" class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20">
         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
       </svg>
     </span>
-    <a href="/" class="btn-primary">Back to home</a>
-    <a href="/services/" class="btn-secondary">Browse services</a>
+    <a href={h.ctaPrimaryHref} class="btn-primary">{h.ctaPrimary}</a>
+    <a href={h.ctaSecondaryHref} class="btn-secondary">{h.ctaSecondary}</a>
   </PageHero>
 </Layout>

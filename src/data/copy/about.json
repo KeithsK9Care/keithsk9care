@@ -1,0 +1,132 @@
+{
+  "meta": {
+    "title": "Meet Keith Kershaw, IPET-qualified dog groomer | Keith's K9 Care",
+    "description": "Meet Keith Kershaw — IPET-qualified dog groomer (Mrs B's Academy, Leeds). Home salon in Hall Green, Wakefield WF4. One dog at a time, in a quiet home.",
+    "ogImage": "/assets/photos/keith-with-cocker-spaniel.jpg"
+  },
+  "hero": {
+    "eyebrow": "About",
+    "heading": "Meet Keith.",
+    "body": "IPET-qualified dog groomer, ex-lawyer, and the only person your dog will see during a groom at Keith's K9 Care. One dog. One groomer. One quiet room.",
+    "ctaPrimary": "Book a Groom",
+    "ctaPrimaryHref": "/book/",
+    "ctaSecondary": "See Services",
+    "ctaSecondaryHref": "/services/",
+    "photo": "keith-with-cocker-spaniel",
+    "photoAlt": "Keith Kershaw, IPET-qualified dog groomer at Keith's K9 Care, Hall Green"
+  },
+  "story": {
+    "eyebrow": "The story",
+    "heading": "From the law to the grooming table.",
+    "paragraphs": [
+      "For decades, Keith worked in law — meticulous, careful, used to getting the details right under pressure. It's the kind of work that teaches you to listen properly before you act. Two qualities, it turns out, that translate unusually well to dog grooming.",
+      "During lockdown, Keith and his wife welcomed two golden retriever brothers — Ringo and Rolo — into their lives. What followed was a crash course in just how much mischief two exuberant retrievers can find: mud, puddles, unidentifiable countryside discoveries, and more baths than anyone had bargained for.",
+      "Somewhere in all that, Keith discovered he loved the grooming process — the calm of it, the care, the transformation at the end. He went on to qualify with the IPET Network at Mrs B's Grooming Academy in Leeds, where his trainers noted his natural ability to put dogs at ease. (It turns out a courtroom voice, used gently, is also a very good \"stay still while I do your nails\" voice.)",
+      "Keith brings the same professionalism and attention to detail to every groom that he has applied throughout his working life. Whether it's a cockapoo's first groom, a senior schnauzer who's a bit grumpy about clippers, or a retriever who's been swimming again — your dog is in safe, experienced hands."
+    ]
+  },
+  "whyKeith": {
+    "eyebrow": "Why Keith",
+    "heading": "What sets Keith's K9 Care apart.",
+    "description": "It boils down to six things — most of which other groomers can't (or won't) match.",
+    "pillars": [
+      {
+        "eyebrow": "Training",
+        "heading": "IPET qualified",
+        "body": "Trained with the iPET Network at Mrs B's Grooming Academy in Leeds — a regulated UK awarding body, not a weekend course."
+      },
+      {
+        "eyebrow": "Cover",
+        "heading": "Fully insured",
+        "body": "Public liability and care, custody &amp; control cover for every dog in the salon. Certificates available on request."
+      },
+      {
+        "eyebrow": "Pace",
+        "heading": "One dog at a time",
+        "body": "No kennels, no shared dryers, no other dogs barking through the wall. Your dog has Keith's full attention."
+      },
+      {
+        "eyebrow": "Pricing",
+        "heading": "Published, transparent",
+        "body": "Small dogs from £40, medium from £50, large/doodles from £60. Surcharges listed. Keith confirms in person before he starts."
+      },
+      {
+        "eyebrow": "Honesty",
+        "heading": "Welfare first",
+        "body": "If a heavily matted coat can't be saved kindly, we'll say so. If your dog gets too anxious, we stop and call you. Always."
+      },
+      {
+        "eyebrow": "Local",
+        "heading": "WF4 home patch",
+        "body": "On Castle Meadows in Hall Green — a short stroll from Newmillerdam Country Park. Most customers are within a 5-minute drive."
+      }
+    ]
+  },
+  "qualifications": {
+    "eyebrow": "Qualifications & insurance",
+    "heading": "Properly trained. Properly insured.",
+    "training": {
+      "eyebrow": "Training",
+      "heading": "IPET Network qualified",
+      "body": "Keith completed his iPET Network qualification at <strong>Mrs B's Grooming Academy in Leeds</strong> — one of West Yorkshire's most respected practical training schools. The iPET Network is an Ofqual-regulated awarding body for the UK pet industry; certificates aren't pieces of paper, they're verifiable."
+    },
+    "insurance": {
+      "eyebrow": "Insurance",
+      "heading": "Fully insured",
+      "body": "Public liability and care, custody & control cover for every dog in the salon. Happy to share certificate details on request before your first booking."
+    }
+  },
+  "salon": {
+    "eyebrow": "The salon",
+    "heading": "A home, not a clinic.",
+    "description": "The salon is a fully equipped, purpose-built converted garage at our home in Hall Green — a quiet street between Newmillerdam and Chapelthorpe. No barking neighbours. No queue. Your dog gets the whole room.",
+    "photos": [
+      {
+        "src": "cockapoo-after-groom",
+        "alt": "Cockapoo after a full groom in Keith's K9 Care home salon, Hall Green WF4"
+      },
+      {
+        "src": "keith-with-grey-schnauzer",
+        "alt": "Keith with a freshly-groomed grey schnauzer"
+      },
+      {
+        "src": "black-poodle-after-groom",
+        "alt": "Black miniature poodle after a full groom"
+      },
+      {
+        "src": "keith-with-border-terrier",
+        "alt": "Keith with a hand-stripped border terrier"
+      },
+      {
+        "src": "cocker-spaniel-after-groom",
+        "alt": "Cocker spaniel after a hand-stripped groom"
+      },
+      {
+        "src": "keith-with-chihuahua",
+        "alt": "Keith with a chihuahua, gently doing a small-dog tidy"
+      }
+    ]
+  },
+  "philosophy": {
+    "eyebrow": "How we work",
+    "heading": "Calm pace. Clear pricing. No surprises.",
+    "cards": [
+      {
+        "t": "One dog at a time",
+        "b": "No kennel, no shared dryer noise, no dogs barking through the wall. Your dog has Keith's full attention from arrival to handover."
+      },
+      {
+        "t": "Honest about coats",
+        "b": "If a coat is heavily matted, the kindest thing is sometimes a fresh start. We'll talk you through it before we pick up the clippers."
+      },
+      {
+        "t": "Pace led by the dog",
+        "b": "Nervous dogs and first-time puppies get breaks, treats, and as much sniff-around time as they need. The bill reflects the real time, but never a surprise."
+      }
+    ]
+  },
+  "contactCta": {
+    "heading": "Like the sound of how Keith works?",
+    "body": "Drop him a message — he prefers a quick chat about your dog before booking the first appointment."
+  }
+}

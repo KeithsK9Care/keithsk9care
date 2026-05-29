@@ -2,43 +2,45 @@
 import Layout from '../layouts/Layout.astro';
 import site from '../data/site.json';
 import services from '../data/services.json';
+import copy from '../data/copy/book.json';
 import SectionIntro from '../components/SectionIntro.astro';
 import PageHero from '../components/PageHero.astro';
 import Reveal from '../components/Reveal.astro';
 
-const title = "Book a groom | Keith's K9 Care";
-const description = `Book Keith's K9 Care — call ${site.phone}, WhatsApp, or send the booking form. Home grooming salon in ${site.address.locality}, ${site.address.postcode}.`;
----
-<Layout title={title} description={description} noindex={true} hideWhatsApp={true} ogImage="/assets/photos/keith-with-chihuahua.jpg">
+const m = copy.meta;
+const h = copy.hero;
+const qc = copy.quickContact;
+const f = copy.form;
+const loc = copy.location;
 
-  <PageHero
-    eyebrow="Book a groom"
-    heading="Get in touch with Keith."
-    body="Keith likes a quick chat about your dog before the first booking — coat type, age, any nerves — so he can pick the right slot. Use the form below, or jump straight to call / WhatsApp."
-  />
+const waMsg = encodeURIComponent(qc.whatsapp.prefilledMessage || "Hi Keith, I'd like to book a groom for my dog.");
+---
+<Layout title={m.title} description={m.description} noindex={true} hideWhatsApp={true} ogImage={m.ogImage}>
+
+  <PageHero eyebrow={h.eyebrow} heading={h.heading} body={h.body} />
 
   <!-- QUICK CONTACT ROW -->
   <section class="pb-4">
     <div class="container-tight grid sm:grid-cols-3 gap-3">
       <Reveal>
         <a href={`tel:${site.phoneIntl}`} class="block rounded-2xl bg-white ring-1 ring-ink-100 p-5 hover:ring-coral-300 hover:shadow-md transition">
-          <p class="text-xs font-semibold uppercase tracking-wider text-coral-700">Call</p>
+          <p class="text-xs font-semibold uppercase tracking-wider text-coral-700">{qc.call.label}</p>
           <p class="mt-1 text-lg font-display font-semibold text-teal-700">{site.phone}</p>
-          <p class="mt-0.5 text-xs text-ink-500">Straight through to Keith.</p>
+          <p class="mt-0.5 text-xs text-ink-500">{qc.call.title}</p>
         </a>
       </Reveal>
       <Reveal delay={80}>
-        <a href={`https://wa.me/${site.whatsappIntl}?text=Hi%20Keith%2C%20I%27d%20like%20to%20book%20a%20groom%20for%20my%20dog.`} target="_blank" rel="noopener" class="block rounded-2xl bg-whatsapp text-white p-5 hover:bg-green-600 transition">
-          <p class="text-xs font-semibold uppercase tracking-wider text-white/80">WhatsApp</p>
-          <p class="mt-1 text-lg font-display font-semibold">Message Keith</p>
-          <p class="mt-0.5 text-xs text-white/90">Usually a reply within the hour.</p>
+        <a href={`https://wa.me/${site.whatsappIntl}?text=${waMsg}`} target="_blank" rel="noopener" class="block rounded-2xl bg-whatsapp text-white p-5 hover:bg-green-600 transition">
+          <p class="text-xs font-semibold uppercase tracking-wider text-white/80">{qc.whatsapp.label}</p>
+          <p class="mt-1 text-lg font-display font-semibold">{qc.whatsapp.title}</p>
+          <p class="mt-0.5 text-xs text-white/90">{qc.whatsapp.subtitle}</p>
         </a>
       </Reveal>
       <Reveal delay={160}>
         <a href={`mailto:${site.email}`} class="block rounded-2xl bg-white ring-1 ring-ink-100 p-5 hover:ring-coral-300 hover:shadow-md transition">
-          <p class="text-xs font-semibold uppercase tracking-wider text-coral-700">Email</p>
+          <p class="text-xs font-semibold uppercase tracking-wider text-coral-700">{qc.email.label}</p>
           <p class="mt-1 text-base font-display font-semibold text-teal-700 break-all">{site.email}</p>
-          <p class="mt-0.5 text-xs text-ink-500">For non-urgent enquiries.</p>
+          <p class="mt-0.5 text-xs text-ink-500">{qc.email.subtitle}</p>
         </a>
       </Reveal>
     </div>
@@ -55,9 +57,9 @@ const description = `Book Keith's K9 Care — call ${site.phone}, WhatsApp, or s
     <div class="container-tight relative">
       <Reveal class="mb-8">
         <SectionIntro
-          eyebrow="Or use the form"
-          heading="Tell Keith about your dog."
-          description="The more we know up front — breed, coat, age, any nerves — the better we can prep the slot. Keith reads every message and replies personally."
+          eyebrow={f.eyebrow}
+          heading={f.heading}
+          description={f.description}
         />
       </Reveal>
 
@@ -114,10 +116,10 @@ const description = `Book Keith's K9 Care — call ${site.phone}, WhatsApp, or s
           </div>
 
           <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-2 -mx-6 md:-mx-8 -mb-6 md:-mb-8 px-6 md:px-8 pb-6 md:pb-8 mt-3 rounded-b-3xl bg-gradient-to-br from-teal-50/70 to-coral-50/60 border-t border-ink-100">
-            <p class="text-xs text-ink-600">By submitting, you agree we can use your details to reply about your booking. See our <a href="/privacy/" class="text-teal-700 font-semibold hover:text-coral-700">Privacy policy</a>.</p>
+            <p class="text-xs text-ink-600">{f.privacyNote} See our <a href="/privacy/" class="text-teal-700 font-semibold hover:text-coral-700">Privacy policy</a>.</p>
             <button id="kk9-book-submit" type="submit" class="btn-primary justify-center group">
               <span data-label class="inline-flex items-center gap-2">
-                Send to Keith
+                {f.submitLabel}
                 <svg aria-hidden="true" class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
               </span>
               <span data-loading class="hidden inline-flex items-center gap-2">
@@ -125,7 +127,7 @@ const description = `Book Keith's K9 Care — call ${site.phone}, WhatsApp, or s
                   <circle class="opacity-30" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3"></circle>
                   <path class="opacity-80" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                 </svg>
-                Sending…
+                {f.submitLoadingLabel}
               </span>
             </button>
           </div>
@@ -138,28 +140,25 @@ const description = `Book Keith's K9 Care — call ${site.phone}, WhatsApp, or s
   <section class="section bg-ink-50/60">
     <div class="container-tight">
       <Reveal>
-        <SectionIntro
-          eyebrow="Find us"
-          heading="A short drive from anywhere in WF4."
-        />
+        <SectionIntro eyebrow={loc.eyebrow} heading={loc.heading} />
       </Reveal>
       <Reveal class="mt-8 grid md:grid-cols-2 gap-5" delay={100}>
         <div class="rounded-2xl bg-white ring-1 ring-ink-100 p-6">
-          <p class="text-xs font-semibold uppercase tracking-wider text-coral-500 mb-3">Address</p>
+          <p class="text-xs font-semibold uppercase tracking-wider text-coral-500 mb-3">{loc.addressLabel}</p>
           <address class="not-italic text-ink-800 text-lg leading-relaxed">
             {site.address.street}<br/>
             {site.address.locality}, {site.address.region}<br/>
             {site.address.postcode}
           </address>
           <a href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(site.address.street + ', ' + site.address.postcode)}`} target="_blank" rel="noopener" class="btn-ghost mt-4">
-            Get directions
+            {loc.directionsLabel}
             <svg aria-hidden="true" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
           </a>
-          <p class="mt-4 text-sm text-ink-600">A short stroll from Newmillerdam Country Park.</p>
+          <p class="mt-4 text-sm text-ink-600">{loc.addressNote}</p>
         </div>
 
         <div class="rounded-2xl bg-white ring-1 ring-ink-100 p-6">
-          <p class="text-xs font-semibold uppercase tracking-wider text-coral-500 mb-3">Opening hours</p>
+          <p class="text-xs font-semibold uppercase tracking-wider text-coral-500 mb-3">{loc.hoursLabel}</p>
           <ul class="text-ink-800 space-y-1">
             {site.hours.map(h => (
               <li class="flex justify-between gap-4"><span class="font-semibold">{h.day}</span><span>{h.open}–{h.close}</span></li>

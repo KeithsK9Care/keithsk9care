@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import site from '../data/site.json';
+import copy from '../data/copy/faq.json';
 import SectionIntro from '../components/SectionIntro.astro';
 import Reveal from '../components/Reveal.astro';
 import FAQItem from '../components/FAQItem.astro';
@@ -10,28 +11,20 @@ import faqs from '../data/faqs.json';
 import { buildFAQSchema, buildBreadcrumbSchema } from '../lib/schemas';
 import ReviewStrip from '../components/ReviewStrip.astro';
 
-const title = "Frequently asked questions | Keith's K9 Care";
-const description = `Everything dog owners ask before their first appointment at Keith's K9 Care — pricing, puppy first grooms, nervous dogs, qualifications. Hall Green, Wakefield ${site.address.postcode}.`;
+const m = copy.meta;
+const h = copy.hero;
+const cta = copy.contactCta;
 
-// Group FAQs by topic via tags
-const groups = [
-  { eyebrow: "Where & when",        tag: "contact",  heading: "Where, when, and how to book" },
-  { eyebrow: "Qualifications",      tag: "trust",    heading: "Trust & qualifications" },
-  { eyebrow: "Pricing",             tag: "pricing",  heading: "How pricing works" },
-  { eyebrow: "Puppies",             tag: "puppy",    heading: "Puppies and first grooms" },
-  { eyebrow: "Nervous dogs",        tag: "nervous",  heading: "Nervous, rescue & older dogs" },
-];
-
-// Each FAQ goes into the first matching group; collect leftover into "general"
+// Group FAQs by topic via tags (config from copy.json)
 const used = new Set();
-const grouped = groups.map(g => {
-  const items = faqs.filter(f => !used.has(f.q) && f.tags.includes(g.tag));
-  items.forEach(f => used.add(f.q));
+const grouped = copy.groups.map((g: any) => {
+  const items = faqs.filter((f: any) => !used.has(f.q) && f.tags.includes(g.tag));
+  items.forEach((f: any) => used.add(f.q));
   return { ...g, items };
-}).filter(g => g.items.length > 0);
+}).filter((g: any) => g.items.length > 0);
 
-const general = faqs.filter(f => !used.has(f.q));
-if (general.length) grouped.push({ eyebrow: "General", tag: "general", heading: "Other questions", items: general });
+const general = faqs.filter((f: any) => !used.has(f.q));
+if (general.length) grouped.push({ ...copy.generalGroup, items: general });
 
 const faqSchema = buildFAQSchema(faqs);
 const breadcrumbSchema = buildBreadcrumbSchema([
@@ -39,27 +32,23 @@ const breadcrumbSchema = buildBreadcrumbSchema([
   { name: "FAQ", url: `${site.url}/faq/` },
 ]);
 ---
-<Layout title={title} description={description} ogImage="/assets/photos/cockapoo-portrait.jpg">
+<Layout title={m.title} description={m.description} ogImage={m.ogImage}>
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
 
-  <PageHero
-    eyebrow="FAQ"
-    heading="Things people usually ask."
-    body="Quick answers about pricing, qualifications, nervous dogs and puppy first grooms. Can't see your question? Drop Keith a message via the contact form."
-  />
+  <PageHero eyebrow={h.eyebrow} heading={h.heading} body={h.body} />
 
   <ReviewStrip />
 
   <!-- GROUPED FAQS -->
-  {grouped.map((g, gi) => (
+  {grouped.map((g: any, gi: number) => (
     <section class:list={["section", gi % 2 === 0 ? '' : 'bg-teal-50/60']}>
       <div class="container-tight">
         <Reveal class="mb-8">
           <SectionIntro eyebrow={g.eyebrow} heading={g.heading} />
         </Reveal>
         <div class="space-y-3">
-          {g.items.map((f, i) => (
+          {g.items.map((f: any, i: number) => (
             <Reveal delay={i * 50}>
               <FAQItem faq={f} open={gi === 0 && i === 0} />
             </Reveal>
@@ -73,7 +62,7 @@ const breadcrumbSchema = buildBreadcrumbSchema([
   <section class="section">
     <div class="container-wide">
       <Reveal>
-        <ContactCTACard heading="Still got a question?" body="Keith is happy to answer anything about your dog — coat, age, behaviour, breed — before you book." />
+        <ContactCTACard heading={cta.heading} body={cta.body} />
       </Reveal>
     </div>
   </section>

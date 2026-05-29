@@ -112,6 +112,384 @@ collections:
               - { name: heading,     widget: string }
               - { name: body,        widget: text }
 
+      # ─── About page ──────────────────────────────────
+      - file: src/data/copy/about.json
+        label: "About page"
+        name: about
+        fields:
+          - name: meta
+            label: "Page meta (SEO)"
+            widget: object
+            fields:
+              - { name: title,       label: "Page title (SEO)",     widget: string }
+              - { name: description, label: "Meta description",     widget: text }
+              - { name: ogImage,     label: "Social share image",   widget: string }
+          - name: hero
+            label: "Hero section"
+            widget: object
+            fields:
+              - { name: eyebrow,         widget: string }
+              - { name: heading,         label: H1, widget: string }
+              - { name: body,            widget: text }
+              - { name: ctaPrimary,      label: "Primary CTA label", widget: string }
+              - { name: ctaPrimaryHref,  label: "Primary CTA link",  widget: string }
+              - { name: ctaSecondary,    label: "Secondary CTA label", widget: string }
+              - { name: ctaSecondaryHref, label: "Secondary CTA link", widget: string }
+              - { name: photo,           label: "Hero photo",       widget: select, options: ["black-poodle-after-groom","black-poodle-side","border-terrier-after-groom","cockapoo-after-groom","cockapoo-portrait","cocker-spaniel-after-groom","golden-puppy-woodland-1","golden-puppy-woodland-2","golden-puppy-woodland-3","golden-puppy-woodland-4","golden-retriever-puppy-newmillerdam-1","golden-retriever-puppy-newmillerdam-2","keith-with-border-terrier","keith-with-chihuahua","keith-with-cockapoo","keith-with-cocker-spaniel","keith-with-grey-schnauzer"] }
+              - { name: photoAlt,        label: "Hero photo alt",   widget: string }
+          - name: story
+            label: "Story section"
+            widget: object
+            fields:
+              - { name: eyebrow,    widget: string }
+              - { name: heading,    widget: string }
+              - name: paragraphs
+                label: "Body paragraphs"
+                widget: list
+          - name: whyKeith
+            label: "Why Keith — trust pillars"
+            widget: object
+            fields:
+              - { name: eyebrow,    widget: string }
+              - { name: heading,    widget: string }
+              - { name: description, widget: text }
+              - name: pillars
+                label: "6 trust pillars"
+                widget: list
+                max: 6
+                min: 6
+                fields:
+                  - { name: eyebrow, widget: string }
+                  - { name: heading, widget: string }
+                  - { name: body,    widget: text }
+          - name: qualifications
+            label: "Qualifications & insurance"
+            widget: object
+            fields:
+              - { name: eyebrow, widget: string }
+              - { name: heading, widget: string }
+              - name: training
+                widget: object
+                fields:
+                  - { name: eyebrow, widget: string }
+                  - { name: heading, widget: string }
+                  - { name: body,    label: "Body (HTML allowed)", widget: text }
+              - name: insurance
+                widget: object
+                fields:
+                  - { name: eyebrow, widget: string }
+                  - { name: heading, widget: string }
+                  - { name: body,    label: "Body (HTML allowed)", widget: text }
+          - name: salon
+            label: "Salon section"
+            widget: object
+            fields:
+              - { name: eyebrow,    widget: string }
+              - { name: heading,    widget: string }
+              - { name: description, widget: text }
+              - name: photos
+                label: "Salon photos (6)"
+                widget: list
+                max: 6
+                min: 6
+                fields:
+                  - { name: src, label: "Photo", widget: select, options: ["black-poodle-after-groom","black-poodle-side","border-terrier-after-groom","cockapoo-after-groom","cockapoo-portrait","cocker-spaniel-after-groom","golden-puppy-woodland-1","golden-puppy-woodland-2","golden-puppy-woodland-3","golden-puppy-woodland-4","golden-retriever-puppy-newmillerdam-1","golden-retriever-puppy-newmillerdam-2","keith-with-border-terrier","keith-with-chihuahua","keith-with-cockapoo","keith-with-cocker-spaniel","keith-with-grey-schnauzer"] }
+                  - { name: alt, label: "Alt text", widget: string }
+          - name: philosophy
+            label: "How we work"
+            widget: object
+            fields:
+              - { name: eyebrow, widget: string }
+              - { name: heading, widget: string }
+              - name: cards
+                label: "3 cards"
+                widget: list
+                max: 3
+                min: 3
+                fields:
+                  - { name: t, label: Title,   widget: string }
+                  - { name: b, label: Body,    widget: text }
+          - name: contactCta
+            label: "Contact CTA"
+            widget: object
+            fields:
+              - { name: heading, widget: string }
+              - { name: body,    widget: text }
+
+      # ─── Services index page ─────────────────────────
+      - file: src/data/copy/services.json
+        label: "Services page (index)"
+        name: services_page
+        fields:
+          - name: meta
+            widget: object
+            fields:
+              - { name: title,       widget: string }
+              - { name: description, widget: text }
+              - { name: ogImage,     widget: string }
+          - name: hero
+            widget: object
+            fields:
+              - { name: eyebrow, widget: string }
+              - { name: heading, widget: string }
+              - { name: body,    widget: text }
+          - name: transparency
+            label: "Transparency callout"
+            widget: object
+            fields:
+              - { name: eyebrow,    widget: string }
+              - { name: heading,    widget: string }
+              - { name: description, widget: text }
+              - { name: ctaText,    widget: string }
+              - { name: ctaHref,    widget: string }
+          - name: contactCta
+            widget: object
+            fields:
+              - { name: heading, widget: string }
+              - { name: body,    widget: text }
+
+      # ─── Pricing page ────────────────────────────────
+      - file: src/data/copy/pricing.json
+        label: "Pricing page"
+        name: pricing
+        fields:
+          - name: meta
+            widget: object
+            fields:
+              - { name: title,       widget: string }
+              - { name: description, widget: text }
+              - { name: ogImage,     widget: string }
+          - name: hero
+            widget: object
+            fields:
+              - { name: eyebrow, widget: string }
+              - { name: heading, widget: string }
+              - { name: body,    widget: text }
+          - name: addOns
+            label: "Add-ons & surcharges"
+            widget: list
+            fields:
+              - { name: label, widget: string }
+              - { name: from,  label: "From £ (0 = POA)", widget: number, value_type: int }
+              - { name: note,  widget: string, required: false }
+          - name: addOnsIntro
+            widget: object
+            fields:
+              - { name: eyebrow,    widget: string }
+              - { name: heading,    widget: string }
+              - { name: description, widget: text }
+          - name: howPricingWorks
+            widget: object
+            fields:
+              - { name: eyebrow, widget: string }
+              - { name: heading, widget: string }
+              - name: cards
+                widget: list
+                fields:
+                  - { name: t, label: Title, widget: string }
+                  - { name: b, label: Body,  widget: text }
+          - name: contactCta
+            widget: object
+            fields:
+              - { name: heading, widget: string }
+              - { name: body,    widget: text }
+
+      # ─── FAQ page ────────────────────────────────────
+      - file: src/data/copy/faq.json
+        label: "FAQ page"
+        name: faq
+        fields:
+          - name: meta
+            widget: object
+            fields:
+              - { name: title,       widget: string }
+              - { name: description, widget: text }
+              - { name: ogImage,     widget: string }
+          - name: hero
+            widget: object
+            fields:
+              - { name: eyebrow, widget: string }
+              - { name: heading, widget: string }
+              - { name: body,    widget: text }
+          - name: groups
+            label: "FAQ section groups"
+            widget: list
+            fields:
+              - { name: eyebrow, widget: string }
+              - { name: tag,     label: "Tag in faqs.json (contact, trust, pricing, puppy, nervous, etc.)", widget: string }
+              - { name: heading, widget: string }
+          - name: generalGroup
+            label: "Catch-all group (untagged FAQs)"
+            widget: object
+            fields:
+              - { name: eyebrow, widget: string }
+              - { name: tag,     widget: string }
+              - { name: heading, widget: string }
+          - name: contactCta
+            widget: object
+            fields:
+              - { name: heading, widget: string }
+              - { name: body,    widget: text }
+
+      # ─── Book page ───────────────────────────────────
+      - file: src/data/copy/book.json
+        label: "Book page"
+        name: book
+        fields:
+          - name: meta
+            widget: object
+            fields:
+              - { name: title,       widget: string }
+              - { name: description, widget: text }
+              - { name: ogImage,     widget: string }
+          - name: hero
+            widget: object
+            fields:
+              - { name: eyebrow, widget: string }
+              - { name: heading, widget: string }
+              - { name: body,    widget: text }
+          - name: quickContact
+            label: "Top contact cards"
+            widget: object
+            fields:
+              - name: call
+                widget: object
+                fields:
+                  - { name: label,    widget: string }
+                  - { name: title,    widget: string }
+                  - { name: subtitle, widget: string, required: false }
+              - name: whatsapp
+                widget: object
+                fields:
+                  - { name: label,            widget: string }
+                  - { name: title,            widget: string }
+                  - { name: subtitle,         widget: string }
+                  - { name: prefilledMessage, label: "WhatsApp prefilled text", widget: string }
+              - name: email
+                widget: object
+                fields:
+                  - { name: label,    widget: string }
+                  - { name: title,    widget: string, required: false }
+                  - { name: subtitle, widget: string }
+          - name: form
+            widget: object
+            fields:
+              - { name: eyebrow,            widget: string }
+              - { name: heading,            widget: string }
+              - { name: description,        widget: text }
+              - { name: submitLabel,        widget: string }
+              - { name: submitLoadingLabel, widget: string }
+              - { name: privacyNote,        widget: text }
+          - name: location
+            widget: object
+            fields:
+              - { name: eyebrow,          widget: string }
+              - { name: heading,          widget: string }
+              - { name: addressLabel,     widget: string }
+              - { name: hoursLabel,       widget: string }
+              - { name: directionsLabel,  widget: string }
+              - { name: addressNote,      widget: text }
+
+      # ─── Thanks page ─────────────────────────────────
+      - file: src/data/copy/thanks.json
+        label: "Thanks page (post-submit)"
+        name: thanks
+        fields:
+          - name: meta
+            widget: object
+            fields:
+              - { name: title,       widget: string }
+              - { name: description, widget: text }
+              - { name: ogImage,     widget: string }
+          - name: hero
+            widget: object
+            fields:
+              - { name: eyebrow,           widget: string }
+              - { name: heading,           widget: string }
+              - { name: body,              widget: text }
+              - { name: ctaPrimary,        widget: string }
+              - { name: ctaPrimaryHref,    widget: string }
+              - { name: ctaSecondary,      widget: string }
+              - { name: ctaSecondaryHref,  widget: string }
+
+      # ─── Reviews page ────────────────────────────────
+      - file: src/data/copy/reviews.json
+        label: "Reviews page"
+        name: reviews_page
+        fields:
+          - name: meta
+            widget: object
+            fields:
+              - { name: title,       widget: string }
+              - { name: ogImage,     widget: string }
+          - name: hero
+            widget: object
+            fields:
+              - { name: eyebrow,                       widget: string }
+              - { name: body,                          widget: text }
+              - { name: headingWithReviewsTemplate,    label: "Heading template (with reviews)", widget: string, hint: "Use {avg}, {n}, {nounOwners} placeholders." }
+              - { name: headingWithoutReviews,         label: "Heading (no reviews yet)", widget: string }
+              - { name: ctaPrimary,                    widget: string }
+              - { name: ctaPrimaryHref,                widget: string }
+              - { name: ctaSecondary,                  widget: string }
+              - { name: ctaSecondaryHref,              widget: string }
+          - name: contactCta
+            widget: object
+            fields:
+              - { name: heading, widget: string }
+              - { name: body,    widget: text }
+
+      # ─── Groom Stories index page ────────────────────
+      - file: src/data/copy/groom-stories.json
+        label: "Groom Stories (index)"
+        name: groom_stories_page
+        fields:
+          - name: meta
+            widget: object
+            fields:
+              - { name: title,       widget: string }
+              - { name: description, widget: text }
+              - { name: ogImage,     widget: string }
+          - name: hero
+            widget: object
+            fields:
+              - { name: eyebrow,         widget: string }
+              - { name: heading,         widget: string }
+              - { name: body,            widget: text }
+              - { name: ctaPrimary,      widget: string }
+              - { name: ctaPrimaryHref,  widget: string }
+          - name: contactCta
+            widget: object
+            fields:
+              - { name: heading, widget: string }
+              - { name: body,    widget: text }
+
+      # ─── 404 page ────────────────────────────────────
+      - file: src/data/copy/404.json
+        label: "404 page"
+        name: not_found
+        fields:
+          - name: meta
+            widget: object
+            fields:
+              - { name: title,       widget: string }
+              - { name: description, widget: text }
+              - { name: ogImage,     widget: string }
+          - name: hero
+            widget: object
+            fields:
+              - { name: eyebrow,      widget: string }
+              - { name: heading,      widget: string }
+              - { name: body,         widget: text }
+              - { name: callPrompt,   widget: string }
+          - name: links
+            label: "Suggested links"
+            widget: list
+            fields:
+              - { name: label,   widget: string }
+              - { name: href,    widget: string }
+              - { name: variant, label: "Style (primary or secondary)", widget: select, options: ["primary","secondary"], default: "secondary" }
+
   # ─────────────────────────────────────────────────────
   - name: site
     label: "Site settings"

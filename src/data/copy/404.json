@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "title": "Page not found | Keith's K9 Care",
+    "description": "The page you're looking for doesn't exist. Browse our services, see the price guide, or get in touch with Keith.",
+    "ogImage": "/assets/photos/golden-puppy-woodland-1.jpg"
+  },
+  "hero": {
+    "eyebrow": "404",
+    "heading": "We couldn't find that page.",
+    "body": "Lost? Sit. Stay. Try one of these instead:",
+    "callPrompt": "Or call Keith on"
+  },
+  "links": [
+    {
+      "label": "Home",
+      "href": "/",
+      "variant": "primary"
+    },
+    {
+      "label": "Services",
+      "href": "/services/",
+      "variant": "secondary"
+    },
+    {
+      "label": "Pricing",
+      "href": "/pricing/",
+      "variant": "secondary"
+    },
+    {
+      "label": "Get in touch",
+      "href": "/book/",
+      "variant": "secondary"
+    }
+  ]
+}

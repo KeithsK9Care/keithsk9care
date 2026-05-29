@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "title": "Book a groom | Keith's K9 Care",
+    "description": "Book Keith's K9 Care — call, WhatsApp, or send the booking form. Home grooming salon in Hall Green, Wakefield WF4 3QJ.",
+    "ogImage": "/assets/photos/keith-with-chihuahua.jpg"
+  },
+  "hero": {
+    "eyebrow": "Book a groom",
+    "heading": "Get in touch with Keith.",
+    "body": "Keith likes a quick chat about your dog before the first booking — coat type, age, any nerves — so he can pick the right slot. Use the form below, or jump straight to call / WhatsApp."
+  },
+  "quickContact": {
+    "call": {
+      "label": "Call",
+      "title": "Straight through to Keith.",
+      "subtitle": ""
+    },
+    "whatsapp": {
+      "label": "WhatsApp",
+      "title": "Message Keith",
+      "subtitle": "Usually a reply within the hour.",
+      "prefilledMessage": "Hi Keith, I'd like to book a groom for my dog."
+    },
+    "email": {
+      "label": "Email",
+      "title": "",
+      "subtitle": "For non-urgent enquiries."
+    }
+  },
+  "form": {
+    "eyebrow": "Or use the form",
+    "heading": "Tell Keith about your dog.",
+    "description": "The more we know up front — breed, coat, age, any nerves — the better we can prep the slot. Keith reads every message and replies personally.",
+    "submitLabel": "Send to Keith",
+    "submitLoadingLabel": "Sending…",
+    "privacyNote": "By submitting, you agree we can use your details to reply about your booking."
+  },
+  "location": {
+    "eyebrow": "Find us",
+    "heading": "A short drive from anywhere in WF4.",
+    "addressLabel": "Address",
+    "hoursLabel": "Opening hours",
+    "directionsLabel": "Get directions",
+    "addressNote": "A short stroll from Newmillerdam Country Park."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "meta": {
+    "title": "Dog grooming services in Hall Green, Wakefield | Keith's K9 Care",
+    "description": "Full grooms, puppy first grooms, bath & tidy, nail trims, de-matting and hand stripping. IPET-qualified, one dog at a time in Hall Green, Wakefield WF4.",
+    "ogImage": "/assets/photos/cockapoo-after-groom.jpg"
+  },
+  "hero": {
+    "eyebrow": "Services",
+    "heading": "What we do.",
+    "body": "Six core dog grooming services — from a 45-minute puppy intro right through to a full hand-stripped terrier groom. Every coat type welcome, every dog at their own pace."
+  },
+  "transparency": {
+    "eyebrow": "No surprises",
+    "heading": "All our prices are published.",
+    "description": "Most local groomers won't tell you what they charge until you ring. We do — small dogs from £40, medium from £50, large or doodles from £60 for a full groom. Surcharges are listed too.",
+    "ctaText": "See the full price guide",
+    "ctaHref": "/pricing/"
+  },
+  "contactCta": {
+    "heading": "Not sure which service is right for your dog?",
+    "body": "Drop Keith a quick message — he'll help you pick the right slot based on coat, age and any nerves."
+  }
+}

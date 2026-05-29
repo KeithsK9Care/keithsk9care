@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import site from '../data/site.json';
+import copy from '../data/copy/about.json';
 import Picture from '../components/Picture.astro';
 import SectionIntro from '../components/SectionIntro.astro';
 import Reveal from '../components/Reveal.astro';
@@ -10,8 +11,24 @@ import PhotoGrid from '../components/PhotoGrid.astro';
 import { buildPersonSchema, buildBreadcrumbSchema } from '../lib/schemas';
 import ReviewStrip from '../components/ReviewStrip.astro';
 
-const title = "Meet Keith Kershaw, IPET-qualified dog groomer | Keith's K9 Care";
-const description = "Meet Keith Kershaw — IPET-qualified dog groomer (Mrs B's Academy, Leeds). Home salon in Hall Green, Wakefield WF4. One dog at a time, in a quiet home.";
+const m = copy.meta;
+const h = copy.hero;
+const story = copy.story;
+const why = copy.whyKeith;
+const qual = copy.qualifications;
+const salon = copy.salon;
+const phil = copy.philosophy;
+const cta = copy.contactCta;
+
+// Decorative icons keyed positionally to whyKeith.pillars
+const PILLAR_ICONS = [
+  `<svg aria-hidden="true" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`,
+  `<svg aria-hidden="true" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>`,
+  `<svg aria-hidden="true" class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><circle cx="8" cy="6" r="2.2"/><circle cx="16" cy="6" r="2.2"/><circle cx="5" cy="11" r="1.8"/><circle cx="19" cy="11" r="1.8"/><path d="M12 11c-3 0-6 2.5-6 5.5C6 19 8 21 12 21s6-2 6-4.5c0-3-3-5.5-6-5.5z"/></svg>`,
+  `<svg aria-hidden="true" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-2.21 0-4-1.79-4-4 0-1.86 1.275-3.426 3-3.874M12 6V4m0 16v-2"/></svg>`,
+  `<svg aria-hidden="true" class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M11.645 20.91a.75.75 0 00.71 0c3.78-2.082 8.395-6.04 8.395-11.16 0-3.073-2.488-5.5-5.5-5.5-1.886 0-3.55.92-4.5 2.337C9.8 5.17 8.136 4.25 6.25 4.25c-3.012 0-5.5 2.427-5.5 5.5 0 5.12 4.615 9.078 8.395 11.16z"/></svg>`,
+  `<svg aria-hidden="true" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0L6.343 16.657A8 8 0 1117.657 16.657z"/><circle cx="12" cy="11" r="3" stroke-width="1.6"/></svg>`,
+];
 
 const personSchema = buildPersonSchema({
   url: `${site.url}/about/`,
@@ -20,7 +37,7 @@ const personSchema = buildPersonSchema({
   alumniOf: "Mrs B's Grooming Academy, Leeds",
   worksFor: site.name,
   worksForUrl: site.url,
-  image: `${site.url}/assets/photos/keith-with-cocker-spaniel-800.jpg`,
+  image: `${site.url}/assets/photos/${h.photo}-800.jpg`,
   knowsAbout: ["Dog grooming", "Puppy grooming", "Hand stripping", "De-matting", "Nervous dog handling", "Doodle and cockapoo grooming"],
 });
 
@@ -29,7 +46,7 @@ const breadcrumbSchema = buildBreadcrumbSchema([
   { name: "About Keith", url: `${site.url}/about/` },
 ]);
 ---
-<Layout title={title} description={description} ogImage="/assets/photos/keith-with-cocker-spaniel.jpg">
+<Layout title={m.title} description={m.description} ogImage={m.ogImage}>
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(personSchema)} />
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
 
@@ -38,18 +55,16 @@ const breadcrumbSchema = buildBreadcrumbSchema([
     <div class="container-tight grid md:grid-cols-5 gap-10 md:gap-14 items-center">
       <Reveal class="md:col-span-2">
         <div class="relative rounded-3xl overflow-hidden ring-1 ring-ink-100 shadow-xl shadow-teal-900/10 aspect-[4/5]">
-          <Picture src="keith-with-cocker-spaniel" size={800} alt="Keith Kershaw, IPET-qualified dog groomer at Keith's K9 Care, Hall Green" width={800} height={1000} priority />
+          <Picture src={h.photo} size={800} alt={h.photoAlt} width={800} height={1000} priority />
         </div>
       </Reveal>
       <Reveal class="md:col-span-3" delay={120}>
-        <p class="text-sm font-semibold uppercase tracking-wider text-coral-700">About</p>
-        <h1 class="mt-3 text-4xl md:text-5xl lg:text-6xl leading-[1.05]">Meet Keith.</h1>
-        <p class="mt-6 text-lg md:text-xl text-ink-700 leading-relaxed max-w-xl">
-          IPET-qualified dog groomer, ex-lawyer, and the only person your dog will see during a groom at Keith's K9 Care. One dog. One groomer. One quiet room.
-        </p>
+        <p class="text-sm font-semibold uppercase tracking-wider text-coral-700">{h.eyebrow}</p>
+        <h1 class="mt-3 text-4xl md:text-5xl lg:text-6xl leading-[1.05]">{h.heading}</h1>
+        <p class="mt-6 text-lg md:text-xl text-ink-700 leading-relaxed max-w-xl">{h.body}</p>
         <div class="mt-7 flex flex-wrap gap-3">
-          <a href="/book/" class="btn-primary">Book a Groom</a>
-          <a href="/services/" class="btn-secondary">See Services</a>
+          <a href={h.ctaPrimaryHref} class="btn-primary">{h.ctaPrimary}</a>
+          <a href={h.ctaSecondaryHref} class="btn-secondary">{h.ctaSecondary}</a>
         </div>
       </Reveal>
     </div>
@@ -61,16 +76,10 @@ const breadcrumbSchema = buildBreadcrumbSchema([
   <section class="section">
     <div class="container-tight">
       <Reveal>
-        <SectionIntro
-          eyebrow="The story"
-          heading="From the law to the grooming table."
-        />
+        <SectionIntro eyebrow={story.eyebrow} heading={story.heading} />
       </Reveal>
       <Reveal class="mt-8 prose-style space-y-5 text-lg text-ink-700 leading-relaxed max-w-2xl" delay={120}>
-        <p>For decades, Keith worked in law — meticulous, careful, used to getting the details right under pressure. It's the kind of work that teaches you to listen properly before you act. Two qualities, it turns out, that translate unusually well to dog grooming.</p>
-        <p>During lockdown, Keith and his wife welcomed two golden retriever brothers — Ringo and Rolo — into their lives. What followed was a crash course in just how much mischief two exuberant retrievers can find: mud, puddles, unidentifiable countryside discoveries, and more baths than anyone had bargained for.</p>
-        <p>Somewhere in all that, Keith discovered he loved the grooming process — the calm of it, the care, the transformation at the end. He went on to qualify with the IPET Network at Mrs B's Grooming Academy in Leeds, where his trainers noted his natural ability to put dogs at ease. (It turns out a courtroom voice, used gently, is also a very good "stay still while I do your nails" voice.)</p>
-        <p>Keith brings the same professionalism and attention to detail to every groom that he has applied throughout his working life. Whether it's a cockapoo's first groom, a senior schnauzer who's a bit grumpy about clippers, or a retriever who's been swimming again — your dog is in safe, experienced hands.</p>
+        {story.paragraphs.map((p: string) => (<p>{p}</p>))}
       </Reveal>
     </div>
   </section>
@@ -79,54 +88,13 @@ const breadcrumbSchema = buildBreadcrumbSchema([
   <section class="section bg-teal-50/40">
     <div class="container-wide">
       <Reveal class="mb-10">
-        <SectionIntro
-          eyebrow="Why Keith"
-          heading="What sets Keith's K9 Care apart."
-          description="It boils down to six things — most of which other groomers can't (or won't) match."
-        />
+        <SectionIntro eyebrow={why.eyebrow} heading={why.heading} description={why.description} />
       </Reveal>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-        {[
-          {
-            eyebrow: "Training",
-            heading: "IPET qualified",
-            body: "Trained with the iPET Network at Mrs B\'s Grooming Academy in Leeds — a regulated UK awarding body, not a weekend course.",
-            icon: `<svg aria-hidden="true" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`
-          },
-          {
-            eyebrow: "Cover",
-            heading: "Fully insured",
-            body: "Public liability and care, custody &amp; control cover for every dog in the salon. Certificates available on request.",
-            icon: `<svg aria-hidden="true" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>`
-          },
-          {
-            eyebrow: "Pace",
-            heading: "One dog at a time",
-            body: "No kennels, no shared dryers, no other dogs barking through the wall. Your dog has Keith\'s full attention.",
-            icon: `<svg aria-hidden="true" class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><circle cx="8" cy="6" r="2.2"/><circle cx="16" cy="6" r="2.2"/><circle cx="5" cy="11" r="1.8"/><circle cx="19" cy="11" r="1.8"/><path d="M12 11c-3 0-6 2.5-6 5.5C6 19 8 21 12 21s6-2 6-4.5c0-3-3-5.5-6-5.5z"/></svg>`
-          },
-          {
-            eyebrow: "Pricing",
-            heading: "Published, transparent",
-            body: "Small dogs from £40, medium from £50, large/doodles from £60. Surcharges listed. Keith confirms in person before he starts.",
-            icon: `<svg aria-hidden="true" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-2.21 0-4-1.79-4-4 0-1.86 1.275-3.426 3-3.874M12 6V4m0 16v-2"/></svg>`
-          },
-          {
-            eyebrow: "Honesty",
-            heading: "Welfare first",
-            body: "If a heavily matted coat can\'t be saved kindly, we\'ll say so. If your dog gets too anxious, we stop and call you. Always.",
-            icon: `<svg aria-hidden="true" class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M11.645 20.91a.75.75 0 00.71 0c3.78-2.082 8.395-6.04 8.395-11.16 0-3.073-2.488-5.5-5.5-5.5-1.886 0-3.55.92-4.5 2.337C9.8 5.17 8.136 4.25 6.25 4.25c-3.012 0-5.5 2.427-5.5 5.5 0 5.12 4.615 9.078 8.395 11.16z"/></svg>`
-          },
-          {
-            eyebrow: "Local",
-            heading: "WF4 home patch",
-            body: "On Castle Meadows in Hall Green — a short stroll from Newmillerdam Country Park. Most customers are within a 5-minute drive.",
-            icon: `<svg aria-hidden="true" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0L6.343 16.657A8 8 0 1117.657 16.657z"/><circle cx="12" cy="11" r="3" stroke-width="1.6"/></svg>`
-          },
-        ].map((p, i) => (
+        {why.pillars.map((p: any, i: number) => (
           <Reveal delay={i * 70}>
             <div class="rounded-2xl bg-white ring-1 ring-ink-100 p-6 h-full">
-              <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-coral-50 text-coral-700 mb-4" set:html={p.icon}></div>
+              <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-coral-50 text-coral-700 mb-4" set:html={PILLAR_ICONS[i] || ''}></div>
               <p class="text-xs font-semibold uppercase tracking-wider text-coral-700">{p.eyebrow}</p>
               <h3 class="mt-1 text-xl">{p.heading}</h3>
               <p class="mt-3 text-ink-700 leading-relaxed text-sm" set:html={p.body}></p>
@@ -141,20 +109,17 @@ const breadcrumbSchema = buildBreadcrumbSchema([
   <section class="section bg-teal-50/60">
     <div class="container-wide">
       <Reveal>
-        <SectionIntro
-          eyebrow="Qualifications & insurance"
-          heading="Properly trained. Properly insured."
-        />
+        <SectionIntro eyebrow={qual.eyebrow} heading={qual.heading} />
       </Reveal>
       <div class="mt-10 grid md:grid-cols-2 gap-6">
         <Reveal>
-          <InfoCard eyebrow="Training" heading="IPET Network qualified">
-            Keith completed his iPET Network qualification at <strong>Mrs B's Grooming Academy in Leeds</strong> — one of West Yorkshire's most respected practical training schools. The iPET Network is an Ofqual-regulated awarding body for the UK pet industry; certificates aren't pieces of paper, they're verifiable.
+          <InfoCard eyebrow={qual.training.eyebrow} heading={qual.training.heading}>
+            <Fragment set:html={qual.training.body} />
           </InfoCard>
         </Reveal>
         <Reveal delay={100}>
-          <InfoCard eyebrow="Insurance" heading="Fully insured">
-            Public liability and care, custody & control cover for every dog in the salon. Happy to share certificate details on request before your first booking.
+          <InfoCard eyebrow={qual.insurance.eyebrow} heading={qual.insurance.heading}>
+            <Fragment set:html={qual.insurance.body} />
           </InfoCard>
         </Reveal>
       </div>
@@ -165,21 +130,10 @@ const breadcrumbSchema = buildBreadcrumbSchema([
   <section class="section">
     <div class="container-wide">
       <Reveal>
-        <SectionIntro
-          eyebrow="The salon"
-          heading="A home, not a clinic."
-          description="The salon is a fully equipped, purpose-built converted garage at our home in Hall Green — a quiet street between Newmillerdam and Chapelthorpe. No barking neighbours. No queue. Your dog gets the whole room."
-        />
+        <SectionIntro eyebrow={salon.eyebrow} heading={salon.heading} description={salon.description} />
       </Reveal>
       <div class="mt-10">
-        <PhotoGrid photos={[
-          { src: 'cockapoo-after-groom',      alt: "Cockapoo after a full groom in Keith's K9 Care home salon, Hall Green WF4" },
-          { src: 'keith-with-grey-schnauzer', alt: 'Keith with a freshly-groomed grey schnauzer' },
-          { src: 'black-poodle-after-groom',  alt: 'Black miniature poodle after a full groom' },
-          { src: 'keith-with-border-terrier', alt: 'Keith with a hand-stripped border terrier' },
-          { src: 'cocker-spaniel-after-groom', alt: 'Cocker spaniel after a hand-stripped groom' },
-          { src: 'keith-with-chihuahua',      alt: 'Keith with a chihuahua, gently doing a small-dog tidy' },
-        ]} cols={3} />
+        <PhotoGrid photos={salon.photos} cols={3} />
       </div>
     </div>
   </section>
@@ -188,15 +142,11 @@ const breadcrumbSchema = buildBreadcrumbSchema([
   <section class="section bg-ink-50/60">
     <div class="container-tight">
       <Reveal>
-        <p class="text-sm font-semibold uppercase tracking-wider text-coral-700">How we work</p>
-        <h2 class="mt-3 text-3xl md:text-4xl leading-tight">Calm pace. Clear pricing. No surprises.</h2>
+        <p class="text-sm font-semibold uppercase tracking-wider text-coral-700">{phil.eyebrow}</p>
+        <h2 class="mt-3 text-3xl md:text-4xl leading-tight">{phil.heading}</h2>
       </Reveal>
       <div class="mt-8 grid md:grid-cols-3 gap-5">
-        {[
-          { t: "One dog at a time", b: "No kennel, no shared dryer noise, no dogs barking through the wall. Your dog has Keith's full attention from arrival to handover." },
-          { t: "Honest about coats", b: "If a coat is heavily matted, the kindest thing is sometimes a fresh start. We'll talk you through it before we pick up the clippers." },
-          { t: "Pace led by the dog", b: "Nervous dogs and first-time puppies get breaks, treats, and as much sniff-around time as they need. The bill reflects the real time, but never a surprise." },
-        ].map((card, i) => (
+        {phil.cards.map((card: any, i: number) => (
           <Reveal delay={i * 100}>
             <InfoCard heading={card.t}>{card.b}</InfoCard>
           </Reveal>
@@ -209,7 +159,7 @@ const breadcrumbSchema = buildBreadcrumbSchema([
   <section class="section">
     <div class="container-wide">
       <Reveal>
-        <ContactCTACard heading="Like the sound of how Keith works?" body="Drop him a message — he prefers a quick chat about your dog before booking the first appointment." />
+        <ContactCTACard heading={cta.heading} body={cta.body} />
       </Reveal>
     </div>
   </section>

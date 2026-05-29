@@ -1,0 +1,71 @@
+{
+  "meta": {
+    "title": "Dog grooming prices in Hall Green | Keith's K9 Care",
+    "description": "Full published price guide with breed examples — small dogs from £40, medium from £50, large or doodles from £60 for a full groom. Hall Green, Wakefield WF4.",
+    "ogImage": "/assets/photos/cockapoo-after-groom.jpg"
+  },
+  "hero": {
+    "eyebrow": "Pricing",
+    "heading": "No surprises. Prices on the page.",
+    "body": "Honest dog grooming prices, published. Most local groomers won't tell you what they charge until you ring — we will. Prices start from the figures shown and may vary a little by breed, coat condition and behaviour. Keith always confirms before he starts."
+  },
+  "addOns": [
+    {
+      "label": "Single nail trim (between grooms)",
+      "from": 10,
+      "note": ""
+    },
+    {
+      "label": "Ear clean + check (between grooms)",
+      "from": 5,
+      "note": ""
+    },
+    {
+      "label": "Matted coat surcharge (light)",
+      "from": 10,
+      "note": ""
+    },
+    {
+      "label": "Anxious / nervous handling allowance",
+      "from": 10,
+      "note": "up to +£20 depending on time taken"
+    },
+    {
+      "label": "Severe matting strip-clip (welfare-first)",
+      "from": 60,
+      "note": "honestly assessed on the day"
+    },
+    {
+      "label": "Extra time for heavy coats or long gaps between grooms",
+      "from": 0,
+      "note": "priced by the half-hour"
+    }
+  ],
+  "addOnsIntro": {
+    "eyebrow": "Add-ons & surcharges",
+    "heading": "Anything extra is added honestly.",
+    "description": "If a coat needs more time than the standard tier, we'll say so up-front. Nothing's a surprise on the bill."
+  },
+  "howPricingWorks": {
+    "eyebrow": "How pricing works",
+    "heading": "Three rules.",
+    "cards": [
+      {
+        "t": "Quoted before we start",
+        "b": "After meeting your dog and assessing the coat, Keith will confirm the price before the bath begins. No surprises after."
+      },
+      {
+        "t": "By coat, not stopwatch",
+        "b": "Two cockapoos can be £20 apart — one might be a tangle, one might be perfect. We price the work, not the diary slot."
+      },
+      {
+        "t": "Welfare wins",
+        "b": "If a severely matted coat can't be saved kindly, a clip-down is cheaper than de-matting and better for your dog. We'll always tell you."
+      }
+    ]
+  },
+  "contactCta": {
+    "heading": "Got a breed or coat we haven't listed?",
+    "body": "Send Keith a quick photo and he'll give you a proper price estimate before you book."
+  }
+}

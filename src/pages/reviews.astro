@@ -2,25 +2,34 @@
 import Layout from '../layouts/Layout.astro';
 import site from '../data/site.json';
 import reviews from '../data/reviews.json';
+import copy from '../data/copy/reviews.json';
 import PageHero from '../components/PageHero.astro';
 import ReviewCard from '../components/ReviewCard.astro';
 import Reveal from '../components/Reveal.astro';
 import ContactCTACard from '../components/ContactCTACard.astro';
 import { buildReviewSchema, buildAggregateRatingSchema, buildBreadcrumbSchema } from '../lib/schemas';
 
+const m = copy.meta;
+const h = copy.hero;
+const cta = copy.contactCta;
+
 const sorted = [...reviews].sort((a, b) => (b.date || '').localeCompare(a.date || ''));
 const ratings = reviews.map(r => r.rating);
 const hasReviews = reviews.length > 0;
 const avg = hasReviews ? (ratings.reduce((a, b) => a + b, 0) / ratings.length).toFixed(1) : '0';
 
-const title = "Reviews | Keith's K9 Care";
+const heading = hasReviews
+  ? h.headingWithReviewsTemplate
+      .replace('{avg}', String(avg))
+      .replace('{n}', String(reviews.length))
+      .replace('{nounOwners}', reviews.length === 1 ? 'owner' : 'owners')
+  : h.headingWithoutReviews;
+
 const description = hasReviews
   ? `${reviews.length} ${reviews.length === 1 ? 'review' : 'reviews'} from dog owners across Hall Green, Newmillerdam, Crigglestone, Sandal and the wider Wakefield area. ${avg} out of 5 average.`
   : `Reviews from dog owners at Keith\'s K9 Care, Hall Green Wakefield WF4. New reviews coming soon.`;
 
 const businessId = `${site.url}/#business`;
-// Only emit Review / AggregateRating schema if there are actually reviews — Google flags empty
-// AggregateRating with ratingCount=0 as invalid structured data.
 const reviewSchema = hasReviews ? buildReviewSchema({
   url: `${site.url}/reviews/`,
   businessId,
@@ -33,18 +42,14 @@ const breadcrumbSchema = buildBreadcrumbSchema([
   { name: "Reviews", url: `${site.url}/reviews/` },
 ]);
 ---
-<Layout title={title} description={description} ogImage="/assets/photos/keith-with-cocker-spaniel.jpg">
+<Layout title={m.title} description={description} ogImage={m.ogImage}>
   {reviewSchema    && <script slot="head" type="application/ld+json" set:html={JSON.stringify(reviewSchema)} />}
   {aggregateSchema && <script slot="head" type="application/ld+json" set:html={JSON.stringify(aggregateSchema)} />}
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
 
-  <PageHero
-    eyebrow="Reviews"
-    heading={hasReviews ? `${avg} out of 5 — from ${reviews.length} dog ${reviews.length === 1 ? "owner" : "owners"}.` : "Reviews coming soon."}
-    body="Dog grooming reviews from local owners — coat type, service, the lot. Honest, unfiltered, locally collected after each visit."
-  >
-    <a href="/book/" class="btn-primary">Book your dog in</a>
-    <a href="/services/" class="btn-secondary">See services</a>
+  <PageHero eyebrow={h.eyebrow} heading={heading} body={h.body}>
+    <a href={h.ctaPrimaryHref} class="btn-primary">{h.ctaPrimary}</a>
+    <a href={h.ctaSecondaryHref} class="btn-secondary">{h.ctaSecondary}</a>
   </PageHero>
 
   <section class="section">
@@ -62,7 +67,7 @@ const breadcrumbSchema = buildBreadcrumbSchema([
   <section class="section">
     <div class="container-wide">
       <Reveal>
-        <ContactCTACard heading="Want to leave a review?" body="If Keith's groomed your dog, drop him a message — he'll send you the Google review link and (with permission) feature your words here too." />
+        <ContactCTACard heading={cta.heading} body={cta.body} />
       </Reveal>
     </div>
   </section>

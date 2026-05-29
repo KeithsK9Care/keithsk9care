@@ -1,0 +1,20 @@
+{
+  "meta": {
+    "title": "Reviews | Keith's K9 Care",
+    "ogImage": "/assets/photos/keith-with-cocker-spaniel.jpg"
+  },
+  "hero": {
+    "eyebrow": "Reviews",
+    "body": "Dog grooming reviews from local owners — coat type, service, the lot. Honest, unfiltered, locally collected after each visit.",
+    "headingWithReviewsTemplate": "{avg} out of 5 — from {n} dog {nounOwners}.",
+    "headingWithoutReviews": "Reviews coming soon.",
+    "ctaPrimary": "Book your dog in",
+    "ctaPrimaryHref": "/book/",
+    "ctaSecondary": "See services",
+    "ctaSecondaryHref": "/services/"
+  },
+  "contactCta": {
+    "heading": "Want to leave a review?",
+    "body": "If Keith's groomed your dog, drop him a message — he'll send you the Google review link and (with permission) feature your words here too."
+  }
+}

@@ -2,31 +2,29 @@
 import Layout from '../../layouts/Layout.astro';
 import site from '../../data/site.json';
 import stories from '../../data/groom-stories.json';
+import copy from '../../data/copy/groom-stories.json';
 import PageHero from '../../components/PageHero.astro';
 import Picture from '../../components/Picture.astro';
 import Reveal from '../../components/Reveal.astro';
 import ContactCTACard from '../../components/ContactCTACard.astro';
 import { buildBreadcrumbSchema } from '../../lib/schemas';
 
-const sorted = [...stories].sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+const m = copy.meta;
+const h = copy.hero;
+const cta = copy.contactCta;
 
-const title = "Groom Stories | Keith's K9 Care";
-const description = `Real grooming case studies — before & after, what Keith did and why. From de-matting and hand stripping to a calm first puppy groom in Hall Green, Wakefield WF4.`;
+const sorted = [...stories].sort((a, b) => (b.date || '').localeCompare(a.date || ''));
 
 const breadcrumbSchema = buildBreadcrumbSchema([
   { name: "Home", url: `${site.url}/` },
   { name: "Groom Stories", url: `${site.url}/groom-stories/` },
 ]);
 ---
-<Layout title={title} description={description} ogImage="/assets/photos/cockapoo-after-groom.jpg">
+<Layout title={m.title} description={m.description} ogImage={m.ogImage}>
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
 
-  <PageHero
-    eyebrow="Groom Stories"
-    heading="Real grooms. Honest stories."
-    body="Before & after walk-throughs of the trickier visits — de-matting, hand-stripping comebacks, first puppy grooms. The work, in Keith's own words."
-  >
-    <a href="/book/" class="btn-primary">Book your dog in</a>
+  <PageHero eyebrow={h.eyebrow} heading={h.heading} body={h.body}>
+    <a href={h.ctaPrimaryHref} class="btn-primary">{h.ctaPrimary}</a>
   </PageHero>
 
   <section class="section">
@@ -55,7 +53,7 @@ const breadcrumbSchema = buildBreadcrumbSchema([
   <section class="section">
     <div class="container-wide">
       <Reveal>
-        <ContactCTACard heading="Got a tricky coat or a nervous dog?" body="Send Keith a photo or two and he'll honestly walk you through what to expect before you book." />
+        <ContactCTACard heading={cta.heading} body={cta.body} />
       </Reveal>
     </div>
   </section>
