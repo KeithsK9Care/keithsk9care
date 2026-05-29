@@ -29,6 +29,10 @@ const {
   heroPreload,
 } = Astro.props;
 
+// ogImage accepts either a full path ("/assets/photos/X.jpg") or a filename stub ("X").
+// Stubs let the CMS use a simple Sveltia `select` widget. We normalise to a full path here.
+const ogPath = ogImage.startsWith('/') ? ogImage : `/assets/photos/${ogImage}.jpg`;
+
 const localBusiness = buildLocalBusinessSchema(site, services);
 ---
 <!DOCTYPE html>
@@ -52,13 +56,13 @@ const localBusiness = buildLocalBusinessSchema(site, services);
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_GB" />
   <meta property="og:url" content={canonical} />
-  <meta property="og:image" content={new URL(ogImage, Astro.site).toString()} />
+  <meta property="og:image" content={new URL(ogPath, Astro.site).toString()} />
   <meta property="og:site_name" content={site.name} />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
-  <meta name="twitter:image" content={new URL(ogImage, Astro.site).toString()} />
+  <meta name="twitter:image" content={new URL(ogPath, Astro.site).toString()} />
 
   <ClientRouter />
   <slot name="head" />

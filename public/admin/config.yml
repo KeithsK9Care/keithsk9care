@@ -123,7 +123,7 @@ collections:
             fields:
               - { name: title,       label: "Page title (SEO)",     widget: string }
               - { name: description, label: "Meta description",     widget: text }
-              - { name: ogImage,     label: "Social share image",   widget: string }
+              - { name: ogImage,     label: "Social share image (og:image)", widget: select, options: ["black-poodle-after-groom","black-poodle-side","border-terrier-after-groom","cockapoo-after-groom","cockapoo-portrait","cocker-spaniel-after-groom","golden-puppy-woodland-1","golden-puppy-woodland-2","golden-puppy-woodland-3","golden-puppy-woodland-4","golden-retriever-puppy-newmillerdam-1","golden-retriever-puppy-newmillerdam-2","keith-with-border-terrier","keith-with-chihuahua","keith-with-cockapoo","keith-with-cocker-spaniel","keith-with-grey-schnauzer"], hint: "Picked from photo library. Pick a striking one — this is what shows in WhatsApp / Facebook previews." }
           - name: hero
             label: "Hero section"
             widget: object
@@ -226,7 +226,7 @@ collections:
             fields:
               - { name: title,       widget: string }
               - { name: description, widget: text }
-              - { name: ogImage,     widget: string }
+              - { name: ogImage,     label: "Social share image (og:image)", widget: select, options: ["black-poodle-after-groom","black-poodle-side","border-terrier-after-groom","cockapoo-after-groom","cockapoo-portrait","cocker-spaniel-after-groom","golden-puppy-woodland-1","golden-puppy-woodland-2","golden-puppy-woodland-3","golden-puppy-woodland-4","golden-retriever-puppy-newmillerdam-1","golden-retriever-puppy-newmillerdam-2","keith-with-border-terrier","keith-with-chihuahua","keith-with-cockapoo","keith-with-cocker-spaniel","keith-with-grey-schnauzer"], hint: "Picked from photo library. Pick a striking one — this is what shows in WhatsApp / Facebook previews." }
           - name: hero
             widget: object
             fields:
@@ -258,7 +258,7 @@ collections:
             fields:
               - { name: title,       widget: string }
               - { name: description, widget: text }
-              - { name: ogImage,     widget: string }
+              - { name: ogImage,     label: "Social share image (og:image)", widget: select, options: ["black-poodle-after-groom","black-poodle-side","border-terrier-after-groom","cockapoo-after-groom","cockapoo-portrait","cocker-spaniel-after-groom","golden-puppy-woodland-1","golden-puppy-woodland-2","golden-puppy-woodland-3","golden-puppy-woodland-4","golden-retriever-puppy-newmillerdam-1","golden-retriever-puppy-newmillerdam-2","keith-with-border-terrier","keith-with-chihuahua","keith-with-cockapoo","keith-with-cocker-spaniel","keith-with-grey-schnauzer"], hint: "Picked from photo library. Pick a striking one — this is what shows in WhatsApp / Facebook previews." }
           - name: hero
             widget: object
             fields:
@@ -304,7 +304,7 @@ collections:
             fields:
               - { name: title,       widget: string }
               - { name: description, widget: text }
-              - { name: ogImage,     widget: string }
+              - { name: ogImage,     label: "Social share image (og:image)", widget: select, options: ["black-poodle-after-groom","black-poodle-side","border-terrier-after-groom","cockapoo-after-groom","cockapoo-portrait","cocker-spaniel-after-groom","golden-puppy-woodland-1","golden-puppy-woodland-2","golden-puppy-woodland-3","golden-puppy-woodland-4","golden-retriever-puppy-newmillerdam-1","golden-retriever-puppy-newmillerdam-2","keith-with-border-terrier","keith-with-chihuahua","keith-with-cockapoo","keith-with-cocker-spaniel","keith-with-grey-schnauzer"], hint: "Picked from photo library. Pick a striking one — this is what shows in WhatsApp / Facebook previews." }
           - name: hero
             widget: object
             fields:
@@ -341,7 +341,7 @@ collections:
             fields:
               - { name: title,       widget: string }
               - { name: description, widget: text }
-              - { name: ogImage,     widget: string }
+              - { name: ogImage,     label: "Social share image (og:image)", widget: select, options: ["black-poodle-after-groom","black-poodle-side","border-terrier-after-groom","cockapoo-after-groom","cockapoo-portrait","cocker-spaniel-after-groom","golden-puppy-woodland-1","golden-puppy-woodland-2","golden-puppy-woodland-3","golden-puppy-woodland-4","golden-retriever-puppy-newmillerdam-1","golden-retriever-puppy-newmillerdam-2","keith-with-border-terrier","keith-with-chihuahua","keith-with-cockapoo","keith-with-cocker-spaniel","keith-with-grey-schnauzer"], hint: "Picked from photo library. Pick a striking one — this is what shows in WhatsApp / Facebook previews." }
           - name: hero
             widget: object
             fields:
@@ -400,7 +400,7 @@ collections:
             fields:
               - { name: title,       widget: string }
               - { name: description, widget: text }
-              - { name: ogImage,     widget: string }
+              - { name: ogImage,     label: "Social share image (og:image)", widget: select, options: ["black-poodle-after-groom","black-poodle-side","border-terrier-after-groom","cockapoo-after-groom","cockapoo-portrait","cocker-spaniel-after-groom","golden-puppy-woodland-1","golden-puppy-woodland-2","golden-puppy-woodland-3","golden-puppy-woodland-4","golden-retriever-puppy-newmillerdam-1","golden-retriever-puppy-newmillerdam-2","keith-with-border-terrier","keith-with-chihuahua","keith-with-cockapoo","keith-with-cocker-spaniel","keith-with-grey-schnauzer"], hint: "Picked from photo library. Pick a striking one — this is what shows in WhatsApp / Facebook previews." }
           - name: hero
             widget: object
             fields:
@@ -421,7 +421,7 @@ collections:
             widget: object
             fields:
               - { name: title,       widget: string }
-              - { name: ogImage,     widget: string }
+              - { name: ogImage,     label: "Social share image (og:image)", widget: select, options: ["black-poodle-after-groom","black-poodle-side","border-terrier-after-groom","cockapoo-after-groom","cockapoo-portrait","cocker-spaniel-after-groom","golden-puppy-woodland-1","golden-puppy-woodland-2","golden-puppy-woodland-3","golden-puppy-woodland-4","golden-retriever-puppy-newmillerdam-1","golden-retriever-puppy-newmillerdam-2","keith-with-border-terrier","keith-with-chihuahua","keith-with-cockapoo","keith-with-cocker-spaniel","keith-with-grey-schnauzer"], hint: "Picked from photo library. Pick a striking one — this is what shows in WhatsApp / Facebook previews." }
           - name: hero
             widget: object
             fields:
@@ -449,7 +449,7 @@ collections:
             fields:
               - { name: title,       widget: string }
               - { name: description, widget: text }
-              - { name: ogImage,     widget: string }
+              - { name: ogImage,     label: "Social share image (og:image)", widget: select, options: ["black-poodle-after-groom","black-poodle-side","border-terrier-after-groom","cockapoo-after-groom","cockapoo-portrait","cocker-spaniel-after-groom","golden-puppy-woodland-1","golden-puppy-woodland-2","golden-puppy-woodland-3","golden-puppy-woodland-4","golden-retriever-puppy-newmillerdam-1","golden-retriever-puppy-newmillerdam-2","keith-with-border-terrier","keith-with-chihuahua","keith-with-cockapoo","keith-with-cocker-spaniel","keith-with-grey-schnauzer"], hint: "Picked from photo library. Pick a striking one — this is what shows in WhatsApp / Facebook previews." }
           - name: hero
             widget: object
             fields:
@@ -474,7 +474,7 @@ collections:
             fields:
               - { name: title,       widget: string }
               - { name: description, widget: text }
-              - { name: ogImage,     widget: string }
+              - { name: ogImage,     label: "Social share image (og:image)", widget: select, options: ["black-poodle-after-groom","black-poodle-side","border-terrier-after-groom","cockapoo-after-groom","cockapoo-portrait","cocker-spaniel-after-groom","golden-puppy-woodland-1","golden-puppy-woodland-2","golden-puppy-woodland-3","golden-puppy-woodland-4","golden-retriever-puppy-newmillerdam-1","golden-retriever-puppy-newmillerdam-2","keith-with-border-terrier","keith-with-chihuahua","keith-with-cockapoo","keith-with-cocker-spaniel","keith-with-grey-schnauzer"], hint: "Picked from photo library. Pick a striking one — this is what shows in WhatsApp / Facebook previews." }
           - name: hero
             widget: object
             fields:
@@ -565,7 +565,7 @@ collections:
               - name: includes
                 label: "What's included"
                 widget: list
-              - { name: heroPhoto,        label: "Hero photo (filename, no extension)", widget: string, required: false }
+              - { name: heroPhoto,        label: "Hero photo", widget: select, options: ["black-poodle-after-groom","black-poodle-side","border-terrier-after-groom","cockapoo-after-groom","cockapoo-portrait","cocker-spaniel-after-groom","golden-puppy-woodland-1","golden-puppy-woodland-2","golden-puppy-woodland-3","golden-puppy-woodland-4","golden-retriever-puppy-newmillerdam-1","golden-retriever-puppy-newmillerdam-2","keith-with-border-terrier","keith-with-chihuahua","keith-with-cockapoo","keith-with-cocker-spaniel","keith-with-grey-schnauzer"], required: false, hint: "Picked from photo library. Shows at the top of the service page + as social share image." }
               - { name: metaDescription,  label: "Meta description (SEO)", widget: text, required: false }
               - name: body
                 label: "Body paragraphs"
@@ -677,7 +677,7 @@ collections:
               - { name: date,        label: "Date of groom",     widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, picker_utc: false }
               - { name: summary,     label: "Short preview",     widget: text,    hint: "1–2 sentences shown on the card." }
               - { name: story,       label: "Full story",        widget: markdown, hint: "Write the story in paragraphs. Leave a blank line between paragraphs." }
-              - { name: beforePhoto, label: "Before photo",      widget: string, required: false, hint: "Photo filename without extension (e.g. black-poodle-side). Upload photos in the Photos folder first." }
-              - { name: afterPhoto,  label: "After photo",       widget: string, required: false, hint: "Same — filename without extension." }
+              - { name: beforePhoto, label: "Before photo", widget: select, options: ["black-poodle-after-groom","black-poodle-side","border-terrier-after-groom","cockapoo-after-groom","cockapoo-portrait","cocker-spaniel-after-groom","golden-puppy-woodland-1","golden-puppy-woodland-2","golden-puppy-woodland-3","golden-puppy-woodland-4","golden-retriever-puppy-newmillerdam-1","golden-retriever-puppy-newmillerdam-2","keith-with-border-terrier","keith-with-chihuahua","keith-with-cockapoo","keith-with-cocker-spaniel","keith-with-grey-schnauzer"], required: false, hint: "Shown at the top of the story (left). Pick from existing photo library." }
+              - { name: afterPhoto,  label: "After photo",  widget: select, options: ["black-poodle-after-groom","black-poodle-side","border-terrier-after-groom","cockapoo-after-groom","cockapoo-portrait","cocker-spaniel-after-groom","golden-puppy-woodland-1","golden-puppy-woodland-2","golden-puppy-woodland-3","golden-puppy-woodland-4","golden-retriever-puppy-newmillerdam-1","golden-retriever-puppy-newmillerdam-2","keith-with-border-terrier","keith-with-chihuahua","keith-with-cockapoo","keith-with-cocker-spaniel","keith-with-grey-schnauzer"], required: false, hint: "Shown at the top of the story (right) + as the card thumbnail on the index page." }
               - { name: featured,    label: "Highlight on homepage?", widget: boolean, default: false }
               - { name: slug,        label: "URL ending",        widget: string,  hint: "Short, lower-case, hyphen-separated. e.g. milo-after-summer" }
