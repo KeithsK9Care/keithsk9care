@@ -47,6 +47,7 @@ const links = [
   id="kk9-nav-drawer"
   class="lg:hidden fixed inset-0 z-50 print:hidden pointer-events-none opacity-0 transition-opacity duration-300 ease-out"
   aria-hidden="true"
+  inert
 >
   <!-- Backdrop (also click-to-close) -->
   <div id="kk9-nav-backdrop" class="absolute inset-0 bg-white/95 backdrop-blur-2xl backdrop-saturate-150"></div>
@@ -96,6 +97,7 @@ const links = [
         drawer.classList.remove('pointer-events-none', 'opacity-0');
         drawer.classList.add('opacity-100');
         drawer.setAttribute('aria-hidden', 'false');
+        drawer.removeAttribute('inert');
         toggle.setAttribute('aria-expanded', 'true');
         toggle.setAttribute('aria-label', 'Close menu');
         if (iconOpen)  iconOpen.classList.add('hidden');
@@ -107,6 +109,7 @@ const links = [
         drawer.classList.add('opacity-0');
         drawer.classList.remove('opacity-100');
         drawer.setAttribute('aria-hidden', 'true');
+        drawer.setAttribute('inert', '');
         setTimeout(function () { drawer.classList.add('pointer-events-none'); }, 300);
         toggle.setAttribute('aria-expanded', 'false');
         toggle.setAttribute('aria-label', 'Open menu');
