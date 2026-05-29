@@ -34,15 +34,51 @@
   .container-wide {
     @apply mx-auto max-w-6xl px-5 md:px-8;
   }
+  /* Primary CTA — coral gradient, coloured shadow, lift on hover, scale on press */
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full bg-coral-700 px-6 py-3 font-semibold text-white shadow-sm hover:bg-coral-800 focus:outline-none focus:ring-2 focus:ring-coral-500 focus:ring-offset-2 transition;
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 font-semibold text-white relative overflow-hidden
+           bg-gradient-to-br from-coral-600 to-coral-800
+           shadow-lg shadow-coral-700/25
+           ring-1 ring-coral-800/20
+           hover:from-coral-500 hover:to-coral-700 hover:shadow-xl hover:shadow-coral-700/35 hover:-translate-y-0.5
+           active:translate-y-0 active:scale-[0.98] active:shadow-md
+           focus:outline-none focus:ring-2 focus:ring-coral-400 focus:ring-offset-2
+           transition-all duration-200 ease-out;
   }
+  /* Subtle inner top highlight for depth */
+  .btn-primary::before {
+    content: '';
+    @apply absolute inset-x-0 top-0 h-1/2 rounded-t-full pointer-events-none;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.18), transparent);
+  }
+  .btn-primary > * { @apply relative; }
+
+  /* Secondary CTA — translucent glass + teal border, lift on hover */
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-teal-500 px-6 py-3 font-semibold text-teal-700 hover:bg-teal-50 transition;
+    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-teal-500 px-6 py-3 font-semibold text-teal-700
+           bg-white/70 backdrop-blur-sm
+           shadow-sm shadow-teal-900/5
+           hover:bg-teal-50 hover:border-teal-600 hover:shadow-md hover:shadow-teal-900/10 hover:-translate-y-0.5
+           active:translate-y-0 active:scale-[0.98] active:shadow-sm
+           focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2
+           transition-all duration-200 ease-out;
+  }
+
+  /* Ghost / text-link CTA — animated underline + arrow */
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 font-semibold text-teal-700
+           hover:text-coral-700
+           focus:outline-none focus:ring-2 focus:ring-coral-400 focus:ring-offset-2 rounded
+           transition-colors duration-200;
   }
   .btn-ghost {
-    @apply inline-flex items-center gap-2 font-semibold text-teal-700 hover:text-teal-900 transition;
+    background-image: linear-gradient(to right, currentColor, currentColor);
+    background-size: 0% 1.5px;
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    transition: color 200ms ease-out, background-size 250ms ease-out;
   }
+  .btn-ghost:hover { background-size: calc(100% - 1.5rem) 1.5px; }
   .section {
     @apply py-16 md:py-24;
   }
