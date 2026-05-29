@@ -15,7 +15,7 @@ const breadcrumbSchema = buildBreadcrumbSchema([
 
 const lastUpdated = "2026-05-28";
 ---
-<Layout title={title} description={description} noindex={true}>
+<Layout title={title} description={description}>
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
 
   <PageHero
