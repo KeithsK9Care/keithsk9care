@@ -17,8 +17,8 @@ const { story } = Astro.props;
 const s = story;
 const matchedService = services.find((sv: any) => sv.name === s.service);
 
-const title = `${s.dog} — ${s.service} | Keith's K9 Care`;
-const description = `${s.dog} (${s.breed}) — ${s.summary}`.substring(0, 167);
+const title = `${s.title || `${s.dog} — ${s.service}`} | Keith's K9 Care`;
+const description = (s.description || `${s.dog} (${s.breed}) — ${s.summary}`).substring(0, 167);
 
 const breadcrumbSchema = buildBreadcrumbSchema([
   { name: "Home", url: `${site.url}/` },
@@ -36,9 +36,9 @@ const breadcrumbSchema = buildBreadcrumbSchema([
         <p class="text-sm font-semibold uppercase tracking-wider text-coral-700">
           <a href="/groom-stories/" class="hover:text-coral-800">← All groom stories</a>
         </p>
-        <h1 class="mt-3 text-4xl md:text-5xl lg:text-6xl leading-[1.05]">{s.dog}</h1>
-        <p class="mt-2 text-lg text-ink-600">{s.breed} · {s.area}</p>
-        <p class="mt-6 text-lg md:text-xl text-ink-700 leading-relaxed max-w-xl">{s.summary}</p>
+        <h1 class="mt-3 text-4xl md:text-5xl lg:text-6xl leading-[1.05]">{s.title || s.dog}</h1>
+        <p class="mt-2 text-lg text-ink-600">{s.dog} · {s.breed} · {s.area}</p>
+        <p class="mt-6 text-lg md:text-xl text-ink-700 leading-relaxed max-w-xl">{s.description || s.summary}</p>
         <div class="mt-7 flex flex-wrap gap-3">
           {matchedService && <a href={`/services/${matchedService.slug}/`} class="btn-secondary">More on {s.service}</a>}
           <a href="/book/" class="btn-primary">Book your dog in</a>

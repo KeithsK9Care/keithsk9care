@@ -1,5 +1,7 @@
 ---
 import site from '../../data/site.json';
+import copy from '../../data/copy/home.json';
+const h = copy.hero;
 import reviews from '../../data/reviews.json';
 import Picture from '../Picture.astro';
 
@@ -17,7 +19,7 @@ const avgRating = reviewCount > 0 ? (reviews.reduce((a: number, r: any) => a + r
       <div class="flex flex-wrap items-center gap-2">
           <span class="inline-flex items-center gap-2 rounded-full bg-white shadow-sm ring-1 ring-ink-100 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-teal-700">
             <span class="w-2 h-2 rounded-full bg-coral-500"></span>
-            Hall Green · WF4 3QJ
+            {h.locationPill}
           </span>
           {avgRating && (
             <a href="/reviews/" class="inline-flex items-center gap-1.5 rounded-full bg-white shadow-sm ring-1 ring-ink-100 px-3 py-1.5 text-xs font-semibold text-ink-800 hover:ring-coral-300 transition">
@@ -32,14 +34,14 @@ const avgRating = reviewCount > 0 ? (reviews.reduce((a: number, r: any) => a + r
         <span class="text-coral-500">Crigglestone</span> & across Wakefield.
       </h1>
       <p class="mt-6 text-lg md:text-xl text-ink-700 leading-relaxed max-w-xl">
-        Your dog deserves to look and feel their best. Whether they've been rolling through Newmillerdam Country Park or turned the garden into a mud bath — Keith's K9 Care is here to get them back to their brilliant best.
+        {h.bodyPara1}
       </p>
       <p class="mt-4 text-base md:text-lg text-ink-700 leading-relaxed max-w-xl">
-        Friendly, professional, and passionate about dogs. This is grooming you can trust.
+        {h.bodyPara2}
       </p>
       <div class="mt-8 flex flex-col sm:flex-row gap-3">
-        <a href="/book/" class="btn-primary">Book a Groom</a>
-        <a href="/pricing/" class="btn-secondary">See Prices</a>
+        <a href={h.ctaPrimaryHref} class="btn-primary">{h.ctaPrimary}</a>
+        <a href={h.ctaSecondaryHref} class="btn-secondary">{h.ctaSecondary}</a>
       </div>
 
       <ul class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-xl">
@@ -60,7 +62,7 @@ const avgRating = reviewCount > 0 ? (reviews.reduce((a: number, r: any) => a + r
         <div class="flex items-center gap-2 text-coral-500 mb-1">
           {[1,2,3,4,5].map(() => <svg aria-hidden="true" class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.37 2.448a1 1 0 00-.364 1.118l1.287 3.958c.3.922-.755 1.688-1.539 1.118l-3.37-2.448a1 1 0 00-1.175 0l-3.371 2.448c-.783.57-1.838-.197-1.539-1.118l1.287-3.958a1 1 0 00-.364-1.118L2.05 9.385c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69l1.286-3.957z"/></svg>)}
         </div>
-        <p class="text-sm font-semibold text-ink-900 leading-tight">IPET qualified · Mrs B's Grooming Academy, Leeds</p>
+        <p class="text-sm font-semibold text-ink-900 leading-tight">{h.ipetBadge}</p>
       </div>
     </div>
   </div>

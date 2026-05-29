@@ -1,0 +1,56 @@
+{
+  "hero": {
+    "locationPill": "Hall Green · WF4 3QJ",
+    "headingHtml": "Friendly dog grooming in <span class=\"text-teal-600\">Newmillerdam</span>,<br class=\"hidden md:block\" /> <span class=\"text-coral-500\">Crigglestone</span> & across Wakefield.",
+    "bodyPara1": "Your dog deserves to look and feel their best. Whether they've been rolling through Newmillerdam Country Park or turned the garden into a mud bath — Keith's K9 Care is here to get them back to their brilliant best.",
+    "bodyPara2": "Friendly, professional, and passionate about dogs. This is grooming you can trust.",
+    "ctaPrimary": "Book a Groom",
+    "ctaPrimaryHref": "/book/",
+    "ctaSecondary": "See Prices",
+    "ctaSecondaryHref": "/pricing/",
+    "ipetBadge": "IPET qualified · Mrs B's Grooming Academy, Leeds"
+  },
+  "about": {
+    "eyebrow": "Meet Keith",
+    "heading": "From the law to the grooming table.",
+    "paragraphs": [
+      "After a successful career in law, Keith and his wife welcomed two golden retriever brothers — Ringo and Rolo — into their lives during lockdown. What followed was a crash course in just how much mischief two exuberant retrievers can find: mud, puddles, unidentifiable countryside discoveries, and more baths than anyone had bargained for.",
+      "Somewhere in all that, Keith discovered he loved the grooming process — the calm of it, the care, the transformation at the end. He went on to qualify with the IPET Network at Mrs B's Grooming Academy in Leeds, where his trainers noted his natural ability to put dogs at ease.",
+      "Keith brings the same professionalism and attention to detail to every groom that he has applied throughout his working life. Your dog is in safe, experienced hands."
+    ],
+    "ctaText": "Read Keith's full story",
+    "ctaHref": "/about/"
+  },
+  "services": {
+    "eyebrow": "Services",
+    "heading": "What we do — gently, properly, and at your dog's pace.",
+    "description": "Cockapoos, doodles, terriers, retrievers, small breeds — every coat type welcome. From puppy first grooms to senior tidies and hand-stripping."
+  },
+  "pricingTeaser": {
+    "eyebrow": "Pricing",
+    "heading": "No surprises. Prices on the page.",
+    "description": "Most local groomers won't tell you what they charge until you ring. We will. Final price varies a little by breed, coat and behaviour — and we always confirm before we start.",
+    "linkText": "See full price guide",
+    "linkHref": "/pricing/"
+  },
+  "salon": {
+    "eyebrow": "The salon",
+    "heading": "One dog. One groomer. One quiet room.",
+    "description": "No kennels. No other dogs barking through the wall. A purpose-built home salon in a converted garage — fully equipped, calm, and set up around your dog's comfort."
+  },
+  "areas": {
+    "eyebrow": "Areas we cover",
+    "heading": "Local to Hall Green & Newmillerdam, serving the wider Wakefield area.",
+    "description": "If you've searched for a dog groomer in Newmillerdam, Crigglestone, Sandal, Hall Green or anywhere across the Wakefield WF4 villages — you're in our patch. Most customers live within a 5-minute drive.",
+    "linkText": "See all areas and what we do there",
+    "linkHref": "/areas/"
+  },
+  "faq": {
+    "eyebrow": "Common questions",
+    "heading": "Before your dog's first visit."
+  },
+  "contactCta": {
+    "heading": "Ready to get your pup looking their best?",
+    "body": "Give Keith a call or message — he's always happy to have a quick chat about your dog before booking. No bots, no answering service."
+  }
+}

@@ -1,6 +1,8 @@
 [
   {
     "slug": "milo-the-doodle-after-summer",
+    "title": "Milo's coat recovery after a wet summer",
+    "description": "How a six-week swim spree at Newmillerdam Lake turned into a careful conversation about strip-clipping vs. de-matting — and the gentlest answer for Milo.",
     "dog": "Milo",
     "breed": "Cockapoo, 3 yrs",
     "service": "De-matting & Full Groom",
@@ -14,6 +16,8 @@
   },
   {
     "slug": "rusty-back-to-hand-stripped",
+    "title": "Rusty back to a proper Border coat",
+    "description": "Three years of clipped grooming had softened his coat. Two careful hand-stripping sessions later, his colour, texture and saddle markings are back.",
     "dog": "Rusty",
     "breed": "Border Terrier, 5 yrs",
     "service": "Hand Stripping",
@@ -27,6 +31,8 @@
   },
   {
     "slug": "pip-first-groom",
+    "title": "Pip's first ever groom",
+    "description": "A 14-week-old Cavapoo who'd never seen a bath, a brush or a pair of clippers. The goal: a calm, confident young dog. Not a perfect cut.",
     "dog": "Pip",
     "breed": "Cavapoo, 14 weeks",
     "service": "Puppy First Groom",

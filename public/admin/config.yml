@@ -18,6 +18,83 @@ logo_url: /assets/logo.png
 
 collections:
   # ─────────────────────────────────────────────────────
+  - name: page-copy
+    label: "Page copy (editable text on each page)"
+    files:
+      - file: src/data/copy/home.json
+        label: "Homepage"
+        name: home
+        fields:
+          - name: hero
+            label: "Hero section"
+            widget: object
+            fields:
+              - { name: locationPill,    label: "Location pill",   widget: string }
+              - { name: headingHtml,     label: "H1 (HTML)",       widget: text, hint: "Headline. Inner <span class='text-teal-600'>…</span> and <span class='text-coral-500'>…</span> highlight words." }
+              - { name: bodyPara1,       label: "Body paragraph 1", widget: text }
+              - { name: bodyPara2,       label: "Body paragraph 2", widget: text }
+              - { name: ctaPrimary,      label: "Primary CTA label", widget: string }
+              - { name: ctaPrimaryHref,  label: "Primary CTA link",  widget: string }
+              - { name: ctaSecondary,    label: "Secondary CTA label", widget: string }
+              - { name: ctaSecondaryHref, label: "Secondary CTA link", widget: string }
+              - { name: ipetBadge,       label: "IPET badge text", widget: string }
+          - name: about
+            label: "About teaser section"
+            widget: object
+            fields:
+              - { name: eyebrow,    label: Eyebrow,    widget: string }
+              - { name: heading,    label: Heading,    widget: string }
+              - name: paragraphs
+                label: "Body paragraphs"
+                widget: list
+              - { name: ctaText,    label: "CTA label", widget: string }
+              - { name: ctaHref,    label: "CTA link",  widget: string }
+          - name: services
+            label: "Services section intro"
+            widget: object
+            fields:
+              - { name: eyebrow,     widget: string }
+              - { name: heading,     widget: string }
+              - { name: description, widget: text }
+          - name: pricingTeaser
+            label: "Pricing teaser intro"
+            widget: object
+            fields:
+              - { name: eyebrow,     widget: string }
+              - { name: heading,     widget: string }
+              - { name: description, widget: text }
+              - { name: linkText,    widget: string }
+              - { name: linkHref,    widget: string }
+          - name: salon
+            label: "The salon section"
+            widget: object
+            fields:
+              - { name: eyebrow,     widget: string }
+              - { name: heading,     widget: string }
+              - { name: description, widget: text }
+          - name: areas
+            label: "Areas we cover section"
+            widget: object
+            fields:
+              - { name: eyebrow,     widget: string }
+              - { name: heading,     widget: string }
+              - { name: description, widget: text }
+              - { name: linkText,    widget: string }
+              - { name: linkHref,    widget: string }
+          - name: faq
+            label: "FAQ section intro"
+            widget: object
+            fields:
+              - { name: eyebrow,     widget: string }
+              - { name: heading,     widget: string }
+          - name: contactCta
+            label: "Contact CTA block"
+            widget: object
+            fields:
+              - { name: heading,     widget: string }
+              - { name: body,        widget: text }
+
+  # ─────────────────────────────────────────────────────
   - name: site
     label: "Site settings"
     files:
@@ -194,6 +271,8 @@ collections:
             widget: list
             summary: "{{fields.dog}} — {{fields.service}}"
             fields:
+              - { name: title,       label: "Story title",       widget: string,  hint: "Short, descriptive. e.g. 'Milo's coat recovery after a wet summer'" }
+              - { name: description, label: "Story description", widget: text,    hint: "1–2 sentences shown under the title on cards and in the hero." }
               - { name: dog,         label: "Dog's name",        widget: string,  hint: "e.g. Milo" }
               - { name: breed,       label: "Breed & age",       widget: string,  hint: "e.g. Cockapoo, 3 years" }
               - { name: service,     label: "Service",           widget: select,
