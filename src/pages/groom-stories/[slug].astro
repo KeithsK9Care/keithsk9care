@@ -18,7 +18,7 @@ const s = story;
 const matchedService = services.find((sv: any) => sv.name === s.service);
 
 const title = `${s.dog} — ${s.service} | Keith's K9 Care`;
-const description = `Groom story: ${s.dog} (${s.breed}). ${s.summary}`;
+const description = `${s.dog} (${s.breed}) — ${s.summary}`.substring(0, 167);
 
 const breadcrumbSchema = buildBreadcrumbSchema([
   { name: "Home", url: `${site.url}/` },
