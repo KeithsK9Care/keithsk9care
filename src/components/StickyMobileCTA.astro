@@ -2,29 +2,19 @@
 import site from '../data/site.json';
 ---
 <!--
-  Mobile sticky bar. Uses strongly-tinted teal-translucent bg so the partial
-  transparency is clearly visible, not washed out into "off-white".
-  The safe-area strip and the floating card share the same gradient so they
-  read as one continuous frosted-teal surface.
+  Mobile sticky bar: clean floating card.
+  No safe-area filler strip — the home-indicator zone shows whatever Safari
+  shows there (transparent over body's gradient bg). Matches the iOS-style
+  pattern used by other modern mobile sites.
 -->
 
-<!-- Safe-area strip — strong teal tint (was almost invisible before) -->
-<div
-  id="kk9-cta-strip"
-  transition:persist
-  class="md:hidden fixed bottom-0 inset-x-0 z-20 print:hidden"
-  style="height: max(env(safe-area-inset-bottom), 0.5rem); background: linear-gradient(180deg, rgba(0, 92, 121, 0.45), rgba(0, 92, 121, 0.65)); -webkit-backdrop-filter: blur(24px) saturate(180%); backdrop-filter: blur(24px) saturate(180%);"
-  aria-hidden="true"
-></div>
-
-<!-- Floating card — fades from translucent white at top to teal at bottom so it visually meets the strip -->
 <div
   id="kk9-cta-card"
   transition:persist
   class="md:hidden fixed inset-x-3 z-30 print:hidden"
-  style="bottom: max(env(safe-area-inset-bottom), 0.5rem);"
+  style="bottom: max(env(safe-area-inset-bottom), 0.75rem);"
 >
-  <div class="rounded-2xl ring-1 ring-ink-900/10 shadow-xl shadow-ink-900/10 overflow-hidden" style="background: linear-gradient(180deg, rgba(255,255,255,0.75) 0%, rgba(0, 92, 121, 0.40) 100%); -webkit-backdrop-filter: blur(24px) saturate(180%); backdrop-filter: blur(24px) saturate(180%);">
+  <div class="rounded-2xl ring-1 ring-ink-900/10 shadow-xl shadow-ink-900/15 overflow-hidden" style="background: rgba(255, 255, 255, 0.75); -webkit-backdrop-filter: blur(24px) saturate(180%); backdrop-filter: blur(24px) saturate(180%);">
     <div class="grid grid-cols-2 gap-2 p-2">
       <a href={`tel:${site.phoneIntl}`} class="inline-flex items-center justify-center gap-2 rounded-xl bg-white/90 border-2 border-teal-500 py-2.5 font-semibold text-teal-700 text-sm hover:bg-white transition">
         <svg aria-hidden="true" class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
@@ -35,11 +25,10 @@ import site from '../data/site.json';
   </div>
 </div>
 
-<!-- Spacer so body content scrolls clear -->
+<!-- Spacer so body content scrolls clear of the floating card -->
 <div class="md:hidden" style="height: calc(theme(spacing.20) + env(safe-area-inset-bottom));" aria-hidden="true"></div>
 
 <style is:global>
-  html.kk9-menu-open #kk9-cta-strip,
   html.kk9-menu-open #kk9-cta-card,
   html.kk9-menu-open #wa-root {
     display: none !important;
