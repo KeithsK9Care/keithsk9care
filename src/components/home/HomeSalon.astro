@@ -2,24 +2,15 @@
 import PhotoGrid from '../PhotoGrid.astro';
 import SectionIntro from '../SectionIntro.astro';
 import Reveal from '../Reveal.astro';
+import copy from '../../data/copy/home.json';
 
-const photos = [
-  { src: 'cockapoo-after-groom',     alt: "Cockapoo after a full groom on the table in Keith's K9 Care home salon, Castle Meadows WF4" },
-  { src: 'keith-with-grey-schnauzer', alt: 'Keith with a freshly-groomed grey schnauzer in the home salon' },
-  { src: 'black-poodle-after-groom',  alt: "Black miniature poodle after a full groom at Keith's K9 Care, Hall Green WF4" },
-  { src: 'keith-with-border-terrier', alt: 'Keith finishing a border terrier groom in the home salon' },
-  { src: 'cocker-spaniel-after-groom', alt: 'Cocker spaniel after a hand-stripped groom' },
-  { src: 'cockapoo-portrait',         alt: "Bright-coated cockapoo after a full groom at Keith's K9 Care" },
-];
+const c = copy.salon;
+const photos = copy.images.salonPhotos;
 ---
 <section class="section bg-ink-50/60">
   <div class="container-wide">
     <Reveal class="mb-10">
-      <SectionIntro
-        eyebrow="The salon"
-        heading="One dog. One groomer. One quiet room."
-        description="No kennels. No other dogs barking through the wall. A purpose-built home salon in a converted garage — fully equipped, calm, and set up around your dog's comfort."
-      />
+      <SectionIntro eyebrow={c.eyebrow} heading={c.heading} description={c.description} />
     </Reveal>
     <PhotoGrid photos={photos} cols={3} />
   </div>

@@ -2,6 +2,8 @@
 import FAQItem from '../FAQItem.astro';
 import SectionIntro from '../SectionIntro.astro';
 import Reveal from '../Reveal.astro';
+import copy from '../../data/copy/home.json';
+const c = copy.faq;
 export interface Props {
   faqs: { q: string; a: string }[];
 }
@@ -10,10 +12,7 @@ const { faqs } = Astro.props;
 <section class="section bg-teal-50/60">
   <div class="container-tight">
     <Reveal class="mb-10">
-      <SectionIntro
-        eyebrow="Common questions"
-        heading="Before your dog's first visit."
-      />
+      <SectionIntro eyebrow={c.eyebrow} heading={c.heading} />
     </Reveal>
 
     <div class="space-y-3">

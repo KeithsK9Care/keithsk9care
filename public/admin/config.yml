@@ -38,6 +38,24 @@ collections:
               - { name: ctaSecondary,    label: "Secondary CTA label", widget: string }
               - { name: ctaSecondaryHref, label: "Secondary CTA link", widget: string }
               - { name: ipetBadge,       label: "IPET badge text", widget: string }
+          - name: images
+            label: "Images"
+            widget: object
+            hint: "Pick photos for the hero, about teaser and salon grid. Filenames are stubs — Picture wraps WebP+JPG variants at the right size."
+            fields:
+              - { name: heroPhoto,    label: "Hero photo (filename)", widget: select, options: ["black-poodle-after-groom","black-poodle-side","border-terrier-after-groom","cockapoo-after-groom","cockapoo-portrait","cocker-spaniel-after-groom","golden-puppy-woodland-1","golden-puppy-woodland-2","golden-puppy-woodland-3","golden-puppy-woodland-4","golden-retriever-puppy-newmillerdam-1","golden-retriever-puppy-newmillerdam-2","keith-with-border-terrier","keith-with-chihuahua","keith-with-cockapoo","keith-with-cocker-spaniel","keith-with-grey-schnauzer"] }
+              - { name: heroPhotoAlt, label: "Hero photo alt text", widget: string }
+              - { name: aboutPhoto,    label: "About teaser photo", widget: select, options: ["black-poodle-after-groom","black-poodle-side","border-terrier-after-groom","cockapoo-after-groom","cockapoo-portrait","cocker-spaniel-after-groom","golden-puppy-woodland-1","golden-puppy-woodland-2","golden-puppy-woodland-3","golden-puppy-woodland-4","golden-retriever-puppy-newmillerdam-1","golden-retriever-puppy-newmillerdam-2","keith-with-border-terrier","keith-with-chihuahua","keith-with-cockapoo","keith-with-cocker-spaniel","keith-with-grey-schnauzer"] }
+              - { name: aboutPhotoAlt, label: "About teaser photo alt text", widget: string }
+              - name: salonPhotos
+                label: "Salon photo grid (6 photos)"
+                widget: list
+                max: 6
+                min: 6
+                fields:
+                  - { name: src, label: "Photo filename", widget: select, options: ["black-poodle-after-groom","black-poodle-side","border-terrier-after-groom","cockapoo-after-groom","cockapoo-portrait","cocker-spaniel-after-groom","golden-puppy-woodland-1","golden-puppy-woodland-2","golden-puppy-woodland-3","golden-puppy-woodland-4","golden-retriever-puppy-newmillerdam-1","golden-retriever-puppy-newmillerdam-2","keith-with-border-terrier","keith-with-chihuahua","keith-with-cockapoo","keith-with-cocker-spaniel","keith-with-grey-schnauzer"] }
+                  - { name: alt, label: "Alt text", widget: string }
+
           - name: about
             label: "About teaser section"
             widget: object

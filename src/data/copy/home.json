@@ -10,6 +10,38 @@
     "ctaSecondaryHref": "/pricing/",
     "ipetBadge": "IPET qualified · Mrs B's Grooming Academy, Leeds"
   },
+  "images": {
+    "heroPhoto": "golden-puppy-woodland-1",
+    "heroPhotoAlt": "Golden retriever puppy near Newmillerdam Country Park — Keith's K9 Care, Hall Green WF4",
+    "aboutPhoto": "keith-with-cocker-spaniel",
+    "aboutPhotoAlt": "Keith Kershaw with a cocker spaniel in his home grooming salon",
+    "salonPhotos": [
+      {
+        "src": "cockapoo-after-groom",
+        "alt": "Cockapoo after a full groom on the table in Keith's K9 Care home salon, Castle Meadows WF4"
+      },
+      {
+        "src": "keith-with-grey-schnauzer",
+        "alt": "Keith with a freshly-groomed grey schnauzer in the home salon"
+      },
+      {
+        "src": "black-poodle-after-groom",
+        "alt": "Black miniature poodle after a full groom at Keith's K9 Care, Hall Green WF4"
+      },
+      {
+        "src": "keith-with-border-terrier",
+        "alt": "Keith finishing a border terrier groom in the home salon"
+      },
+      {
+        "src": "cocker-spaniel-after-groom",
+        "alt": "Cocker spaniel after a hand-stripped groom"
+      },
+      {
+        "src": "cockapoo-portrait",
+        "alt": "Bright-coated cockapoo after a full groom at Keith's K9 Care"
+      }
+    ]
+  },
   "about": {
     "eyebrow": "Meet Keith",
     "heading": "From the law to the grooming table.",

@@ -1,11 +1,13 @@
 ---
 import ContactCTACard from '../ContactCTACard.astro';
 import Reveal from '../Reveal.astro';
+import copy from '../../data/copy/home.json';
+const c = copy.contactCta;
 ---
 <section id="contact" class="section">
   <div class="container-wide">
     <Reveal>
-      <ContactCTACard />
+      <ContactCTACard heading={c.heading} body={c.body} />
     </Reveal>
   </div>
 </section>

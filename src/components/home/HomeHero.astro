@@ -2,6 +2,7 @@
 import site from '../../data/site.json';
 import copy from '../../data/copy/home.json';
 const h = copy.hero;
+const imgs = copy.images;
 import reviews from '../../data/reviews.json';
 import Picture from '../Picture.astro';
 
@@ -56,7 +57,7 @@ const avgRating = reviewCount > 0 ? (reviews.reduce((a: number, r: any) => a + r
 
     <div class="relative">
       <div class="relative rounded-3xl overflow-hidden ring-1 ring-ink-100 shadow-2xl shadow-teal-900/10 aspect-[4/5]">
-        <Picture src="golden-puppy-woodland-1" size={800} alt="Golden retriever puppy near Newmillerdam Country Park — Keith's K9 Care, Hall Green WF4" width={800} height={1000} priority />
+        <Picture src={imgs.heroPhoto} size={800} alt={imgs.heroPhotoAlt} width={800} height={1000} priority />
       </div>
       <div class="absolute -bottom-6 -left-6 hidden md:block bg-white rounded-2xl shadow-xl ring-1 ring-ink-100 px-5 py-4 max-w-[200px]">
         <div class="flex items-center gap-2 text-coral-500 mb-1">

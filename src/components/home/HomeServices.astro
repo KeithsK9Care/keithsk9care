@@ -3,17 +3,15 @@ import services from '../../data/services.json';
 import ServiceCard from '../ServiceCard.astro';
 import SectionIntro from '../SectionIntro.astro';
 import Reveal from '../Reveal.astro';
+import copy from '../../data/copy/home.json';
+
+const c = copy.services;
 ---
 <section class="section bg-teal-50/60">
   <div class="container-wide">
     <Reveal>
-      <SectionIntro
-        eyebrow="Services"
-        heading="What we do — gently, properly, and at your dog's pace."
-        description="Cockapoos, doodles, terriers, retrievers, small breeds — every coat type welcome. From puppy first grooms to senior tidies and hand-stripping."
-      />
+      <SectionIntro eyebrow={c.eyebrow} heading={c.heading} description={c.description} />
     </Reveal>
-
     <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
       {services.map((s, i) => (
         <Reveal delay={i * 60}>

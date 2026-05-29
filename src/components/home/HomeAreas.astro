@@ -3,24 +3,21 @@ import areas from '../../data/areas.json';
 import AreaPill from '../AreaPill.astro';
 import SectionIntro from '../SectionIntro.astro';
 import Reveal from '../Reveal.astro';
+import copy from '../../data/copy/home.json';
+
+const c = copy.areas;
 ---
 <section class="section">
   <div class="container-wide">
     <Reveal>
-      <SectionIntro
-        eyebrow="Areas we cover"
-        heading="Local to Hall Green & Newmillerdam, serving the wider Wakefield area."
-        description="If you've searched for a dog groomer in Newmillerdam, Crigglestone, Sandal, Hall Green or anywhere across the Wakefield WF4 villages — you're in our patch. Most customers live within a 5-minute drive."
-      />
+      <SectionIntro eyebrow={c.eyebrow} heading={c.heading} description={c.description} />
     </Reveal>
-
     <Reveal class="mt-10 flex flex-wrap gap-2" delay={120}>
       {areas.map(a => <AreaPill area={a} />)}
     </Reveal>
-
     <Reveal delay={200}>
-      <a href="/areas/" class="btn-ghost mt-8">
-        See all areas and what we do there
+      <a href={c.linkHref} class="btn-ghost mt-8">
+        {c.linkText}
         <svg aria-hidden="true" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
       </a>
     </Reveal>
