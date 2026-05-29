@@ -10,32 +10,37 @@ import { buildReviewSchema, buildAggregateRatingSchema, buildBreadcrumbSchema } 
 
 const sorted = [...reviews].sort((a, b) => (b.date || '').localeCompare(a.date || ''));
 const ratings = reviews.map(r => r.rating);
-const avg = (ratings.reduce((a, b) => a + b, 0) / ratings.length).toFixed(1);
+const hasReviews = reviews.length > 0;
+const avg = hasReviews ? (ratings.reduce((a, b) => a + b, 0) / ratings.length).toFixed(1) : '0';
 
 const title = "Reviews | Keith's K9 Care";
-const description = `${reviews.length} reviews from dog owners across Hall Green, Newmillerdam, Crigglestone, Sandal and the wider Wakefield area. ${avg} out of 5 average.`;
+const description = hasReviews
+  ? `${reviews.length} ${reviews.length === 1 ? 'review' : 'reviews'} from dog owners across Hall Green, Newmillerdam, Crigglestone, Sandal and the wider Wakefield area. ${avg} out of 5 average.`
+  : `Reviews from dog owners at Keith\'s K9 Care, Hall Green Wakefield WF4. New reviews coming soon.`;
 
 const businessId = `${site.url}/#business`;
-const reviewSchema = buildReviewSchema({
+// Only emit Review / AggregateRating schema if there are actually reviews — Google flags empty
+// AggregateRating with ratingCount=0 as invalid structured data.
+const reviewSchema = hasReviews ? buildReviewSchema({
   url: `${site.url}/reviews/`,
   businessId,
   businessName: site.name,
   reviews: sorted,
-});
-const aggregateSchema = buildAggregateRatingSchema({ businessId, ratings });
+}) : null;
+const aggregateSchema = hasReviews ? buildAggregateRatingSchema({ businessId, ratings }) : null;
 const breadcrumbSchema = buildBreadcrumbSchema([
   { name: "Home", url: `${site.url}/` },
   { name: "Reviews", url: `${site.url}/reviews/` },
 ]);
 ---
 <Layout title={title} description={description} ogImage="/assets/photos/keith-with-cocker-spaniel.jpg">
-  <script slot="head" type="application/ld+json" set:html={JSON.stringify(reviewSchema)} />
-  <script slot="head" type="application/ld+json" set:html={JSON.stringify(aggregateSchema)} />
+  {reviewSchema    && <script slot="head" type="application/ld+json" set:html={JSON.stringify(reviewSchema)} />}
+  {aggregateSchema && <script slot="head" type="application/ld+json" set:html={JSON.stringify(aggregateSchema)} />}
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
 
   <PageHero
     eyebrow="Reviews"
-    heading={`${avg} out of 5 — from ${reviews.length} dog owners.`}
+    heading={hasReviews ? `${avg} out of 5 — from ${reviews.length} dog ${reviews.length === 1 ? "owner" : "owners"}.` : "Reviews coming soon."}
     body="What Keith's customers say after their dog's visit — coat type, service, the lot. Honest, unfiltered, locally collected."
   >
     <a href="/book/" class="btn-primary">Book your dog in</a>

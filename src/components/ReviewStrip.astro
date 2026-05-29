@@ -5,7 +5,7 @@ import Reveal from './Reveal.astro';
 
 const featured = reviews.filter(r => r.featured).slice(0, 3);
 if (featured.length === 0) featured.push(...reviews.slice(0, 3));
-const avg = (reviews.reduce((a, r) => a + r.rating, 0) / reviews.length).toFixed(1);
+const avg = reviews.length > 0 ? (reviews.reduce((a, r) => a + r.rating, 0) / reviews.length).toFixed(1) : null;
 ---
 {featured.length > 0 && (
   <section class="py-8 md:py-12 bg-teal-50/40">
@@ -14,9 +14,10 @@ const avg = (reviews.reduce((a, r) => a + r.rating, 0) / reviews.length).toFixed
         <div>
           <p class="text-sm font-semibold uppercase tracking-wider text-coral-700">What dogs' owners say</p>
           <p class="mt-1 text-sm text-ink-600">
-            <span class="text-coral-500 mr-1">★★★★★</span>
-            <strong class="text-ink-900">{avg}</strong> from {reviews.length} reviews ·
-            <a href="/reviews/" class="text-teal-700 font-semibold hover:text-coral-700 ml-1">Read all</a>
+            {avg && <span class="text-coral-500 mr-1">★★★★★</span>}
+            {avg && <strong class="text-ink-900">{avg}</strong>}
+            {avg && <>from {reviews.length} {reviews.length === 1 ? 'review' : 'reviews'} ·</>}
+            <a href="/reviews/" class="text-teal-700 font-semibold hover:text-coral-700 ml-1">{avg ? 'Read all' : 'Reviews'}</a>
           </p>
         </div>
       </Reveal>
