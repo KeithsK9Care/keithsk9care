@@ -1,0 +1,18 @@
+---
+/**
+ * Brand logo for UI use — picture element with WebP + PNG fallback.
+ * Source: 192×192 (8.5 KB WebP / 19.8 KB PNG). Tiny.
+ * For schema / OG image use, reference /assets/logo.png directly
+ * (a 512×512 / 87 KB version is kept at that path).
+ */
+export interface Props {
+  class?: string;
+  width?: number;
+  height?: number;
+}
+const { class: cls = "h-10 w-10", width = 40, height = 40 } = Astro.props;
+---
+<picture>
+  <source srcset="/assets/logo-192.webp" type="image/webp" />
+  <img src="/assets/logo-192.png" alt="" width={width} height={height} class={cls} loading="eager" decoding="async" />
+</picture>

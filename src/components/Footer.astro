@@ -1,12 +1,13 @@
 ---
 import site from '../data/site.json';
+import Logo from './Logo.astro';
 const year = new Date().getFullYear();
 ---
 <footer class="bg-teal-700 text-teal-50 mt-24">
   <div class="container-wide py-14 grid gap-10 md:grid-cols-4">
     <div>
       <div class="flex items-center gap-3 mb-3">
-        <img src="/assets/logo.png" alt="" width="48" height="48" class="h-12 w-12 bg-white rounded-full p-1" />
+        <Logo class="h-12 w-12 bg-white rounded-full p-1" width={48} height={48} />
         <span class="font-display font-bold text-xl text-white">Keith's K9 Care</span>
       </div>
       <p class="text-teal-100 text-sm leading-relaxed">{site.tagline}</p>
