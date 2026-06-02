@@ -50,12 +50,11 @@ function getEmail(request: Request): { email: string; source: string } {
 }
 
 export const onRequest: PagesFunction<Env> = async ({ request, env }) => {
-  const { email, source } = getEmail(request);
+  const { email } = getEmail(request);
 
   if (!email || !ALLOWED_EMAILS.includes(email)) {
     return new Response(
-      "Not authorised. The content editor is for approved editors only. " +
-        "(debug — identity source: " + source + "; email: " + (email || "none") + ")",
+      "Not authorised. The content editor is for approved editors only.",
       { status: 403, headers: { "content-type": "text/plain; charset=utf-8" } },
     );
   }

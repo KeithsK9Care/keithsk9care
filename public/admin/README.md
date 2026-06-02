@@ -15,11 +15,12 @@ edit your site.
 Your editor lives at **keithsk9care.co.uk/admin/**
 
 1. Go to that address in your browser (Chrome or Safari are both fine).
-2. Click **Sign in with GitHub** and approve access when asked.
-3. You'll land on the editor dashboard.
-
-Ron will set this up and do the very first sign-in with you, so you don't have to worry about
-the technical bit. After that, signing in is just one click. *(Tip: bookmark the /admin/ page.)*
+2. You'll be asked for your **email** — enter your approved address. We email you a **6‑digit
+   code**; type it in. *(This is the security step — only approved editors can get in.)*
+3. The editor loads. Click **"Sign in with GitHub"** — despite the name, it will **not** send
+   you to GitHub; it just signs you straight in.
+4. You're in. *(You'll only need the email code occasionally — roughly once a week — not every
+   visit. Tip: bookmark the /admin/ page.)*
 
 > 📷 *[screenshot: the sign-in screen]*
 
