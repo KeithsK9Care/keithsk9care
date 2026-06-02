@@ -6,8 +6,10 @@ backend:
   name: github
   repo: KeithsK9Care/keithsk9care
   branch: main
-  base_url: https://api.netlify.com
-  auth_endpoint: auth
+  # Auth is handled by our own /cms-auth Pages Function, gated by Cloudflare Access
+  # (email One-time PIN). It vends the CMS_GH_TOKEN secret via the CMS auth handshake.
+  base_url: https://keithsk9care.co.uk
+  auth_endpoint: cms-auth
 
 media_folder: public/assets/photos
 public_folder: /assets/photos
