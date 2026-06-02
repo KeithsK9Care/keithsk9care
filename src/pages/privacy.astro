@@ -1,109 +1,46 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import site from '../data/site.json';
+import copy from '../data/copy/privacy.json';
 import PageHero from '../components/PageHero.astro';
 import Reveal from '../components/Reveal.astro';
 import { buildBreadcrumbSchema } from '../lib/schemas';
+import { expandPlaceholders } from '../lib/legal';
 
-const title = "Privacy policy | Keith's K9 Care";
-const description = `How Keith's K9 Care uses and protects the information you give us when you book or message us. Hall Green, Wakefield ${site.address.postcode}.`;
+const m = copy.meta;
+const h = copy.hero;
+const sections: any[] = copy.sections;
+const ex = (t: string) => expandPlaceholders(t, site);
 
 const breadcrumbSchema = buildBreadcrumbSchema([
   { name: "Home", url: `${site.url}/` },
   { name: "Privacy", url: `${site.url}/privacy/` },
 ]);
-
-const lastUpdated = "2026-05-28";
 ---
-<Layout title={title} description={description}>
+<Layout title={m.title} description={m.description} ogImage={m.ogImage}>
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
 
   <PageHero
-    eyebrow="Privacy"
-    heading="How we look after your information."
-    body={`Plain-English summary of what Keith's K9 Care collects, why, and what you can do about it. Last updated ${lastUpdated}.`}
+    eyebrow={h.eyebrow}
+    heading={h.heading}
+    body={`${h.body} Last updated ${copy.lastUpdated}.`}
   />
 
   <section class="section">
     <div class="container-tight prose max-w-2xl">
       <Reveal class="space-y-6 text-ink-700 leading-relaxed">
-
-        <div>
-          <h2 class="text-2xl font-display font-semibold text-ink-900 mt-0">Who we are</h2>
-          <p>This website (<a href={site.url} class="text-teal-700 font-semibold">{site.url}</a>) is operated by <strong>Keith's K9 Care</strong>, a dog grooming business based at {site.address.street}, {site.address.locality}, {site.address.region} {site.address.postcode}. The data controller is Keith Kershaw.</p>
-          <p>You can contact us about anything on this page on <a href={`tel:${site.phoneIntl}`} class="text-teal-700 font-semibold">{site.phone}</a> or <a href={`mailto:${site.email}`} class="text-teal-700 font-semibold">{site.email}</a>.</p>
-        </div>
-
-        <div>
-          <h2 class="text-2xl font-display font-semibold text-ink-900">What we collect, and when</h2>
-          <p>We only collect information you give us directly:</p>
-          <ul class="space-y-2 list-disc pl-6 marker:text-coral-500">
-            <li><strong>When you use the booking form</strong> at <a href="/book/" class="text-teal-700 font-semibold">/book/</a>: your name, email address, phone number (if you give us one), your dog's name and breed (if you tell us), which service you're interested in, and any message you send.</li>
-            <li><strong>When you call, WhatsApp or email us</strong>: whatever you say in that message, plus your number/email if not anonymous.</li>
-            <li><strong>When you visit the salon</strong>: anything you tell us in person about you or your dog so we can do a good groom.</li>
-          </ul>
-        </div>
-
-        <div>
-          <h2 class="text-2xl font-display font-semibold text-ink-900">What we don't collect</h2>
-          <ul class="space-y-2 list-disc pl-6 marker:text-coral-500">
-            <li>We don't use any third-party analytics, advertising, or tracking cookies.</li>
-            <li>We don't sell, rent, or share your information with anyone for marketing.</li>
-            <li>We don't accept card payments through this website. (If we ever do, that'll be via a regulated payment processor with their own privacy policy.)</li>
-          </ul>
-        </div>
-
-        <div>
-          <h2 class="text-2xl font-display font-semibold text-ink-900">Why we collect it (lawful basis)</h2>
-          <p>Under UK GDPR, we use your information on two bases:</p>
-          <ul class="space-y-2 list-disc pl-6 marker:text-coral-500">
-            <li><strong>Legitimate interests</strong>: replying to your enquiry, arranging your appointment, and keeping records of work we've done on your dog.</li>
-            <li><strong>Consent</strong>: if you've separately agreed to be featured (with your dog's name) in a review or groom story on this website, that publication is on the basis of your consent. You can withdraw consent at any time and we'll remove the content.</li>
-          </ul>
-        </div>
-
-        <div>
-          <h2 class="text-2xl font-display font-semibold text-ink-900">How long we keep it</h2>
-          <p>Booking enquiries and messages: <strong>up to 3 years</strong> from your last contact with us, so we can recognise you if you book again and check coat history.</p>
-          <p>Customer records (if you become a regular): kept while you're a customer, then up to 3 years after your last appointment.</p>
-          <p>Tax records (invoices, payments): kept for <strong>6 years</strong> as required by HMRC.</p>
-        </div>
-
-        <div>
-          <h2 class="text-2xl font-display font-semibold text-ink-900">Who we share it with</h2>
-          <p>Where we use a third party to handle parts of the service, your information may be processed by them on our instructions:</p>
-          <ul class="space-y-2 list-disc pl-6 marker:text-coral-500">
-            <li><strong>Cloudflare</strong> (this website's host and DNS provider).</li>
-            <li><strong>Resend</strong> (the email service we may use to deliver the booking form to Keith's inbox).</li>
-            <li><strong>GitHub</strong> (where the website's content is stored as code).</li>
-            <li>Our accountant, only where needed for tax purposes (limited to invoice information).</li>
-          </ul>
-          <p>That's it. We don't share with anyone else.</p>
-        </div>
-
-        <div>
-          <h2 class="text-2xl font-display font-semibold text-ink-900">Your rights</h2>
-          <p>Under UK GDPR you have the right to:</p>
-          <ul class="space-y-2 list-disc pl-6 marker:text-coral-500">
-            <li>See a copy of the information we hold about you</li>
-            <li>Ask us to correct anything that's wrong</li>
-            <li>Ask us to delete your information (where there's no legal reason to keep it)</li>
-            <li>Withdraw consent for anything we publish about you or your dog</li>
-            <li>Complain to the <a href="https://ico.org.uk/" target="_blank" rel="noopener" class="text-teal-700 font-semibold">Information Commissioner's Office (ICO)</a> if you think we've handled your information badly</li>
-          </ul>
-          <p>To exercise any of these rights, drop us a line at <a href={`mailto:${site.email}`} class="text-teal-700 font-semibold">{site.email}</a> — we'll respond within a month.</p>
-        </div>
-
-        <div>
-          <h2 class="text-2xl font-display font-semibold text-ink-900">Cookies</h2>
-          <p>This website does not set any cookies. We don't track visitors. If we ever change that, we'll tell you at the top of the page and ask your consent before setting anything.</p>
-        </div>
-
-        <div>
-          <h2 class="text-2xl font-display font-semibold text-ink-900">Changes to this policy</h2>
-          <p>If we change anything material on this page, we'll update the "last updated" date at the top. The current version is always the one published here.</p>
-        </div>
-
+        {sections.map((s: any, i: number) => (
+          <div>
+            <h2 class:list={['text-2xl font-display font-semibold text-ink-900', i === 0 && 'mt-0']}>{s.heading}</h2>
+            {(s.intro || []).map((p: string) => <p set:html={ex(p)} />)}
+            {s.bullets && s.bullets.length > 0 && (
+              <ul class="space-y-2 list-disc pl-6 marker:text-coral-500">
+                {s.bullets.map((b: string) => <li set:html={ex(b)} />)}
+              </ul>
+            )}
+            {(s.outro || []).map((p: string) => <p set:html={ex(p)} />)}
+          </div>
+        ))}
       </Reveal>
     </div>
   </section>

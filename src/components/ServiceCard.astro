@@ -10,11 +10,11 @@ const { service: s, index } = Astro.props;
     <span class="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-coral-50 text-coral-500">
       <span class="font-display font-bold">{index + 1}</span>
     </span>
-    <span class="text-xs font-semibold uppercase tracking-wider text-ink-500">from £{s.fromPrice}</span>
+    <span class="text-xs font-semibold uppercase tracking-wider text-ink-600">from £{s.fromPrice}</span>
   </div>
   <h3 class="mt-4 text-xl">{s.name}</h3>
   <p class="mt-2 text-sm text-ink-600 leading-relaxed">{s.summary}</p>
-  <span class="inline-flex items-center gap-1 mt-5 text-sm font-semibold text-teal-700 group-hover:text-coral-500">
+  <span class="inline-flex items-center gap-1 mt-5 text-sm font-semibold text-teal-700 group-hover:text-coral-700">
     Details
     <svg aria-hidden="true" class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
   </span>

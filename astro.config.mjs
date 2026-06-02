@@ -7,12 +7,14 @@ export default defineConfig({
   integrations: [
     tailwind(),
     sitemap({
-      // Exclude pages that are still noindex'd placeholders (/pricing, /book, /areas).
-      // All other pages — home, about, faq, services index + 6 detail pages — are indexable.
+      // Exclude the noindex routes from the sitemap: /book and /thanks (booking flow),
+      // /areas (placeholder hub — flip to indexable once the area detail pages ship), and
+      // /admin (CMS). Keep this list in sync with the `noindex` array below. All other
+      // routes (home, about, faq, services index + 6 detail pages, pricing, reviews,
+      // groom-stories, privacy, terms) are indexable.
       filter: (page) => {
         const noindex = [
           'https://keithsk9care.co.uk/book/',
-          'https://keithsk9care.co.uk/areas/',
           'https://keithsk9care.co.uk/thanks/',
           'https://keithsk9care.co.uk/admin/',
         ];

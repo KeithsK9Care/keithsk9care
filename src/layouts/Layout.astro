@@ -1,5 +1,7 @@
 ---
 import '../styles/global.css';
+import '@fontsource-variable/inter';
+import '@fontsource-variable/fraunces';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import WhatsAppPopup from '../components/WhatsAppPopup.astro';
@@ -69,12 +71,7 @@ const localBusiness = buildLocalBusinessSchema(site, services);
 
   <script type="application/ld+json" set:html={JSON.stringify(localBusiness)} />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  {/* Non-blocking font load: preload as style, then activate. NoScript fallback for crawlers/JS-off. */}
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" media="print" onload="this.media='all'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" /></noscript>
+  {/* Inter + Fraunces are self-hosted via @fontsource-variable (bundled into the CSS) — no third-party font request. */}
 
   {/* Preload the hero image (LCP) — only if the page passes a heroPreload */}
   {heroPreload && (

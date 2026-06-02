@@ -25,6 +25,13 @@ collections:
         label: "Homepage"
         name: home
         fields:
+          - name: meta
+            label: "Page meta (SEO)"
+            widget: object
+            fields:
+              - { name: title,       label: "Page title (SEO)",     widget: string }
+              - { name: description, label: "Meta description",     widget: text }
+              - { name: ogImage,     label: "Social share image (og:image)", widget: image, hint: "Picked from photo library. Pick a striking one — this is what shows in WhatsApp / Facebook previews." }
           - name: hero
             label: "Hero section"
             widget: object
@@ -421,6 +428,7 @@ collections:
             widget: object
             fields:
               - { name: title,       widget: string }
+              - { name: description, label: "Meta description", widget: text }
               - { name: ogImage,     label: "Social share image (og:image)", widget: image, hint: "Picked from photo library. Pick a striking one — this is what shows in WhatsApp / Facebook previews." }
           - name: hero
             widget: object
@@ -490,6 +498,86 @@ collections:
               - { name: href,    widget: string }
               - { name: variant, label: "Style (primary or secondary)", widget: select, options: ["primary","secondary"], default: "secondary" }
 
+      # ─── Privacy page ────────────────────────────────
+      - file: src/data/copy/privacy.json
+        label: "Privacy policy page"
+        name: privacy
+        fields:
+          - name: meta
+            widget: object
+            fields:
+              - { name: title,       label: "Page title (SEO)", widget: string }
+              - { name: description, label: "Meta description", widget: text }
+              - { name: ogImage,     label: "Social share image (og:image)", widget: image, hint: "Picked from photo library. Shows in WhatsApp / Facebook previews." }
+          - name: hero
+            widget: object
+            fields:
+              - { name: eyebrow, widget: string }
+              - { name: heading, label: H1, widget: string }
+              - { name: body,    label: "Intro line", widget: text }
+          - { name: lastUpdated, label: "Last updated (date)", widget: string, hint: "Shown under the heading. Update when you change the policy." }
+          - name: sections
+            label: "Sections"
+            label_singular: "Section"
+            widget: list
+            summary: "{{fields.heading}}"
+            fields:
+              - { name: heading, label: "Section heading", widget: string }
+              - name: intro
+                label: "Intro paragraphs (before any list)"
+                widget: list
+                required: false
+                hint: "Each item is a paragraph. <strong>bold</strong> and links allowed, plus auto-fill placeholders {address} {phone} {email} {url}."
+              - name: bullets
+                label: "Bulleted list (optional)"
+                widget: list
+                required: false
+                hint: "Each item is a bullet point. <strong>bold</strong> and links allowed."
+              - name: outro
+                label: "Closing paragraphs after the list (optional)"
+                widget: list
+                required: false
+
+      # ─── Terms page ──────────────────────────────────
+      - file: src/data/copy/terms.json
+        label: "Terms of service page"
+        name: terms
+        fields:
+          - name: meta
+            widget: object
+            fields:
+              - { name: title,       label: "Page title (SEO)", widget: string }
+              - { name: description, label: "Meta description", widget: text }
+              - { name: ogImage,     label: "Social share image (og:image)", widget: image, hint: "Picked from photo library. Shows in WhatsApp / Facebook previews." }
+          - name: hero
+            widget: object
+            fields:
+              - { name: eyebrow, widget: string }
+              - { name: heading, label: H1, widget: string }
+              - { name: body,    label: "Intro line", widget: text }
+          - { name: lastUpdated, label: "Last updated (date)", widget: string, hint: "Shown under the heading. Update when you change the terms." }
+          - name: sections
+            label: "Sections"
+            label_singular: "Section"
+            widget: list
+            summary: "{{fields.heading}}"
+            fields:
+              - { name: heading, label: "Section heading", widget: string }
+              - name: intro
+                label: "Intro paragraphs (before any list)"
+                widget: list
+                required: false
+                hint: "Each item is a paragraph. <strong>bold</strong> and links allowed, plus auto-fill placeholders {address} {phone} {email} {url}."
+              - name: bullets
+                label: "Bulleted list (optional)"
+                widget: list
+                required: false
+                hint: "Each item is a bullet point. <strong>bold</strong> and links allowed."
+              - name: outro
+                label: "Closing paragraphs after the list (optional)"
+                widget: list
+                required: false
+
   # ─────────────────────────────────────────────────────
   - name: site
     label: "Site settings"
@@ -505,6 +593,7 @@ collections:
           - { name: owner,      label: "Owner name",            widget: string }
           - { name: qualification,     label: "Qualification (short)",   widget: string }
           - { name: qualificationFull, label: "Qualification (long)",    widget: string }
+          - { name: academyName,       label: "Grooming academy name",   widget: string }
           - name: address
             label: "Address"
             widget: object
@@ -531,6 +620,7 @@ collections:
               - { name: open,  label: Open,  widget: string }
               - { name: close, label: Close, widget: string }
           - { name: hoursNote, label: "Hours note", widget: text }
+          - { name: surchargesNote, label: "Surcharges note (shown on pricing)", widget: text, hint: "The small-print line about matted-coat and nervous-dog surcharges." }
           - name: serviceArea
             label: "Service area (towns/villages)"
             widget: list
@@ -566,6 +656,7 @@ collections:
                 label: "What's included"
                 widget: list
               - { name: heroPhoto,        label: "Hero photo", widget: image, required: false, hint: "Picked from photo library. Shows at the top of the service page + as social share image." }
+              - { name: heroPhotoAlt,     label: "Hero photo alt text", widget: string, required: false, hint: "Short description of what's in the photo (for accessibility + Google)." }
               - { name: metaDescription,  label: "Meta description (SEO)", widget: text, required: false }
               - name: body
                 label: "Body paragraphs"
@@ -612,6 +703,21 @@ collections:
               - name: landmarks
                 widget: list
               - { name: blurb, widget: text }
+              - { name: metaDescription, label: "Meta description (SEO)", widget: text, required: false }
+              - { name: lead, label: "Intro line (under the heading)", widget: text, required: false }
+              - { name: heroPhoto, label: "Hero / social image", widget: image, required: false, hint: "Optional. Defaults to a stock photo if left blank." }
+              - name: body
+                label: "Body paragraphs"
+                widget: list
+                required: false
+                hint: "The main page content for this area — aim for a few genuinely local paragraphs (landmarks, drive time, who we serve there)."
+              - name: faqs
+                label: "Area FAQs"
+                widget: list
+                required: false
+                fields:
+                  - { name: q, label: Question, widget: string }
+                  - { name: a, label: Answer, widget: text }
 
   # ─────────────────────────────────────────────────────
   - name: faqs

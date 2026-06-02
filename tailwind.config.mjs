@@ -4,8 +4,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-        display: ['"Fraunces"', 'Georgia', 'serif'],
+        sans: ['"Inter Variable"', 'Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        display: ['"Fraunces Variable"', '"Fraunces"', 'Georgia', 'serif'],
       },
       colors: {
         // Brand teal — sampled directly from logo wordmark (Designer.png)

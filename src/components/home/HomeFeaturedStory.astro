@@ -28,9 +28,9 @@ if (!story) return;
             <div class="p-6 md:p-10 flex flex-col">
               <p class="text-xs font-semibold uppercase tracking-wider text-coral-700">{story.service}</p>
               <h3 class="mt-2 text-2xl md:text-3xl font-display font-semibold text-ink-900 group-hover:text-coral-700 transition">{story.title || `${story.dog} — ${story.breed}`}</h3>
-              {story.title && <p class="mt-1 text-sm text-ink-500">{story.dog} · {story.breed}</p>}
+              {story.title && <p class="mt-1 text-sm text-ink-600">{story.dog} · {story.breed}</p>}
               <p class="mt-4 text-ink-700 leading-relaxed">{story.description || story.summary}</p>
-              <p class="mt-6 text-xs text-ink-500">From {story.area}</p>
+              <p class="mt-6 text-xs text-ink-600">From {story.area}</p>
               <span class="inline-flex items-center gap-1 mt-6 font-semibold text-teal-700 group-hover:text-coral-700">
                 Read the full story
                 <svg aria-hidden="true" class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>

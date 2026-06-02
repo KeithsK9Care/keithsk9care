@@ -1,4 +1,9 @@
 {
+  "meta": {
+    "title": "Dog Grooming in Newmillerdam & Hall Green | Keith's K9 Care",
+    "description": "IPET-qualified home dog grooming in Hall Green near Newmillerdam, Wakefield WF4 — one dog at a time in a quiet home. See prices and book your dog in.",
+    "ogImage": "/assets/photos/golden-puppy-woodland-1.jpg"
+  },
   "hero": {
     "locationPill": "Hall Green · WF4 3QJ",
     "headingHtml": "Friendly dog grooming in <span class=\"text-teal-600\">Newmillerdam</span>,<br class=\"hidden md:block\" /> <span class=\"text-coral-500\">Crigglestone</span> & across Wakefield.",
@@ -46,9 +51,9 @@
     "eyebrow": "Meet Keith",
     "heading": "From the law to the grooming table.",
     "paragraphs": [
-      "After a successful career in law, Keith and his wife welcomed two golden retriever brothers — Ringo and Rolo — into their lives during lockdown. What followed was a crash course in just how much mischief two exuberant retrievers can find: mud, puddles, unidentifiable countryside discoveries, and more baths than anyone had bargained for.",
-      "Somewhere in all that, Keith discovered he loved the grooming process — the calm of it, the care, the transformation at the end. He went on to qualify with the IPET Network at Mrs B's Grooming Academy in Leeds, where his trainers noted his natural ability to put dogs at ease.",
-      "Keith brings the same professionalism and attention to detail to every groom that he has applied throughout his working life. Your dog is in safe, experienced hands."
+      "After more than 30 years as a solicitor, Keith swapped the courtroom for the grooming table. His love of dogs began with a golden retriever, Ringo, during lockdown — soon joined by playful Rolo, the perfect contrast to Ringo's calm, gentle nature.",
+      "Between long walks and muddy fields, two exuberant retrievers gave Keith plenty of hands-on experience — and a real appreciation for proper, regular coat care. He went on to train professionally at Mrs B's Grooming Academy in Leeds.",
+      "Today Keith offers a calm, one-to-one groom from a purpose-built home salon — your dog has his full attention, with no other animals around. Safe, experienced hands."
     ],
     "ctaText": "Read Keith's full story",
     "ctaHref": "/about/"

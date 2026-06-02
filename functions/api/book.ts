@@ -4,14 +4,17 @@
  * Email transport: Resend (https://resend.com — free tier 100/day, 3k/month).
  * Set RESEND_API_KEY in Cloudflare Pages → Settings → Environment variables.
  *
- * If the API key is not set, the function still validates the form, logs the
- * submission to the function console, and redirects to /thanks/ — so the form
- * is functional from day one and email sending can be enabled when ready.
+ * Behaviour:
+ *  - Honeypot "company" filled → silent success (bots don't retry).
+ *  - Missing/invalid fields → /book/?status=invalid (friendly banner on the page).
+ *  - RESEND_API_KEY set + send OK → /thanks/.
+ *  - RESEND_API_KEY set + send FAILS → /book/?status=error. We never claim a
+ *    "thanks" we didn't actually deliver.
+ *  - RESEND_API_KEY not set (pre-launch) → log the submission + /thanks/.
  *
- * Anti-spam:
- *  - Honeypot field "company" — bots fill it, humans don't.
- *  - Required-fields validation.
- *  - 60s per-IP rate limit (best-effort, using a header check; CF has a real RL too).
+ * Rate limiting: best configured via Cloudflare's dashboard rate-limit rules (or a
+ * KV / Durable Object) — not in-process, since Workers isolates don't share memory.
+ * The honeypot handles the bulk of automated spam.
  */
 
 interface Env {
@@ -22,16 +25,19 @@ interface Env {
 
 export const onRequestPost: PagesFunction<Env> = async (context) => {
   const { request, env } = context;
+  const redirect = (path: string) =>
+    Response.redirect(new URL(path, request.url).toString(), 303);
+
   let formData: FormData;
   try {
     formData = await request.formData();
   } catch {
-    return new Response("Invalid form submission", { status: 400 });
+    return redirect("/book/?status=invalid");
   }
 
   // Honeypot — silently treat as success so bots don't retry
   if (formData.get("company")) {
-    return Response.redirect(new URL("/thanks/", request.url).toString(), 303);
+    return redirect("/thanks/");
   }
 
   // Validate required fields
@@ -44,10 +50,10 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
   const message = (formData.get("message") || "").toString().trim();
 
   if (!name || !email || !message) {
-    return new Response("Please fill in your name, email and a short message.", { status: 400 });
+    return redirect("/book/?status=invalid");
   }
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    return new Response("Please enter a valid email address.", { status: 400 });
+    return redirect("/book/?status=invalid");
   }
 
   // Build the email body
@@ -68,12 +74,12 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
   ].filter(Boolean);
   const text = lines.join("\n");
 
-  // Send via Resend if configured
   const apiKey = env.RESEND_API_KEY;
   const from   = env.RESEND_FROM || "Keith's K9 Care <bookings@keithsk9care.co.uk>";
   const to     = env.RESEND_TO   || "keith@keithsk9care.co.uk";
 
   if (apiKey) {
+    let delivered = false;
     try {
       const r = await fetch("https://api.resend.com/emails", {
         method: "POST",
@@ -81,27 +87,25 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
           "Authorization": `Bearer ${apiKey}`,
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          from,
-          to,
-          reply_to: email,
-          subject,
-          text,
-        }),
+        body: JSON.stringify({ from, to, reply_to: email, subject, text }),
       });
+      delivered = r.ok;
       if (!r.ok) {
         const body = await r.text().catch(() => "(no body)");
         console.error("Resend API error", r.status, body);
-        // Don't fail the user — log it, still redirect
       }
     } catch (e) {
       console.error("Resend network error", e);
     }
+    // Never claim a success we didn't deliver — surface the failure to the user.
+    if (!delivered) {
+      return redirect("/book/?status=error");
+    }
   } else {
-    // No email transport configured — log so it's still recoverable
+    // No email transport configured (pre-launch) — log so it's still recoverable.
     console.log("[BOOKING SUBMISSION — RESEND_API_KEY not set]");
     console.log(text);
   }
 
-  return Response.redirect(new URL("/thanks/", request.url).toString(), 303);
+  return redirect("/thanks/");
 };

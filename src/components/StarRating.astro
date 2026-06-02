@@ -1,0 +1,26 @@
+---
+interface Props {
+  /** Number of filled stars, 0–5. Defaults to 5. */
+  rating?: number;
+  /** Decorative use (e.g. a flourish next to text that already states the rating). Renders aria-hidden with no label. */
+  decorative?: boolean;
+  /** Star size. sm = w-4, md = w-5. */
+  size?: 'sm' | 'md';
+  /** Extra classes on the wrapper (e.g. gap + margin). */
+  class?: string;
+}
+const { rating = 5, decorative = false, size = 'sm', class: className = '' } = Astro.props;
+const dim = size === 'md' ? 'w-5 h-5' : 'w-4 h-4';
+---
+<span
+  class:list={['inline-flex items-center text-coral-500', className]}
+  role={decorative ? undefined : 'img'}
+  aria-label={decorative ? undefined : `${rating} out of 5 stars`}
+  aria-hidden={decorative ? 'true' : undefined}
+>
+  {[1, 2, 3, 4, 5].map((i) => (
+    <svg aria-hidden="true" class:list={[dim, i <= rating ? 'fill-current' : 'fill-ink-200']} viewBox="0 0 20 20">
+      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.37 2.448a1 1 0 00-.364 1.118l1.287 3.958c.3.922-.755 1.688-1.539 1.118l-3.37-2.448a1 1 0 00-1.175 0l-3.371 2.448c-.783.57-1.838-.197-1.539-1.118l1.287-3.958a1 1 0 00-.364-1.118L2.05 9.385c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69l1.286-3.957z"/>
+    </svg>
+  ))}
+</span>

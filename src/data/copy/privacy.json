@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "title": "Privacy policy | Keith's K9 Care",
+    "description": "How Keith's K9 Care collects, uses and protects the information you give us when you book or message. Hall Green, Wakefield WF4.",
+    "ogImage": "/assets/photos/golden-puppy-woodland-1.jpg"
+  },
+  "hero": {
+    "eyebrow": "Privacy",
+    "heading": "How we look after your information.",
+    "body": "Plain-English summary of what Keith's K9 Care collects, why, and what you can do about it."
+  },
+  "lastUpdated": "2026-05-28",
+  "sections": [
+    {
+      "heading": "Who we are",
+      "intro": [
+        "This website ({url}) is operated by <strong>Keith's K9 Care</strong>, a dog grooming business based at {address}. The data controller is Keith Kershaw.",
+        "You can contact us about anything on this page on {phone} or {email}."
+      ]
+    },
+    {
+      "heading": "What we collect, and when",
+      "intro": [ "We only collect information you give us directly:" ],
+      "bullets": [
+        "<strong>When you use the booking form</strong> at <a href=\"/book/\" class=\"text-teal-700 font-semibold\">/book/</a>: your name, email address, phone number (if you give us one), your dog's name and breed (if you tell us), which service you're interested in, and any message you send.",
+        "<strong>When you call, WhatsApp or email us</strong>: whatever you say in that message, plus your number/email if not anonymous.",
+        "<strong>When you visit the salon</strong>: anything you tell us in person about you or your dog so we can do a good groom."
+      ]
+    },
+    {
+      "heading": "What we don't collect",
+      "bullets": [
+        "We don't use any third-party analytics, advertising, or tracking cookies.",
+        "We don't sell, rent, or share your information with anyone for marketing.",
+        "We don't accept card payments through this website. (If we ever do, that'll be via a regulated payment processor with their own privacy policy.)"
+      ]
+    },
+    {
+      "heading": "Why we collect it (lawful basis)",
+      "intro": [ "Under UK GDPR, we use your information on two bases:" ],
+      "bullets": [
+        "<strong>Legitimate interests</strong>: replying to your enquiry, arranging your appointment, and keeping records of work we've done on your dog.",
+        "<strong>Consent</strong>: if you've separately agreed to be featured (with your dog's name) in a review or groom story on this website, that publication is on the basis of your consent. You can withdraw consent at any time and we'll remove the content."
+      ]
+    },
+    {
+      "heading": "How long we keep it",
+      "intro": [
+        "Booking enquiries and messages: <strong>up to 3 years</strong> from your last contact with us, so we can recognise you if you book again and check coat history.",
+        "Customer records (if you become a regular): kept while you're a customer, then up to 3 years after your last appointment.",
+        "Tax records (invoices, payments): kept for <strong>6 years</strong> as required by HMRC."
+      ]
+    },
+    {
+      "heading": "Who we share it with",
+      "intro": [ "Where we use a third party to handle parts of the service, your information may be processed by them on our instructions:" ],
+      "bullets": [
+        "<strong>Cloudflare</strong> (this website's host and DNS provider).",
+        "<strong>Resend</strong> (the email service we may use to deliver the booking form to Keith's inbox).",
+        "<strong>GitHub</strong> (where the website's content is stored as code).",
+        "Our accountant, only where needed for tax purposes (limited to invoice information)."
+      ],
+      "outro": [ "That's it. We don't share with anyone else." ]
+    },
+    {
+      "heading": "Your rights",
+      "intro": [ "Under UK GDPR you have the right to:" ],
+      "bullets": [
+        "See a copy of the information we hold about you",
+        "Ask us to correct anything that's wrong",
+        "Ask us to delete your information (where there's no legal reason to keep it)",
+        "Withdraw consent for anything we publish about you or your dog",
+        "Complain to the <a href=\"https://ico.org.uk/\" target=\"_blank\" rel=\"noopener\" class=\"text-teal-700 font-semibold\">Information Commissioner's Office (ICO)</a> if you think we've handled your information badly"
+      ],
+      "outro": [ "To exercise any of these rights, drop us a line at {email} — we'll respond within a month." ]
+    },
+    {
+      "heading": "Cookies",
+      "intro": [ "This website does not set any cookies. We don't track visitors. If we ever change that, we'll tell you at the top of the page and ask your consent before setting anything." ]
+    },
+    {
+      "heading": "Changes to this policy",
+      "intro": [ "If we change anything material on this page, we'll update the \"last updated\" date at the top. The current version is always the one published here." ]
+    }
+  ]
+}

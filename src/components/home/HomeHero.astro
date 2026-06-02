@@ -5,6 +5,7 @@ const h = copy.hero;
 const imgs = copy.images;
 import reviews from '../../data/reviews.json';
 import Picture from '../Picture.astro';
+import StarRating from '../StarRating.astro';
 
 const reviewCount = reviews.length;
 const avgRating = reviewCount > 0 ? (reviews.reduce((a: number, r: any) => a + r.rating, 0) / reviewCount).toFixed(1) : null;
@@ -24,16 +25,13 @@ const avgRating = reviewCount > 0 ? (reviews.reduce((a: number, r: any) => a + r
           </span>
           {avgRating && (
             <a href="/reviews/" class="inline-flex items-center gap-1.5 rounded-full bg-white shadow-sm ring-1 ring-ink-100 px-3 py-1.5 text-xs font-semibold text-ink-800 hover:ring-coral-300 transition">
-              <span class="text-coral-500 leading-none">★★★★★</span>
+              <span class="text-coral-500 leading-none" aria-hidden="true">★★★★★</span>
               <span>{avgRating}</span>
-              <span class="text-ink-500">· {reviewCount} {reviewCount === 1 ? 'review' : 'reviews'}</span>
+              <span class="text-ink-600">· {reviewCount} {reviewCount === 1 ? 'review' : 'reviews'}</span>
             </a>
           )}
         </div>
-      <h1 class="mt-6 text-4xl md:text-5xl lg:text-6xl leading-[1.05]">
-        Friendly dog grooming in <span class="text-teal-600">Newmillerdam</span>,<br class="hidden md:block" />
-        <span class="text-coral-500">Crigglestone</span> & across Wakefield.
-      </h1>
+      <h1 class="mt-6 text-4xl md:text-5xl lg:text-6xl leading-[1.05]" set:html={h.headingHtml}></h1>
       <p class="mt-6 text-lg md:text-xl text-ink-700 leading-relaxed max-w-xl">
         {h.bodyPara1}
       </p>
@@ -60,9 +58,7 @@ const avgRating = reviewCount > 0 ? (reviews.reduce((a: number, r: any) => a + r
         <Picture src={imgs.heroPhoto} size={800} alt={imgs.heroPhotoAlt} width={800} height={1000} priority />
       </div>
       <div class="absolute -bottom-6 -left-6 hidden md:block bg-white rounded-2xl shadow-xl ring-1 ring-ink-100 px-5 py-4 max-w-[200px]">
-        <div class="flex items-center gap-2 text-coral-500 mb-1">
-          {[1,2,3,4,5].map(() => <svg aria-hidden="true" class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.37 2.448a1 1 0 00-.364 1.118l1.287 3.958c.3.922-.755 1.688-1.539 1.118l-3.37-2.448a1 1 0 00-1.175 0l-3.371 2.448c-.783.57-1.838-.197-1.539-1.118l1.287-3.958a1 1 0 00-.364-1.118L2.05 9.385c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69l1.286-3.957z"/></svg>)}
-        </div>
+        <StarRating decorative class="gap-2 mb-1" />
         <p class="text-sm font-semibold text-ink-900 leading-tight">{h.ipetBadge}</p>
       </div>
     </div>

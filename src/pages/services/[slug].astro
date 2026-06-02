@@ -61,7 +61,7 @@ const breadcrumbSchema = buildBreadcrumbSchema([
         <p class="mt-6 text-lg md:text-xl text-ink-700 leading-relaxed max-w-xl">{s.summary}</p>
         <div class="mt-7 flex flex-wrap gap-x-6 gap-y-2 items-baseline">
           <p class="text-3xl font-display font-semibold text-teal-700">from £{s.fromPrice}</p>
-          <p class="text-sm text-ink-500">{s.duration}</p>
+          <p class="text-sm text-ink-600">{s.duration}</p>
         </div>
         <div class="mt-7 flex flex-col sm:flex-row gap-3">
           <a href="/book/" class="btn-primary">Book a Groom</a>
@@ -71,7 +71,7 @@ const breadcrumbSchema = buildBreadcrumbSchema([
       <Reveal delay={120}>
         <div class="relative rounded-3xl overflow-hidden ring-1 ring-ink-100 shadow-xl shadow-teal-900/10 aspect-[4/5]">
           {s.heroPhoto && (
-            <Picture src={s.heroPhoto} size={800} alt={`${s.name} at Keith's K9 Care, Hall Green WF4`} width={800} height={1000} priority />
+            <Picture src={s.heroPhoto} size={800} alt={s.heroPhotoAlt || `${s.name} at Keith's K9 Care, Hall Green WF4`} width={800} height={1000} priority />
           )}
         </div>
       </Reveal>
@@ -121,7 +121,7 @@ const breadcrumbSchema = buildBreadcrumbSchema([
           ))}
         </ul>
         <p class="mt-5 text-sm text-ink-600">
-          Surcharges where applicable — matted coats from £10 · nervous, anxious or reactive dogs +£10–£20. <a href="/pricing/" class="text-teal-700 font-semibold hover:text-coral-500">Full price guide</a>.
+          Surcharges where applicable — matted coats from £10 · nervous, anxious or reactive dogs +£10–£20. <a href="/pricing/" class="text-teal-700 font-semibold hover:text-coral-700">Full price guide</a>.
         </p>
       </Reveal>
     </div>
@@ -143,7 +143,7 @@ const breadcrumbSchema = buildBreadcrumbSchema([
         </div>
         <Reveal delay={200}>
           <p class="mt-8 text-sm text-ink-600">
-            More general questions on the <a href="/faq/" class="text-teal-700 font-semibold hover:text-coral-500">full FAQ page</a>.
+            More general questions on the <a href="/faq/" class="text-teal-700 font-semibold hover:text-coral-700">full FAQ page</a>.
           </p>
         </Reveal>
       </div>

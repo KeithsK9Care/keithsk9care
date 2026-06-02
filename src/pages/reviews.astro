@@ -25,10 +25,6 @@ const heading = hasReviews
       .replace('{nounOwners}', reviews.length === 1 ? 'owner' : 'owners')
   : h.headingWithoutReviews;
 
-const description = hasReviews
-  ? `${reviews.length} ${reviews.length === 1 ? 'review' : 'reviews'} from dog owners across Hall Green, Newmillerdam, Crigglestone, Sandal and the wider Wakefield area. ${avg} out of 5 average.`
-  : `Reviews from dog owners at Keith\'s K9 Care, Hall Green Wakefield WF4. New reviews coming soon.`;
-
 const businessId = `${site.url}/#business`;
 const reviewSchema = hasReviews ? buildReviewSchema({
   url: `${site.url}/reviews/`,
@@ -42,7 +38,7 @@ const breadcrumbSchema = buildBreadcrumbSchema([
   { name: "Reviews", url: `${site.url}/reviews/` },
 ]);
 ---
-<Layout title={m.title} description={description} ogImage={m.ogImage}>
+<Layout title={m.title} description={m.description} ogImage={m.ogImage}>
   {reviewSchema    && <script slot="head" type="application/ld+json" set:html={JSON.stringify(reviewSchema)} />}
   {aggregateSchema && <script slot="head" type="application/ld+json" set:html={JSON.stringify(aggregateSchema)} />}
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />

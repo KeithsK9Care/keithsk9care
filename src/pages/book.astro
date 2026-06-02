@@ -26,7 +26,7 @@ const waMsg = encodeURIComponent(qc.whatsapp.prefilledMessage || "Hi Keith, I'd 
         <a href={`tel:${site.phoneIntl}`} class="block rounded-2xl bg-white ring-1 ring-ink-100 p-5 hover:ring-coral-300 hover:shadow-md transition">
           <p class="text-xs font-semibold uppercase tracking-wider text-coral-700">{qc.call.label}</p>
           <p class="mt-1 text-lg font-display font-semibold text-teal-700">{site.phone}</p>
-          <p class="mt-0.5 text-xs text-ink-500">{qc.call.title}</p>
+          <p class="mt-0.5 text-xs text-ink-600">{qc.call.title}</p>
         </a>
       </Reveal>
       <Reveal delay={80}>
@@ -40,7 +40,7 @@ const waMsg = encodeURIComponent(qc.whatsapp.prefilledMessage || "Hi Keith, I'd 
         <a href={`mailto:${site.email}`} class="block rounded-2xl bg-white ring-1 ring-ink-100 p-5 hover:ring-coral-300 hover:shadow-md transition">
           <p class="text-xs font-semibold uppercase tracking-wider text-coral-700">{qc.email.label}</p>
           <p class="mt-1 text-base font-display font-semibold text-teal-700 break-all">{site.email}</p>
-          <p class="mt-0.5 text-xs text-ink-500">{qc.email.subtitle}</p>
+          <p class="mt-0.5 text-xs text-ink-600">{qc.email.subtitle}</p>
         </a>
       </Reveal>
     </div>
@@ -63,6 +63,8 @@ const waMsg = encodeURIComponent(qc.whatsapp.prefilledMessage || "Hi Keith, I'd 
         />
       </Reveal>
 
+      <div id="kk9-form-status" role="alert" class="hidden mb-6 rounded-xl border border-coral-200 bg-coral-50 px-5 py-4 text-sm font-semibold text-coral-800"></div>
+
       <Reveal delay={100}>
         <form
           id="kk9-book-form"
@@ -77,7 +79,7 @@ const waMsg = encodeURIComponent(qc.whatsapp.prefilledMessage || "Hi Keith, I'd 
 
           <div class="grid sm:grid-cols-2 gap-5">
             <div>
-              <label for="name" class="block text-sm font-semibold text-ink-800">Your name <span class="text-coral-500">*</span></label>
+              <label for="name" class="block text-sm font-semibold text-ink-800">Your name <span class="text-coral-700">*</span></label>
               <input id="name" name="name" type="text" required class="form-input mt-1" placeholder="Jane Smith" autocomplete="name" />
             </div>
             <div>
@@ -87,7 +89,7 @@ const waMsg = encodeURIComponent(qc.whatsapp.prefilledMessage || "Hi Keith, I'd 
           </div>
 
           <div>
-            <label for="email" class="block text-sm font-semibold text-ink-800">Email <span class="text-coral-500">*</span></label>
+            <label for="email" class="block text-sm font-semibold text-ink-800">Email <span class="text-coral-700">*</span></label>
             <input id="email" name="email" type="email" required class="form-input mt-1" placeholder="you@example.com" autocomplete="email" />
           </div>
 
@@ -111,7 +113,7 @@ const waMsg = encodeURIComponent(qc.whatsapp.prefilledMessage || "Hi Keith, I'd 
           </div>
 
           <div>
-            <label for="message" class="block text-sm font-semibold text-ink-800">Message <span class="text-coral-500">*</span></label>
+            <label for="message" class="block text-sm font-semibold text-ink-800">Message <span class="text-coral-700">*</span></label>
             <textarea id="message" name="message" rows="5" required class="form-input mt-1" placeholder="A little about your dog — age, last groom, anything Keith should know about behaviour or coat."></textarea>
           </div>
 
@@ -144,7 +146,7 @@ const waMsg = encodeURIComponent(qc.whatsapp.prefilledMessage || "Hi Keith, I'd 
       </Reveal>
       <Reveal class="mt-8 grid md:grid-cols-2 gap-5" delay={100}>
         <div class="rounded-2xl bg-white ring-1 ring-ink-100 p-6">
-          <p class="text-xs font-semibold uppercase tracking-wider text-coral-500 mb-3">{loc.addressLabel}</p>
+          <p class="text-xs font-semibold uppercase tracking-wider text-coral-700 mb-3">{loc.addressLabel}</p>
           <address class="not-italic text-ink-800 text-lg leading-relaxed">
             {site.address.street}<br/>
             {site.address.locality}, {site.address.region}<br/>
@@ -158,7 +160,7 @@ const waMsg = encodeURIComponent(qc.whatsapp.prefilledMessage || "Hi Keith, I'd 
         </div>
 
         <div class="rounded-2xl bg-white ring-1 ring-ink-100 p-6">
-          <p class="text-xs font-semibold uppercase tracking-wider text-coral-500 mb-3">{loc.hoursLabel}</p>
+          <p class="text-xs font-semibold uppercase tracking-wider text-coral-700 mb-3">{loc.hoursLabel}</p>
           <ul class="text-ink-800 space-y-1">
             {site.hours.map(h => (
               <li class="flex justify-between gap-4"><span class="font-semibold">{h.day}</span><span>{h.open}–{h.close}</span></li>
@@ -192,8 +194,22 @@ const waMsg = encodeURIComponent(qc.whatsapp.prefilledMessage || "Hi Keith, I'd 
         form.classList.add('opacity-90', 'pointer-events-none');
       });
     }
+    function showStatus() {
+      var el = document.getElementById('kk9-form-status');
+      if (!el) return;
+      var status = new URLSearchParams(location.search).get('status');
+      if (status === 'error') {
+        el.textContent = 'Sorry — something went wrong sending your message. Please call or WhatsApp Keith using the buttons above, or try again.';
+        el.classList.remove('hidden');
+        el.scrollIntoView({ block: 'center', behavior: 'smooth' });
+      } else if (status === 'invalid') {
+        el.textContent = 'Please add your name, email and a short message, then send again.';
+        el.classList.remove('hidden');
+      }
+    }
     arm();
-    document.addEventListener('astro:page-load', arm);
+    showStatus();
+    document.addEventListener('astro:page-load', function () { arm(); showStatus(); });
   })();
 </script>
 

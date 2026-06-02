@@ -1,0 +1,125 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import site from '../../data/site.json';
+import areas from '../../data/areas.json';
+import services from '../../data/services.json';
+import PageHero from '../../components/PageHero.astro';
+import SectionIntro from '../../components/SectionIntro.astro';
+import Reveal from '../../components/Reveal.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import FAQItem from '../../components/FAQItem.astro';
+import AreaPill from '../../components/AreaPill.astro';
+import ContactCTACard from '../../components/ContactCTACard.astro';
+import ReviewStrip from '../../components/ReviewStrip.astro';
+import { buildFAQSchema, buildBreadcrumbSchema } from '../../lib/schemas';
+
+export function getStaticPaths() {
+  return areas.map((a: any) => ({ params: { slug: a.slug }, props: { area: a } }));
+}
+
+const { area } = Astro.props;
+const a: any = area;
+const isHome = a.distanceMiles === 0;
+const hasContent = Array.isArray(a.body) && a.body.length > 0;
+
+const title = `Dog grooming in ${a.name} | Keith's K9 Care`;
+const description = a.metaDescription
+  || `IPET-qualified, one-to-one dog grooming a short drive from ${a.name} — a calm home salon in Hall Green, Wakefield WF4. See prices and book your dog in.`;
+
+const others = areas.filter((x: any) => x.slug !== a.slug);
+
+const faqSchema = a.faqs && a.faqs.length ? buildFAQSchema(a.faqs) : null;
+const breadcrumbSchema = buildBreadcrumbSchema([
+  { name: "Home", url: `${site.url}/` },
+  { name: "Areas we cover", url: `${site.url}/areas/` },
+  { name: a.name, url: `${site.url}/areas/${a.slug}/` },
+]);
+---
+<Layout title={title} description={description} noindex={!hasContent} ogImage={a.heroPhoto ?? '/assets/photos/golden-puppy-woodland-3.jpg'}>
+  {faqSchema && <script slot="head" type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <PageHero eyebrow="Areas we cover" heading={`Dog grooming in ${a.name}.`} body={a.lead || a.blurb}>
+    <a href="/book/" class="btn-primary">Book your dog in</a>
+    <a href="/pricing/" class="btn-secondary">See prices</a>
+  </PageHero>
+
+  <ReviewStrip />
+
+  <!-- LOCAL CONTEXT -->
+  <section class="pt-2">
+    <div class="container-tight">
+      <Reveal class="flex flex-wrap gap-x-6 gap-y-2 text-sm text-ink-700">
+        {!isHome && <span><strong class="text-ink-900">{a.driveMinutes} min</strong> drive · {a.distanceMiles} miles</span>}
+        <span><strong class="text-ink-900">Postcode area:</strong> {a.postcodePrefix}</span>
+        {a.landmarks && a.landmarks.length > 0 && <span><strong class="text-ink-900">Near:</strong> {a.landmarks.join(' · ')}</span>}
+      </Reveal>
+    </div>
+  </section>
+
+  <!-- BODY -->
+  {hasContent && (
+    <section class="section pt-8">
+      <div class="container-tight">
+        <Reveal class="space-y-5 text-lg text-ink-700 leading-relaxed max-w-2xl">
+          {a.body.map((p: string) => <p>{p}</p>)}
+        </Reveal>
+      </div>
+    </section>
+  )}
+
+  <!-- SERVICES -->
+  <section class="section bg-teal-50/60">
+    <div class="container-wide">
+      <Reveal>
+        <SectionIntro
+          eyebrow="What we do"
+          heading={`Grooming services for ${a.name} dogs`}
+          description="Every coat type welcome — from a puppy's first groom to traditional hand stripping. One dog at a time, in a quiet home salon."
+        />
+      </Reveal>
+      <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {services.map((s: any, i: number) => (
+          <Reveal delay={i * 60}><ServiceCard service={s} index={i} /></Reveal>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- AREA FAQ -->
+  {a.faqs && a.faqs.length > 0 && (
+    <section class="section">
+      <div class="container-tight">
+        <Reveal>
+          <SectionIntro eyebrow="Frequently asked" heading={`Grooming in ${a.name} — your questions`} />
+        </Reveal>
+        <div class="mt-8 space-y-3">
+          {a.faqs.map((f: any, i: number) => (
+            <Reveal delay={i * 50}><FAQItem faq={f} open={i === 0} /></Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- OTHER AREAS -->
+  <section class="section bg-ink-50/60">
+    <div class="container-tight">
+      <Reveal>
+        <SectionIntro eyebrow="Nearby" heading="Other areas we cover" />
+      </Reveal>
+      <Reveal class="mt-8 flex flex-wrap gap-2" delay={100}>
+        {others.map((x: any) => <AreaPill area={x} />)}
+      </Reveal>
+    </div>
+  </section>
+
+  <!-- CONTACT CTA -->
+  <section class="section">
+    <div class="container-wide">
+      <Reveal>
+        <ContactCTACard heading={`Book a groom near ${a.name}`} body="Drop Keith a quick message about your dog — coat, age, any nerves — and he'll find the right slot." />
+      </Reveal>
+    </div>
+  </section>
+</Layout>
