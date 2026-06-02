@@ -38,10 +38,7 @@ const breadcrumbSchema = buildBreadcrumbSchema([
   { name: "Reviews", url: `${site.url}/reviews/` },
 ]);
 ---
-<Layout title={m.title} description={m.description} ogImage={m.ogImage}>
-  {reviewSchema    && <script slot="head" type="application/ld+json" set:html={JSON.stringify(reviewSchema)} />}
-  {aggregateSchema && <script slot="head" type="application/ld+json" set:html={JSON.stringify(aggregateSchema)} />}
-  <script slot="head" type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+<Layout title={m.title} description={m.description} ogImage={m.ogImage} schema={[reviewSchema, aggregateSchema, breadcrumbSchema]}>
 
   <PageHero eyebrow={h.eyebrow} heading={heading} body={h.body}>
     <a href={h.ctaPrimaryHref} class="btn-primary">{h.ctaPrimary}</a>

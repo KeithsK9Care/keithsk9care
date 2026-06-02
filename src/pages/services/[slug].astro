@@ -45,10 +45,7 @@ const breadcrumbSchema = buildBreadcrumbSchema([
   { name: s.name, url: `${site.url}/services/${s.slug}/` },
 ]);
 ---
-<Layout title={title} description={description} ogImage={s.heroPhoto ?? undefined}>
-  <script slot="head" type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
-  {faqSchema && <script slot="head" type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
-  <script slot="head" type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+<Layout title={title} description={description} ogImage={`/assets/og/services/${s.slug}.jpg`} ogImageAlt={`${s.name} — Keith's K9 Care, Wakefield WF4`} schema={[serviceSchema, faqSchema, breadcrumbSchema]}>
 
   <!-- HERO -->
   <section class="section bg-gradient-to-b from-teal-50 via-white to-white">

@@ -19,8 +19,7 @@ const faqSchema = buildFAQSchema(homepageFaqs);
 
 const m = copy.meta;
 ---
-<Layout title={m.title} description={m.description} ogImage={m.ogImage} heroPreload="golden-puppy-woodland-1-800">
-  <script slot="head" type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+<Layout title={m.title} description={m.description} ogImage={m.ogImage} heroPreload="golden-puppy-woodland-1-800" schema={[faqSchema]}>
 
   <HomeHero />
   <ReviewStrip />

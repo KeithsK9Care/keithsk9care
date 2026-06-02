@@ -80,7 +80,7 @@ const waMsg = encodeURIComponent(qc.whatsapp.prefilledMessage || "Hi Keith, I'd 
           <div class="grid sm:grid-cols-2 gap-5">
             <div>
               <label for="name" class="block text-sm font-semibold text-ink-800">Your name <span class="text-coral-700">*</span></label>
-              <input id="name" name="name" type="text" required class="form-input mt-1" placeholder="Jane Smith" autocomplete="name" />
+              <input id="name" name="name" type="text" required aria-required="true" class="form-input mt-1" placeholder="Jane Smith" autocomplete="name" />
             </div>
             <div>
               <label for="phone" class="block text-sm font-semibold text-ink-800">Phone</label>
@@ -90,7 +90,7 @@ const waMsg = encodeURIComponent(qc.whatsapp.prefilledMessage || "Hi Keith, I'd 
 
           <div>
             <label for="email" class="block text-sm font-semibold text-ink-800">Email <span class="text-coral-700">*</span></label>
-            <input id="email" name="email" type="email" required class="form-input mt-1" placeholder="you@example.com" autocomplete="email" />
+            <input id="email" name="email" type="email" required aria-required="true" class="form-input mt-1" placeholder="you@example.com" autocomplete="email" />
           </div>
 
           <div class="grid sm:grid-cols-2 gap-5">
@@ -114,7 +114,7 @@ const waMsg = encodeURIComponent(qc.whatsapp.prefilledMessage || "Hi Keith, I'd 
 
           <div>
             <label for="message" class="block text-sm font-semibold text-ink-800">Message <span class="text-coral-700">*</span></label>
-            <textarea id="message" name="message" rows="5" required class="form-input mt-1" placeholder="A little about your dog — age, last groom, anything Keith should know about behaviour or coat."></textarea>
+            <textarea id="message" name="message" rows="5" required aria-required="true" class="form-input mt-1" placeholder="A little about your dog — age, last groom, anything Keith should know about behaviour or coat."></textarea>
           </div>
 
           <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-2 -mx-6 md:-mx-8 -mb-6 md:-mb-8 px-6 md:px-8 pb-6 md:pb-8 mt-3 rounded-b-3xl bg-gradient-to-br from-teal-50/70 to-coral-50/60 border-t border-ink-100">

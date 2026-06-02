@@ -46,9 +46,7 @@ const breadcrumbSchema = buildBreadcrumbSchema([
   { name: "About Keith", url: `${site.url}/about/` },
 ]);
 ---
-<Layout title={m.title} description={m.description} ogImage={m.ogImage}>
-  <script slot="head" type="application/ld+json" set:html={JSON.stringify(personSchema)} />
-  <script slot="head" type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+<Layout title={m.title} description={m.description} ogImage={m.ogImage} schema={[personSchema, breadcrumbSchema]}>
 
   <!-- HERO -->
   <section class="section bg-gradient-to-b from-teal-50 via-white to-white">

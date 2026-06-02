@@ -42,7 +42,6 @@ interface ServiceShape {
  */
 export function buildLocalBusinessSchema(site: SiteShape, services: ServiceShape[]) {
   return {
-    "@context": "https://schema.org",
     "@type": ["LocalBusiness", "AnimalCareService"],
     "@id": `${site.url}/#business`,
     "name": site.name,
@@ -108,7 +107,6 @@ export function buildLocalBusinessSchema(site: SiteShape, services: ServiceShape
  */
 export function buildFAQSchema(faqs: { q: string; a: string }[]) {
   return {
-    "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": faqs.map((f) => ({
       "@type": "Question",
@@ -124,7 +122,6 @@ export function buildFAQSchema(faqs: { q: string; a: string }[]) {
  */
 export function buildBreadcrumbSchema(crumbs: { name: string; url: string }[]) {
   return {
-    "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": crumbs.map((c, i) => ({
       "@type": "ListItem",
@@ -150,7 +147,6 @@ export function buildPersonSchema(opts: {
   knowsAbout?: string[];
 }) {
   return {
-    "@context": "https://schema.org",
     "@type": "Person",
     "name": opts.name,
     "jobTitle": opts.jobTitle,
@@ -181,7 +177,6 @@ export function buildServiceSchema(opts: {
   areaServed: string[];
 }) {
   return {
-    "@context": "https://schema.org",
     "@type": "Service",
     "serviceType": "Dog grooming",
     "name": opts.name,
@@ -219,7 +214,6 @@ export function buildReviewSchema(opts: {
   reviews: { id: string; author: string; date: string; rating: number; body: string; service?: string }[];
 }) {
   return {
-    "@context": "https://schema.org",
     "@type": "ItemList",
     "itemListElement": opts.reviews.map((r, i) => ({
       "@type": "ListItem",
@@ -249,7 +243,6 @@ export function buildAggregateRatingSchema(opts: {
   const total = opts.ratings.reduce((a, b) => a + b, 0);
   const avg = total / opts.ratings.length;
   return {
-    "@context": "https://schema.org",
     "@type": "AggregateRating",
     "itemReviewed": { "@id": opts.businessId },
     "ratingValue": Math.round(avg * 10) / 10,
@@ -257,5 +250,18 @@ export function buildAggregateRatingSchema(opts: {
     "worstRating": 1,
     "ratingCount": opts.ratings.length,
     "reviewCount": opts.ratings.length,
+  };
+}
+
+/**
+ * Combine one or more schema entities into a single JSON-LD `@graph` block, so
+ * every page emits exactly ONE <script type="application/ld+json"> (RVTC Gold
+ * Standard point 5). Falsy entries (e.g. an absent FAQ or empty reviews) are
+ * dropped, and the shared @context lives once at the top of the graph.
+ */
+export function buildGraph(entities: Array<object | null | undefined | false>) {
+  return {
+    "@context": "https://schema.org",
+    "@graph": entities.filter(Boolean),
   };
 }

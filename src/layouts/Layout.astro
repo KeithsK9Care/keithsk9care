@@ -8,7 +8,7 @@ import WhatsAppPopup from '../components/WhatsAppPopup.astro';
 import StickyMobileCTA from '../components/StickyMobileCTA.astro';
 import site from '../data/site.json';
 import { services } from '../lib/content';
-import { buildLocalBusinessSchema } from '../lib/schemas';
+import { buildLocalBusinessSchema, buildGraph } from '../lib/schemas';
 import { ClientRouter } from 'astro:transitions';
 
 export interface Props {
@@ -16,19 +16,23 @@ export interface Props {
   description: string;
   canonical?: string;
   ogImage?: string;
+  ogImageAlt?: string;
   noindex?: boolean;
   hideWhatsApp?: boolean;
   heroPreload?: string;   // path under /assets/photos/ — preloads webp + jpg for the LCP image
+  schema?: Array<object | null | false>;  // page-specific JSON-LD entities, merged into one @graph
 }
 
 const {
   title,
   description,
   canonical = new URL(Astro.url.pathname, Astro.site).toString(),
-  ogImage = '/assets/photos/golden-puppy-woodland-1.jpg',
+  ogImage = '/assets/og/default.jpg',
+  ogImageAlt = "Keith's K9 Care — friendly local dog grooming in Hall Green, Wakefield WF4",
   noindex = false,
   hideWhatsApp = false,
   heroPreload,
+  schema = [],
 } = Astro.props;
 
 // ogImage accepts either a full path ("/assets/photos/X.jpg") or a filename stub ("X").
@@ -36,6 +40,9 @@ const {
 const ogPath = ogImage.startsWith('/') ? ogImage : `/assets/photos/${ogImage}.jpg`;
 
 const localBusiness = buildLocalBusinessSchema(site, services);
+// Every page emits exactly one JSON-LD <script>: the sitewide LocalBusiness plus
+// whatever entities the page passes, combined into a single @graph (Gold Standard #5).
+const graph = buildGraph([localBusiness, ...schema]);
 ---
 <!DOCTYPE html>
 <html lang="en-GB">
@@ -59,17 +66,21 @@ const localBusiness = buildLocalBusinessSchema(site, services);
   <meta property="og:locale" content="en_GB" />
   <meta property="og:url" content={canonical} />
   <meta property="og:image" content={new URL(ogPath, Astro.site).toString()} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content={ogImageAlt} />
   <meta property="og:site_name" content={site.name} />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content={new URL(ogPath, Astro.site).toString()} />
+  <meta name="twitter:image:alt" content={ogImageAlt} />
 
   <ClientRouter />
   <slot name="head" />
 
-  <script type="application/ld+json" set:html={JSON.stringify(localBusiness)} />
+  <script type="application/ld+json" set:html={JSON.stringify(graph)} />
 
   {/* Inter + Fraunces are self-hosted via @fontsource-variable (bundled into the CSS) — no third-party font request. */}
 
@@ -82,7 +93,7 @@ const localBusiness = buildLocalBusinessSchema(site, services);
   )}
 </head>
 <body class="font-sans">
-  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:px-4 focus:py-2 focus:bg-coral-500 focus:text-white focus:rounded-md">Skip to content</a>
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:px-4 focus:py-2 focus:bg-coral-700 focus:text-white focus:rounded-md">Skip to content</a>
   <Nav />
   <main id="main">
     <slot />

@@ -2,13 +2,13 @@
   "meta": {
     "title": "Dog Grooming in Newmillerdam & Hall Green | Keith's K9 Care",
     "description": "IPET-qualified home dog grooming in Hall Green near Newmillerdam, Wakefield WF4 — one dog at a time in a quiet home. See prices and book your dog in.",
-    "ogImage": "/assets/photos/golden-puppy-woodland-1.jpg"
+    "ogImage": "/assets/og/default.jpg"
   },
   "hero": {
     "locationPill": "Hall Green · WF4 3QJ",
     "headingHtml": "Friendly dog grooming in <span class=\"text-teal-600\">Newmillerdam</span>,<br class=\"hidden md:block\" /> <span class=\"text-coral-500\">Crigglestone</span> & across Wakefield.",
     "bodyPara1": "Your dog deserves to look and feel their best. Whether they've been rolling through Newmillerdam Country Park or turned the garden into a mud bath — Keith's K9 Care is here to get them back to their brilliant best.",
-    "bodyPara2": "Friendly, professional, and passionate about dogs. This is grooming you can trust.",
+    "bodyPara2": "Friendly, professional, and calm — one dog at a time, never a production line. This is grooming you can trust.",
     "ctaPrimary": "Book a Groom",
     "ctaPrimaryHref": "/book/",
     "ctaSecondary": "See Prices",

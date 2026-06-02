@@ -29,6 +29,8 @@ import site from '../data/site.json';
 <div class="md:hidden" style="height: calc(theme(spacing.20) + env(safe-area-inset-bottom));" aria-hidden="true"></div>
 
 <style is:global>
+  /* Specificity guard (justified !important per SOP §1.8): when the mobile menu is
+     open, force-hide the floating CTA + WhatsApp bubble so they can't overlay it. */
   html.kk9-menu-open #kk9-cta-card,
   html.kk9-menu-open #wa-root {
     display: none !important;
