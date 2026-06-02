@@ -3,16 +3,14 @@
  *
  * Login model: Cloudflare Access (One-time PIN to an approved email) gates /admin
  * and /cms-auth. Once a user has passed that, Sveltia opens this endpoint in a popup
- * to "sign in"; we hand it a GitHub token (stored as the CMS_GH_TOKEN secret) via the
+ * to "sign in"; we hand it a GitHub token (the CMS_GH_TOKEN secret) via the
  * Decap/Netlify-CMS auth handshake. The user never touches GitHub.
  *
- * Security:
- *  - Cloudflare Access is the primary gate (it enforces the approved-emails list).
- *  - Cloudflare injects `Cf-Access-Authenticated-User-Email` after login and strips any
- *    client-supplied value, so it is safe to trust on the custom domain. We re-check it
- *    against ALLOWED_EMAILS here as defence-in-depth (so a token is never vended to a
- *    non-approved identity, even if the Access policy were misconfigured).
- *  - The token is delivered only to the opener window's verified origin.
+ * Identity: established by Cloudflare Access. On Pages Functions the reliable source
+ * is the signed Access JWT (`Cf-Access-Jwt-Assertion`) — the convenience email header
+ * isn't always injected. The request only reaches here AFTER Cloudflare Access has
+ * validated that JWT (the path is gated), so reading the `email` claim is safe; we
+ * re-check it against ALLOWED_EMAILS as defence-in-depth.
  *
  * To change editors: update BOTH this list and the Cloudflare Access policy.
  */
@@ -27,14 +25,37 @@ const ALLOWED_EMAILS = [
   "kgkershaw7201@gmail.com",
 ];
 
+function b64urlDecode(s: string): string {
+  s = s.replace(/-/g, "+").replace(/_/g, "/");
+  while (s.length % 4) s += "=";
+  return atob(s);
+}
+
+function getEmail(request: Request): { email: string; source: string } {
+  const jwt = request.headers.get("Cf-Access-Jwt-Assertion");
+  if (jwt && jwt.split(".").length === 3) {
+    try {
+      const claims = JSON.parse(b64urlDecode(jwt.split(".")[1]));
+      if (typeof claims.email === "string" && claims.email) {
+        return { email: claims.email.trim().toLowerCase(), source: "jwt" };
+      }
+      return { email: "", source: "jwt-no-email[" + Object.keys(claims).join(",") + "]" };
+    } catch {
+      return { email: "", source: "jwt-parse-error" };
+    }
+  }
+  const hdr = request.headers.get("Cf-Access-Authenticated-User-Email");
+  if (hdr) return { email: hdr.trim().toLowerCase(), source: "header" };
+  return { email: "", source: "no-jwt-no-header" };
+}
+
 export const onRequest: PagesFunction<Env> = async ({ request, env }) => {
-  const email = (request.headers.get("Cf-Access-Authenticated-User-Email") || "")
-    .trim()
-    .toLowerCase();
+  const { email, source } = getEmail(request);
 
   if (!email || !ALLOWED_EMAILS.includes(email)) {
     return new Response(
-      "Not authorised. The content editor is for approved editors only.",
+      "Not authorised. The content editor is for approved editors only. " +
+        "(debug — identity source: " + source + "; email: " + (email || "none") + ")",
       { status: 403, headers: { "content-type": "text/plain; charset=utf-8" } },
     );
   }
