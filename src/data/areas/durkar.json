@@ -1,0 +1,36 @@
+{
+  "order": 6,
+  "slug": "durkar",
+  "name": "Durkar",
+  "postcodePrefix": "WF4",
+  "distanceMiles": 1.8,
+  "driveMinutes": 5,
+  "landmarks": [
+    "Durkar Village",
+    "Painthorpe Lane",
+    "M1 J39"
+  ],
+  "blurb": "Five minutes from Durkar via Painthorpe Lane. Handy if you're coming off the M1 at J39 for a groom.",
+  "metaDescription": "Dog grooming near Durkar — a 5-minute drive to Keith's K9 Care in Hall Green, Wakefield WF4. Handy off the M1 J39. One dog at a time. Book today.",
+  "lead": "Five minutes from Durkar via Painthorpe Lane — and an easy hop off the M1 at J39 — Keith's K9 Care is a calm, one-to-one home dog grooming salon.",
+  "body": [
+    "Durkar is a quick run from us down Painthorpe Lane, and handy if you're coming off the M1 at junction 39 — drop the dog for a groom on your way through, or on the way home from work. There's easy parking right outside the salon on Castle Meadows, so no circling for a space and no high-street traffic.",
+    "Keith's K9 Care is a home salon built around one dog at a time. A quiet, purpose-built room, no kennels, no shared dryers, no other dogs in earshot — just your dog and Keith. It's a calm setup that suits puppies, nervous dogs and older dogs, and it lets Keith work at your dog's pace instead of rushing to fit the next appointment in.",
+    "Every coat type is welcome, and Keith — IPET-qualified, trained at Mrs B's in Leeds — offers the full menu: full grooms, puppy first grooms, bath and tidy, nail trims, de-matting and traditional hand stripping. Prices are published in full with breed examples, and confirmed before he starts.",
+    "Whether it's a standing six-week appointment or a one-off, booking your Durkar dog in is a quick call, WhatsApp or message. Keith likes a quick chat about coat, age and temperament first."
+  ],
+  "faqs": [
+    {
+      "q": "How do I get to you from Durkar?",
+      "a": "About 1.8 miles — five minutes down Painthorpe Lane to Castle Meadows in Hall Green (WF4), with easy parking outside."
+    },
+    {
+      "q": "I commute via M1 J39 — can I drop my dog on the way?",
+      "a": "Yes — we're a couple of minutes from J39, which makes a drop-off on the commute or school run easy. Keith will agree a drop-off and pick-up time when you book."
+    },
+    {
+      "q": "Do you publish your prices?",
+      "a": "In full, with breed-by-breed examples on the pricing page — no ringing round for a quote. Keith confirms the exact price in person before starting."
+    }
+  ]
+}

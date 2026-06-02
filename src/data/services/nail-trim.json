@@ -1,0 +1,80 @@
+{
+  "order": 4,
+  "slug": "nail-trim",
+  "name": "Nail Trim, Ear Clean & Tidy",
+  "summary": "Quick maintenance visit between full grooms — nails, ears, face & feet tidy.",
+  "fromPrice": 15,
+  "duration": "15–30 minutes",
+  "tiers": [
+    {
+      "label": "Nails only",
+      "from": 10
+    },
+    {
+      "label": "Nails + ear clean",
+      "from": 15
+    },
+    {
+      "label": "Tidy (face/feet/rear)",
+      "from": 20
+    }
+  ],
+  "includes": [
+    "Nail trim",
+    "Ear check & clean",
+    "Face & eye tidy",
+    "Paw-pad trim",
+    "Sanitary trim if needed"
+  ],
+  "heroPhoto": "/assets/photos/keith-with-chihuahua.jpg",
+  "heroPhotoAlt": "Keith gently handling a small chihuahua",
+  "metaDescription": "Quick dog nail trim, ear clean and tidy in Hall Green, Wakefield WF4. Nails from £10, nails + ears £15, full tidy £20. 15-30 minute appointments.",
+  "body": [
+    "Sometimes you just need the nails done. Or the ears. Or a tidy round the eyes before they're rubbing on the cornea. A full groom isn't always the answer — and we'd rather do a quick maintenance visit than have you put it off because the cost of a full session feels like overkill.",
+    "Nails-only is the quickest appointment: 15 minutes, £10. Includes a careful look at the quick (the live part of the nail) so we never go too short. If your dog is nervous about feet, we'll work in shorter sessions and stop at whatever your dog is happy with.",
+    "Add an ear clean (£15 total) and we'll take a look inside the ear, gently clean the visible surface with a vet-approved solution, and flag anything that looks like a vet check might be sensible (we're groomers, not vets — but you get used to spotting infection early).",
+    "A full tidy (£20 total) is the maintenance lap — nails, ears, face, eyes, paw pads, sanitary trim. Usually 25 to 30 minutes. A great between-grooms option for dogs whose coats grow back quickly between proper full grooms."
+  ],
+  "faqs": [
+    {
+      "q": "How short can you cut my dog's nails?",
+      "a": "As short as is safe. The 'quick' is the live blood vessel inside each nail — cut into it and it bleeds (a lot, briefly). We can see the quick on light nails and feel for it on dark ones, and we'll get as close as your dog will tolerate without going into it."
+    },
+    {
+      "q": "Can I bring my dog in just for nails between grooms?",
+      "a": "Absolutely. Lots of customers do — saves the kitchen-floor disaster of trying it themselves. Quick appointments are easier to fit in too."
+    },
+    {
+      "q": "What if my dog hates having their feet touched?",
+      "a": "We work slowly with treats and breaks. If a session ends with only two paws done, that's fine — book a follow-up at no extra cost. The goal is a dog who's calmer about feet, not a dog who's traumatised by the salon."
+    }
+  ],
+  "relatedSlugs": [
+    "full-groom",
+    "bath-and-tidy",
+    "puppy-first-groom"
+  ],
+  "breedExamples": [
+    {
+      "size": "Nails only",
+      "from": 10,
+      "breeds": [
+        "~15 minutes — for between-groom maintenance"
+      ]
+    },
+    {
+      "size": "Nails + ear clean",
+      "from": 15,
+      "breeds": [
+        "~20 minutes — adds a gentle ear check and clean"
+      ]
+    },
+    {
+      "size": "Full tidy (face / feet / rear / pads)",
+      "from": 20,
+      "breeds": [
+        "~25-30 minutes — maintenance lap between full grooms"
+      ]
+    }
+  ]
+}

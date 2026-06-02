@@ -1,0 +1,35 @@
+{
+  "order": 13,
+  "slug": "haigh",
+  "name": "Haigh",
+  "postcodePrefix": "S75",
+  "distanceMiles": 4,
+  "driveMinutes": 10,
+  "landmarks": [
+    "Haigh village",
+    "Bank Lane"
+  ],
+  "blurb": "Ten minutes south into Barnsley. We pick up a lot of Haigh customers — easy run up the lanes to our place.",
+  "metaDescription": "Dog grooming near Haigh — a 10-minute drive up the lanes to Keith's K9 Care home salon in Hall Green, Wakefield WF4. One dog at a time. Book your dog in.",
+  "lead": "A short run north up the lanes from Haigh, Keith's K9 Care is a calm, one-to-one home dog grooming salon — and we pick up plenty of Haigh customers.",
+  "body": [
+    "Haigh sits just over the boundary into Barnsley (S75), and it's an easy ten-minute run up the lanes to us in Hall Green. We pick up a lot of Haigh dogs — far enough out that a quiet, one-to-one groom is a welcome change, close enough that it's no trek. Easy parking right outside on Castle Meadows, too.",
+    "Keith's K9 Care is a home salon, built around one dog at a time. A quiet, purpose-built room, no kennels, no shared dryers, no other dogs barking — just your dog and Keith. It's a calm setup that suits nervous dogs, puppies and older dogs, and it means your dog has Keith's undivided attention throughout.",
+    "Keith is IPET-qualified and grooms every coat type and breed — full grooms, puppy first grooms, bath and tidy, nail trims, de-matting and traditional hand stripping. Prices are published in full with breed examples, and confirmed in person before he starts, so the short drive is the only difference — never the bill.",
+    "Booking your Haigh dog in is a quick call, WhatsApp or message. Keith likes a quick chat about coat, age and temperament first so the right amount of time is set aside."
+  ],
+  "faqs": [
+    {
+      "q": "How far is the salon from Haigh?",
+      "a": "About 4 miles — a ten-minute drive north up the lanes to Castle Meadows in Hall Green (WF4)."
+    },
+    {
+      "q": "I'm just into Barnsley (S75) — do you cover Haigh?",
+      "a": "Yes — Haigh is well within our patch and we groom a lot of Haigh dogs. It's a short, easy run up the lanes."
+    },
+    {
+      "q": "Do you publish your prices?",
+      "a": "In full, with breed-by-breed examples on the pricing page. No ringing round for a quote — Keith confirms the exact figure in person before he starts."
+    }
+  ]
+}

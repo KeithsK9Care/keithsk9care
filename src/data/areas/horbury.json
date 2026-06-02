@@ -1,0 +1,36 @@
+{
+  "order": 11,
+  "slug": "horbury",
+  "name": "Horbury",
+  "postcodePrefix": "WF4",
+  "distanceMiles": 3.5,
+  "driveMinutes": 10,
+  "landmarks": [
+    "Horbury High Street",
+    "St Peter's Church",
+    "Horbury Bridge"
+  ],
+  "blurb": "Ten minutes from Horbury. Plenty of Horbury customers prefer the quieter home setting over a busy high-street salon.",
+  "metaDescription": "Dog grooming near Horbury — a 10-minute drive to Keith's K9 Care home salon in Hall Green, Wakefield WF4. A calmer alternative to a busy high-street salon. Book.",
+  "lead": "Ten minutes from Horbury, Keith's K9 Care is a calm, one-to-one home dog grooming salon — the quieter alternative for owners who'd rather skip a busy high-street salon.",
+  "body": [
+    "Horbury has plenty going on along the high street, but a busy commercial salon isn't to every dog's taste. For owners who'd rather their dog wasn't one of several in a noisy unit, we're about ten minutes away in Hall Green — a home salon where your dog is the only one in the room.",
+    "That's the whole idea behind Keith's K9 Care: one dog at a time, in a quiet, purpose-built space, with no kennels, no shared dryers and no other dogs barking through the wall. It's a calmer experience that nervous dogs, rescue dogs, puppies and older dogs genuinely do better in — and it means Keith works at your dog's pace rather than the clock's.",
+    "Keith is IPET-qualified and grooms every coat type — full grooms, puppy first grooms, bath and tidy, nail trims, de-matting and traditional hand stripping. Prices are published in full with breed examples (no ringing round for a quote), and confirmed in person before he starts.",
+    "If your Horbury dog would prefer a calmer groom, booking in is a quick call, WhatsApp or message. Keith likes a quick chat about coat, age and temperament first so the right time is set aside."
+  ],
+  "faqs": [
+    {
+      "q": "How far is the salon from Horbury?",
+      "a": "About 3.5 miles — a ten-minute drive to Castle Meadows in Hall Green (WF4)."
+    },
+    {
+      "q": "Why come to you rather than a Horbury high-street salon?",
+      "a": "For the calm. We're a one-dog-at-a-time home salon — no queue, no other dogs, no rush — which suits nervous, rescue and older dogs especially. Prices are published and Keith does every dog himself."
+    },
+    {
+      "q": "Do you groom rescue dogs?",
+      "a": "Often — the quiet, predictable home setup is ideal for a rescue who's still building confidence. Tell Keith the background when you book and he'll take it gently."
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "order": 3,
+  "slug": "bath-and-tidy",
+  "name": "Bath & Tidy",
+  "summary": "Bath, blow-dry, brush, nails & tidy — the in-between visit between full grooms. Great for short coats and quick freshen-ups.",
+  "fromPrice": 30,
+  "duration": "45–75 minutes",
+  "tiers": [
+    {
+      "label": "Small dogs",
+      "from": 30
+    },
+    {
+      "label": "Medium dogs",
+      "from": 40
+    },
+    {
+      "label": "Large dogs / doodles",
+      "from": 50
+    }
+  ],
+  "includes": [
+    "Warm bath with breed-appropriate shampoo",
+    "Towel & blow-dry",
+    "Brush-through",
+    "Nail trim",
+    "Face & feet tidy",
+    "Quick ear check"
+  ],
+  "heroPhoto": "/assets/photos/cockapoo-portrait.jpg",
+  "heroPhotoAlt": "A clean, bright-coated cockapoo",
+  "metaDescription": "Bath and tidy dog grooming in Hall Green, Wakefield WF4 — bath, blow-dry, brush, nails and tidy. Small from £30, medium £40, large or doodles £50.",
+  "body": [
+    "A bath and tidy is the lighter, quicker dog bath option between full grooms. Perfect for short-coated breeds, dogs who've been on a muddy walk, or anyone whose coat doesn't yet need a full clip but could really do with a clean and a tidy round the face, feet and rear.",
+    "We bathe with a breed-appropriate shampoo, towel and blow-dry properly (no damp dogs going home), brush the coat out, trim nails, give the face and feet a quick tidy, and check the ears. The whole appointment is usually 45 to 75 minutes.",
+    "If you book a bath and tidy and we spot something during the appointment — a small mat behind the ear, nails that turned out to need more work, an ear that needs a proper clean — we'll mention it before doing anything extra. No surprises on the bill.",
+    "Small dogs from £30, medium from £40, large or doodles from £50. Often the right choice for a Cocker Spaniel between full grooms, or a Labrador after the lake."
+  ],
+  "faqs": [
+    {
+      "q": "How is a bath and tidy different from a full groom?",
+      "a": "No body clip or scissor finish. We bathe, dry, brush out, tidy face/feet/rear, do nails and ears — but we don't take length off the body. About £10 cheaper per size tier and ~30 minutes quicker."
+    },
+    {
+      "q": "Will the coat be smelling fresh?",
+      "a": "Yes. We pick a shampoo for the coat type — gentle on skin, properly cleansing for muddy dogs, brightening for white coats. Towel and blow-dry leaves the coat fluffy, not damp."
+    },
+    {
+      "q": "Is this a good option for puppies after their intro groom?",
+      "a": "Often yes — for short-coated puppies who've outgrown the puppy first groom but don't yet need a full body clip, a bath and tidy is a sensible step."
+    }
+  ],
+  "relatedSlugs": [
+    "full-groom",
+    "nail-trim",
+    "puppy-first-groom"
+  ],
+  "breedExamples": [
+    {
+      "size": "Small",
+      "from": 30,
+      "breeds": [
+        "Shih-tzu",
+        "Bichon Frise",
+        "Yorkshire Terrier",
+        "Cavalier KCS",
+        "Maltese",
+        "Westie"
+      ]
+    },
+    {
+      "size": "Medium",
+      "from": 40,
+      "breeds": [
+        "Cockapoo",
+        "Cavapoo",
+        "Cocker Spaniel",
+        "Mini Schnauzer",
+        "Mini Poodle",
+        "Springer Spaniel"
+      ]
+    },
+    {
+      "size": "Large / doodle",
+      "from": 50,
+      "breeds": [
+        "Labradoodle",
+        "Goldendoodle",
+        "Golden Retriever",
+        "Standard Poodle",
+        "Bernedoodle"
+      ]
+    }
+  ]
+}

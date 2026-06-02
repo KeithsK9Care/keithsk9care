@@ -1,0 +1,86 @@
+{
+  "order": 5,
+  "slug": "de-matting",
+  "name": "De-matting & Coat Recovery",
+  "summary": "Careful, dog-first removal of mats. Severe matting assessed honestly on the day — coat health comes first.",
+  "fromPrice": 50,
+  "duration": "From 1 hour, +£10 per extra 30 mins",
+  "tiers": [
+    {
+      "label": "Light matting (add to Full Groom)",
+      "from": 10
+    },
+    {
+      "label": "Moderate matting",
+      "from": 50
+    },
+    {
+      "label": "Severe matting (clip-down)",
+      "from": 60,
+      "note": "Final price assessed in person — sometimes the kindest option is a fresh start."
+    }
+  ],
+  "includes": [
+    "Coat assessment",
+    "De-matting spray & gentle line brushing",
+    "Bath & blow-dry",
+    "Strip clip if welfare requires",
+    "Aftercare guidance to keep mats away"
+  ],
+  "heroPhoto": "/assets/photos/black-poodle-side.jpg",
+  "heroPhotoAlt": "Black miniature poodle with a healthy, well-kept coat",
+  "metaDescription": "Careful dog de-matting in Hall Green, Wakefield WF4 — coat recovery from £50. Severe matting honestly assessed; welfare always comes first.",
+  "body": [
+    "Mats happen. Doodles, cocker spaniels, golden retrievers — any heavy-coated breed can develop matting between grooms, especially after wet walks or growth spurts in young dogs. We don't judge, we just help.",
+    "Light matting (small, surface-level tangles) we can usually work through during a normal full groom — we'll add a fee from £10 for the extra time. Brush, conditioner, gentle line-brushing, done.",
+    "Moderate matting (firmer, closer to the skin in patches) needs a dedicated de-matting session — from £50. We use de-matting spray and patient line-brushing, working in small sections, with breaks for your dog. This can take an hour or more, depending on coat condition.",
+    "Severe matting (pelting — when the coat has felted close to the skin) is harder. Brushing through a heavily pelted coat is genuinely painful for the dog, and not always safe — it can pull on skin and cause sores. The kindest, fastest option is usually a strip-clip down to a short, healthy length and start fresh. We'll always show you what we're seeing, talk it through, and never carry on if your dog is becoming distressed. From £60, often less for smaller dogs.",
+    "Either way, you'll leave with a clear plan for keeping the coat right between grooms — usually a more frequent groom cycle, plus a brushing routine that takes 3-5 minutes a day. We're happy to recommend a brush type for your specific coat."
+  ],
+  "faqs": [
+    {
+      "q": "Will it hurt my dog to remove the mats?",
+      "a": "Mild matting, no — it's a slow, gentle process with conditioner. Severe matting, yes — pulling on pelted coat hurts and can damage skin. That's why we offer the strip-clip alternative for badly matted coats. Welfare always wins over aesthetics."
+    },
+    {
+      "q": "How do I stop matting happening again?",
+      "a": "Two things — slightly more frequent grooms (every 5-6 weeks instead of 8), and a daily 3-minute brush with the right tool. We'll show you the tool and the technique before you leave."
+    },
+    {
+      "q": "Why is de-matting more expensive than a normal groom?",
+      "a": "Time, and skill. A normal full groom is 1.5-3 hours. A heavily matted dog can take 2-4 hours plus a recovery period for the skin. The price reflects that — not the difficulty of brushing."
+    },
+    {
+      "q": "My dog won't stand still to be brushed at home. What do I do?",
+      "a": "Start in tiny sessions — 30 seconds, lots of treats, increase gradually. We can talk you through the routine when you come in. Often the issue is the brush type, not the dog."
+    }
+  ],
+  "relatedSlugs": [
+    "full-groom",
+    "bath-and-tidy",
+    "nail-trim"
+  ],
+  "breedExamples": [
+    {
+      "size": "Light matting",
+      "from": 10,
+      "breeds": [
+        "Small mats that work through a normal full groom — added to the standard appointment time"
+      ]
+    },
+    {
+      "size": "Moderate matting",
+      "from": 50,
+      "breeds": [
+        "Dedicated de-matting session, 1-2 hours, spray + line brushing"
+      ]
+    },
+    {
+      "size": "Severe matting (strip-clip)",
+      "from": 60,
+      "breeds": [
+        "When the kindest option is a fresh start. Coat clipped to a short, healthy length and grown back properly."
+      ]
+    }
+  ]
+}

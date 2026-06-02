@@ -1,0 +1,96 @@
+{
+  "order": 6,
+  "slug": "hand-stripping",
+  "name": "Hand Stripping",
+  "summary": "Traditional hand stripping for wire-coated breeds — terriers, schnauzers, spaniels. Preserves coat colour & texture.",
+  "fromPrice": 50,
+  "duration": "1.5–2.5 hours",
+  "tiers": [
+    {
+      "label": "Small wire-coat (Border, Norfolk)",
+      "from": 50
+    },
+    {
+      "label": "Medium (Mini Schnauzer, Cocker)",
+      "from": 60
+    },
+    {
+      "label": "Standard Schnauzer & larger",
+      "from": 70
+    }
+  ],
+  "includes": [
+    "Full coat assessment",
+    "Hand stripping in stages (gentle on the skin)",
+    "Bath & blow-dry",
+    "Tidy & nail trim",
+    "Schedule plan for next visit"
+  ],
+  "heroPhoto": "/assets/photos/border-terrier-after-groom.jpg",
+  "heroPhotoAlt": "Border terrier after a hand-stripped groom",
+  "metaDescription": "Traditional hand stripping in Hall Green, Wakefield WF4 — for wire-coated terriers, schnauzers and spaniels. Preserves coat colour and texture. From £50.",
+  "body": [
+    "Hand stripping is the traditional method of grooming wire coat breeds — Border terriers, Norfolk terriers, schnauzers, working cocker spaniels and many others. Instead of clipping the coat (which softens the texture and dulls the colour over time), hand stripping plucks dead hair out by hand, leaving the harder guard hairs intact. The coat keeps its proper texture, weather-resistance, and rich colour.",
+    "It's labour-intensive — usually 1.5 to 2.5 hours depending on size and how long the coat has been left — and skill matters. Done well, it's not painful for the dog (the dead hair lifts easily); done in a rush or to the wrong stage of growth, it can pull and irritate. Keith trained specifically in hand stripping at Mrs B's Grooming Academy.",
+    "We work in stages, taking breaks. Most dogs settle into it — many actively enjoy the rhythm. A coat that's been clipped for years can still be brought back to a proper stripped texture over two or three sessions, though it takes patience.",
+    "Pricing reflects time: small wire-coats (Border, Norfolk, Cairn) from £50; medium (Miniature Schnauzer, working Cocker, Lakeland) from £60; Standard Schnauzers and larger from £70. We'll always recommend the visit interval that suits your specific dog and how the coat is growing.",
+    "If you're unsure whether hand stripping is right for your dog, send us a photo of the coat — we can advise honestly. Some owners prefer the lower-maintenance clipped look, and that's a perfectly fine choice. We won't push you towards what's not right for you and your dog."
+  ],
+  "faqs": [
+    {
+      "q": "Does hand stripping hurt my dog?",
+      "a": "Done correctly — no. We strip hair that's already at the end of its life cycle and ready to come out; it lifts with very little resistance. Done badly (or to coat at the wrong stage), it can pull. Skill and timing are everything."
+    },
+    {
+      "q": "How often should a stripped coat be done?",
+      "a": "Most stripped breeds need a full strip every 8-12 weeks, with a light 'rolling' between if the coat blows quickly. We'll work out a schedule together based on how your specific dog's coat behaves."
+    },
+    {
+      "q": "My dog has been clipped for years. Can I still go back to hand stripping?",
+      "a": "Often yes, but it takes patience. The first session might be more of a tidy than a true strip; the coat needs to grow through and re-set its texture. Usually 2-3 sessions to get to a properly stripped finish."
+    },
+    {
+      "q": "Is hand stripping the same price as a clipped groom?",
+      "a": "Slightly more — it's significantly more time. Small wire-coats from £50, medium from £60, larger schnauzers from £70."
+    }
+  ],
+  "relatedSlugs": [
+    "full-groom",
+    "de-matting",
+    "nail-trim"
+  ],
+  "breedExamples": [
+    {
+      "size": "Small wire-coat",
+      "from": 50,
+      "breeds": [
+        "Border Terrier",
+        "Norfolk Terrier",
+        "Norwich Terrier",
+        "Cairn Terrier",
+        "West Highland (Westie)"
+      ]
+    },
+    {
+      "size": "Medium",
+      "from": 60,
+      "breeds": [
+        "Miniature Schnauzer",
+        "Working Cocker Spaniel",
+        "Lakeland Terrier",
+        "Welsh Terrier",
+        "Sealyham"
+      ]
+    },
+    {
+      "size": "Standard Schnauzer & larger",
+      "from": 70,
+      "breeds": [
+        "Standard Schnauzer",
+        "Giant Schnauzer",
+        "Airedale Terrier",
+        "Wirehaired Pointer"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "order": 4,
+  "slug": "walton",
+  "name": "Walton",
+  "postcodePrefix": "WF2",
+  "distanceMiles": 1.8,
+  "driveMinutes": 5,
+  "landmarks": [
+    "Walton Hall",
+    "Anglers Country Park",
+    "Walton Lane"
+  ],
+  "blurb": "Five minutes from Walton village. If your dog comes back from Anglers covered in lake water, we'll have them dry and tidy by tea-time.",
+  "metaDescription": "Dog grooming near Walton, Wakefield — a 5-minute drive to Keith's K9 Care home salon in Hall Green WF4. IPET-qualified, one dog at a time. Book your dog in.",
+  "lead": "Five minutes from Walton village, Keith's K9 Care is a calm, one-to-one home dog grooming salon — and the answer to a dog that's just been swimming at Anglers.",
+  "body": [
+    "Walton sits right next to two of the best dog walks in the district — Anglers Country Park and the lakes around Walton Hall. Wonderful for dogs; less wonderful for the back seat of the car. When your spaniel or retriever comes home from Anglers caked in lake water and pond weed, we're a five-minute drive away in Hall Green and we'll have them bathed, dried and tidy by tea-time.",
+    "Keith's K9 Care is a home salon, not a busy commercial unit. One dog at a time, in a quiet, purpose-built room — no kennels, no other dogs barking, no rush. It's a calm setup that suits the water-loving breeds Walton seems full of, as well as nervous dogs, puppies and older dogs who don't enjoy a chaotic high-street salon.",
+    "Keith is IPET-qualified and grooms every coat type and length — full grooms, puppy first grooms, a quick bath and tidy, nail trims, de-matting and traditional hand stripping for wire coats. Prices are published in full with breed examples, so there's no ringing round for a quote, and Keith confirms the price in person before he starts.",
+    "Whether your Walton dog needs a regular six-week groom or an emergency de-tangle after one swim too many, booking in is a quick call, WhatsApp or message. Keith likes a quick chat about coat and temperament first so he can set aside the right amount of time."
+  ],
+  "faqs": [
+    {
+      "q": "How far is the salon from Walton?",
+      "a": "About 1.8 miles — a five-minute drive to Castle Meadows in Hall Green (WF4). An easy run round from Walton village."
+    },
+    {
+      "q": "My dog always swims at Anglers — can you sort the mess out?",
+      "a": "That's a regular for us. Book a full groom or a bath and tidy and we'll deal with the lake water, mud and pond smell and send them home dry and fluffy."
+    },
+    {
+      "q": "Do you groom large dogs and doodles from Walton?",
+      "a": "Yes — all sizes and coat types, including retrievers, labradoodles and other heavy coats. Large and doodle full grooms start from £60, confirmed before we start."
+    }
+  ]
+}

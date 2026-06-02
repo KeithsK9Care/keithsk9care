@@ -1,0 +1,36 @@
+{
+  "order": 10,
+  "slug": "west-bretton",
+  "name": "West Bretton",
+  "postcodePrefix": "WF4",
+  "distanceMiles": 4.5,
+  "driveMinutes": 11,
+  "landmarks": [
+    "Yorkshire Sculpture Park",
+    "Bretton Hall",
+    "Bretton Lane"
+  ],
+  "blurb": "Ten minutes from West Bretton. If your dog has been racing round the Yorkshire Sculpture Park grounds, we'll have them dry, tidy and tired-out.",
+  "metaDescription": "Dog grooming near West Bretton — a 10-minute drive to Keith's K9 Care home salon in Hall Green, Wakefield WF4. One dog at a time. See prices and book.",
+  "lead": "Ten minutes from West Bretton, Keith's K9 Care is a calm, one-to-one home dog grooming salon — worth the short drive for a dog that's been racing round the Sculpture Park.",
+  "body": [
+    "West Bretton is home to the Yorkshire Sculpture Park, and there are few better places to wear a dog out across its acres of parkland and woods. The downside is a dog that comes back muddy, damp and thoroughly pleased with itself. We're about ten minutes away in Hall Green, and a full groom or a bath and tidy will have them dry, de-tangled and tired-out.",
+    "Keith's K9 Care is a home salon, not a busy high-street unit — and for the short extra drive, your dog gets something a town-centre salon can't offer: a completely calm, one-to-one experience. No kennels, no other dogs barking, no rush. It suits nervous dogs, puppies and older dogs, and it lets Keith work at your dog's pace.",
+    "Keith is IPET-qualified and grooms every coat type — full grooms, puppy first grooms, bath and tidy, nail trims, de-matting and traditional hand stripping for wire coats. Prices are published in full with breed examples, and confirmed before he starts, so the drive is the only thing that's slightly longer — never the bill.",
+    "Plenty of West Bretton owners happily make the short trip for a calmer groom. Booking in is a quick call, WhatsApp or message, and Keith likes a quick chat about your dog first."
+  ],
+  "faqs": [
+    {
+      "q": "How far is the salon from West Bretton?",
+      "a": "About 4.5 miles — a ten-minute drive to Castle Meadows in Hall Green (WF4). Many West Bretton owners make the short trip for a quieter, one-to-one groom."
+    },
+    {
+      "q": "My dog gets filthy at the Sculpture Park — can you help?",
+      "a": "That's a common one. A full groom or a bath and tidy will sort out the mud and damp and send them home dry, brushed and smart."
+    },
+    {
+      "q": "Is it worth the extra few minutes' drive?",
+      "a": "A lot of our regulars think so — you're swapping a busy high-street salon for a calm, one-dog-at-a-time home setup, with published prices and Keith's full attention."
+    }
+  ]
+}

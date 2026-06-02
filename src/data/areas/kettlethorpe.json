@@ -1,0 +1,36 @@
+{
+  "order": 7,
+  "slug": "kettlethorpe",
+  "name": "Kettlethorpe",
+  "postcodePrefix": "WF2",
+  "distanceMiles": 2.5,
+  "driveMinutes": 7,
+  "landmarks": [
+    "Kettlethorpe High School",
+    "Standbridge Lane",
+    "Cock & Crown"
+  ],
+  "blurb": "A short drive from Kettlethorpe — straight down past Standbridge Lane and you're with us.",
+  "metaDescription": "Dog grooming near Kettlethorpe, Wakefield — a 7-minute drive to Keith's K9 Care home salon in Hall Green WF4. One dog at a time, prices published. Book today.",
+  "lead": "A short drive from Kettlethorpe — straight down past Standbridge Lane — Keith's K9 Care is a calm, one-to-one home dog grooming salon.",
+  "body": [
+    "Kettlethorpe is a straightforward seven-minute run down to us, past Standbridge Lane and into Hall Green. It's an easy one to fit around the school run or a day's work — drop the dog with Keith, get on with your day, and collect a freshly-groomed dog later. Parking is right outside on Castle Meadows.",
+    "What sets Keith's K9 Care apart from a high-street salon is the calm. It's a home salon: one dog at a time, in a quiet purpose-built room, with no kennels and no other dogs barking through the wall. That suits the puppies, nervous dogs and older dogs who find a busy commercial salon overwhelming, and it means your dog has Keith's full attention from start to finish.",
+    "Keith is IPET-qualified and grooms every coat type — full grooms, puppy first grooms, bath and tidy, nail trims, de-matting and hand stripping. Prices are published with breed examples so you know roughly what to expect, and Keith confirms the figure in person before he starts work.",
+    "Booking your Kettlethorpe dog in is a quick call, WhatsApp or message. A quick chat about your dog first means Keith can set aside the right amount of time for the coat and temperament."
+  ],
+  "faqs": [
+    {
+      "q": "How far is the salon from Kettlethorpe?",
+      "a": "About 2.5 miles — a seven-minute drive down past Standbridge Lane to Castle Meadows in Hall Green (WF4)."
+    },
+    {
+      "q": "Can you fit a groom around the school run?",
+      "a": "Usually, yes — a drop-off and pick-up works well for a lot of our Kettlethorpe families. Keith will agree the timing when you book."
+    },
+    {
+      "q": "When can my puppy start grooming?",
+      "a": "Usually from around 12 weeks, after the second vaccination. The calm home setup is ideal for a gentle first experience that sets them up for life."
+    }
+  ]
+}

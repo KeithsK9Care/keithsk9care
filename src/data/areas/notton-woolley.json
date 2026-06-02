@@ -1,0 +1,36 @@
+{
+  "order": 12,
+  "slug": "notton-woolley",
+  "name": "Notton & Woolley",
+  "postcodePrefix": "WF4",
+  "distanceMiles": 3.5,
+  "driveMinutes": 9,
+  "landmarks": [
+    "Notton Park",
+    "Woolley village",
+    "Notton Lane"
+  ],
+  "blurb": "Ten minutes south through the lanes. Notton and Woolley share the same quiet, semi-rural character as our patch — your dog will feel at home.",
+  "metaDescription": "Dog grooming near Notton & Woolley — a 9-minute drive to Keith's K9 Care home salon in Hall Green, Wakefield WF4. One dog at a time. See prices and book.",
+  "lead": "A short drive north through the lanes, Keith's K9 Care is a calm, one-to-one home dog grooming salon — and Notton and Woolley dogs settle right in.",
+  "body": [
+    "Notton and Woolley are quiet, semi-rural villages just south of us through the lanes, and they share exactly the kind of calm character our salon was built for. The run up to Hall Green takes about nine minutes, and there's easy parking right outside on Castle Meadows — none of the bustle of a town-centre groomer.",
+    "Keith's K9 Care is a home salon: one dog at a time, in a quiet, purpose-built room, with no kennels and no other dogs in earshot. For a country dog used to peace and space, it's a far gentler experience than a busy commercial salon — and it's the right setting for nervous dogs, puppies and seniors, who get Keith's full attention from start to finish.",
+    "Keith is IPET-qualified and grooms every coat type — full grooms, puppy first grooms, bath and tidy, nail trims, de-matting and traditional hand stripping for wire-coated breeds. Prices are published in full with breed examples, and confirmed in person before he starts.",
+    "Whether it's a regular groom or a tidy after a muddy country walk, booking your Notton or Woolley dog in is a quick call, WhatsApp or message away."
+  ],
+  "faqs": [
+    {
+      "q": "How far is the salon from Notton and Woolley?",
+      "a": "About 3.5 miles — a nine-minute drive north through the lanes to Castle Meadows in Hall Green (WF4)."
+    },
+    {
+      "q": "Do you groom country dogs that get really muddy?",
+      "a": "All the time. A full groom or a bath and tidy will deal with the mud, brambles and damp and send them home clean, brushed and smart."
+    },
+    {
+      "q": "Is the salon quiet? My dog isn't used to busy places.",
+      "a": "Very — it's a one-dog-at-a-time home salon with no other dogs around. Ideal for a country dog who'd find a busy high-street salon overwhelming."
+    }
+  ]
+}

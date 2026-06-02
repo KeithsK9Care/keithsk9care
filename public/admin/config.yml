@@ -633,159 +633,173 @@ collections:
   # ─────────────────────────────────────────────────────
   - name: services
     label: "Services (full grooming menu)"
-    files:
-      - file: src/data/services.json
-        label: "All services"
-        name: services
+    label_singular: "Service"
+    description: "Each grooming service is its own entry. Add one with 'New Service', or click a service to edit it."
+    folder: src/data/services
+    format: json
+    extension: json
+    create: true
+    slug: "{{fields.slug}}"
+    identifier_field: name
+    summary: "{{fields.order}}. {{fields.name}}"
+    sortable_fields: [order, name, fromPrice]
+    fields:
+      - { name: order,          label: "Display order", widget: number, value_type: int, hint: "Lower numbers show first across the site. 1, 2, 3…" }
+      - { name: slug,           label: "URL slug", widget: string, hint: "Lower-case with hyphens — becomes /services/<slug>/. Don't change it on an existing service or its links break." }
+      - { name: name,           label: "Service name", widget: string }
+      - { name: summary,        label: "Summary (card text)", widget: text }
+      - { name: fromPrice,      label: "From £ (number)", widget: number, value_type: int }
+      - { name: duration,       label: Duration, widget: string }
+      - name: tiers
+        label: "Price tiers"
+        widget: list
         fields:
-          - name: services
-            label: "Services"
+          - { name: label, widget: string }
+          - { name: from,  widget: number, value_type: int }
+          - { name: note,  widget: string, required: false }
+      - name: includes
+        label: "What's included"
+        widget: list
+      - { name: heroPhoto,        label: "Hero photo", widget: image, required: false, hint: "Picked from photo library. Shows at the top of the service page + as social share image." }
+      - { name: heroPhotoAlt,     label: "Hero photo alt text", widget: string, required: false, hint: "Short description of what's in the photo (for accessibility + Google)." }
+      - { name: metaDescription,  label: "Meta description (SEO)", widget: text, required: false }
+      - name: body
+        label: "Body paragraphs"
+        widget: list
+        required: false
+      - name: faqs
+        label: "Service-specific FAQs"
+        widget: list
+        required: false
+        fields:
+          - { name: q, widget: string }
+          - { name: a, widget: text }
+      - name: relatedSlugs
+        label: "Related service slugs"
+        widget: list
+        required: false
+      - name: breedExamples
+        label: "Breed examples (for /pricing/)"
+        widget: list
+        required: false
+        fields:
+          - { name: size, label: "Tier label", widget: string }
+          - { name: from, label: "From £",    widget: number, value_type: int }
+          - name: breeds
+            label: "Breeds in this tier"
             widget: list
-            fields:
-              - { name: slug,           label: Slug, widget: string }
-              - { name: name,           label: "Service name", widget: string }
-              - { name: summary,        label: "Summary (card text)", widget: text }
-              - { name: fromPrice,      label: "From £ (number)", widget: number, value_type: int }
-              - { name: duration,       label: Duration, widget: string }
-              - name: tiers
-                label: "Price tiers"
-                widget: list
-                fields:
-                  - { name: label, widget: string }
-                  - { name: from,  widget: number, value_type: int }
-                  - { name: note,  widget: string, required: false }
-              - name: includes
-                label: "What's included"
-                widget: list
-              - { name: heroPhoto,        label: "Hero photo", widget: image, required: false, hint: "Picked from photo library. Shows at the top of the service page + as social share image." }
-              - { name: heroPhotoAlt,     label: "Hero photo alt text", widget: string, required: false, hint: "Short description of what's in the photo (for accessibility + Google)." }
-              - { name: metaDescription,  label: "Meta description (SEO)", widget: text, required: false }
-              - name: body
-                label: "Body paragraphs"
-                widget: list
-                required: false
-              - name: faqs
-                label: "Service-specific FAQs"
-                widget: list
-                required: false
-                fields:
-                  - { name: q, widget: string }
-                  - { name: a, widget: text }
-              - name: relatedSlugs
-                label: "Related service slugs"
-                widget: list
-                required: false
-              - name: breedExamples
-                label: "Breed examples (for /pricing/)"
-                widget: list
-                required: false
-                fields:
-                  - { name: size, label: "Tier label", widget: string }
-                  - { name: from, label: "From £",    widget: number, value_type: int }
-                  - name: breeds
-                    label: "Breeds in this tier"
-                    widget: list
 
   # ─────────────────────────────────────────────────────
   - name: areas
     label: "Areas covered"
-    files:
-      - file: src/data/areas.json
-        label: "All areas"
-        name: areas
+    label_singular: "Area"
+    description: "Each local area page is its own entry. Add one with 'New Area', or click an area to edit it."
+    folder: src/data/areas
+    format: json
+    extension: json
+    create: true
+    slug: "{{fields.slug}}"
+    identifier_field: name
+    summary: "{{fields.order}}. {{fields.name}}"
+    sortable_fields: [order, name, distanceMiles]
+    fields:
+      - { name: order,           label: "Display order", widget: number, value_type: int, hint: "Lower numbers show first. 1, 2, 3…" }
+      - { name: slug,            label: "URL slug", widget: string, hint: "Lower-case with hyphens — becomes /areas/<slug>/. Don't change it on an existing area or its links break." }
+      - { name: name,            label: "Area name", widget: string }
+      - { name: postcodePrefix,  label: "Postcode prefix", widget: string }
+      - { name: distanceMiles,   label: "Distance (miles)", widget: number, value_type: float }
+      - { name: driveMinutes,    label: "Drive time (minutes)", widget: number, value_type: int }
+      - name: landmarks
+        label: "Local landmarks"
+        widget: list
+      - { name: blurb, label: "Short blurb (used as fallback intro)", widget: text }
+      - { name: metaDescription, label: "Meta description (SEO)", widget: text, required: false }
+      - { name: lead, label: "Intro line (under the heading)", widget: text, required: false }
+      - { name: heroPhoto, label: "Hero / social image", widget: image, required: false, hint: "Optional. Defaults to a stock photo if left blank." }
+      - name: body
+        label: "Body paragraphs"
+        widget: list
+        required: false
+        hint: "The main page content for this area — aim for a few genuinely local paragraphs (landmarks, drive time, who we serve there)."
+      - name: faqs
+        label: "Area FAQs"
+        widget: list
+        required: false
         fields:
-          - name: areas
-            widget: list
-            fields:
-              - { name: slug,            widget: string }
-              - { name: name,            widget: string }
-              - { name: postcodePrefix,  widget: string }
-              - { name: distanceMiles,   widget: number, value_type: float }
-              - { name: driveMinutes,    widget: number, value_type: int }
-              - name: landmarks
-                widget: list
-              - { name: blurb, widget: text }
-              - { name: metaDescription, label: "Meta description (SEO)", widget: text, required: false }
-              - { name: lead, label: "Intro line (under the heading)", widget: text, required: false }
-              - { name: heroPhoto, label: "Hero / social image", widget: image, required: false, hint: "Optional. Defaults to a stock photo if left blank." }
-              - name: body
-                label: "Body paragraphs"
-                widget: list
-                required: false
-                hint: "The main page content for this area — aim for a few genuinely local paragraphs (landmarks, drive time, who we serve there)."
-              - name: faqs
-                label: "Area FAQs"
-                widget: list
-                required: false
-                fields:
-                  - { name: q, label: Question, widget: string }
-                  - { name: a, label: Answer, widget: text }
+          - { name: q, label: Question, widget: string }
+          - { name: a, label: Answer, widget: text }
 
   # ─────────────────────────────────────────────────────
   - name: faqs
     label: "FAQs"
-    files:
-      - file: src/data/faqs.json
-        label: "All FAQs"
-        name: faqs
-        fields:
-          - name: faqs
-            widget: list
-            fields:
-              - { name: q, label: Question, widget: string }
-              - { name: a, label: Answer,   widget: text }
-              - name: tags
-                label: "Tags (home, puppy, nervous, pricing, contact, trust, about, general)"
-                widget: list
+    label_singular: "FAQ"
+    description: "Each FAQ is its own entry. Add one with 'New FAQ', or click a question to edit it."
+    folder: src/data/faqs
+    format: json
+    extension: json
+    create: true
+    slug: "{{fields.q}}"
+    identifier_field: q
+    summary: "{{fields.order}}. {{fields.q}}"
+    sortable_fields: [order, q]
+    fields:
+      - { name: order, label: "Display order", widget: number, value_type: int, hint: "Lower numbers show first. 1, 2, 3…" }
+      - { name: q, label: Question, widget: string }
+      - { name: a, label: Answer,   widget: text }
+      - name: tags
+        label: "Tags"
+        widget: list
+        hint: "Which sections this FAQ appears in — e.g. home, puppy, nervous, pricing, contact, trust, about. 'home' shows it on the homepage FAQ block."
 
   # ─────────────────────────────────────────────────────
   - name: reviews
     label: "Reviews"
-    files:
-      - file: src/data/reviews.json
-        label: "All reviews"
-        name: reviews
-        fields:
-          - name: reviews
-            label: "Reviews"
-            widget: list
-            summary: "{{fields.author}} — {{fields.dog}}"
-            fields:
-              - { name: author,    label: "Customer name",     widget: string,  hint: "e.g. Sarah M." }
-              - { name: location,  label: "Where they live",   widget: string,  required: false, hint: "e.g. Newmillerdam" }
-              - { name: dog,       label: "Dog's name + breed", widget: string, required: false, hint: "e.g. Bella (cockapoo)" }
-              - { name: service,   label: "Service",           widget: select, required: false,
-                  options: ["Full Groom","Puppy First Groom","Bath & Tidy","Nail Trim, Ear Clean & Tidy","De-matting & Coat Recovery","Hand Stripping"] }
-              - { name: rating,    label: "Stars (1–5)",       widget: number,  min: 1, max: 5, value_type: int, default: 5 }
-              - { name: date,      label: "Date",              widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, picker_utc: false }
-              - { name: body,      label: "Review",            widget: text,    hint: "What the customer said." }
-              - { name: featured,  label: "Show on every page?", widget: boolean, default: false, hint: "Featured reviews appear in the strip under every page hero. Pick your 3 best." }
-              - { name: id,        label: "Internal ID",       widget: string,  hint: "Any short unique id, e.g. r6" }
+    label_singular: "Review"
+    description: "Each customer review is its own entry. Add one with 'New Review'. Only add real reviews from real customers, with their permission."
+    folder: src/data/reviews
+    format: json
+    extension: json
+    create: true
+    slug: "{{fields.author}}-{{fields.dog}}"
+    identifier_field: author
+    summary: "{{fields.author}} — {{fields.dog}}"
+    sortable_fields: [date, author, rating]
+    fields:
+      - { name: author,    label: "Customer name",     widget: string,  hint: "e.g. Sarah M." }
+      - { name: location,  label: "Where they live",   widget: string,  required: false, hint: "e.g. Newmillerdam" }
+      - { name: dog,       label: "Dog's name + breed", widget: string, required: false, hint: "e.g. Bella (cockapoo)" }
+      - { name: service,   label: "Service",           widget: select, required: false,
+          options: ["Full Groom","Puppy First Groom","Bath & Tidy","Nail Trim, Ear Clean & Tidy","De-matting & Coat Recovery","Hand Stripping"] }
+      - { name: rating,    label: "Stars (1–5)",       widget: number,  min: 1, max: 5, value_type: int, default: 5 }
+      - { name: date,      label: "Date",              widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, picker_utc: false }
+      - { name: body,      label: "Review",            widget: text,    hint: "What the customer said." }
+      - { name: featured,  label: "Show on every page?", widget: boolean, default: false, hint: "Featured reviews appear in the strip under every page hero. Pick your 3 best." }
 
   # ─────────────────────────────────────────────────────
   - name: groom-stories
     label: "Groom Stories"
-    files:
-      - file: src/data/groom-stories.json
-        label: "All groom stories"
-        name: groom_stories
-        fields:
-          - name: stories
-            label: "Groom stories"
-            widget: list
-            summary: "{{fields.dog}} — {{fields.service}}"
-            fields:
-              - { name: title,       label: "Story title",       widget: string,  hint: "Short, descriptive. e.g. 'Milo's coat recovery after a wet summer'" }
-              - { name: description, label: "Story description", widget: text,    hint: "1–2 sentences shown under the title on cards and in the hero." }
-              - { name: dog,         label: "Dog's name",        widget: string,  hint: "e.g. Milo" }
-              - { name: breed,       label: "Breed & age",       widget: string,  hint: "e.g. Cockapoo, 3 years" }
-              - { name: service,     label: "Service",           widget: select,
-                  options: ["Full Groom","Puppy First Groom","Bath & Tidy","Nail Trim, Ear Clean & Tidy","De-matting & Coat Recovery","Hand Stripping","De-matting & Full Groom"] }
-              - { name: area,        label: "Where they live",   widget: string,  hint: "e.g. Newmillerdam" }
-              - { name: date,        label: "Date of groom",     widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, picker_utc: false }
-              - { name: summary,     label: "Short preview",     widget: text,    hint: "1–2 sentences shown on the card." }
-              - { name: story,       label: "Full story",        widget: markdown, hint: "Write the story in paragraphs. Leave a blank line between paragraphs." }
-              - { name: beforePhoto, label: "Before photo", widget: image, required: false, hint: "Shown at the top of the story (left). Pick from existing photo library." }
-              - { name: afterPhoto,  label: "After photo",  widget: image, required: false, hint: "Shown at the top of the story (right) + as the card thumbnail on the index page." }
-              - { name: featured,    label: "Highlight on homepage?", widget: boolean, default: false }
-              - { name: slug,        label: "URL ending",        widget: string,  hint: "Short, lower-case, hyphen-separated. e.g. milo-after-summer" }
+    label_singular: "Groom Story"
+    description: "Each before-and-after story is its own entry. Add one with 'New Groom Story'."
+    folder: src/data/groom-stories
+    format: json
+    extension: json
+    create: true
+    slug: "{{fields.slug}}"
+    identifier_field: title
+    summary: "{{fields.dog}} — {{fields.service}}"
+    sortable_fields: [date, dog]
+    fields:
+      - { name: title,       label: "Story title",       widget: string,  hint: "Short, descriptive. e.g. 'Milo's coat recovery after a wet summer'" }
+      - { name: description, label: "Story description", widget: text,    hint: "1–2 sentences shown under the title on cards and in the hero." }
+      - { name: dog,         label: "Dog's name",        widget: string,  hint: "e.g. Milo" }
+      - { name: breed,       label: "Breed & age",       widget: string,  hint: "e.g. Cockapoo, 3 years" }
+      - { name: service,     label: "Service",           widget: select,
+          options: ["Full Groom","Puppy First Groom","Bath & Tidy","Nail Trim, Ear Clean & Tidy","De-matting & Coat Recovery","Hand Stripping","De-matting & Full Groom"] }
+      - { name: area,        label: "Where they live",   widget: string,  hint: "e.g. Newmillerdam" }
+      - { name: date,        label: "Date of groom",     widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, picker_utc: false }
+      - { name: summary,     label: "Short preview",     widget: text,    hint: "1–2 sentences shown on the card." }
+      - { name: story,       label: "Full story",        widget: markdown, hint: "Write the story in paragraphs. Leave a blank line between paragraphs." }
+      - { name: beforePhoto, label: "Before photo", widget: image, required: false, hint: "Shown at the top of the story (left). Pick from existing photo library." }
+      - { name: afterPhoto,  label: "After photo",  widget: image, required: false, hint: "Shown at the top of the story (right) + as the card thumbnail on the index page." }
+      - { name: featured,    label: "Highlight on homepage?", widget: boolean, default: false }
+      - { name: slug,        label: "URL ending",        widget: string,  hint: "Short, lower-case, hyphen-separated. e.g. milo-after-summer" }

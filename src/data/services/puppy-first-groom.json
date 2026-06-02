@@ -1,0 +1,78 @@
+{
+  "order": 2,
+  "slug": "puppy-first-groom",
+  "name": "Puppy First Groom",
+  "summary": "A gentle, reassuring introduction (up to ~6 months). Sets your pup up for a lifetime of stress-free grooming.",
+  "fromPrice": 25,
+  "duration": "45–60 minutes",
+  "tiers": [
+    {
+      "label": "Puppy Intro Groom",
+      "from": 25
+    },
+    {
+      "label": "Follow-up Puppy Groom",
+      "from": 30
+    }
+  ],
+  "includes": [
+    "Calm meet & sniff",
+    "Sound desensitisation (clippers & dryer)",
+    "Gentle bath",
+    "Light tidy & nail trim",
+    "Reward-led pace",
+    "Aftercare chat"
+  ],
+  "heroPhoto": "/assets/photos/golden-puppy-woodland-2.jpg",
+  "heroPhotoAlt": "A young golden retriever puppy",
+  "metaDescription": "Gentle puppy first groom in Hall Green, Wakefield WF4 — calm 45-60 minute intro for pups up to 6 months. Sets your puppy up for stress-free grooming.",
+  "body": [
+    "A puppy's first grooming experience matters more than people realise. Done gently, puppy grooming teaches a young dog that the salon is a friendly place — somewhere they'll be calm and confident for the rest of their life. Done badly (or with a queue of barking adults in earshot), it can take years to undo.",
+    "The puppy first groom at Keith's K9 Care is a slower, calmer version of a normal session. Usually 45 to 60 minutes. We start with a sniff-around so your puppy can investigate the room. Then we introduce the sounds — clippers running near (but not on) them, the warm hum of the dryer at a distance — and reward each calm response with treats. Only when your puppy is settled do we move to a gentle bath, a light tidy of face, paws and rear, and a careful first nail trim.",
+    "Most puppies can have their first groom from around 12 weeks — after their second vaccination — but it's worth a quick chat first. We'll ask about coat type, breed, and how they handle new noises at home, and pick the right moment.",
+    "Follow-up puppy grooms (the second and subsequent visits up to ~6 months) build on the first. Puppy intro groom: from £25. Follow-up puppy groom: from £30. Cheaper than a full groom because we keep them shorter and lower-intensity by design — the goal is a confident adult dog, not a perfect cut."
+  ],
+  "faqs": [
+    {
+      "q": "When can my puppy have their first groom?",
+      "a": "Usually any time after their second vaccination (around 12 weeks). The earlier we can introduce gentle handling, water and the sound of clippers, the easier every groom for the rest of their life."
+    },
+    {
+      "q": "What happens if my puppy gets upset?",
+      "a": "We stop, take a break, give them a treat and try again — at their pace. There's no rule that says a groom has to finish in one session. Sometimes the best thing we can do is leave a bit until next time."
+    },
+    {
+      "q": "Can I stay with my puppy for the first appointment?",
+      "a": "If you'd like to, yes — especially for the meet-and-sniff at the start. Most puppies actually settle better once their owner is in the other room, but you're welcome to be there if you'd rather."
+    },
+    {
+      "q": "Should my puppy be tired before the groom?",
+      "a": "A short walk beforehand can help — but don't exhaust them. A puppy that's a bit calm-and-content settles best. Avoid feeding them within an hour of the appointment."
+    },
+    {
+      "q": "What should I bring?",
+      "a": "A vaccination card the first time, a familiar treat if they have a favourite, and your phone for the proud post-groom photo. That's it."
+    }
+  ],
+  "relatedSlugs": [
+    "full-groom",
+    "nail-trim",
+    "bath-and-tidy"
+  ],
+  "breedExamples": [
+    {
+      "size": "Puppy intro (up to ~6 months)",
+      "from": 25,
+      "breeds": [
+        "All breeds welcome — calm 45 min introduction with bath, light tidy, paw-pad trim and a careful first nail trim."
+      ]
+    },
+    {
+      "size": "Follow-up puppy groom",
+      "from": 30,
+      "breeds": [
+        "Second and subsequent appointments up to about 6 months — extends the routine gently, building confidence."
+      ]
+    }
+  ]
+}

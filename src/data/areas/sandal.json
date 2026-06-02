@@ -1,0 +1,36 @@
+{
+  "order": 3,
+  "slug": "sandal",
+  "name": "Sandal",
+  "postcodePrefix": "WF2",
+  "distanceMiles": 2.2,
+  "driveMinutes": 6,
+  "landmarks": [
+    "Sandal Castle",
+    "Pugneys Country Park",
+    "Castle Grove Park"
+  ],
+  "blurb": "Just south of Sandal — a quick run down the A61. We see plenty of Sandal regulars after their morning walk at Pugneys.",
+  "metaDescription": "Dog grooming near Sandal, Wakefield — a 6-minute drive to Keith's K9 Care home salon in Hall Green WF4. IPET-qualified, one dog at a time. See prices and book.",
+  "lead": "A short run down from Sandal, Keith's K9 Care is a quiet, one-to-one home dog grooming salon — popular with Sandal owners after a morning walk at Pugneys.",
+  "body": [
+    "Sandal and the area around Pugneys Country Park is prime dog-walking territory, and we groom plenty of Sandal regulars. The salon is a six-minute drive south in Hall Green — close enough to be convenient, far enough to be properly quiet. If your dog has spent the morning charging round Pugneys lake, we'll have them bathed, dried and tidy by the afternoon.",
+    "Keith's K9 Care is a home salon built around one idea: one dog at a time. No kennels, no shared dryers, no other dogs in earshot — just your dog and Keith in a calm, purpose-built room. It's the right setup for water-loving spaniels and retrievers, for doodles that mat up after a swim, and for any dog that finds a busy commercial salon a bit much.",
+    "Keith is IPET-qualified and grooms every coat type, with the full menu of services — full grooms, puppy first grooms, bath and tidy, nail trims, de-matting and hand stripping. Pricing is published with breed-by-breed examples, so you know roughly what you'll pay before you arrive, and Keith confirms it in person before starting.",
+    "If your Sandal dog needs a regular groom, a first puppy visit, or rescuing after one swim too many at Pugneys, getting booked in is a quick call, WhatsApp or message away."
+  ],
+  "faqs": [
+    {
+      "q": "How far is the salon from Sandal?",
+      "a": "About 2.2 miles — a six-minute drive south to Castle Meadows in Hall Green (WF4). An easy run down the A61."
+    },
+    {
+      "q": "Do you groom dogs after walks at Pugneys?",
+      "a": "Often — a lot of our Sandal customers come straight from a Pugneys walk. Book a bath and tidy or a full groom and we'll sort out the lake water and mud."
+    },
+    {
+      "q": "Can I get my Sandal puppy's first groom done with you?",
+      "a": "Yes — the calm home setup is ideal for a puppy's first experience. We keep it short and gentle so they learn the salon is a friendly place. Usually from around 12 weeks, after the second vaccination."
+    }
+  ]
+}

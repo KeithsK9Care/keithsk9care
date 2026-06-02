@@ -1,0 +1,36 @@
+{
+  "order": 5,
+  "slug": "chapelthorpe",
+  "name": "Chapelthorpe",
+  "postcodePrefix": "WF4",
+  "distanceMiles": 1.2,
+  "driveMinutes": 4,
+  "landmarks": [
+    "St James's Church",
+    "Chapelthorpe Cricket Club",
+    "Hall Green Lane"
+  ],
+  "blurb": "A short run from Chapelthorpe. Same WF4 postcode area — most of our Chapelthorpe customers walk down to us along the lanes.",
+  "metaDescription": "Dog grooming in Chapelthorpe — Keith's K9 Care is a 4-minute walk or drive away in neighbouring Hall Green, Wakefield WF4. One dog at a time. Book today.",
+  "lead": "Chapelthorpe is right on our doorstep — same WF4 postcode area, a few minutes down the lanes. Keith's K9 Care is a calm, one-to-one home dog grooming salon in neighbouring Hall Green.",
+  "body": [
+    "Chapelthorpe and Hall Green sit side by side, so for Chapelthorpe owners we're about as local as a groomer gets — a four-minute drive, or a gentle walk down the lanes for dogs that like to arrive already stretched. Plenty of our Chapelthorpe regulars do exactly that: walk the dog over, drop them with Keith, and pick them up looking their best.",
+    "Being a home salon makes all the difference. Your dog is the only one in the room — no kennels, no other dogs barking through the wall, no production line. One dog, one groomer, one quiet space, worked at your dog's pace rather than the clock's. It's the right setting for puppies, nervous dogs and older dogs who find a busy commercial salon too much.",
+    "Keith is IPET-qualified and offers the full range of grooming for every coat type — full grooms, puppy first grooms, bath and tidy, nail trims, de-matting and hand stripping. Prices are published in full with breed examples, and confirmed in person before he starts, so there are never any surprises on the bill.",
+    "From a regular groom to a first puppy visit or a quick tidy before a family occasion, getting your Chapelthorpe dog booked in is a quick call, WhatsApp or message away."
+  ],
+  "faqs": [
+    {
+      "q": "How close is Keith's K9 Care to Chapelthorpe?",
+      "a": "Very — we're in neighbouring Hall Green, the same WF4 area, about 1.2 miles (a four-minute drive). Lots of Chapelthorpe owners walk their dog down."
+    },
+    {
+      "q": "Can I walk my dog to the salon from Chapelthorpe?",
+      "a": "Plenty do — it's a short walk down the lanes, and a walked-out dog often settles better for a groom. Just let Keith know roughly when you'll arrive."
+    },
+    {
+      "q": "Is the home setup good for a nervous dog?",
+      "a": "It's exactly why a lot of nervous and rescue dogs come to us. One dog at a time, in a calm room, with breaks whenever they're needed — no busy salon noise."
+    }
+  ]
+}

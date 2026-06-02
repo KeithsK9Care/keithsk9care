@@ -1,0 +1,36 @@
+{
+  "order": 1,
+  "slug": "newmillerdam",
+  "name": "Newmillerdam",
+  "postcodePrefix": "WF2",
+  "distanceMiles": 0.5,
+  "driveMinutes": 2,
+  "landmarks": [
+    "Newmillerdam Country Park",
+    "Newmillerdam Lake",
+    "The Dam Inn"
+  ],
+  "blurb": "Our salon at 4 Castle Meadows is in neighbouring Hall Green — a short stroll from Newmillerdam Country Park. If you walk your dog round the lake, we're round the corner.",
+  "metaDescription": "Dog grooming for Newmillerdam — Keith's K9 Care is a 2-minute drive away in neighbouring Hall Green, Wakefield. IPET-qualified, one dog at a time. Book today.",
+  "lead": "If you walk your dog round Newmillerdam Lake, your nearest groomer is right around the corner. Keith's K9 Care is a calm, one-to-one home salon in neighbouring Hall Green — barely two minutes from the Country Park.",
+  "body": [
+    "Newmillerdam is a dog walker's paradise — the lake, the woodland trails, the boathouse and the open water all within a few minutes of home. It's also a reliable way to send a dog back muddy, soggy and very pleased with themselves. That's where we come in. Keith's K9 Care sits on Castle Meadows in Hall Green, the village immediately south of Newmillerdam Country Park, so for most Newmillerdam owners we're the closest proper grooming salon there is — a two-minute drive or a gentle walk.",
+    "We're a home salon, not a high-street unit. That means one dog at a time, in a quiet converted garage set up entirely around your dog's comfort — no kennels, no other dogs barking through the wall, no production line. For the retrievers, spaniels and doodles that love the Newmillerdam water, it's a calm place to dry off, de-tangle and get back to looking their best after a summer of swimming.",
+    "Keith is IPET-qualified, trained at Mrs B's in Leeds, and grooms every coat type — from a cockapoo's first puppy groom to a hand-stripped terrier. Prices are published in full, with breed examples, so there are no surprises: a full groom starts at £40 for small dogs, £50 for medium and £60 for large or doodles, and Keith always confirms the price in person before he starts.",
+    "If your dog comes back from the lake matted or smelling of pond, a bath and tidy or a careful de-matting session will put them right — and Keith will give you an honest plan to keep the coat in good shape between grooms. Booking is a quick call, WhatsApp or message away."
+  ],
+  "faqs": [
+    {
+      "q": "How far is Keith's K9 Care from Newmillerdam?",
+      "a": "About half a mile — a two-minute drive. The salon is at 4 Castle Meadows in Hall Green, the village just south of Newmillerdam Country Park. Plenty of Newmillerdam owners walk down."
+    },
+    {
+      "q": "Do you groom dogs after walks at Newmillerdam Lake?",
+      "a": "All the time — muddy, soggy retrievers and spaniels are our bread and butter. Book a full groom or a quicker bath and tidy and we'll have them dry, de-tangled and smart again."
+    },
+    {
+      "q": "Are you the closest dog groomer to Newmillerdam?",
+      "a": "For most of Newmillerdam, yes — we're the nearest one-to-one home salon, a short hop into neighbouring Hall Green (WF4). No trip into Wakefield centre needed."
+    }
+  ]
+}

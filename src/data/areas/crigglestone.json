@@ -1,0 +1,36 @@
+{
+  "order": 2,
+  "slug": "crigglestone",
+  "name": "Crigglestone",
+  "postcodePrefix": "WF4",
+  "distanceMiles": 1.4,
+  "driveMinutes": 4,
+  "landmarks": [
+    "High Street",
+    "Crigglestone Cricket Club",
+    "Cedar Park"
+  ],
+  "blurb": "Five minutes up the road from Crigglestone village. Easy parking outside the salon, no city-centre traffic.",
+  "metaDescription": "Dog grooming near Crigglestone — a 4-minute drive to Keith's K9 Care in Hall Green, Wakefield WF4. IPET-qualified, one dog at a time, prices published. Book today.",
+  "lead": "Five minutes up the road from Crigglestone village, Keith's K9 Care is a calm, one-to-one home dog grooming salon with easy parking and none of the city-centre traffic.",
+  "body": [
+    "Crigglestone sits just to the west of us, and we see a lot of Crigglestone dogs — it's a quick, easy run over to Hall Green with none of the parking hassle of a high-street salon. Pull up right outside on Castle Meadows, drop your dog with Keith, and there's no circling for a space or queuing behind three other dogs.",
+    "What Crigglestone owners tend to like is the calm. Keith's K9 Care is a home salon — a purpose-built, fully-equipped converted garage where your dog is the only one in the room. One dog, one groomer, one quiet space. It suits nervous dogs, puppies and older dogs who find busy commercial salons overwhelming, and it means Keith can work at your dog's pace rather than the clock's.",
+    "Every coat is welcome: cockapoos and cavapoos, cocker and springer spaniels, schnauzers, terriers, retrievers and the small breeds. Keith is IPET-qualified and offers the full range — full grooms, puppy first grooms, bath and tidy, nail trims, de-matting and traditional hand stripping. Prices are published in full with breed examples, and confirmed in person before he starts.",
+    "Whether it's a regular six-week groom or a one-off tidy before a family event, getting your Crigglestone dog booked in is a quick call, WhatsApp or message. Keith likes a quick chat about coat, age and temperament first so he can set aside the right amount of time."
+  ],
+  "faqs": [
+    {
+      "q": "How long does it take to get to you from Crigglestone?",
+      "a": "About four minutes by car — roughly 1.4 miles. We're on Castle Meadows in Hall Green (WF4), with easy parking right outside."
+    },
+    {
+      "q": "Is there parking at the salon?",
+      "a": "Yes — park right outside on Castle Meadows. No high-street traffic, no hunting for a space. Much easier than a town-centre groomer."
+    },
+    {
+      "q": "Do you groom nervous or older dogs from Crigglestone?",
+      "a": "Absolutely — the calm, one-to-one home setup is exactly why a lot of nervous, rescue and senior dogs come to us. We work at the dog's pace and take breaks when needed."
+    }
+  ]
+}

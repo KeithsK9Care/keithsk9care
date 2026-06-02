@@ -1,0 +1,36 @@
+{
+  "order": 8,
+  "slug": "calder-grove",
+  "name": "Calder Grove",
+  "postcodePrefix": "WF4",
+  "distanceMiles": 2,
+  "driveMinutes": 6,
+  "landmarks": [
+    "Denby Dale Road (A636)",
+    "Calder Grove Working Men's Club",
+    "Stocksmoor Lane"
+  ],
+  "blurb": "Five minutes off the A636. Convenient if you're on the Calder Grove side of Crigglestone.",
+  "metaDescription": "Dog grooming near Calder Grove — a 6-minute drive to Keith's K9 Care in Hall Green, Wakefield WF4, just off the A636. One dog at a time. Book today.",
+  "lead": "Five minutes off the A636, Keith's K9 Care is a calm, one-to-one home dog grooming salon — handy for the Calder Grove side of Crigglestone.",
+  "body": [
+    "Calder Grove sits just off the Denby Dale Road, and we're a straightforward six-minute run across via the A636. It's an easy one for anyone on the Calder Grove or western side of Crigglestone — no trip into Wakefield centre, and easy parking right outside the salon on Castle Meadows.",
+    "Keith's K9 Care is a home salon, which for your dog means one thing above all: calm. One dog at a time, in a quiet, purpose-built room — no kennels, no shared dryers, no other dogs barking. It's the right environment for nervous dogs, puppies and seniors, and it means your dog has Keith's undivided attention from arrival to handover.",
+    "Keith is IPET-qualified and grooms every coat and breed — full grooms, puppy first grooms, bath and tidy, nail trims, de-matting and traditional hand stripping. Prices are published in full with breed examples, and confirmed in person before he starts, so you always know what you're paying for.",
+    "For a regular groom or a one-off tidy, getting your Calder Grove dog booked in is a quick call, WhatsApp or message. Keith likes a quick chat about your dog first to set aside the right amount of time."
+  ],
+  "faqs": [
+    {
+      "q": "How far is the salon from Calder Grove?",
+      "a": "About 2 miles — a six-minute drive across via the A636 to Castle Meadows in Hall Green (WF4)."
+    },
+    {
+      "q": "Is parking easy at the salon?",
+      "a": "Yes — park right outside on Castle Meadows. No high-street traffic and no hunting for a space, unlike a town-centre groomer."
+    },
+    {
+      "q": "Do you do hand stripping for terriers and schnauzers?",
+      "a": "Yes — Keith trained specifically in hand stripping. It keeps a wire coat's colour and texture, and it's the right choice for Border terriers, schnauzers and working cockers."
+    }
+  ]
+}
