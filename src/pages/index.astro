@@ -11,15 +11,17 @@ import HomeFAQ from '../components/home/HomeFAQ.astro';
 import HomeContactCTA from '../components/home/HomeContactCTA.astro';
 import { faqs } from '../lib/content';
 import copy from '../data/copy/home.json';
-import { buildFAQSchema } from '../lib/schemas';
+import site from '../data/site.json';
+import { buildFAQSchema, buildWebSiteSchema } from '../lib/schemas';
 import ReviewStrip from '../components/ReviewStrip.astro';
 
 const homepageFaqs = faqs.filter((f: any) => f.tags.includes('home')).slice(0, 5);
 const faqSchema = buildFAQSchema(homepageFaqs);
+const webSiteSchema = buildWebSiteSchema({ url: site.url, name: site.name, businessId: `${site.url}/#business` });
 
 const m = copy.meta;
 ---
-<Layout title={m.title} description={m.description} ogImage={m.ogImage} heroPreload="golden-puppy-woodland-1-800" schema={[faqSchema]}>
+<Layout title={m.title} description={m.description} ogImage={m.ogImage} heroPreload="golden-puppy-woodland-1-800" schema={[webSiteSchema, faqSchema]}>
 
   <HomeHero />
   <ReviewStrip />

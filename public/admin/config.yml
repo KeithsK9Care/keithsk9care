@@ -242,6 +242,11 @@ collections:
               - { name: eyebrow, widget: string }
               - { name: heading, widget: string }
               - { name: body,    widget: text }
+          - name: overview
+            label: "Overview paragraphs (under the service grid)"
+            widget: list
+            required: false
+            hint: "A few paragraphs of overview shown below the services. Each item is one paragraph."
           - name: transparency
             label: "Transparency callout"
             widget: object

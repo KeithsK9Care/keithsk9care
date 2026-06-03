@@ -254,6 +254,21 @@ export function buildAggregateRatingSchema(opts: {
 }
 
 /**
+ * WebSite entity for the homepage @graph — completes the SOP home archetype
+ * (LocalBusiness/Organization + WebSite). `publisher` links to the business node.
+ */
+export function buildWebSiteSchema(opts: { url: string; name: string; businessId: string }) {
+  return {
+    "@type": "WebSite",
+    "@id": `${opts.url}/#website`,
+    "url": opts.url,
+    "name": opts.name,
+    "publisher": { "@id": opts.businessId },
+    "inLanguage": "en-GB",
+  };
+}
+
+/**
  * Combine one or more schema entities into a single JSON-LD `@graph` block, so
  * every page emits exactly ONE <script type="application/ld+json"> (RVTC Gold
  * Standard point 5). Falsy entries (e.g. an absent FAQ or empty reviews) are

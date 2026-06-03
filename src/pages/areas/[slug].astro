@@ -12,6 +12,7 @@ import AreaPill from '../../components/AreaPill.astro';
 import ContactCTACard from '../../components/ContactCTACard.astro';
 import ReviewStrip from '../../components/ReviewStrip.astro';
 import { buildFAQSchema, buildBreadcrumbSchema } from '../../lib/schemas';
+import { seoTitle } from '../../lib/seo';
 
 export function getStaticPaths() {
   return areas.map((a: any) => ({ params: { slug: a.slug }, props: { area: a } }));
@@ -22,7 +23,7 @@ const a: any = area;
 const isHome = a.distanceMiles === 0;
 const hasContent = Array.isArray(a.body) && a.body.length > 0;
 
-const title = `Dog grooming in ${a.name} | Keith's K9 Care`;
+const title = seoTitle(`Dog grooming in ${a.name}`, [" — calm home salon, Wakefield", " — home salon, WF4", " — Wakefield WF4"]);
 const description = a.metaDescription
   || `IPET-qualified, one-to-one dog grooming a short drive from ${a.name} — a calm home salon in Hall Green, Wakefield WF4. See prices and book your dog in.`;
 

@@ -15,6 +15,7 @@ const m = copy.meta;
 const h = copy.hero;
 const trans = copy.transparency;
 const cta = copy.contactCta;
+const overview: string[] = copy.overview ?? [];
 
 const breadcrumbSchema = buildBreadcrumbSchema([
   { name: "Home", url: `${site.url}/` },
@@ -39,6 +40,15 @@ const breadcrumbSchema = buildBreadcrumbSchema([
       </div>
     </div>
   </section>
+
+  <!-- OVERVIEW -->
+  {overview.length > 0 && (
+    <section class="section pt-0">
+      <div class="container-tight space-y-5 text-lg text-ink-700 leading-relaxed">
+        {overview.map((p) => <p>{p}</p>)}
+      </div>
+    </section>
+  )}
 
   <!-- TRANSPARENCY CALLOUT -->
   <section class="section bg-teal-50/60">

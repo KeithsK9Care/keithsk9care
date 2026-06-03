@@ -10,6 +10,7 @@ import ContactCTACard from '../../components/ContactCTACard.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
 import ReviewStrip from '../../components/ReviewStrip.astro';
 import { buildServiceSchema, buildFAQSchema, buildBreadcrumbSchema } from '../../lib/schemas';
+import { seoTitle } from '../../lib/seo';
 
 export function getStaticPaths() {
   return services.map((s: any) => ({
@@ -21,7 +22,7 @@ export function getStaticPaths() {
 const { service } = Astro.props;
 const s = service;
 
-const title = `${s.name} | Keith's K9 Care`;
+const title = seoTitle(s.name, [" — dog grooming in Wakefield WF4", " — dog grooming, Wakefield", " in Wakefield WF4", " in Wakefield"]);
 const description = s.metaDescription || `${s.name} from £${s.fromPrice} at Keith's K9 Care, Hall Green Wakefield WF4. ${s.summary}`;
 
 // Find related services
