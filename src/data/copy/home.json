@@ -22,20 +22,20 @@
     "aboutPhotoAlt": "Keith Kershaw with a golden retriever in his home grooming salon",
     "salonPhotos": [
       {
+        "src": "/assets/photos/keith_golden_retriever_bathing.jpg",
+        "alt": "Keith finishing a border terrier groom in the home salon"
+      },
+      {
         "src": "/assets/photos/keith_golden_retriever_grooming_table_ringo.jpg",
         "alt": "Golden Retriever after a full groom on the table in Keith's K9 Care home salon, Castle Meadows WF4"
       },
       {
         "src": "/assets/photos/IMG_2678.jpg",
-        "alt": "Dalmatian poodle after a full groom at Keith's K9 Care, Hall Green WF4"
+        "alt": "Dalmatian after a full groom at Keith's K9 Care, Hall Green WF4"
       },
       {
         "src": "/assets/photos/keith-with-grey-schnauzer.jpg",
         "alt": "Keith with a freshly-groomed grey schnauzer in the home salon"
-      },
-      {
-        "src": "/assets/photos/keith-with-border-terrier.jpg",
-        "alt": "Keith finishing a border terrier groom in the home salon"
       },
       {
         "src": "/assets/photos/cocker-spaniel-after-groom.jpg",
