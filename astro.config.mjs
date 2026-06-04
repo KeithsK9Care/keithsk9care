@@ -7,11 +7,11 @@ export default defineConfig({
   integrations: [
     tailwind(),
     sitemap({
-      // Exclude the noindex routes from the sitemap: /book and /thanks (booking flow),
-      // /areas (placeholder hub — flip to indexable once the area detail pages ship), and
-      // /admin (CMS). Keep this list in sync with the `noindex` array below. All other
-      // routes (home, about, faq, services index + 6 detail pages, pricing, reviews,
-      // groom-stories, privacy, terms) are indexable.
+      // Exclude the non-indexable routes from the sitemap: the booking flow (/book, /thanks)
+      // and the CMS (/admin — a static public file; belt-and-braces). Everything else is
+      // indexable and in the map: home, about, the /services/ + /areas/ hubs and all their
+      // detail pages, pricing, faq, reviews, groom-stories, privacy, terms. (404 is excluded
+      // automatically.) Keep this in sync with each page's `noindex` prop.
       filter: (page) => {
         const noindex = [
           'https://keithsk9care.co.uk/book/',
