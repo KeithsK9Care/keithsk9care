@@ -8,15 +8,18 @@
   "tiers": [
     {
       "label": "Nails only",
-      "from": 10
+      "from": 10,
+      "note": ""
     },
     {
       "label": "Nails + ear clean",
-      "from": 15
+      "from": 15,
+      "note": ""
     },
     {
       "label": "Tidy (face/feet/rear)",
-      "from": 20
+      "from": 20,
+      "note": ""
     }
   ],
   "includes": [
@@ -26,34 +29,34 @@
     "Paw-pad trim",
     "Sanitary trim if needed"
   ],
-  "heroPhoto": "/assets/photos/keith-with-chihuahua.jpg",
+  "heroPhoto": "/assets/photos/keith_golden_retriever_meet_ringo.jpg",
   "heroPhotoAlt": "Keith gently handling a small chihuahua",
   "metaDescription": "Quick dog nail trim, ear clean and tidy in Hall Green, Wakefield WF4. Nails from £10, nails + ears £15, full tidy £20. 15-30 minute appointments.",
   "body": [
-    "Sometimes you just need the nails done. Or the ears. Or a tidy round the eyes before they're rubbing on the cornea. A full groom isn't always the answer — and we'd rather do a quick maintenance visit than have you put it off because the cost of a full session feels like overkill.",
+    "Sometimes you just need the nails done. Or the ears. Or a tidy round the eyes before they're rubbing on the cornea. A full groom isn't always the answer - and we'd rather do a quick maintenance visit than have you put it off because the cost of a full session feels like overkill.",
     "Nails-only is the quickest appointment: 15 minutes, £10. Includes a careful look at the quick (the live part of the nail) so we never go too short. If your dog is nervous about feet, we'll work in shorter sessions and stop at whatever your dog is happy with.",
-    "Add an ear clean (£15 total) and we'll take a look inside the ear, gently clean the visible surface with a vet-approved solution, and flag anything that looks like a vet check might be sensible (we're groomers, not vets — but you get used to spotting infection early).",
-    "A full tidy (£20 total) is the maintenance lap — nails, ears, face, eyes, paw pads, sanitary trim. Usually 25 to 30 minutes. A great between-grooms option for dogs whose coats grow back quickly between proper full grooms.",
-    "Overlong nails are not only a tidiness issue — they change how a dog stands and moves. When a nail is long enough to meet the floor it pushes back into the toe with every step, which over time splays the toes, strains the joints, and can leave an older dog reluctant to walk on hard or slippery surfaces. A good guide is the sound: if you can hear the nails clicking on a kitchen or hall floor, they have grown past the comfortable length and are due. Back feet often wear down a little more than fronts, and the dewclaws higher up the leg touch nothing at all, so they keep growing unchecked and can curl round into the pad if they are missed — they are part of every nail trim here.",
-    "Regular trims do more than keep the length down — they gradually shorten the nail for good. Inside each nail is the quick, the live vessel that bleeds if it is cut; in an overgrown nail the quick has grown out along with the nail, so there is a limit to how short it can safely go in one visit. Trimming little and often encourages that quick to recede over the following weeks, which means the next trim can take a touch more, and the one after that more again. For a dog whose nails have been left a long time, the honest plan is several short visits a couple of weeks apart rather than one drastic cut — kinder, and it gets you to a properly short nail in the end.",
+    "Add an ear clean (£15 total) and we'll take a look inside the ear, gently clean the visible surface with a vet-approved solution, and flag anything that looks like a vet check might be sensible (we're groomers, not vets, but you get used to spotting infection early).",
+    "A full tidy (£20 total) is the maintenance lap,  nails, ears, face, eyes, paw pads, sanitary trim. Usually 25 to 30 minutes. A great between-grooms option for dogs whose coats grow back quickly between proper full grooms.",
+    "Overlong nails are not only a tidiness issue,  they change how a dog stands and moves. When a nail is long enough to meet the floor it pushes back into the toe with every step, which over time splays the toes, strains the joints, and can leave an older dog reluctant to walk on hard or slippery surfaces. A good guide is the sound: if you can hear the nails clicking on a kitchen or hall floor, they have grown past the comfortable length and are due. Back feet often wear down a little more than fronts, and the dewclaws higher up the leg touch nothing at all, so they keep growing unchecked and can curl round into the pad if they are missed, they are part of every nail trim here.",
+    "Regular trims do more than keep the length down, they gradually shorten the nail for good. Inside each nail is the quick, the live vessel that bleeds if it is cut; in an overgrown nail the quick has grown out along with the nail, so there is a limit to how short it can safely go in one visit. Trimming little and often encourages that quick to recede over the following weeks, which means the next trim can take a touch more, and the one after that more again. For a dog whose nails have been left a long time, the honest plan is several short visits a couple of weeks apart rather than one drastic cut - kinder, and it gets you to a properly short nail in the end.",
     "A few quick visits also keep feet from becoming a fight. Many dogs that dislike having their paws held learned it from one bad experience, so we work slowly, reward calm, and stop at whatever your dog will give us rather than push to a finish. If you would like to help at home, hold a paw for a second or two now and then with a treat, without any clippers in sight, so the handling itself stops being the thing they brace against."
   ],
   "faqs": [
     {
       "q": "How short can you cut my dog's nails?",
-      "a": "As short as is safe. The 'quick' is the live blood vessel inside each nail — cut into it and it bleeds (a lot, briefly). We can see the quick on light nails and feel for it on dark ones, and we'll get as close as your dog will tolerate without going into it."
+      "a": "As short as is safe. The 'quick' is the live blood vessel inside each nail,  cut into it and it bleeds (a lot, briefly). You can see the quick on light nails and feel for it on dark ones, and I'll get as close as your dog will tolerate without going into it, always prioritising comfort and wellbeing."
     },
     {
       "q": "Can I bring my dog in just for nails between grooms?",
-      "a": "Absolutely. Lots of customers do — saves the kitchen-floor disaster of trying it themselves. Quick appointments are easier to fit in too."
+      "a": "Absolutely. Lots of customers do, saves the kitchen-floor disaster of trying it themselves. Quick appointments are easier to fit in too."
     },
     {
       "q": "What if my dog hates having their feet touched?",
-      "a": "We work slowly with treats and breaks. If a session ends with only two paws done, that's fine — book a follow-up at no extra cost. The goal is a dog who's calmer about feet, not a dog who's traumatised by the salon."
+      "a": "We work slowly with treats and breaks. If a session ends with only two paws done, that's fine, book a follow-up at no extra cost. The goal is a dog who's calmer about feet, not a dog who's traumatised by the salon."
     },
     {
       "q": "Can I add a nail trim to another appointment, or does it need its own visit?",
-      "a": "Either works. A nail trim is included in a full groom and a bath and tidy at no extra cost, so there is no need to book it separately if your dog is already booked in for one of those. If it is only nails — or nails and ears — between grooms, a standalone visit is from £10 and takes around fifteen minutes, which is often quicker to fit in than a full session."
+      "a": "Either works. A nail trim is included in a full groom and a bath and tidy at no extra cost, so there is no need to book it separately if your dog is already booked in for one of those. If it is only nails or nails and ears between grooms, a standalone visit is from £10 and takes around fifteen minutes, which is often quicker to fit in than a full session."
     }
   ],
   "relatedSlugs": [
@@ -66,21 +69,21 @@
       "size": "Nails only",
       "from": 10,
       "breeds": [
-        "~15 minutes — for between-groom maintenance"
+        "~15 minutes (for between-groom maintenance)"
       ]
     },
     {
       "size": "Nails + ear clean",
       "from": 15,
       "breeds": [
-        "~20 minutes — adds a gentle ear check and clean"
+        "~20 minutes  (adds a gentle ear check and clean)"
       ]
     },
     {
       "size": "Full tidy (face / feet / rear / pads)",
       "from": 20,
       "breeds": [
-        "~25-30 minutes — maintenance lap between full grooms"
+        "~25-30 minutes (maintenance lap between full grooms)"
       ]
     }
   ]
