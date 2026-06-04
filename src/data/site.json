@@ -6,6 +6,7 @@
   "owner": "Keith Kershaw",
   "qualification": "IPET (iPET Network)",
   "qualificationFull": "IPET-qualified dog groomer — Mrs B's Grooming Academy, Leeds",
+  "academyName": "Mrs B's Grooming Academy, Leeds",
   "address": {
     "street": "4 Castle Meadows",
     "locality": "Hall Green",
@@ -19,36 +20,43 @@
   "phoneIntl": "+447926471552",
   "whatsappIntl": "447926471552",
   "email": "keith@keithsk9care.co.uk",
-  "facebook": "https://www.facebook.com/share/17gGULvoGV/?mibextid=wwXIfr",
+  "facebook": "https://www.facebook.com/profile.php?id=61590397141050",
+  "instagram": "",
   "priceRange": "££",
   "hours": [
     {
+      "day": "Monday",
+      "open": "08:30",
+      "close": "19:00"
+    },
+    {
       "day": "Tuesday",
-      "open": "09:00",
-      "close": "17:00"
+      "open": "08:30",
+      "close": "19:00"
     },
     {
       "day": "Wednesday",
-      "open": "09:00",
-      "close": "17:00"
+      "open": "08:30",
+      "close": "19:00"
     },
     {
       "day": "Thursday",
-      "open": "09:00",
-      "close": "17:00"
+      "open": "08:30",
+      "close": "19:00"
     },
     {
       "day": "Friday",
-      "open": "09:00",
-      "close": "17:00"
+      "open": "08:30",
+      "close": "19:00"
     },
     {
       "day": "Saturday",
-      "open": "09:00",
-      "close": "14:00"
+      "open": "08:30",
+      "close": "19:00"
     }
   ],
   "hoursNote": "Closed Sundays & Mondays. Hours flexible — call or message.",
+  "surchargesNote": "Surcharges where applicable , matted coats from £10 (severe assessed on the day) · nervous, anxious or reactive dogs +£10–£20 · extra time may apply for heavy coats or long gaps between grooms.",
   "serviceArea": [
     "Newmillerdam",
     "Crigglestone",
@@ -70,8 +78,5 @@
     "Home salon",
     "One dog at a time",
     "Hall Green · WF4"
-  ],
-  "surchargesNote": "Surcharges where applicable — matted coats from £10 (severe assessed on the day) · nervous, anxious or reactive dogs +£10–£20 · extra time may apply for heavy coats or long gaps between grooms.",
-  "instagram": "",
-  "academyName": "Mrs B's Grooming Academy, Leeds"
+  ]
 }
