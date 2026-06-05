@@ -45,7 +45,7 @@ const links = [
 <!-- FULL-SCREEN MOBILE DRAWER (fades in/out) -->
 <div
   id="kk9-nav-drawer"
-  class="lg:hidden fixed inset-0 z-50 print:hidden pointer-events-none opacity-0 transition-opacity duration-300 ease-out"
+  class="lg:hidden fixed inset-0 z-50 print:hidden flex flex-col pointer-events-none opacity-0 transition-opacity duration-300 ease-out"
   aria-hidden="true"
   inert
 >
@@ -68,13 +68,13 @@ const links = [
   </div>
 
   <!-- Nav links -->
-  <nav class="relative h-full flex flex-col justify-center px-8 pb-32 pt-20 pointer-events-none" aria-label="Mobile">
-    <div class="space-y-1 pointer-events-auto">
+  <nav class="relative flex-1 min-h-0 flex flex-col px-8 pt-4 pb-10 pointer-events-none" aria-label="Mobile">
+    <div class="flex-1 min-h-0 overflow-y-auto flex flex-col justify-center space-y-0.5 pointer-events-auto">
       {links.map(({ href, label }) => (
-        <a href={href} data-kk9-nav-link class={`block py-3 text-3xl font-display font-semibold transition ${isActive(href) ? 'text-coral-700' : 'text-ink-800 hover:text-teal-700'}`}>{label}</a>
+        <a href={href} data-kk9-nav-link class={`block py-2 text-2xl font-display font-semibold transition ${isActive(href) ? 'text-coral-700' : 'text-ink-800 hover:text-teal-700'}`}>{label}</a>
       ))}
     </div>
-    <div class="mt-10 flex flex-col sm:flex-row gap-3 pointer-events-auto">
+    <div class="mt-6 flex flex-col sm:flex-row gap-3 pointer-events-auto">
       <a href="/book/" data-kk9-nav-link class="btn-primary justify-center">Book a Groom</a>
       <a href={`tel:${site.phoneIntl}`} data-kk9-nav-link class="btn-secondary justify-center">Call {site.phone}</a>
       <a href={`https://wa.me/${site.whatsappIntl}`} target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 rounded-full bg-whatsapp px-6 py-3 font-semibold text-white text-sm">WhatsApp</a>

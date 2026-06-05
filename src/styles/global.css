@@ -154,11 +154,25 @@
 @supports (animation-timeline: scroll()) {
   @media (prefers-reduced-motion: no-preference) {
     .paw > * { stroke-dashoffset: 1; animation: pawDraw linear both; animation-timeline: scroll(root block); }
-    .paw-1 > * { animation-range: 0vh 22vh; }
-    .paw-2 > * { animation-range: 5vh 27vh; }
-    .paw-3 > * { animation-range: 10vh 32vh; }
-    .paw-4 > * { animation-range: 15vh 37vh; }
-    .paw-5 > * { animation-range: 20vh 42vh; }
+    .paw-1 > * { animation-range: 0vh 16vh; }
+    .paw-2 > * { animation-range: 7vh 23vh; }
+    .paw-3 > * { animation-range: 14vh 30vh; }
+    .paw-4 > * { animation-range: 21vh 37vh; }
+    .paw-5 > * { animation-range: 28vh 44vh; }
+    .paw-6 > * { animation-range: 35vh 51vh; }
+    .paw-7 > * { animation-range: 42vh 58vh; }
   }
 }
 @keyframes pawDraw { to { stroke-dashoffset: 0; } }
+
+/* Footer paw-print trail — draws as the footer scrolls into view (view timeline, not page scroll). */
+.fpaw > * { stroke-dasharray: 1; }
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .fpaw > * { stroke-dashoffset: 1; animation: pawDraw linear both; animation-timeline: view(); }
+    .fpaw-1 > * { animation-range: entry 0% cover 25%; }
+    .fpaw-2 > * { animation-range: entry 15% cover 40%; }
+    .fpaw-3 > * { animation-range: entry 30% cover 55%; }
+    .fpaw-4 > * { animation-range: entry 45% cover 70%; }
+  }
+}
