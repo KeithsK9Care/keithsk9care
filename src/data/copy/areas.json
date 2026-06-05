@@ -9,7 +9,11 @@
     "heading": "Local to Hall Green, serving the wider Wakefield area.",
     "body": "Most of our customers live within a 5-minute drive of the salon in Hall Green — but we groom dogs from right across the Wakefield WF4 villages and into north Barnsley. Pick your area below for local details, drive times and the questions we get asked most.",
     "photo": "golden-puppy-woodland-2",
-    "photoAlt": "A young golden retriever in the woods near Newmillerdam"
+    "photoAlt": "A young golden retriever in the woods near Newmillerdam",
+    "ctaPrimary": "Book a Groom",
+    "ctaPrimaryHref": "/book/",
+    "ctaSecondary": "See pricing",
+    "ctaSecondaryHref": "/pricing/"
   },
   "ctaText": "Get in touch",
   "overview": [

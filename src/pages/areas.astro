@@ -27,7 +27,10 @@ const breadcrumbSchema = buildBreadcrumbSchema([
     align="left"
     photo={h.photo}
     photoAlt={h.photoAlt}
-  />
+  >
+    <a href={h.ctaPrimaryHref} class="btn-primary">{h.ctaPrimary}</a>
+    <a href={h.ctaSecondaryHref} class="btn-secondary">{h.ctaSecondary}</a>
+  </PageHero>
 
   <ReviewStrip />
 
@@ -47,7 +50,7 @@ const breadcrumbSchema = buildBreadcrumbSchema([
   {overview.length > 0 && (
     <section class="section bg-teal-50/60">
       <div class="container-tight">
-        <div class="max-w-3xl space-y-5 text-lg text-ink-700 leading-relaxed">
+        <div class="space-y-5 text-lg text-ink-700 leading-relaxed">
           {overview.map((p) => <p>{p}</p>)}
         </div>
       </div>

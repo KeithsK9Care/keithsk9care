@@ -69,12 +69,13 @@ const waMsg = encodeURIComponent(qc.whatsapp.prefilledMessage || "Hi Keith, I'd 
         <form
           id="kk9-book-form"
           method="POST"
-          action="/api/book"
+          action={site.bookingFormEndpoint}
           class="rounded-3xl bg-white/95 ring-1 ring-ink-100 shadow-xl shadow-teal-900/5 p-6 md:p-8 space-y-5"
         >
-          <!-- Honeypot — hidden from real users, bots tend to fill -->
+          <input type="hidden" name="_subject" value="New booking enquiry — Keith's K9 Care" />
+          <!-- Honeypot (Formspree's _gotcha) — hidden from real users, bots tend to fill -->
           <div class="hidden" aria-hidden="true">
-            <label>Company (leave blank): <input type="text" name="company" tabindex="-1" autocomplete="off" /></label>
+            <label>Company (leave blank): <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" /></label>
           </div>
 
           <div class="grid sm:grid-cols-2 gap-5">
@@ -199,41 +200,58 @@ const waMsg = encodeURIComponent(qc.whatsapp.prefilledMessage || "Hi Keith, I'd 
 
 <script is:inline>
   (function () {
+    var ERR = 'Sorry — something went wrong sending your message. Please call or WhatsApp Keith using the buttons above, or try again.';
     function arm() {
-      var form   = document.getElementById('kk9-book-form');
-      var btn    = document.getElementById('kk9-book-submit');
+      var form = document.getElementById('kk9-book-form');
+      var btn  = document.getElementById('kk9-book-submit');
       if (!form || !btn) return;
       if (form.dataset.armed === '1') return;
       form.dataset.armed = '1';
 
       var labelEl   = btn.querySelector('[data-label]');
       var loadingEl = btn.querySelector('[data-loading]');
+      var statusEl  = document.getElementById('kk9-form-status');
 
-      form.addEventListener('submit', function () {
-        // Allow native form post to proceed; just update UI.
-        btn.disabled = true;
-        btn.setAttribute('aria-busy', 'true');
-        if (labelEl)   labelEl.classList.add('hidden');
-        if (loadingEl) loadingEl.classList.remove('hidden');
-        form.classList.add('opacity-90', 'pointer-events-none');
+      function busy(on) {
+        btn.disabled = on;
+        if (on) btn.setAttribute('aria-busy', 'true'); else btn.removeAttribute('aria-busy');
+        if (labelEl)   labelEl.classList.toggle('hidden', on);
+        if (loadingEl) loadingEl.classList.toggle('hidden', !on);
+        form.classList.toggle('opacity-90', on);
+        form.classList.toggle('pointer-events-none', on);
+      }
+      function fail(msg) {
+        if (statusEl) {
+          statusEl.textContent = msg || ERR;
+          statusEl.classList.remove('hidden');
+          statusEl.scrollIntoView({ block: 'center', behavior: 'smooth' });
+        }
+        busy(false);
+      }
+
+      // AJAX submit to Formspree — keeps the user on-site, shows a clean
+      // loading state, redirects to /thanks/ on success, inline error on failure.
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (statusEl) statusEl.classList.add('hidden');
+        busy(true);
+        fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        }).then(function (res) {
+          if (res.ok) { window.location.assign('/thanks/'); return; }
+          return res.json().catch(function () { return null; }).then(function (data) {
+            var msg = (data && data.errors && data.errors.length)
+              ? data.errors.map(function (x) { return x.message; }).join(' ')
+              : ERR;
+            fail(msg);
+          });
+        }).catch(function () { fail(ERR); });
       });
     }
-    function showStatus() {
-      var el = document.getElementById('kk9-form-status');
-      if (!el) return;
-      var status = new URLSearchParams(location.search).get('status');
-      if (status === 'error') {
-        el.textContent = 'Sorry — something went wrong sending your message. Please call or WhatsApp Keith using the buttons above, or try again.';
-        el.classList.remove('hidden');
-        el.scrollIntoView({ block: 'center', behavior: 'smooth' });
-      } else if (status === 'invalid') {
-        el.textContent = 'Please add your name, email and a short message, then send again.';
-        el.classList.remove('hidden');
-      }
-    }
     arm();
-    showStatus();
-    document.addEventListener('astro:page-load', function () { arm(); showStatus(); });
+    document.addEventListener('astro:page-load', arm);
   })();
 </script>
 

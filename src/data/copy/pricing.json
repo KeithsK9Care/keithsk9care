@@ -9,7 +9,11 @@
     "heading": "Clear pricing, no surprises.",
     "body": "I'm proud to publish my prices upfront. Competitive rates, no hidden fees, and I always confirm the final price before we start.",
     "photo": "cockapoo-portrait",
-    "photoAlt": "A happy, freshly groomed cockapoo"
+    "photoAlt": "A happy, freshly groomed cockapoo",
+    "ctaPrimary": "Book a Groom",
+    "ctaPrimaryHref": "/book/",
+    "ctaSecondary": "See services",
+    "ctaSecondaryHref": "/services/"
   },
   "addOns": [
     {

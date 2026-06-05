@@ -9,7 +9,11 @@
     "heading": "Things people usually ask.",
     "body": "Quick answers about pricing, qualifications, nervous dogs and puppy first grooms. Can't see your question? Drop Keith a message via the contact form.",
     "photo": "keith-with-chihuahua",
-    "photoAlt": "Keith with a chihuahua at the salon"
+    "photoAlt": "Keith with a chihuahua at the salon",
+    "ctaPrimary": "Book a Groom",
+    "ctaPrimaryHref": "/book/",
+    "ctaSecondary": "See services",
+    "ctaSecondaryHref": "/services/"
   },
   "groups": [
     {

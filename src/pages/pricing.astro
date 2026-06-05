@@ -26,7 +26,10 @@ const breadcrumbSchema = buildBreadcrumbSchema([
 ---
 <Layout title={m.title} description={m.description} ogImage={m.ogImage} schema={[breadcrumbSchema]}>
 
-  <PageHero eyebrow={h.eyebrow} heading={h.heading} body={h.body} align="left" photo={h.photo} photoAlt={h.photoAlt} />
+  <PageHero eyebrow={h.eyebrow} heading={h.heading} body={h.body} align="left" photo={h.photo} photoAlt={h.photoAlt}>
+    <a href={h.ctaPrimaryHref} class="btn-primary">{h.ctaPrimary}</a>
+    <a href={h.ctaSecondaryHref} class="btn-secondary">{h.ctaSecondary}</a>
+  </PageHero>
 
   <ReviewStrip />
 

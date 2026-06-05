@@ -22,6 +22,7 @@
   "email": "keith@keithsk9care.co.uk",
   "facebook": "https://www.facebook.com/profile.php?id=61590397141050",
   "instagram": "",
+  "bookingFormEndpoint": "https://formspree.io/f/REPLACE_WITH_FORM_ID",
   "priceRange": "££",
   "hours": [
     {
