@@ -44,8 +44,8 @@ const avgRating = reviewCount > 0 ? (reviews.reduce((a: number, r: any) => a + r
       </div>
 
       <ul class="mt-9 flex flex-wrap gap-2 max-w-xl">
-        {site.trustPoints.map(p => (
-          <li class="inline-flex items-center gap-1.5 rounded-full bg-white shadow-sm ring-1 ring-ink-100 px-3.5 py-1.5 text-sm font-semibold text-ink-800">
+        {site.trustPoints.map((p, i) => (
+          <li class="hero-pill-in inline-flex items-center gap-1.5 rounded-full bg-white shadow-sm ring-1 ring-ink-100 px-3.5 py-1.5 text-sm font-semibold text-ink-800" style={`animation-delay:${i * 70}ms`}>
             <svg aria-hidden="true" class="w-4 h-4 text-coral-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
             {p}
           </li>
@@ -55,7 +55,7 @@ const avgRating = reviewCount > 0 ? (reviews.reduce((a: number, r: any) => a + r
 
     <div class="relative">
       <div class="relative rounded-3xl overflow-hidden ring-1 ring-ink-100 shadow-2xl shadow-teal-900/10 aspect-[4/5]">
-        <Picture src={imgs.heroPhoto} size={800} alt={imgs.heroPhotoAlt} width={800} height={1000} priority />
+        <Picture src={imgs.heroPhoto} size={800} alt={imgs.heroPhotoAlt} width={800} height={1000} priority class="w-full h-full object-cover kenburns" />
       </div>
       <div class="absolute -bottom-6 -left-6 hidden md:block bg-white rounded-2xl shadow-xl ring-1 ring-ink-100 px-5 py-4 max-w-[200px]">
         <StarRating decorative class="gap-2 mb-1" />

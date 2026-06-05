@@ -106,6 +106,18 @@ collections:
               - { name: eyebrow,     widget: string }
               - { name: heading,     widget: string }
               - { name: description, widget: text }
+          - name: beforeAfter
+            label: "Before & After slider"
+            widget: object
+            hint: "The drag-to-reveal slider. Leave a photo blank to hide the whole section."
+            fields:
+              - { name: eyebrow,     widget: string }
+              - { name: heading,     widget: string }
+              - { name: description, widget: text }
+              - { name: beforePhoto, label: "Before photo", widget: image, hint: "The scruffy / mid-wash shot. Works best with the same dog at the same angle as the after." }
+              - { name: beforeAlt,   label: "Before photo alt text", widget: string }
+              - { name: afterPhoto,  label: "After photo", widget: image, hint: "The freshly-groomed shot." }
+              - { name: afterAlt,    label: "After photo alt text", widget: string }
           - name: areas
             label: "Areas we cover section"
             widget: object

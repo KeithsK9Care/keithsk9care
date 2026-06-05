@@ -80,6 +80,15 @@
     "heading": "See some of our most recent customers.",
     "description": "Before and after walk-throughs of the trickier visits. De-matting, hand-stripping comebacks, first puppy grooms."
   },
+  "beforeAfter": {
+    "eyebrow": "See the difference",
+    "heading": "Drag to see the transformation.",
+    "description": "Slide across to reveal before and after — the same dog, one calm visit. Real grooms, no filters.",
+    "beforePhoto": "/assets/photos/keith_golden_retriever_bathing.jpg",
+    "beforeAlt": "Golden retriever being bathed before its groom at Keith's K9 Care",
+    "afterPhoto": "/assets/photos/golden_retriever_happy.jpg",
+    "afterAlt": "Happy golden retriever after a full groom at Keith's K9 Care"
+  },
   "areas": {
     "eyebrow": "Areas we cover",
     "heading": "Local to Hall Green & Newmillerdam, serving the wider Wakefield area.",

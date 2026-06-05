@@ -1,0 +1,26 @@
+---
+import copy from '../../data/copy/home.json';
+import SectionIntro from '../SectionIntro.astro';
+import Reveal from '../Reveal.astro';
+import BeforeAfterSlider from '../BeforeAfterSlider.astro';
+
+const ba: any = (copy as any).beforeAfter;
+const show = ba && ba.beforePhoto && ba.afterPhoto;
+---
+{show && (
+  <section class="section">
+    <div class="container-tight">
+      <Reveal class="mb-8">
+        <SectionIntro eyebrow={ba.eyebrow} heading={ba.heading} description={ba.description} />
+      </Reveal>
+      <Reveal delay={120}>
+        <BeforeAfterSlider
+          beforeSrc={ba.beforePhoto}
+          beforeAlt={ba.beforeAlt}
+          afterSrc={ba.afterPhoto}
+          afterAlt={ba.afterAlt}
+        />
+      </Reveal>
+    </div>
+  </section>
+)}

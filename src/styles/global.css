@@ -110,5 +110,12 @@
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
     }
+    .kenburns { animation: none !important; }
   }
 }
+
+/* Hero motion — gentle Ken Burns drift on the hero photo + a staggered trust-pill entrance. */
+@keyframes kenburns { from { transform: scale(1); } to { transform: scale(1.06); } }
+.kenburns { animation: kenburns 24s ease-in-out infinite alternate; will-change: transform; }
+@keyframes heroPillIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+.hero-pill-in { animation: heroPillIn 0.5s ease-out both; }

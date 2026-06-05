@@ -1,0 +1,56 @@
+---
+/**
+ * BeforeAfterSlider — drag-to-reveal comparison of a before + after groom photo.
+ * The after image sits underneath full-size; the before image is layered on top and
+ * clipped to the divider position. A visually-hidden range input drives it (so it's
+ * fully keyboard-accessible and touch-draggable); the divider/handle are decorative.
+ */
+import Picture from './Picture.astro';
+
+interface Props {
+  beforeSrc: string;
+  beforeAlt: string;
+  afterSrc: string;
+  afterAlt: string;
+}
+const { beforeSrc, beforeAlt, afterSrc, afterAlt } = Astro.props;
+---
+<div class="ba-slider relative aspect-[4/3] md:aspect-[3/2] rounded-3xl overflow-hidden ring-1 ring-ink-100 shadow-2xl shadow-teal-900/10 select-none" style="--ba-pos:50%">
+  <!-- After (full, underneath) -->
+  <div class="absolute inset-0">
+    <Picture src={afterSrc} size={800} alt={afterAlt} width={800} height={600} />
+  </div>
+  <span class="ba-label-after pointer-events-none absolute top-4 right-4 rounded-full bg-coral-700 text-white px-3 py-1 text-xs font-semibold shadow-sm">After</span>
+
+  <!-- Before (clipped from the right to reveal the left portion) -->
+  <div class="absolute inset-0" style="clip-path: inset(0 calc(100% - var(--ba-pos)) 0 0)">
+    <Picture src={beforeSrc} size={800} alt={beforeAlt} width={800} height={600} />
+    <span class="pointer-events-none absolute top-4 left-4 rounded-full bg-white/90 text-ink-800 ring-1 ring-ink-100 px-3 py-1 text-xs font-semibold shadow-sm">Before</span>
+  </div>
+
+  <!-- Divider + handle -->
+  <div class="pointer-events-none absolute inset-y-0 z-10 w-0.5 bg-white/95 shadow-[0_0_0_1px_rgba(0,0,0,0.08)]" style="left: var(--ba-pos); transform: translateX(-50%)">
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white shadow-lg ring-1 ring-ink-200 flex items-center justify-center text-ink-700 group-hover:scale-105 transition">
+      <svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 9l-4 3 4 3m8-6l4 3-4 3"/></svg>
+    </div>
+  </div>
+
+  <!-- Accessible control: covers the slider, drives --ba-pos -->
+  <input type="range" min="0" max="100" value="50" step="0.1" class="ba-range absolute inset-0 z-20 w-full h-full cursor-ew-resize opacity-0" aria-label="Drag to compare the dog before and after its groom" />
+</div>
+
+<script>
+  function initBeforeAfter() {
+    document.querySelectorAll('.ba-slider').forEach((slider) => {
+      const el = slider as HTMLElement;
+      const range = el.querySelector('.ba-range') as HTMLInputElement | null;
+      if (!range || range.dataset.baInit) return;
+      range.dataset.baInit = '1';
+      const update = () => el.style.setProperty('--ba-pos', range.value + '%');
+      range.addEventListener('input', update);
+      update();
+    });
+  }
+  initBeforeAfter();
+  document.addEventListener('astro:page-load', initBeforeAfter);
+</script>
