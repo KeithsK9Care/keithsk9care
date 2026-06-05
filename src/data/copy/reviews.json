@@ -12,7 +12,9 @@
     "ctaPrimary": "Book your dog in",
     "ctaPrimaryHref": "/book/",
     "ctaSecondary": "See services",
-    "ctaSecondaryHref": "/services/"
+    "ctaSecondaryHref": "/services/",
+    "photo": "golden_retriever_happy",
+    "photoAlt": "A happy golden retriever after its groom"
   },
   "contactCta": {
     "heading": "Want to leave a review?",

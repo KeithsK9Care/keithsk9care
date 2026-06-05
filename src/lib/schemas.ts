@@ -27,6 +27,7 @@ interface SiteShape {
   hours: { day: string; open: string; close: string }[];
   serviceArea: string[];
   facebook: string;
+  instagram: string;
 }
 
 interface ServiceShape {

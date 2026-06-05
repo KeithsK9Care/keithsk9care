@@ -130,7 +130,7 @@
     .ba-slider:not(.ba-dragged) {
       animation: baScroll linear both;
       animation-timeline: view();
-      animation-range: cover 25% cover 58%;
+      animation-range: cover 20% cover 70%;
     }
   }
 }

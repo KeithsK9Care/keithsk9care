@@ -15,12 +15,12 @@ interface Props {
 }
 const { beforeSrc, beforeAlt, afterSrc, afterAlt } = Astro.props;
 ---
-<div class="ba-slider relative aspect-[4/3] md:aspect-[3/2] rounded-3xl overflow-hidden ring-1 ring-ink-100 shadow-2xl shadow-teal-900/10 select-none" style="--ba-pos:50%">
+<div class="ba-slider group relative aspect-[4/3] md:aspect-[3/2] rounded-3xl overflow-hidden ring-1 ring-ink-100 shadow-2xl shadow-teal-900/10 select-none" style="--ba-pos:50%">
   <!-- After (full, underneath) -->
   <div class="absolute inset-0">
     <Picture src={afterSrc} size={800} alt={afterAlt} width={800} height={600} />
   </div>
-  <span class="ba-label-after pointer-events-none absolute top-4 right-4 rounded-full bg-coral-700 text-white px-3 py-1 text-xs font-semibold shadow-sm">After</span>
+  <span class="pointer-events-none absolute top-4 right-4 rounded-full bg-coral-700 text-white px-3 py-1 text-xs font-semibold shadow-sm">After</span>
 
   <!-- Before (clipped from the right to reveal the left portion) -->
   <div class="absolute inset-0" style="clip-path: inset(0 calc(100% - var(--ba-pos)) 0 0)">

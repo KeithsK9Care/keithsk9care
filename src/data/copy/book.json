@@ -7,7 +7,9 @@
   "hero": {
     "eyebrow": "Book a groom",
     "heading": "Get in touch with Keith.",
-    "body": "Keith likes a quick chat about your dog before the first booking — coat type, age, any nerves — so he can pick the right slot. Use the form below, or jump straight to call / WhatsApp."
+    "body": "Keith likes a quick chat about your dog before the first booking — coat type, age, any nerves — so he can pick the right slot. Use the form below, or jump straight to call / WhatsApp.",
+    "photo": "keith-with-cockapoo",
+    "photoAlt": "Keith with a cockapoo at the salon"
   },
   "quickContact": {
     "call": {
