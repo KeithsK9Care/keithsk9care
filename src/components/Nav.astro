@@ -1,6 +1,5 @@
 ---
 import site from '../data/site.json';
-import Logo from './Logo.astro';
 const pathname = Astro.url.pathname;
 const isActive = (p: string) => pathname === p || (p !== '/' && pathname.startsWith(p));
 
@@ -19,7 +18,7 @@ const links = [
     <a href="/" class="flex items-center shrink-0" aria-label="Keith's K9 Care — home">
       <picture>
         <source srcset="/assets/logo-tight.webp" type="image/webp" />
-        <img src="/assets/logo-tight.png" alt="" width="109" height="94" class="h-14 w-auto md:h-[4.5rem]" loading="eager" decoding="async" />
+        <img src="/assets/logo-tight.png" alt="" width="109" height="94" class="h-12 w-auto md:h-16" loading="eager" decoding="async" />
       </picture>
     </a>
 
@@ -54,26 +53,28 @@ const links = [
   <div id="kk9-nav-backdrop" class="absolute inset-0 bg-white/95 backdrop-blur-2xl backdrop-saturate-150"></div>
 
   <!-- Close button (over the backdrop, separate from header toggle) -->
-  <button id="kk9-nav-close" type="button" class="absolute top-4 right-4 p-3 rounded-lg hover:bg-ink-50 focus:outline-none focus:ring-2 focus:ring-coral-400" aria-label="Close menu">
+  <button id="kk9-nav-close" type="button" class="absolute top-4 right-4 z-10 p-3 rounded-lg hover:bg-ink-50 focus:outline-none focus:ring-2 focus:ring-coral-400" aria-label="Close menu">
     <svg aria-hidden="true" class="w-7 h-7 text-ink-800" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
   </button>
 
   <!-- Logo at top -->
-  <div class="relative pt-6 pl-5">
-    <a href="/" data-kk9-nav-link class="inline-flex items-center gap-3" aria-label="Keith's K9 Care — home">
-      <Logo class="h-10 w-10" width={40} height={40} />
-      <span class="font-display font-bold text-lg text-teal-700">Keith's <span class="text-coral-700">K9</span> Care</span>
+  <div class="relative pt-6 pl-5 pointer-events-none">
+    <a href="/" data-kk9-nav-link class="inline-flex items-center pointer-events-auto" aria-label="Keith's K9 Care — home">
+      <picture>
+        <source srcset="/assets/logo-tight.webp" type="image/webp" />
+        <img src="/assets/logo-tight.png" alt="" width="109" height="94" class="h-12 w-auto" loading="eager" decoding="async" />
+      </picture>
     </a>
   </div>
 
   <!-- Nav links -->
-  <nav class="relative h-full flex flex-col justify-center px-8 pb-32 pt-20" aria-label="Mobile">
-    <div class="space-y-1">
+  <nav class="relative h-full flex flex-col justify-center px-8 pb-32 pt-20 pointer-events-none" aria-label="Mobile">
+    <div class="space-y-1 pointer-events-auto">
       {links.map(({ href, label }) => (
         <a href={href} data-kk9-nav-link class={`block py-3 text-3xl font-display font-semibold transition ${isActive(href) ? 'text-coral-700' : 'text-ink-800 hover:text-teal-700'}`}>{label}</a>
       ))}
     </div>
-    <div class="mt-10 flex flex-col sm:flex-row gap-3">
+    <div class="mt-10 flex flex-col sm:flex-row gap-3 pointer-events-auto">
       <a href="/book/" data-kk9-nav-link class="btn-primary justify-center">Book a Groom</a>
       <a href={`tel:${site.phoneIntl}`} data-kk9-nav-link class="btn-secondary justify-center">Call {site.phone}</a>
       <a href={`https://wa.me/${site.whatsappIntl}`} target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 rounded-full bg-whatsapp px-6 py-3 font-semibold text-white text-sm">WhatsApp</a>
