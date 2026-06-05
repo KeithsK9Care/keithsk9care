@@ -124,13 +124,13 @@
    Zero scroll-JS; degrades to a static, draggable 50% slider where unsupported,
    and dragging adds .ba-dragged to hand control back to the user. */
 @property --ba-pos { syntax: '<percentage>'; inherits: true; initial-value: 50%; }
-@keyframes baScroll { from { --ba-pos: 8%; } to { --ba-pos: 92%; } }
+@keyframes baScroll { from { --ba-pos: 92%; } to { --ba-pos: 8%; } }
 @supports (animation-timeline: view()) {
   @media (prefers-reduced-motion: no-preference) {
     .ba-slider:not(.ba-dragged) {
       animation: baScroll linear both;
       animation-timeline: view();
-      animation-range: cover 25% cover 75%;
+      animation-range: cover 25% cover 58%;
     }
   }
 }
