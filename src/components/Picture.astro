@@ -69,9 +69,14 @@ const imgSrc = hasJpgVariant ? `/assets/photos/${jpgName}` : fallbackSrc;
 <style is:global>
   .img-fade { opacity: 0; transition: opacity 500ms ease-out; }
   .img-fade.img-loaded { opacity: 1; }
+  /* Gentle hover zoom — folds the load-fade + the scale into one transition so neither
+     clobbers the other. Needs a .group ancestor (the card / photo tile). */
+  .img-zoom { transition: opacity 500ms ease-out, transform 700ms ease-out; will-change: transform; }
+  .group:hover .img-zoom { transform: scale(1.05); }
   /* Eager hero images shouldn't fade in — too noticeable */
   img[fetchpriority="high"].img-fade { opacity: 1; transition: none; }
   @media (prefers-reduced-motion: reduce) {
     .img-fade { opacity: 1; transition: none; }
+    .group:hover .img-zoom { transform: none; }
   }
 </style>

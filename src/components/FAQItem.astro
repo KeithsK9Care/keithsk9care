@@ -5,10 +5,10 @@ export interface Props {
 }
 const { faq: f, open = false } = Astro.props;
 ---
-<details class="group rounded-2xl bg-white ring-1 ring-ink-100 open:ring-coral-200 open:shadow-sm" open={open}>
+<details class="faq-item group rounded-2xl bg-white ring-1 ring-ink-100 open:ring-coral-200 open:shadow-sm transition-shadow duration-300" open={open}>
   <summary class="cursor-pointer list-none p-5 md:p-6 flex items-center justify-between gap-4">
     <span class="font-display text-lg font-semibold text-ink-900">{f.q}</span>
-    <svg aria-hidden="true" class="w-5 h-5 text-coral-500 transition-transform group-open:rotate-180 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+    <svg aria-hidden="true" class="w-5 h-5 text-coral-500 transition-transform duration-300 group-open:rotate-180 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
   </summary>
   <div class="px-5 md:px-6 pb-5 md:pb-6 text-ink-700 leading-relaxed">
     <p>{f.a}</p>

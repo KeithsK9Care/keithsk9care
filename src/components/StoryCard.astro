@@ -16,10 +16,10 @@ const title = s.title || `${s.dog} — ${s.breed}`;
 const blurb = s.description || s.summary;
 ---
 {featured ? (
-  <a href={href} class="group block rounded-3xl overflow-hidden ring-1 ring-ink-100 bg-white hover:ring-coral-300 hover:shadow-xl hover:-translate-y-0.5 transition">
+  <a href={href} class="group block rounded-3xl overflow-hidden ring-1 ring-ink-100 bg-white hover:ring-coral-300 hover:shadow-xl hover:-translate-y-0.5 transition duration-300">
     <div class="grid md:grid-cols-2 gap-0">
-      <div class="relative aspect-[4/3] md:aspect-auto">
-        {s.afterPhoto && <Picture src={s.afterPhoto} size={800} alt={`${s.dog} after a ${s.service}`} width={800} height={800} />}
+      <div class="relative aspect-[4/3] md:aspect-auto overflow-hidden">
+        {s.afterPhoto && <Picture src={s.afterPhoto} size={800} alt={`${s.dog} after a ${s.service}`} width={800} height={800} class="w-full h-full object-cover img-zoom" />}
         <span class="absolute top-4 left-4 rounded-full bg-coral-700 text-white px-3 py-1 text-xs font-semibold">Featured</span>
       </div>
       <div class="p-6 md:p-10 flex flex-col">
@@ -36,9 +36,9 @@ const blurb = s.description || s.summary;
     </div>
   </a>
 ) : (
-  <a href={href} class="group block rounded-2xl bg-white ring-1 ring-ink-100 hover:ring-coral-300 hover:shadow-lg hover:-translate-y-0.5 transition overflow-hidden h-full">
-    <div class="relative aspect-[4/3]">
-      {s.afterPhoto && <Picture src={s.afterPhoto} size={800} alt={`${s.dog} after a ${s.service} at Keith's K9 Care`} width={800} height={600} />}
+  <a href={href} class="group block rounded-2xl bg-white ring-1 ring-ink-100 hover:ring-coral-300 hover:shadow-lg hover:-translate-y-0.5 transition duration-300 overflow-hidden h-full">
+    <div class="relative aspect-[4/3] overflow-hidden">
+      {s.afterPhoto && <Picture src={s.afterPhoto} size={800} alt={`${s.dog} after a ${s.service} at Keith's K9 Care`} width={800} height={600} class="w-full h-full object-cover img-zoom" />}
     </div>
     <div class="p-5">
       <p class="text-xs font-semibold uppercase tracking-wider text-coral-700">{s.service}</p>

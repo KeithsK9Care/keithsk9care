@@ -4,7 +4,7 @@ export interface Props {
 }
 const { area: a } = Astro.props;
 ---
-<a href={`/areas/${a.slug}/`} class="inline-flex items-center gap-2 rounded-full ring-1 ring-ink-200 bg-white px-4 py-2 text-sm font-semibold text-ink-800 hover:ring-coral-400 hover:text-coral-700 transition">
+<a href={`/areas/${a.slug}/`} class="inline-flex items-center gap-2 rounded-full ring-1 ring-ink-200 bg-white px-4 py-2 text-sm font-semibold text-ink-800 hover:ring-coral-400 hover:text-coral-700 transition duration-300">
   <svg aria-hidden="true" class="w-3.5 h-3.5 text-teal-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
   {a.name}
   <span class="text-xs text-ink-600">{a.driveMinutes} min</span>
