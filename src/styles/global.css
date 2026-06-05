@@ -147,3 +147,18 @@
   }
   details.faq-item[open]::details-content { block-size: auto; }
 }
+
+/* Hero paw-print trail — faint prints that "draw" themselves as you scroll (pure CSS scroll-driven).
+   Where scroll timelines aren't supported (or motion is reduced) they sit static + fully drawn. */
+.paw > * { stroke-dasharray: 1; }
+@supports (animation-timeline: scroll()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .paw > * { stroke-dashoffset: 1; animation: pawDraw linear both; animation-timeline: scroll(root block); }
+    .paw-1 > * { animation-range: 0vh 22vh; }
+    .paw-2 > * { animation-range: 5vh 27vh; }
+    .paw-3 > * { animation-range: 10vh 32vh; }
+    .paw-4 > * { animation-range: 15vh 37vh; }
+    .paw-5 > * { animation-range: 20vh 42vh; }
+  }
+}
+@keyframes pawDraw { to { stroke-dashoffset: 0; } }

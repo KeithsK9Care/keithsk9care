@@ -9,11 +9,28 @@ import StarRating from '../StarRating.astro';
 
 const reviewCount = reviews.length;
 const avgRating = reviewCount > 0 ? (reviews.reduce((a: number, r: any) => a + r.rating, 0) / reviewCount).toFixed(1) : null;
+
+// Faint paw-print trail in the hero background — draws itself on scroll.
+const pawShapes = `<ellipse pathLength="1" cx="32" cy="46" rx="13" ry="10.5"/><ellipse pathLength="1" cx="15" cy="31" rx="5" ry="7"/><ellipse pathLength="1" cx="26" cy="22" rx="5" ry="7.5"/><ellipse pathLength="1" cx="40" cy="22" rx="5" ry="7.5"/><ellipse pathLength="1" cx="50" cy="31" rx="5" ry="7"/>`;
+const paws = [
+  { cls: 'paw-1', style: 'left:6%;top:74%;width:48px;transform:rotate(-14deg)' },
+  { cls: 'paw-2', style: 'left:18%;top:85%;width:44px;transform:rotate(9deg)' },
+  { cls: 'paw-3', style: 'left:31%;top:76%;width:50px;transform:rotate(-8deg)' },
+  { cls: 'paw-4', style: 'left:44%;top:86%;width:42px;transform:rotate(14deg)' },
+  { cls: 'paw-5', style: 'left:57%;top:77%;width:48px;transform:rotate(-5deg)' },
+];
 ---
-<section class="relative overflow-hidden bg-gradient-to-b from-teal-50 via-white to-white">
+<section class="relative overflow-hidden bg-gradient-to-b from-teal-50 via-white to-teal-50 border-b border-teal-100/80">
   <div class="absolute inset-0 pointer-events-none">
     <div class="absolute -top-24 -right-24 w-96 h-96 bg-coral-100 rounded-full blur-3xl opacity-50"></div>
     <div class="absolute top-32 -left-24 w-96 h-96 bg-teal-100 rounded-full blur-3xl opacity-40"></div>
+  </div>
+
+  <!-- Faint paw-print trail — draws itself on scroll -->
+  <div class="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+    {paws.map((p) => (
+      <svg class={`paw ${p.cls} absolute text-coral-300 opacity-50`} style={p.style} viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" set:html={pawShapes} />
+    ))}
   </div>
 
   <div class="container-wide relative pt-12 pb-20 md:pt-20 md:pb-28 grid md:grid-cols-2 gap-12 items-center">
