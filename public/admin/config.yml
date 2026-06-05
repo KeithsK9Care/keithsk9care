@@ -262,6 +262,30 @@ collections:
               - { name: heading, widget: string }
               - { name: body,    widget: text }
 
+      # ─── Areas index page ────────────────────────────
+      - file: src/data/copy/areas.json
+        label: "Areas page (index)"
+        name: areas_page
+        fields:
+          - name: meta
+            widget: object
+            fields:
+              - { name: title,       widget: string }
+              - { name: description, widget: text }
+              - { name: ogImage,     label: "Social share image (og:image)", widget: image, hint: "Picked from photo library. Pick a striking one — this is what shows in WhatsApp / Facebook previews." }
+          - name: hero
+            widget: object
+            fields:
+              - { name: eyebrow, widget: string }
+              - { name: heading, widget: string }
+              - { name: body,    widget: text }
+          - { name: ctaText, label: "Button text (under the area list)", widget: string }
+          - name: overview
+            label: "Overview paragraphs (the teal band at the bottom)"
+            widget: list
+            required: false
+            hint: "Paragraphs shown in the teal band below the area list. Each item is one paragraph."
+
       # ─── Pricing page ────────────────────────────────
       - file: src/data/copy/pricing.json
         label: "Pricing page"
