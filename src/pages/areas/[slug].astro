@@ -39,7 +39,7 @@ const breadcrumbSchema = buildBreadcrumbSchema([
 ---
 <Layout title={title} description={description} noindex={!hasContent} ogImage={ogImageFor('areas', a.slug, a.heroPhoto)} ogImageAlt={`Dog grooming in ${a.name} — Keith's K9 Care, Wakefield WF4`} schema={[faqSchema, breadcrumbSchema]}>
 
-  <PageHero eyebrow="Areas we cover" heading={`Dog grooming in ${a.name}.`} body={a.lead || a.blurb}>
+  <PageHero eyebrow="Areas we cover" heading={`Dog grooming in ${a.name}.`} body={a.lead || a.blurb} align="left">
     <a href="/book/" class="btn-primary">Book your dog in</a>
     <a href="/pricing/" class="btn-secondary">See prices</a>
   </PageHero>

@@ -9,7 +9,7 @@ if (featured.length === 0) featured.push(...reviews.slice(0, 3));
 const avg = reviews.length > 0 ? (reviews.reduce((a, r) => a + r.rating, 0) / reviews.length).toFixed(1) : null;
 ---
 {featured.length > 0 && (
-  <section class="py-8 md:py-12 bg-teal-50/40">
+  <section class="py-8 md:py-12 bg-teal-50/60">
     <div class="container-wide">
       <Reveal class="mb-6 flex flex-wrap items-baseline justify-between gap-4">
         <div>

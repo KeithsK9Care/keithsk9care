@@ -23,6 +23,7 @@ const breadcrumbSchema = buildBreadcrumbSchema([
     eyebrow={h.eyebrow}
     heading={h.heading}
     body={h.body}
+    align="left"
   />
 
   <ReviewStrip />
@@ -41,7 +42,7 @@ const breadcrumbSchema = buildBreadcrumbSchema([
 
   <!-- COVERAGE OVERVIEW -->
   {overview.length > 0 && (
-    <section class="section bg-teal-50/50">
+    <section class="section bg-teal-50/60">
       <div class="container-tight">
         <div class="max-w-3xl space-y-5 text-lg text-ink-700 leading-relaxed">
           {overview.map((p) => <p>{p}</p>)}
