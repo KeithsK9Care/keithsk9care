@@ -39,8 +39,10 @@ if (src.startsWith('/')) {
 }
 
 const suffix = size ? `-${size}` : "";
+const avifName = `${stub}${suffix}.avif`;
 const webpName = `${stub}${suffix}.webp`;
 const jpgName  = `${stub}${suffix}.jpg`;
+const hasAvifVariant = availableFiles.has(avifName);
 const hasWebpVariant = availableFiles.has(webpName);
 const hasJpgVariant  = availableFiles.has(jpgName);
 
@@ -49,6 +51,7 @@ const fallbackSrc = originalPath ?? `/assets/photos/${jpgName}`;
 const imgSrc = hasJpgVariant ? `/assets/photos/${jpgName}` : fallbackSrc;
 ---
 <picture>
+  {hasAvifVariant && <source srcset={`/assets/photos/${avifName}`} type="image/avif" />}
   {hasWebpVariant && <source srcset={`/assets/photos/${webpName}`} type="image/webp" />}
   <img
     src={imgSrc}

@@ -1,17 +1,24 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import site from '../data/site.json';
 import { areas } from '../lib/content';
 import copy from '../data/copy/areas.json';
 import PageHero from '../components/PageHero.astro';
 import Reveal from '../components/Reveal.astro';
 import AreaPill from '../components/AreaPill.astro';
 import ReviewStrip from '../components/ReviewStrip.astro';
+import { buildBreadcrumbSchema } from '../lib/schemas';
 
 const m = copy.meta;
 const h = copy.hero;
 const overview: string[] = copy.overview ?? [];
+
+const breadcrumbSchema = buildBreadcrumbSchema([
+  { name: "Home", url: `${site.url}/` },
+  { name: "Areas we cover", url: `${site.url}/areas/` },
+]);
 ---
-<Layout title={m.title} description={m.description} ogImage={m.ogImage}>
+<Layout title={m.title} description={m.description} ogImage={m.ogImage} schema={[breadcrumbSchema]}>
   <PageHero
     eyebrow={h.eyebrow}
     heading={h.heading}

@@ -38,6 +38,9 @@ const {
 // ogImage accepts either a full path ("/assets/photos/X.jpg") or a filename stub ("X").
 // Stubs let the CMS use a simple Sveltia `select` widget. We normalise to a full path here.
 const ogPath = ogImage.startsWith('/') ? ogImage : `/assets/photos/${ogImage}.jpg`;
+// Only the branded 1200×630 cards under /assets/og/ should declare those exact dimensions;
+// pages that point og:image at a raw photo omit width/height so scrapers don't mis-crop.
+const isOgCard = ogPath.startsWith('/assets/og/');
 
 const localBusiness = buildLocalBusinessSchema(site, services);
 // Every page emits exactly one JSON-LD <script>: the sitewide LocalBusiness plus
@@ -66,8 +69,8 @@ const graph = buildGraph([localBusiness, ...schema]);
   <meta property="og:locale" content="en_GB" />
   <meta property="og:url" content={canonical} />
   <meta property="og:image" content={new URL(ogPath, Astro.site).toString()} />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
+  {isOgCard && <meta property="og:image:width" content="1200" />}
+  {isOgCard && <meta property="og:image:height" content="630" />}
   <meta property="og:image:alt" content={ogImageAlt} />
   <meta property="og:site_name" content={site.name} />
 

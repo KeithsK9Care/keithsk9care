@@ -2,22 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Self-host Inter via system stack first; can swap for fontsource later */
+/* Inter + Fraunces are self-hosted via @fontsource-variable (imported in Layout.astro). */
 @layer base {
   html {
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
+    background: #ffffff;
+    min-height: 100vh;
+    min-height: 100dvh;
   }
   body {
     @apply bg-white text-ink-900 antialiased;
     min-height: 100vh;
     min-height: 100dvh;
     text-rendering: optimizeLegibility;
-  }
-  html {
-    background: #ffffff;
-    min-height: 100vh;
-    min-height: 100dvh;
   }
   h1, h2, h3, h4 {
     @apply font-display font-semibold tracking-tight text-ink-950;
@@ -106,6 +104,7 @@
   }
 
   @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
     *, *::before, *::after {
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;

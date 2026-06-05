@@ -57,6 +57,18 @@ async function main() {
       }
     } else { skipped++; }
 
+    // Full-size AVIF companion (best compression, ~30% smaller than WebP; modern browsers)
+    const fullAvifPath = join(PHOTOS_DIR, `${base}.avif`);
+    if (!existsSync(fullAvifPath)) {
+      try {
+        await sharp(inputPath).avif({ quality: 55 }).toFile(fullAvifPath);
+        console.log(`[photos] generated ${base}.avif`);
+        generated++;
+      } catch (err) {
+        console.warn(`[photos] FAILED ${base}.avif: ${err.message}`);
+      }
+    } else { skipped++; }
+
     // Sized responsive variants
     for (const w of SIZES) {
       const jpgPath  = join(PHOTOS_DIR, `${base}-${w}.jpg`);
@@ -77,6 +89,16 @@ async function main() {
           generated++;
         } catch (err) {
           console.warn(`[photos] FAILED ${base}-${w}.webp: ${err.message}`);
+        }
+      } else { skipped++; }
+      const avifPath = join(PHOTOS_DIR, `${base}-${w}.avif`);
+      if (!existsSync(avifPath)) {
+        try {
+          await sharp(inputPath).resize({ width: w, withoutEnlargement: true }).avif({ quality: 50 }).toFile(avifPath);
+          console.log(`[photos] generated ${base}-${w}.avif`);
+          generated++;
+        } catch (err) {
+          console.warn(`[photos] FAILED ${base}-${w}.avif: ${err.message}`);
         }
       } else { skipped++; }
     }

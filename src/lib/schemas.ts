@@ -98,7 +98,7 @@ export function buildLocalBusinessSchema(site: SiteShape, services: ServiceShape
         },
       })),
     },
-    "sameAs": [site.facebook],
+    "sameAs": [site.facebook, site.instagram].filter(Boolean),
   };
 }
 
