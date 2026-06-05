@@ -3,7 +3,7 @@
  *
  * Lets the CMS copy stay editable while business contact details stay
  * single-sourced from site.json. Supported placeholders:
- *   {url}     -> linked site URL
+ *   {url}     -> site domain, plain text (not a bare-URL link)
  *   {address} -> full street address (plain text)
  *   {phone}   -> linked phone number
  *   {email}   -> linked email address
@@ -23,7 +23,7 @@ const link = (href: string, text: string) =>
 export function expandPlaceholders(text: string, site: SiteLike): string {
   const address = `${site.address.street}, ${site.address.locality}, ${site.address.region} ${site.address.postcode}`;
   return text
-    .replaceAll('{url}', link(site.url, site.url))
+    .replaceAll('{url}', site.url.replace(/^https?:\/\//, ''))
     .replaceAll('{address}', address)
     .replaceAll('{phone}', link(`tel:${site.phoneIntl}`, site.phone))
     .replaceAll('{email}', link(`mailto:${site.email}`, site.email));

@@ -22,7 +22,7 @@
       "heading": "What we collect, and when",
       "intro": [ "We only collect information you give us directly:" ],
       "bullets": [
-        "<strong>When you use the booking form</strong> at <a href=\"/book/\" class=\"text-teal-700 font-semibold\">/book/</a>: your name, email address, phone number (if you give us one), your dog's name and breed (if you tell us), which service you're interested in, and any message you send.",
+        "<strong>When you use the <a href=\"/book/\" class=\"text-teal-700 font-semibold\">booking form</a></strong>: your name, email address, phone number (if you give us one), your dog's name and breed (if you tell us), which service you're interested in, and any message you send.",
         "<strong>When you call, WhatsApp or email us</strong>: whatever you say in that message, plus your number/email if not anonymous.",
         "<strong>When you visit the salon</strong>: anything you tell us in person about you or your dog so we can do a good groom."
       ]
