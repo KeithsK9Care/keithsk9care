@@ -33,7 +33,8 @@
     "description": "The more we know up front — breed, coat, age, any nerves — the better we can prep the slot. Keith reads every message and replies personally.",
     "submitLabel": "Send to Keith",
     "submitLoadingLabel": "Sending…",
-    "privacyNote": "By submitting, you agree we can use your details to reply about your booking."
+    "privacyNote": "By submitting, you agree we can use your details to reply about your booking.",
+    "reassurance": "Keith reads and replies to every message himself — no bots, no answering service."
   },
   "location": {
     "eyebrow": "Find us",

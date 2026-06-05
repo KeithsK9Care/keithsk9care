@@ -1,0 +1,51 @@
+---
+/**
+ * StoryCard — a linked groom-story tile.
+ *  - default: vertical card for the /groom-stories/ grid (h2)
+ *  - featured: wide 2-column card for the homepage band (h3 + "Featured" badge)
+ */
+import Picture from './Picture.astro';
+
+interface Props {
+  story: any;
+  featured?: boolean;
+}
+const { story: s, featured = false } = Astro.props;
+const href = `/groom-stories/${s.slug}/`;
+const title = s.title || `${s.dog} — ${s.breed}`;
+const blurb = s.description || s.summary;
+---
+{featured ? (
+  <a href={href} class="group block rounded-3xl overflow-hidden ring-1 ring-ink-100 bg-white hover:ring-coral-300 hover:shadow-xl hover:-translate-y-0.5 transition">
+    <div class="grid md:grid-cols-2 gap-0">
+      <div class="relative aspect-[4/3] md:aspect-auto">
+        {s.afterPhoto && <Picture src={s.afterPhoto} size={800} alt={`${s.dog} after a ${s.service}`} width={800} height={800} />}
+        <span class="absolute top-4 left-4 rounded-full bg-coral-700 text-white px-3 py-1 text-xs font-semibold">Featured</span>
+      </div>
+      <div class="p-6 md:p-10 flex flex-col">
+        <p class="text-xs font-semibold uppercase tracking-wider text-coral-700">{s.service}</p>
+        <h3 class="mt-2 text-2xl md:text-3xl font-display font-semibold text-ink-900 group-hover:text-coral-700 transition">{title}</h3>
+        {s.title && <p class="mt-1 text-sm text-ink-600">{s.dog} · {s.breed}</p>}
+        <p class="mt-4 text-ink-700 leading-relaxed">{blurb}</p>
+        <p class="mt-6 text-xs text-ink-600">From {s.area}</p>
+        <span class="inline-flex items-center gap-1 mt-6 font-semibold text-teal-700 group-hover:text-coral-700">
+          Read the full story
+          <svg aria-hidden="true" class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+        </span>
+      </div>
+    </div>
+  </a>
+) : (
+  <a href={href} class="group block rounded-2xl bg-white ring-1 ring-ink-100 hover:ring-coral-300 hover:shadow-lg hover:-translate-y-0.5 transition overflow-hidden h-full">
+    <div class="relative aspect-[4/3]">
+      {s.afterPhoto && <Picture src={s.afterPhoto} size={800} alt={`${s.dog} after a ${s.service} at Keith's K9 Care`} width={800} height={600} />}
+    </div>
+    <div class="p-5">
+      <p class="text-xs font-semibold uppercase tracking-wider text-coral-700">{s.service}</p>
+      <h2 class="mt-2 text-xl font-display font-semibold text-ink-900 group-hover:text-coral-700 transition">{title}</h2>
+      <p class="mt-2 text-xs text-ink-600">{s.dog} · {s.breed}</p>
+      <p class="mt-2 text-sm text-ink-600 leading-relaxed">{blurb}</p>
+      <p class="mt-3 text-xs text-ink-600">{s.area}</p>
+    </div>
+  </a>
+)}

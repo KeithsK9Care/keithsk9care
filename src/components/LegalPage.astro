@@ -1,0 +1,40 @@
+---
+/**
+ * LegalPage — shared renderer for the privacy + terms pages. Takes the page's
+ * copy JSON (hero + lastUpdated + sections[]) and expands {placeholders} from site.json.
+ */
+import site from '../data/site.json';
+import PageHero from './PageHero.astro';
+import Reveal from './Reveal.astro';
+import { expandPlaceholders } from '../lib/legal';
+
+interface Props { copy: any; }
+const { copy } = Astro.props;
+const h = copy.hero;
+const sections: any[] = copy.sections;
+const ex = (t: string) => expandPlaceholders(t, site);
+---
+<PageHero
+  eyebrow={h.eyebrow}
+  heading={h.heading}
+  body={`${h.body} Last updated ${copy.lastUpdated}.`}
+/>
+
+<section class="section">
+  <div class="container-tight prose max-w-2xl">
+    <Reveal class="space-y-6 text-ink-700 leading-relaxed">
+      {sections.map((s: any, i: number) => (
+        <div>
+          <h2 class:list={['text-2xl font-display font-semibold text-ink-900', i === 0 && 'mt-0']}>{s.heading}</h2>
+          {(s.intro || []).map((p: string) => <p set:html={ex(p)} />)}
+          {s.bullets && s.bullets.length > 0 && (
+            <ul class="space-y-2 list-disc pl-6 marker:text-coral-500">
+              {s.bullets.map((b: string) => <li set:html={ex(b)} />)}
+            </ul>
+          )}
+          {(s.outro || []).map((p: string) => <p set:html={ex(p)} />)}
+        </div>
+      ))}
+    </Reveal>
+  </div>
+</section>

@@ -1,5 +1,6 @@
 ---
 import { reviews } from '../lib/content';
+import site from '../data/site.json';
 import ReviewCard from './ReviewCard.astro';
 import Reveal from './Reveal.astro';
 
@@ -12,7 +13,7 @@ const avg = reviews.length > 0 ? (reviews.reduce((a, r) => a + r.rating, 0) / re
     <div class="container-wide">
       <Reveal class="mb-6 flex flex-wrap items-baseline justify-between gap-4">
         <div>
-          <p class="text-sm font-semibold uppercase tracking-wider text-coral-700">What dogs' owners say</p>
+          <p class="text-sm font-semibold uppercase tracking-wider text-coral-700">{site.reviewsEyebrow}</p>
           <p class="mt-1 text-sm text-ink-600">
             {avg && <span class="text-coral-500 mr-1" aria-hidden="true">★★★★★</span>}
             {avg && <strong class="text-ink-900">{avg}</strong>}

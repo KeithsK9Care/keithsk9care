@@ -7,6 +7,7 @@ import PageHero from '../components/PageHero.astro';
 import SectionIntro from '../components/SectionIntro.astro';
 import Reveal from '../components/Reveal.astro';
 import InfoCard from '../components/InfoCard.astro';
+import PriceCard from '../components/PriceCard.astro';
 import ContactCTACard from '../components/ContactCTACard.astro';
 import { buildBreadcrumbSchema } from '../lib/schemas';
 import ReviewStrip from '../components/ReviewStrip.astro';
@@ -50,15 +51,7 @@ const breadcrumbSchema = buildBreadcrumbSchema([
           <div class="grid md:grid-cols-3 gap-4 md:gap-6">
             {s.breedExamples.map((tier: any, ti: number) => (
               <Reveal delay={ti * 80}>
-                <div class="rounded-2xl bg-white ring-1 ring-ink-100 p-6 h-full">
-                  <div class="flex items-baseline justify-between gap-3">
-                    <h3 class="font-display text-lg text-ink-900">{tier.size}</h3>
-                    <span class="font-semibold text-teal-700 text-lg whitespace-nowrap">from £{tier.from}</span>
-                  </div>
-                  <ul class="mt-4 space-y-1.5 text-sm text-ink-700">
-                    {tier.breeds.map((b: string) => <li class="flex gap-2"><span class="text-coral-400">·</span><span>{b}</span></li>)}
-                  </ul>
-                </div>
+                <PriceCard label={tier.size} from={tier.from} bullets={tier.breeds} />
               </Reveal>
             ))}
           </div>
@@ -80,13 +73,7 @@ const breadcrumbSchema = buildBreadcrumbSchema([
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {addOns.map((a: any, i: number) => (
           <Reveal delay={i * 60}>
-            <div class="rounded-2xl bg-white ring-1 ring-ink-100 p-5 h-full">
-              <div class="flex items-baseline justify-between gap-3">
-                <h3 class="font-display text-base text-ink-900">{a.label}</h3>
-                <span class="font-semibold text-teal-700 whitespace-nowrap">{a.from > 0 ? `from £${a.from}` : 'POA'}</span>
-              </div>
-              {a.note && <p class="mt-2 text-xs text-ink-600">{a.note}</p>}
-            </div>
+            <PriceCard label={a.label} from={a.from} note={a.note} size="sm" />
           </Reveal>
         ))}
       </div>

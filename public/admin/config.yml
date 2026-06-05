@@ -99,6 +99,13 @@ collections:
               - { name: eyebrow,     widget: string }
               - { name: heading,     widget: string }
               - { name: description, widget: text }
+          - name: featuredStory
+            label: "Featured story section intro"
+            widget: object
+            fields:
+              - { name: eyebrow,     widget: string }
+              - { name: heading,     widget: string }
+              - { name: description, widget: text }
           - name: areas
             label: "Areas we cover section"
             widget: object
@@ -418,6 +425,7 @@ collections:
               - { name: submitLabel,        widget: string }
               - { name: submitLoadingLabel, widget: string }
               - { name: privacyNote,        widget: text }
+              - { name: reassurance,        label: "Reassurance line (above the button)", widget: text }
           - name: location
             widget: object
             fields:
@@ -652,6 +660,7 @@ collections:
               - { name: close, label: Close, widget: string }
           - { name: hoursNote, label: "Hours note", widget: text }
           - { name: surchargesNote, label: "Surcharges note (shown on pricing)", widget: text, hint: "The small-print line about matted-coat and nervous-dog surcharges." }
+          - { name: reviewsEyebrow, label: "Reviews strip eyebrow", widget: string, hint: "The small heading shown above the review cards." }
           - name: serviceArea
             label: "Service area (towns/villages)"
             widget: list

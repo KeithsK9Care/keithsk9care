@@ -1,0 +1,38 @@
+---
+/**
+ * PriceCard — a "label + from-price" card/row used on the pricing page
+ * (breed tiers + add-ons) and the service-detail tier list.
+ *   from: undefined → no price · 0 → "POA" · >0 → "from £X"
+ *   row:  compact justify-between row (service-detail tiers)
+ *   size: 'sm' (add-ons) | 'md' (breed tiers)
+ */
+interface Props {
+  label: string;
+  from?: number;
+  bullets?: string[];
+  note?: string;
+  row?: boolean;
+  size?: 'sm' | 'md';
+}
+const { label, from, bullets = [], note, row = false, size = 'md' } = Astro.props;
+const priceText = from === undefined ? null : (from > 0 ? `from £${from}` : 'POA');
+---
+{row ? (
+  <div class="flex justify-between items-baseline gap-3 rounded-xl bg-white ring-1 ring-ink-100 px-5 py-4">
+    <span class="text-ink-800">{label}</span>
+    {priceText && <span class="font-semibold text-teal-700 text-lg">{priceText}</span>}
+  </div>
+) : (
+  <div class:list={["rounded-2xl bg-white ring-1 ring-ink-100 h-full", size === 'sm' ? 'p-5' : 'p-6']}>
+    <div class="flex items-baseline justify-between gap-3">
+      <h3 class:list={["font-display text-ink-900", size === 'sm' ? 'text-base' : 'text-lg']}>{label}</h3>
+      {priceText && <span class:list={["font-semibold text-teal-700 whitespace-nowrap", size === 'md' && 'text-lg']}>{priceText}</span>}
+    </div>
+    {bullets.length > 0 && (
+      <ul class="mt-4 space-y-1.5 text-sm text-ink-700">
+        {bullets.map((b) => <li class="flex gap-2"><span class="text-coral-400">·</span><span>{b}</span></li>)}
+      </ul>
+    )}
+    {note && <p class="mt-2 text-xs text-ink-600">{note}</p>}
+  </div>
+)}
