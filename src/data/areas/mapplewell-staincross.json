@@ -1,0 +1,49 @@
+{
+  "order": 15,
+  "slug": "mapplewell-staincross",
+  "name": "Mapplewell & Staincross",
+  "postcodePrefix": "S75",
+  "distanceMiles": 4.5,
+  "driveMinutes": 13,
+  "landmarks": [
+    "Mapplewell Park (Bar Lane)",
+    "Staincross Common",
+    "Mapplewell & Staincross War Memorial",
+    "Ibberson Park"
+  ],
+  "blurb": "Calm, one-to-one home dog grooming a short run north of Mapplewell and Staincross. Straight up the A61 to Hall Green, near Newmillerdam — quiet salon, one dog at a time, no kennels.",
+  "metaDescription": "Calm grooming for Mapplewell & Staincross (S75) — a 13-minute run up the A61 to Hall Green, Wakefield WF4. No kennels, prices published. Book Keith.",
+  "lead": "A straight run north up the A61 from Mapplewell and Staincross brings you to Keith's K9 Care, a calm, one-to-one home dog grooming salon in Hall Green — and we groom plenty of dogs from the S75 villages.",
+  "body": [
+    "Mapplewell and Staincross sit close together at the north edge of Barnsley (S75), former nail-making and pit villages that still feel like proper villages. From here the A61 Barnsley Road runs due north through Staincross and on past Newmillerdam, and we're a short way off it in Hall Green. Reckon on about 4.5 miles and a 13-minute drive — far enough out that a quiet, unhurried groom is a real change from a busy high-street salon, close enough that it's no trek.",
+    "Plenty of S75 dogs come up the A61 to us, and the reason is the calm. We groom one dog at a time in a home salon, with no kennels and no row of dryers going at once. Your dog isn't waiting in a crate or listening to other dogs bark — it's seen, groomed and finished, then home with you. For an anxious dog, a rescue, or a pup on its first visit, that quiet makes all the difference.",
+    "Keith trained at Mrs B's Grooming Academy in Leeds and holds an IPET qualification, so the welfare side is done properly: coats checked, ears and nails sorted, and an honest word if something needs watching. If you walk the woods at Mapplewell Park or along Staincross Common, you'll know how a Yorkshire winter leaves a coat — mud, knots and the odd mat behind the ears. We handle full grooms, bath and tidy, de-matting and hand stripping, and we never shave a matted coat off for the sake of speed without telling you why.",
+    "Prices are published and there are no surprises on the day: full groom £40 small, £50 medium, £60 large or doodle; bath and tidy from £30; a puppy's first groom from £25; nail trim from £10; de-matting and hand stripping from £50. Parking is right outside on Castle Meadows, so there's no faffing at the end. To book, call or WhatsApp Keith on 07926 471552 and we'll find a slot that suits."
+  ],
+  "faqs": [
+    {
+      "q": "How far is the salon from Mapplewell and Staincross?",
+      "a": "About 4.5 miles — roughly a 13-minute drive. Head north up the A61 Barnsley Road through Staincross towards Newmillerdam, and we're a short way off it on Castle Meadows in Hall Green (WF4)."
+    },
+    {
+      "q": "Do you groom dogs from across the S75 area?",
+      "a": "Yes. We see plenty of dogs from Mapplewell, Staincross, Darton and Kexbrough, and from the wider S75 villages. It's a straight run up the A61, so most owners are with us inside fifteen minutes."
+    },
+    {
+      "q": "My dog gets matted after walks at Mapplewell Park — can you help?",
+      "a": "We can. Damp woodland and long grass build knots fast, especially behind the ears and under the legs. We offer de-matting from £50 and will always talk you through the kindest option rather than clipping a coat off without explaining first."
+    },
+    {
+      "q": "How do I book, and what are your hours?",
+      "a": "Call or WhatsApp Keith on 07926 471552 to book. We work one dog at a time by appointment, so there's no queue and no waiting around — we'll agree a time that fits your day and confirm the price before you come."
+    },
+    {
+      "q": "My dog is nervous or a rescue — is the calm salon a better fit?",
+      "a": "Often, yes. There's only ever one dog here, with no kennels and no crowd of other dogs, so it stays quiet from start to finish. Nervous and rescue dogs tend to settle far better than they would in a busy commercial salon."
+    },
+    {
+      "q": "Is there parking, and is the drive from the Barnsley side straightforward?",
+      "a": "Parking is right outside on Castle Meadows, so you pull up at the door. From the S75 villages it's a clear run north on the A61 past Newmillerdam, then a short turn into Hall Green — no town-centre traffic to fight through."
+    }
+  ]
+}
