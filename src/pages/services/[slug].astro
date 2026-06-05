@@ -7,7 +7,7 @@ import PriceCard from '../../components/PriceCard.astro';
 import SectionIntro from '../../components/SectionIntro.astro';
 import Reveal from '../../components/Reveal.astro';
 import FAQItem from '../../components/FAQItem.astro';
-import ContactCTACard from '../../components/ContactCTACard.astro';
+import ContactCTASection from '../../components/ContactCTASection.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
 import ReviewStrip from '../../components/ReviewStrip.astro';
 import { buildServiceSchema, buildFAQSchema, buildBreadcrumbSchema } from '../../lib/schemas';
@@ -160,12 +160,6 @@ const breadcrumbSchema = buildBreadcrumbSchema([
   )}
 
   <!-- CONTACT CTA -->
-  <section class="section">
-    <div class="container-wide">
-      <Reveal>
-        <ContactCTACard heading={`Book a ${s.name.toLowerCase()} for your dog`} body="Keith likes a quick chat first — coat, age, any nerves — so he can pick the right slot." />
-      </Reveal>
-    </div>
-  </section>
+  <ContactCTASection heading={`Book a ${s.name.toLowerCase()} for your dog`} body="Keith likes a quick chat first — coat, age, any nerves — so he can pick the right slot." />
 
 </Layout>

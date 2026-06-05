@@ -6,7 +6,7 @@ import SectionIntro from '../components/SectionIntro.astro';
 import Reveal from '../components/Reveal.astro';
 import FAQItem from '../components/FAQItem.astro';
 import PageHero from '../components/PageHero.astro';
-import ContactCTACard from '../components/ContactCTACard.astro';
+import ContactCTASection from '../components/ContactCTASection.astro';
 import { faqs } from '../lib/content';
 import { buildFAQSchema, buildBreadcrumbSchema } from '../lib/schemas';
 import ReviewStrip from '../components/ReviewStrip.astro';
@@ -57,11 +57,5 @@ const breadcrumbSchema = buildBreadcrumbSchema([
   ))}
 
   <!-- CONTACT CTA -->
-  <section class="section">
-    <div class="container-wide">
-      <Reveal>
-        <ContactCTACard heading={cta.heading} body={cta.body} />
-      </Reveal>
-    </div>
-  </section>
+  <ContactCTASection heading={cta.heading} body={cta.body} />
 </Layout>

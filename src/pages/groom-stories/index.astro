@@ -6,7 +6,7 @@ import copy from '../../data/copy/groom-stories.json';
 import PageHero from '../../components/PageHero.astro';
 import StoryCard from '../../components/StoryCard.astro';
 import Reveal from '../../components/Reveal.astro';
-import ContactCTACard from '../../components/ContactCTACard.astro';
+import ContactCTASection from '../../components/ContactCTASection.astro';
 import { buildBreadcrumbSchema } from '../../lib/schemas';
 
 const m = copy.meta;
@@ -38,11 +38,5 @@ const breadcrumbSchema = buildBreadcrumbSchema([
     </div>
   </section>
 
-  <section class="section">
-    <div class="container-wide">
-      <Reveal>
-        <ContactCTACard heading={cta.heading} body={cta.body} />
-      </Reveal>
-    </div>
-  </section>
+  <ContactCTASection heading={cta.heading} body={cta.body} />
 </Layout>

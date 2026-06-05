@@ -5,7 +5,7 @@ import copy from '../data/copy/about.json';
 import Picture from '../components/Picture.astro';
 import SectionIntro from '../components/SectionIntro.astro';
 import Reveal from '../components/Reveal.astro';
-import ContactCTACard from '../components/ContactCTACard.astro';
+import ContactCTASection from '../components/ContactCTASection.astro';
 import InfoCard from '../components/InfoCard.astro';
 import PhotoGrid from '../components/PhotoGrid.astro';
 import { buildPersonSchema, buildBreadcrumbSchema } from '../lib/schemas';
@@ -154,12 +154,6 @@ const breadcrumbSchema = buildBreadcrumbSchema([
   </section>
 
   <!-- CONTACT CTA -->
-  <section class="section">
-    <div class="container-wide">
-      <Reveal>
-        <ContactCTACard heading={cta.heading} body={cta.body} />
-      </Reveal>
-    </div>
-  </section>
+  <ContactCTASection heading={cta.heading} body={cta.body} />
 
 </Layout>

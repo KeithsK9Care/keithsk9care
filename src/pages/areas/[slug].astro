@@ -9,7 +9,7 @@ import Reveal from '../../components/Reveal.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
 import FAQItem from '../../components/FAQItem.astro';
 import AreaPill from '../../components/AreaPill.astro';
-import ContactCTACard from '../../components/ContactCTACard.astro';
+import ContactCTASection from '../../components/ContactCTASection.astro';
 import ReviewStrip from '../../components/ReviewStrip.astro';
 import { buildFAQSchema, buildBreadcrumbSchema } from '../../lib/schemas';
 import { seoTitle } from '../../lib/seo';
@@ -115,11 +115,5 @@ const breadcrumbSchema = buildBreadcrumbSchema([
   </section>
 
   <!-- CONTACT CTA -->
-  <section class="section">
-    <div class="container-wide">
-      <Reveal>
-        <ContactCTACard heading={`Book a groom near ${a.name}`} body="Drop Keith a quick message about your dog — coat, age, any nerves — and he'll find the right slot." />
-      </Reveal>
-    </div>
-  </section>
+  <ContactCTASection heading={`Book a groom near ${a.name}`} body="Drop Keith a quick message about your dog — coat, age, any nerves — and he'll find the right slot." />
 </Layout>

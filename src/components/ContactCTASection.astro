@@ -1,0 +1,23 @@
+---
+/**
+ * ContactCTASection — the standard page-footer CTA: the `section > container-wide >
+ * Reveal > ContactCTACard` scaffold that every secondary page ended with. Pages now
+ * call <ContactCTASection heading=… body=… /> once instead of repeating the wrapper.
+ */
+import ContactCTACard from './ContactCTACard.astro';
+import Reveal from './Reveal.astro';
+
+interface Props {
+  heading?: string;
+  body?: string;
+  showAddress?: boolean;
+}
+const { heading, body, showAddress } = Astro.props;
+---
+<section class="section">
+  <div class="container-wide">
+    <Reveal>
+      <ContactCTACard heading={heading} body={body} showAddress={showAddress} />
+    </Reveal>
+  </div>
+</section>

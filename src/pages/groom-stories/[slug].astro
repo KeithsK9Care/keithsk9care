@@ -7,7 +7,7 @@ import Picture from '../../components/Picture.astro';
 import DetailHero from '../../components/DetailHero.astro';
 import SectionIntro from '../../components/SectionIntro.astro';
 import Reveal from '../../components/Reveal.astro';
-import ContactCTACard from '../../components/ContactCTACard.astro';
+import ContactCTASection from '../../components/ContactCTASection.astro';
 import { buildBreadcrumbSchema } from '../../lib/schemas';
 
 export function getStaticPaths() {
@@ -85,11 +85,5 @@ const breadcrumbSchema = buildBreadcrumbSchema([
   )}
 
   <!-- CTA -->
-  <section class="section">
-    <div class="container-wide">
-      <Reveal>
-        <ContactCTACard heading={`Got a dog like ${s.dog}?`} body="Send Keith a photo and a quick note about the coat or behaviour. He'll come back honestly with what to expect before you book." />
-      </Reveal>
-    </div>
-  </section>
+  <ContactCTASection heading={`Got a dog like ${s.dog}?`} body="Send Keith a photo and a quick note about the coat or behaviour. He'll come back honestly with what to expect before you book." />
 </Layout>
