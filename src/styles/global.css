@@ -119,3 +119,18 @@
 .kenburns { animation: kenburns 24s ease-in-out infinite alternate; will-change: transform; }
 @keyframes heroPillIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 .hero-pill-in { animation: heroPillIn 0.5s ease-out both; }
+
+/* Before/After slider — scroll-coupled reveal via CSS scroll-driven animation.
+   Zero scroll-JS; degrades to a static, draggable 50% slider where unsupported,
+   and dragging adds .ba-dragged to hand control back to the user. */
+@property --ba-pos { syntax: '<percentage>'; inherits: true; initial-value: 50%; }
+@keyframes baScroll { from { --ba-pos: 64%; } to { --ba-pos: 36%; } }
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .ba-slider:not(.ba-dragged) {
+      animation: baScroll linear both;
+      animation-timeline: view();
+      animation-range: entry 15% exit 85%;
+    }
+  }
+}

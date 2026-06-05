@@ -1,6 +1,5 @@
 ---
 import copy from '../../data/copy/home.json';
-import SectionIntro from '../SectionIntro.astro';
 import Reveal from '../Reveal.astro';
 import BeforeAfterSlider from '../BeforeAfterSlider.astro';
 
@@ -9,11 +8,24 @@ const show = ba && ba.beforePhoto && ba.afterPhoto;
 ---
 {show && (
   <section class="section">
-    <div class="container-tight">
-      <Reveal class="mb-8">
-        <SectionIntro eyebrow={ba.eyebrow} heading={ba.heading} description={ba.description} />
+    <div class="container-tight grid md:grid-cols-5 gap-10 md:gap-12 items-center">
+      <Reveal class="md:col-span-2">
+        {ba.eyebrow && (
+          <p class="text-sm font-semibold uppercase tracking-wider text-coral-700">{ba.eyebrow}</p>
+        )}
+        <h2 class="mt-3 text-3xl md:text-4xl leading-tight">{ba.heading}</h2>
+        {ba.description && (
+          <p class="mt-5 text-ink-700 leading-relaxed">{ba.description}</p>
+        )}
+        <p class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-teal-700">
+          <svg aria-hidden="true" class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8 9l-4 3 4 3m8-6l4 3-4 3" />
+          </svg>
+          Drag the slider to compare
+        </p>
       </Reveal>
-      <Reveal delay={120}>
+
+      <Reveal class="md:col-span-3" delay={120}>
         <BeforeAfterSlider
           beforeSrc={ba.beforePhoto}
           beforeAlt={ba.beforeAlt}

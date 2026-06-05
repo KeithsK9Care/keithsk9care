@@ -47,7 +47,7 @@ const { beforeSrc, beforeAlt, afterSrc, afterAlt } = Astro.props;
       if (!range || range.dataset.baInit) return;
       range.dataset.baInit = '1';
       const update = () => el.style.setProperty('--ba-pos', range.value + '%');
-      range.addEventListener('input', update);
+      range.addEventListener('input', () => { el.classList.add('ba-dragged'); update(); });
       update();
     });
   }
