@@ -13,35 +13,52 @@
   "metaDescription": "Dog grooming near Haigh — a 10-minute drive up the lanes to Keith's K9 Care home salon in Hall Green, Wakefield WF4. One dog at a time. Book your dog in.",
   "lead": "A short run north up the lanes from Haigh, Keith's K9 Care is a calm, one-to-one home dog grooming salon — and we pick up plenty of Haigh customers.",
   "body": [
-    "Haigh sits just over the boundary into Barnsley (S75), and it's an easy ten-minute run up the lanes to us in Hall Green. We pick up a lot of Haigh dogs — far enough out that a quiet, one-to-one groom is a welcome change, close enough that it's no trek. Easy parking right outside on Castle Meadows, too.",
-    "Keith's K9 Care is a home salon, built around one dog at a time. A quiet, purpose-built room, no kennels, no shared dryers, no other dogs barking — just your dog and Keith. It's a calm setup that suits nervous dogs, puppies and older dogs, and it means your dog has Keith's undivided attention throughout.",
-    "Keith is IPET-qualified and grooms every coat type and breed — full grooms, puppy first grooms, bath and tidy, nail trims, de-matting and traditional hand stripping. Prices are published in full with breed examples, and confirmed in person before he starts, so the short drive is the only difference — never the bill.",
-    "Booking your Haigh dog in is a quick call, WhatsApp or message. Keith likes a quick chat about coat, age and temperament first so the right amount of time is set aside."
+    {
+      "heading": "A small hamlet of lanes, fields and woodland",
+      "paragraphs": [
+        "Haigh is a tiny hamlet tucked between Woolley and West Bretton, just off junction 38 of the M1 and only about half a mile from the edge of the Yorkshire Sculpture Park. It sits right on the Barnsley boundary (S75), surrounded by farmland and the network of narrow lanes — Haigh Lane, Jebb Lane, Intake Lane, Woolley Low Moor Lane — that the dogs round here get walked along.",
+        "From Haigh it's a short ten-minute run north up those same lanes to me in Hall Green, with easy parking right outside on Castle Meadows. Close enough that it's no trek, far enough out that the field-and-woodland walks really show in a coat."
+      ]
+    },
+    {
+      "heading": "What the Sculpture Park and Woolley Edge do to a coat",
+      "paragraphs": [
+        "The footpath off Jebb Lane runs along the edge of the fields and into the woods towards the Sculpture Park and Litherop Road, so seed heads and burrs are a regular job on feathered legs and longer coats this time of year. If you let your dog have a paddle at the Bretton lakes down at the lower lake by the weir, that lake water needs a proper wash and a thorough dry rather than a quick rub — left damp under the coat it's the perfect start to a mat.",
+        "Woolley Edge, the Woodland Trust strip on the ridge above the village, is gorgeous but genuinely muddy, with the path dropping down to the road near Haigh. After a few wet walks up there the legs and undercarriage cake up fast, and that drying mud is what I most often find tangling into the coat behind the ears and between the toes when a dog comes in."
+      ]
+    },
+    {
+      "heading": "A calm, one-dog-at-a-time groom",
+      "paragraphs": [
+        "I groom one dog at a time in a quiet converted garage at home — no kennels and no other dogs around, so your dog has my full attention from start to finish. I'm IPET-qualified (trained at Mrs B's in Leeds) and cover full grooms, puppy first grooms, bath and tidy, nail trims, de-matting and hand stripping, with prices confirmed before I start.",
+        "To book your Haigh dog in, give me a call or message and we'll have a quick chat about the coat, age and temperament so I can set aside the right amount of time."
+      ]
+    }
   ],
   "faqs": [
     {
       "q": "How far is the salon from Haigh?",
-      "a": "About 4 miles — a ten-minute drive north up the lanes to Castle Meadows in Hall Green (WF4)."
+      "a": "About 4 miles — a ten-minute drive north up the lanes from Haigh to Castle Meadows in Hall Green (WF4), with parking right outside."
     },
     {
-      "q": "I'm just into Barnsley (S75) — do you cover Haigh?",
-      "a": "Yes — Haigh is well within our patch and we groom a lot of Haigh dogs. It's a short, easy run up the lanes."
+      "q": "My dog swims at the Bretton lakes — can you sort the coat out afterwards?",
+      "a": "Yes. Lake and weir water left to dry in the coat is a common cause of matting, so I give a proper wash and a full blow-dry rather than a quick towel-off. If your dog's been in down at the lower lake, just mention it when you book."
+    },
+    {
+      "q": "We walk the woods off Jebb Lane and up Woolley Edge — do you do de-matting and burr removal?",
+      "a": "I do. Those field-edge and woodland paths drop a lot of burrs and seed heads into feathering, and Woolley Edge gets properly muddy, which cakes into the legs and belly. I'll de-mat carefully and, if it's tangled too tight, talk you through the kindest way to take it back."
     },
     {
       "q": "Do you publish your prices?",
-      "a": "In full, with breed-by-breed examples on the pricing page. No ringing round for a quote — Keith confirms the exact figure in person before he starts."
-    },
-    {
-      "q": "What are your opening hours for Haigh?",
-      "a": "Keith grooms Tuesday to Friday, 9am to 5pm, and Saturday mornings until 2pm, closed Sundays and Mondays. Haigh is a ten-minute run north up the lanes, and the hours flex around your appointment. Call or message 07926 471552 to find a time that suits."
+      "a": "In full, with breed-by-breed examples on the pricing page. No ringing round for a quote — I confirm the exact figure in person before I start, so the short drive up the lanes is the only difference, never the bill."
     },
     {
       "q": "Do you groom doodles and spaniels from Haigh?",
-      "a": "Yes, doodles, spaniels and every coat type are welcome, and Keith is IPET-qualified across all breeds. The poodle crosses in particular do well on a regular six-week groom to keep mats at bay. Let him know the breed and coat when you book."
+      "a": "Yes, doodles, spaniels and every coat type are welcome, and I'm IPET-qualified across all breeds. The poodle crosses in particular do well on a regular six-week groom to keep mats at bay, especially with all the fields and woods around the village. Let me know the breed and coat when you book."
     },
     {
       "q": "Do you groom nervous or rescue dogs from Haigh?",
-      "a": "Yes, the calm one-to-one home salon suits nervous and rescue dogs well, with no other dogs around and no rush. Keith works at the dog's pace and takes breaks whenever they are needed. Tell him the background when you book so he can take it gently."
+      "a": "Yes. The calm one-to-one home setup suits nervous and rescue dogs well — no other dogs around and no rush. I work at the dog's pace and take breaks whenever they're needed, so tell me the background when you book and I'll take it gently."
     }
   ]
 }

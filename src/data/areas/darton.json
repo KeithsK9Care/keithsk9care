@@ -15,35 +15,52 @@
   "metaDescription": "Calm one-to-one dog grooming for Darton (S75) — a short drive north into Wakefield WF4. No kennels, no queue, prices published. Call or WhatsApp Keith.",
   "lead": "A short drive north over the River Dearne and across the West Yorkshire border, Keith's K9 Care is a calm, one-to-one home dog grooming salon in Hall Green — and plenty of our dogs come up from Darton.",
   "body": [
-    "Darton sits on the Barnsley side of the boundary in S75, on the River Dearne, with Kexbrough, Mapplewell and Staincross all close by. From the village it's a steady ten-minute run north on the lanes towards Newmillerdam to reach us at Castle Meadows in Hall Green (WF4). Far enough out that a quiet, unhurried groom feels like a proper change of pace; close enough that it's no trek. There's parking right outside the door, too.",
-    "The salon is built around one dog at a time. No kennels, no row of crates, no other dog barking in the next chair — your dog comes in, gets my full attention, and goes home. For a lot of Darton owners that calm is the whole point, especially after a busy high-street salon where dogs are booked in three deep and left waiting. If your dog has walked the Dearne Way from Darton station down towards Bretton, or had a muddy lap of Darton Park, a proper bath and tidy sorts them out.",
-    "I trained at Mrs B's Grooming Academy in Leeds and I'm IPET-qualified, so the welfare side is done properly. The full list is here: full groom, puppy first groom, bath and tidy, nail trim and ear clean, de-matting and hand stripping. Prices are published and the same for everyone — full groom from £40 for a small dog, £50 medium, £60 for a large dog or doodle; bath and tidy from £30; a puppy's first groom from £25; nail trim from £10. De-matting and hand stripping both start at £50.",
-    "Booking is straightforward. Phone or WhatsApp me on 07926 471552, tell me the breed and roughly when the coat was last done, and I'll find a slot that suits. Nervous dogs, rescues and first-timers are genuinely welcome — the one-at-a-time setup means I can take things at the dog's pace rather than rushing to the next appointment. Whether you're in the heart of Darton near All Saints Church, over in Kexbrough, or up towards Mapplewell, you're a short hop from a calm groom."
+    {
+      "heading": "From the Dearne valley up to Hall Green",
+      "paragraphs": [
+        "Darton sits on the Barnsley side of the boundary in S75, down on the River Dearne, with Kexbrough just to the west and Mapplewell and Staincross close by. From the village it's a steady ten-minute run north along Barnsley Road towards Newmillerdam to reach me at Castle Meadows in Hall Green (WF4) — far enough out that an unhurried groom feels like a proper change of pace, close enough that it's no trek. You cross the Dearne and the West Yorkshire boundary on the way, and there's parking right outside the door.",
+        "I work one dog at a time in a quiet converted garage — no kennels, no crates, no other dog barking in the next chair — and I'm IPET-qualified (trained at Mrs B's Grooming Academy in Leeds)."
+      ]
+    },
+    {
+      "heading": "Dearne Way mud and Windhill Wood burrs",
+      "paragraphs": [
+        "If your dog walks the Dearne Way along the riverbank from Darton station — the path hugs the Dearne for the best part of a mile and a half down towards Haigh Lane and the railway bridge — they'll come home with the silty mud the valley is known for worked right into the legs and belly. A lap of Darton Park or a scramble through Windhill Wood adds wet grass, leaf litter and the odd burr or seed caught up in a longer coat.",
+        "A bath and tidy from £30 clears the mud, loose coat and that damp-dog smell. If the coat has knotted up after a soaking, de-matting from £50 takes it apart the kinder, slower way rather than clipping everything off. Alongside those I do full grooms, puppy first grooms, nail trims and hand stripping, with prices published and the same for everyone."
+      ]
+    },
+    {
+      "heading": "Booking from Darton, Kexbrough and Mapplewell",
+      "paragraphs": [
+        "Phone or WhatsApp me on 07926 471552 with your dog's breed and roughly when the coat was last done, and I'll find a slot that suits. Nervous dogs, rescues and first-timers are genuinely welcome — the one-at-a-time setup means I can take things at the dog's own pace rather than rushing to the next appointment.",
+        "Whether you're in the heart of Darton near All Saints Church, over in Kexbrough by the boundary, or up towards Mapplewell and Staincross, you're a short hop north from a calm, quiet groom."
+      ]
+    }
   ],
   "faqs": [
     {
       "q": "How far is the salon from Darton?",
-      "a": "About 3.5 miles — a ten-minute drive north up the lanes towards Newmillerdam to Castle Meadows in Hall Green (WF4). You cross the River Dearne and the West Yorkshire boundary on the way, and there's parking right outside."
+      "a": "About 3.5 miles — a ten-minute drive north along Barnsley Road towards Newmillerdam to Castle Meadows in Hall Green (WF4). You cross the River Dearne and the West Yorkshire boundary on the way, and there's parking right outside the door."
     },
     {
-      "q": "Do you cover Darton and the rest of S75?",
-      "a": "Yes. Plenty of our dogs come up from Darton, Kexbrough, Mapplewell and Staincross. It's a home salon, so you bring your dog to us in Hall Green rather than us coming out, and the short run north keeps it an easy trip."
+      "q": "Do you cover Kexbrough, Mapplewell and Staincross as well?",
+      "a": "Yes. Plenty of my dogs come up from across S75 — Darton itself, Kexbrough by the boundary, and Mapplewell and Staincross just east. It's a home salon, so you bring your dog to me in Hall Green rather than me coming out, and the short run north keeps it an easy trip."
     },
     {
-      "q": "My dog gets muddy on the Dearne Way and around Darton Park — can you sort that out?",
-      "a": "That's a big part of the job. A bath and tidy from £30 clears mud, loose coat and that wet-dog smell after a walk along the River Dearne or a lap of the park. If the coat has knotted up, de-matting starts at £50 and I'll always work the kinder way through it."
+      "q": "My dog gets filthy on the Dearne Way and round Darton Park — can you sort that out?",
+      "a": "That's a big part of the job. A bath and tidy from £30 clears the valley mud, loose coat and that wet-dog smell after a walk along the River Dearne or a lap of the park. If the coat has knotted up after a soaking, de-matting starts at £50 and I'll always work the kinder way through it."
     },
     {
-      "q": "What are your opening hours and how do I book?",
-      "a": "Booking is by appointment so each dog gets the place to itself. Phone or WhatsApp Keith on 07926 471552 with your dog's breed and when it was last groomed, and I'll offer a time. I'll confirm current days and hours when you get in touch."
+      "q": "There's often burrs and seeds in the coat after Windhill Wood — is that a problem?",
+      "a": "Not at all — it's normal for a dog that gets out into the woods and fields around Darton. I'll work the burrs, seeds and leaf litter out of a longer coat by hand where I can rather than just clipping straight through, and finish with a proper bath so the skin gets a look at the same time."
     },
     {
       "q": "Is the salon suitable for a nervous or rescue dog?",
       "a": "It's well suited to them. One dog at a time means no other dogs barking and no rushing to the next appointment, so an anxious or rescue dog can settle and go at its own pace. Tell me what worries your dog when you book and we'll plan around it."
     },
     {
-      "q": "Why drive up from Darton when there are groomers closer in Barnsley?",
-      "a": "Most Barnsley salons are busy commercial setups with several dogs in at once. Here it's calm and one-to-one, with no kennels and prices published up front. For Darton owners who want a quieter groom, ten minutes north over the border is a small trade for that."
+      "q": "How do I book, and what should I tell you?",
+      "a": "Booking is by appointment so each dog gets the place to itself. Phone or WhatsApp me on 07926 471552 with your dog's breed and roughly when it was last groomed, and I'll offer a time. I'll confirm current days and hours when you get in touch."
     }
   ]
 }

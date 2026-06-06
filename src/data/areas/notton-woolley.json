@@ -14,35 +14,52 @@
   "metaDescription": "Dog grooming near Notton & Woolley — a 9-minute drive to Keith's K9 Care home salon in Hall Green, Wakefield WF4. One dog at a time. See prices and book.",
   "lead": "A short drive north through the lanes, Keith's K9 Care is a calm, one-to-one home dog grooming salon — and Notton and Woolley dogs settle right in.",
   "body": [
-    "Notton and Woolley are quiet, semi-rural villages just south of us through the lanes, and they share exactly the kind of calm character our salon was built for. The run up to Hall Green takes about nine minutes, and there's easy parking right outside on Castle Meadows — none of the bustle of a town-centre groomer.",
-    "Keith's K9 Care is a home salon: one dog at a time, in a quiet, purpose-built room, with no kennels and no other dogs in earshot. For a country dog used to peace and space, it's a far gentler experience than a busy commercial salon — and it's the right setting for nervous dogs, puppies and seniors, who get Keith's full attention from start to finish.",
-    "Keith is IPET-qualified and grooms every coat type — full grooms, puppy first grooms, bath and tidy, nail trims, de-matting and traditional hand stripping for wire-coated breeds. Prices are published in full with breed examples, and confirmed in person before he starts.",
-    "Whether it's a regular groom or a tidy after a muddy country walk, booking your Notton or Woolley dog in is a quick call, WhatsApp or message away."
+    {
+      "heading": "The woods and old lanes your dog comes home from",
+      "paragraphs": [
+        "If you walk out of Notton or Woolley, you're never far from trees and mud. Notton Woods are the surviving fragment of a medieval deer park, and the old green lanes around them — Smawell Lane, Woolley Mill Lane and Applehaigh Lane down towards Applehaigh Clough — turn soft and claggy for most of the autumn and winter. That heavy clay is what I see most: it dries into the belly, leg feathering and pads, and on a longer or curly coat it works into mats if it isn't lifted out properly.",
+        "Drop down to Seckar Wood on the edge of Woolley and the going changes again. It's an SSSI of ancient woodland, wetland and sandy lowland heath, so a dog comes back carrying fine grit, bracken bits and, after the boggy patches, a damp musty smell rather than thick mud. I'll always check what your dog has actually been into before I pick a wash and a finish for it."
+      ]
+    },
+    {
+      "heading": "After Woolley Edge or Newmillerdam",
+      "paragraphs": [
+        "Woolley Edge gives the open, breezy ridge walks; Newmillerdam Country Park, a short run south on the A61, gives the lake loop. Both are lovely and both leave their mark. The Newmillerdam path is compacted earth that goes genuinely soft and puddled after rain, and the lake itself tempts a lot of dogs in — pond water and silt that sits in the undercoat and needs a proper bath, not a quick rinse, to clear.",
+        "Whatever the walk threw at them, a full groom or a simple bath and tidy sends them home clean, dried through to the skin and brushed out, with nails and the bits around the pads sorted too."
+      ]
+    },
+    {
+      "heading": "A calm, one-dog-at-a-time room — about nine minutes away",
+      "paragraphs": [
+        "I'm Keith, and I groom one dog at a time in a quiet converted garage at home in Hall Green — no kennels, no other dogs waiting, just your dog and me. It's about 3.5 miles and roughly a nine-minute drive north through the lanes from Notton and Woolley, with parking right outside on Castle Meadows.",
+        "I'm IPET-qualified and cover full grooms, puppy first grooms, bath and tidy, nail trims, de-matting and hand stripping, and I'll always confirm the price with you before I start. To book, give me a call, WhatsApp or message and tell me the breed and how the coat's looking."
+      ]
+    }
   ],
   "faqs": [
     {
+      "q": "My dog gets caked in Notton Woods after rain — can you sort that?",
+      "a": "Yes, that heavy lane and woodland clay is the most common thing I deal with. A full groom or a bath and tidy lifts it out of the legs, belly and pads, and your dog goes home clean, dried right through and brushed out."
+    },
+    {
+      "q": "We walk a lot in Seckar Wood. Does the heath and bog cause coat problems?",
+      "a": "It can. Seckar's sandy heath and wet patches leave fine grit and a damp, musty smell in the coat rather than thick mud, so I match the wash to that. Tell me where you've been walking when you book and I'll plan the groom around it."
+    },
+    {
+      "q": "My dog swims in the lake at Newmillerdam — is that a problem for the coat?",
+      "a": "Not at all, but pond water and silt sit deep in the undercoat and need a proper bath rather than a rinse to clear, otherwise the smell lingers. A bath and tidy or full groom will get them fresh again."
+    },
+    {
       "q": "How far is the salon from Notton and Woolley?",
-      "a": "About 3.5 miles — a nine-minute drive north through the lanes to Castle Meadows in Hall Green (WF4)."
+      "a": "About 3.5 miles — roughly a nine-minute drive north through the lanes to Castle Meadows in Hall Green (WF4), with parking right outside."
     },
     {
-      "q": "Do you groom country dogs that get really muddy?",
-      "a": "All the time. A full groom or a bath and tidy will deal with the mud, brambles and damp and send them home clean, brushed and smart."
-    },
-    {
-      "q": "Is the salon quiet? My dog isn't used to busy places.",
-      "a": "Very — it's a one-dog-at-a-time home salon with no other dogs around. Ideal for a country dog who'd find a busy high-street salon overwhelming."
-    },
-    {
-      "q": "What days can I bring my Notton or Woolley dog?",
-      "a": "Keith grooms Tuesday to Friday, 9am to 5pm, and Saturday until 2pm, closed Sundays and Mondays. The run up through the lanes takes about nine minutes, with parking right outside. Hours are flexible, so call or message 07926 471552 to arrange a time that fits."
-    },
-    {
-      "q": "Do you groom the spaniels and gundogs common around Woolley?",
-      "a": "Yes, spaniels, gundogs and every other coat type are a regular part of Keith's work. As an IPET-qualified groomer he covers full grooms, hand stripping, de-matting and more. Tell him the breed and coat when you book so the right time is set aside for it."
+      "q": "Is it quiet? My country dog isn't used to busy places.",
+      "a": "Very. It's one dog at a time in a converted garage at my home, with no kennels and no other dogs around — a calmer setting than a busy high-street salon, and good for nervous dogs, puppies and seniors."
     },
     {
       "q": "Do you publish your prices?",
-      "a": "Yes, prices are listed in full with breed-by-breed examples on the pricing page, so there is no ringing round for a quote. A full groom starts at £40 for small dogs, £50 for medium and £60 for large or doodles. Keith confirms the exact figure in person before he starts."
+      "a": "Yes, they're listed in full with breed-by-breed examples on the pricing page. A full groom starts at £40 for small dogs, £50 for medium and £60 for large or doodles, and I confirm the exact figure with you before I start."
     }
   ]
 }

@@ -14,35 +14,52 @@
   "metaDescription": "Dog grooming for Newmillerdam. Keith's K9 Care is a 2-minute drive away in neighbouring Hall Green, Wakefield. IPET-qualified, one dog at a time. Book today.",
   "lead": "If you walk your dog round Newmillerdam Lake, your nearest groomer is right around the corner. Keith's K9 Care is a calm, one-to-one home salon in neighbouring Hall Green,  barely two minutes from the Country Park.",
   "body": [
-    "Newmillerdam is a dog walker's paradise - the lake, the woodland trails, the boathouse and the open water all within a few minutes of home. It's also a reliable way to send a dog back muddy, soggy and very pleased with themselves. That's where we come in. Keith's K9 Care sits on Castle Meadows in Hall Green, the village immediately south of Newmillerdam Country Park, so for most Newmillerdam owners we're the closest proper grooming salon there is,  a two-minute drive or a gentle walk.",
-    "We're a home salon, not a high-street unit. That means one dog at a time, in a quiet converted garage set up entirely around your dog's comfort.  No kennels, no other dogs barking through the wall, no production line. For the retrievers, spaniels and doodles that love the Newmillerdam water, it's a calm place to dry off, de-tangle and get back to looking their best after a summer of swimming.",
-    "I am IPET-qualified, trained at Mrs B's in Leeds, and grooms every coat type, from a cockapoo's first puppy groom to a hand-stripped terrier. Prices are published in full, with breed examples, so there are no surprises: a full groom starts at £40 for small dogs, £50 for medium and £60 for large or doodles, and Keith always confirms the price in person before he starts.",
-    "If your dog comes back from the lake matted or smelling of pond, a bath and tidy or a careful de-matting session will put them right, and I will give you an honest plan to keep the coat in good shape between grooms. Booking is a quick call, WhatsApp or message away."
+    {
+      "heading": "The lake walk that brings dogs to me wet",
+      "paragraphs": [
+        "I'm at 4 Castle Meadows in Hall Green, just up the A61 Barnsley Road from Newmillerdam Country Park, so the lake is more or less my local patch too. The surfaced path that loops the water is about a mile and a half, and that ring is what most Newmillerdam owners walk every day, past the old Grade II listed boathouse.",
+        "It's a lovely walk and a reliable way to send a dog home damp. The dam was made by penning back Bleakley Dyke and Bushcliff Beck, so the water carries silt and a green, ponds-end smell once a coat soaks it up. Retrievers and spaniels that go straight in come back heavy and whiffy, and that lake water sits in the undercoat long after they look dry."
+      ]
+    },
+    {
+      "heading": "Up to the arboretum and the Chevet line",
+      "paragraphs": [
+        "Head past the lake and the ground changes. The arboretum on the hill at the far side has more than a hundred kinds of tree and a soft, leafy floor that turns to bluebells in spring and to leaf-mould and burrs the rest of the year, all of which work their way into feathered legs and ear fringes.",
+        "If your dog ranges further, onto the old Chevet branch line trail or over towards Seckar Wood with its heathy, ancient woodland, you'll know the difference: bracken seeds, twigs and proper claggy mud rather than a clean lakeside rinse. Those are the coats that most often need a de-matting session as well as a wash."
+      ]
+    },
+    {
+      "heading": "What I'll do once they're back",
+      "paragraphs": [
+        "I keep it to one dog at a time in a quiet converted garage, no kennels and no other dogs around. After a Newmillerdam walk that usually means a proper bath to lift the lake silt and smell, a thorough blow-dry into the undercoat, and a tidy of the legs, feet and ears where the burrs collect; if it's gone past tidying, I'll de-matt carefully rather than clip to the skin.",
+        "I'm IPET-qualified, trained at Mrs B's Grooming Academy in Leeds, and I groom every coat type from a first puppy groom to a hand-stripped terrier, with full grooms from £40 small, £50 medium and £60 large or doodles confirmed before I start. Booking is a quick call, WhatsApp or message, and I'll give you an honest plan to keep the coat right between the lake swims."
+      ]
+    }
   ],
   "faqs": [
     {
       "q": "How far is Keith's K9 Care from Newmillerdam?",
-      "a": "About half a mile, a two-minute drive. The salon is at 4 Castle Meadows in Hall Green, the village just south of Newmillerdam Country Park. Plenty of Newmillerdam owners walk down."
+      "a": "About half a mile, a two-minute drive. The salon is at 4 Castle Meadows in Hall Green, just up the A61 from the Country Park, and plenty of Newmillerdam owners walk down."
     },
     {
-      "q": "Do you groom dogs after walks at Newmillerdam Lake?",
-      "a": "All the time, including my own two! Muddy, soggy retrievers and spaniels are our bread and butter. Book a full groom or a quicker bath and tidy and we'll have them dry, de-tangled and smart again."
+      "q": "My dog always smells of the lake after a swim, can you help?",
+      "a": "Yes, that's a regular one. The dam water carries silt and a pondy smell that settles into the undercoat, so a proper bath and a full blow-dry lifts it far better than a quick rinse at home. A bath and tidy does the job if a full groom isn't due."
     },
     {
-      "q": "Are you the closest dog groomer to Newmillerdam?",
-      "a": "For most of Newmillerdam, yes we're the nearest one-to-one home salon, a short hop into neighbouring Hall Green (WF4). No trip into Wakefield centre needed."
+      "q": "What do you do about the burrs and leaf-mould from the arboretum walk?",
+      "a": "The leafy ground past the lake and up at the arboretum drops burrs and seeds straight into feathered legs, feet and ear fringes. I work those out by hand and tidy the feathering so they're less likely to pick more up next time round."
+    },
+    {
+      "q": "My dog comes back matted from Seckar Wood and the Chevet line, can you sort it?",
+      "a": "I can. Bracken, twigs and claggy mud off the heathland and the old railway trail tangle a coat quickly. I'll de-matt carefully where the coat can be saved, and only clip shorter if matting has gone too far to brush out kindly."
     },
     {
       "q": "What days is the salon open for Newmillerdam dogs?",
-      "a": "I work Monday to Saturday, 08:30am to 7pm and am closed Sundays. Being so close to Newmillerdam, a Saturday tidy after a muddy walk and swim is popular. Hours are flexible, so call or message 07926 471552 if you need something outside those times."
+      "a": "I groom by appointment rather than fixed hours, and a Saturday tidy after a muddy walk and swim around the lake is always popular. Call or message me on 07926 471552 and I'll confirm a time that suits."
     },
     {
-      "q": "Do you groom the retrievers and spaniels that swim at Newmillerdam?",
-      "a": "Yes, those water-loving breeds are some of our most regular visitors. A full groom or a bath and tidy clears the lake water, pond smell and tangles, and Keith will suggest how to keep the coat in shape between swims. Every coat type is welcome, from spaniels to doodles."
-    },
-    {
-      "q": "Can I walk my dog round to you from Newmillerdam Lake?",
-      "a": "Plenty of owners do, as the salon on Castle Meadows is barely two minutes from the Country Park. A dog that has already run round the lake often settles better for its groom. Let me know roughly when you will arrive so I can be ready for you."
+      "q": "Can I walk round to you straight from the lake?",
+      "a": "Plenty of owners do, as Castle Meadows is barely two minutes from the Country Park. A dog that's already done the loop round the water often settles better for its groom. Let me know roughly when you'll arrive so I'm ready for you."
     }
   ]
 }

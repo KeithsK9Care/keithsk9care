@@ -14,35 +14,52 @@
   "metaDescription": "Dog grooming near Walton, Wakefield — a 5-minute drive to Keith's K9 Care home salon in Hall Green WF4. IPET-qualified, one dog at a time. Book your dog in.",
   "lead": "Five minutes from Walton village, Keith's K9 Care is a calm, one-to-one home dog grooming salon — and the answer to a dog that's just been swimming at Anglers.",
   "body": [
-    "Walton sits right next to two of the best dog walks in the district — Anglers Country Park and the lakes around Walton Hall. Wonderful for dogs; less wonderful for the back seat of the car. When your spaniel or retriever comes home from Anglers caked in lake water and pond weed, we're a five-minute drive away in Hall Green and we'll have them bathed, dried and tidy by tea-time.",
-    "Keith's K9 Care is a home salon, not a busy commercial unit. One dog at a time, in a quiet, purpose-built room — no kennels, no other dogs barking, no rush. It's a calm setup that suits the water-loving breeds Walton seems full of, as well as nervous dogs, puppies and older dogs who don't enjoy a chaotic high-street salon.",
-    "Keith is IPET-qualified and grooms every coat type and length — full grooms, puppy first grooms, a quick bath and tidy, nail trims, de-matting and traditional hand stripping for wire coats. Prices are published in full with breed examples, so there's no ringing round for a quote, and Keith confirms the price in person before he starts.",
-    "Whether your Walton dog needs a regular six-week groom or an emergency de-tangle after one swim too many, booking in is a quick call, WhatsApp or message. Keith likes a quick chat about coat and temperament first so he can set aside the right amount of time."
+    {
+      "heading": "The lake and woodland walks on your doorstep",
+      "paragraphs": [
+        "Walton is wrapped in water and woodland, and most of it ends up in a dog's coat. The roughly two-mile path around the lake at Anglers Country Park runs past a reed-covered embankment and wetland, so a dog that wades in comes back with that distinctive pond smell and a layer of fine silt down its legs and belly. The lakes and ponds over at Walton Colliery Nature Park do exactly the same.",
+        "Then there's the woodland. Haw Park Wood, the ancient woodland that borders Charles Waterton's old Walton Hall estate, drops leaf litter, twigs and seed cases that work their way deep into a feathered or curly coat. Spaniels, doodles and anything with leg feathering pick the worst of it up."
+      ]
+    },
+    {
+      "heading": "Canal towpaths mean mud, and mud means matting",
+      "paragraphs": [
+        "Walton sits on the Barnsley Canal, and the towpath — part of the Trans Pennine Trail — is a favourite local loop that links Anglers, Haw Park Wood and the grounds of Walton Hall. After rain it turns to claggy mud that cakes into the coat behind the ears, under the legs and around the tail, and once that dries it knits into the kind of matting that's sore to brush out at home.",
+        "I'm just over the fields in Hall Green, about a five-minute drive, so I see a lot of this. A bath and tidy lifts out the silt and canal mud; if it has already matted I'll de-tangle it gently rather than dragging at the skin, and tell you honestly if a section needs clipping out."
+      ]
+    },
+    {
+      "heading": "A calm one-dog room, and how to book",
+      "paragraphs": [
+        "I groom one dog at a time in a quiet converted garage at home — no kennels and no other dogs around, which suits the water-lovers Walton is full of as well as nervous or older dogs. I'm IPET-qualified and cover full grooms, puppy first grooms, bath and tidy, nail trims, de-matting and hand stripping, with prices confirmed before I start.",
+        "Booking is a quick call, WhatsApp or message, and I like a short chat about your dog's coat and temperament first so I can set aside the right amount of time."
+      ]
+    }
   ],
   "faqs": [
     {
-      "q": "How far is the salon from Walton?",
-      "a": "About 1.8 miles — a five-minute drive to Castle Meadows in Hall Green (WF4). An easy run round from Walton village."
+      "q": "My dog always swims in the lake at Anglers — can you sort the mess out?",
+      "a": "That's a regular for me. A bath and tidy lifts out the lake silt, reed bits and pond smell, and I'll dry the coat right through so your dog goes home properly clean rather than damp and musty. Book a full groom if it needs the works."
     },
     {
-      "q": "My dog always swims at Anglers — can you sort the mess out?",
-      "a": "That's a regular for us. Book a full groom or a bath and tidy and we'll deal with the lake water, mud and pond smell and send them home dry and fluffy."
+      "q": "We walk the canal towpath and Haw Park Wood — how often should my dog be groomed?",
+      "a": "If you're regularly on the muddy towpath or through the woodland, a feathered or curly coat usually needs a groom every six to eight weeks to stay on top of the matting. Brushing between visits really helps. Tell me your routes and I'll suggest a sensible interval."
+    },
+    {
+      "q": "My dog picks up twigs and seed cases in the woods — can you get them out?",
+      "a": "Yes. Bits of woodland debris and the odd burr work deep into feathering and curls, so I comb the coat right down to the skin as part of a groom. If anything has knotted around it I'll ease it free gently rather than tugging."
     },
     {
       "q": "Do you groom large dogs and doodles from Walton?",
-      "a": "Yes — all sizes and coat types, including retrievers, labradoodles and other heavy coats. Large and doodle full grooms start from £60, confirmed before we start."
-    },
-    {
-      "q": "What are your hours for Walton dogs?",
-      "a": "Keith grooms Tuesday to Friday, 9am to 5pm, and Saturday until 2pm, closed Sundays and Mondays. The hours flex around your appointment, so message 07926 471552 if you need an earlier or later slot. Walton is five minutes away, so fitting a groom into the day is straightforward."
+      "a": "Yes, all sizes and coat types, including the retrievers and labradoodles you see all over the local lakes and trails. Large and doodle full grooms start from £60, confirmed before I start."
     },
     {
       "q": "Do you hand strip wire-coated breeds from Walton?",
-      "a": "Yes, Keith trained specifically in hand stripping, which keeps a wire coat's colour and texture as it should be. It is the right approach for breeds like Border terriers and wire-haired dogs rather than clipping them off. Tell him the breed when you book so he can set aside the time it takes."
+      "a": "Yes, I trained specifically in hand stripping, which keeps a wire coat's colour and texture as it should be rather than clipping it off. It's the right approach for breeds like Border terriers. Tell me the breed when you book so I can set aside the time it takes."
     },
     {
       "q": "Can I drop my dog off and collect later?",
-      "a": "Yes, a drop-off and pick-up works well and is how many Walton owners fit a groom around work. Keith agrees the timing with you when you book, and grooms one dog at a time so yours is never left waiting in a kennel. A quick call sets it up."
+      "a": "Yes, a drop-off and pick-up works well and is how a lot of Walton owners fit a groom around work. I agree the timing with you when you book, and groom one dog at a time so yours is never left waiting in a kennel. A quick call sets it up."
     }
   ]
 }

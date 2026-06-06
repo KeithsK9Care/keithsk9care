@@ -14,35 +14,52 @@
   "metaDescription": "Dog grooming near Horbury — a 10-minute drive to Keith's K9 Care in Hall Green, Wakefield WF4. A calmer alternative to a busy high-street salon. Book.",
   "lead": "Ten minutes from Horbury, Keith's K9 Care is a calm, one-to-one home dog grooming salon — the quieter alternative for owners who'd rather skip a busy high-street salon.",
   "body": [
-    "Horbury has plenty going on along the high street, but a busy commercial salon isn't to every dog's taste. For owners who'd rather their dog wasn't one of several in a noisy unit, we're about ten minutes away in Hall Green — a home salon where your dog is the only one in the room.",
-    "That's the whole idea behind Keith's K9 Care: one dog at a time, in a quiet, purpose-built space, with no kennels, no shared dryers and no other dogs barking through the wall. It's a calmer experience that nervous dogs, rescue dogs, puppies and older dogs genuinely do better in — and it means Keith works at your dog's pace rather than the clock's.",
-    "Keith is IPET-qualified and grooms every coat type — full grooms, puppy first grooms, bath and tidy, nail trims, de-matting and traditional hand stripping. Prices are published in full with breed examples (no ringing round for a quote), and confirmed in person before he starts.",
-    "If your Horbury dog would prefer a calmer groom, booking in is a quick call, WhatsApp or message. Keith likes a quick chat about coat, age and temperament first so the right time is set aside."
+    {
+      "heading": "Lagoon swims and Calder mud — what I see on Horbury coats",
+      "paragraphs": [
+        "If your dog walks Horbury, I can usually tell from the coat. Down at Horbury Lagoon, off Forge Lane, plenty of dogs can't resist a swim in the lagoon or a paddle in the River Calder, and they come home with a damp, silty coat that needs proper drying right down to the skin — not a quick towel and out the door. A wet coat left to dry on its own is exactly how knots start, so I take the time to dry and brush it through.",
+        "The Calder and Hebble Navigation towpath through Horbury Bridge is the other big one. It turns to mud and standing puddles after any rain, and that grit works its way into feathering on the legs, belly and feet. I check those areas closely and clear out anything caught before it tightens into a mat."
+      ]
+    },
+    {
+      "heading": "From Carr Lodge to Coxley Valley woods",
+      "paragraphs": [
+        "Carr Lodge Park keeps things gentler — circular paths and grass rather than deep water — but the woodland walks are a different story. Up through Coxley Valley and Stoneycliffe Wood, between Horbury Bridge, Netherton and Middlestown, dogs pick up burrs, seeds and leaf litter that hide in longer coats. If your dog favours those routes, mention it when you book so I can set aside time to comb the coat out thoroughly rather than rushing it.",
+        "Whatever the walk, the idea here is simple: one dog at a time in a quiet converted garage at Hall Green, with no kennels and no other dogs around, which suits nervous, rescue and older dogs."
+      ]
+    },
+    {
+      "heading": "The grooms I do and how to book",
+      "paragraphs": [
+        "I'm IPET-qualified and groom every coat type — full grooms, puppy first grooms, bath and tidy, nail trims, de-matting and traditional hand stripping — with prices published in full and confirmed before I start.",
+        "Booking from Horbury is a quick call, WhatsApp or message, and I like a chat about your dog's coat, age and temperament first so I set aside the right amount of time."
+      ]
+    }
   ],
   "faqs": [
     {
-      "q": "How far is the salon from Horbury?",
-      "a": "About 3.5 miles — a ten-minute drive to Castle Meadows in Hall Green (WF4)."
+      "q": "My dog swims at Horbury Lagoon — can you sort the coat afterwards?",
+      "a": "Yes, that's a common one. After a swim in the lagoon or the River Calder I dry the coat right down to the skin and brush it through, because a damp coat left to dry on its own is how knots and matting begin."
     },
     {
-      "q": "Why come to you rather than a Horbury high-street salon?",
-      "a": "For the calm. We're a one-dog-at-a-time home salon — no queue, no other dogs, no rush — which suits nervous, rescue and older dogs especially. Prices are published and Keith does every dog himself."
+      "q": "We walk the Calder and Hebble towpath at Horbury Bridge — does the mud cause problems?",
+      "a": "It can. The towpath gets very muddy and puddled after rain, and grit works into the feathering on legs, belly and feet. I check and clear those areas carefully so it doesn't tighten into a mat before your next groom."
+    },
+    {
+      "q": "Do dogs pick up much from the Coxley Valley and Stoneycliffe woods?",
+      "a": "Often, yes — burrs, seeds and leaf litter hide in longer coats from the wooded routes around Horbury Bridge, Netherton and Middlestown. Tell me if your dog walks there and I'll set aside time to comb it all out properly."
+    },
+    {
+      "q": "How far is the salon from Horbury?",
+      "a": "About 3.5 miles — a ten-minute drive from Horbury to Castle Meadows in Hall Green (WF4)."
     },
     {
       "q": "Do you groom rescue dogs?",
-      "a": "Often — the quiet, predictable home setup is ideal for a rescue who's still building confidence. Tell Keith the background when you book and he'll take it gently."
-    },
-    {
-      "q": "What are your opening hours for Horbury?",
-      "a": "The salon runs Tuesday to Friday, 9am to 5pm, and Saturday mornings until 2pm, closed Sundays and Mondays. Horbury is a ten-minute drive away, and the hours flex around the appointment. A message to 07926 471552 will sort a time that suits."
-    },
-    {
-      "q": "Do you groom spaniels and doodles from Horbury?",
-      "a": "Yes, spaniels, doodles and every coat type are part of the week, and Keith is IPET-qualified across all of them. The quieter home setting often suits these breeds better than a busy high-street unit. Mention the coat and breed when booking so the right time is set aside."
+      "a": "Often. The quiet, one-dog-at-a-time home setup is ideal for a rescue still building confidence — no other dogs around and no rush. Tell me the background when you book and I'll take it gently."
     },
     {
       "q": "Do you hand strip wire-coated dogs from Horbury?",
-      "a": "Yes, Keith trained in traditional hand stripping, which keeps a wire coat's proper colour and texture instead of clipping it soft. It is the right method for terriers, schnauzers and similar breeds. Let him know when you book, as hand stripping takes longer than a clip."
+      "a": "Yes — I trained in traditional hand stripping, which keeps a wire coat's proper colour and texture instead of clipping it soft. It's the right method for terriers, schnauzers and similar breeds. Let me know when you book, as hand stripping takes longer than a clip."
     }
   ]
 }

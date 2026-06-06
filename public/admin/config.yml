@@ -767,10 +767,15 @@ collections:
       - { name: lead, label: "Intro line (under the heading)", widget: text, required: false }
       - { name: heroPhoto, label: "Hero / social image", widget: image, required: false, hint: "Optional. Defaults to a stock photo if left blank." }
       - name: body
-        label: "Body paragraphs"
+        label: "Body sections"
         widget: list
         required: false
-        hint: "The main page content for this area — aim for a few genuinely local paragraphs (landmarks, drive time, who we serve there)."
+        hint: "Each section is an optional heading (H2) plus its paragraphs. Specific, local headings (named parks, roads, walks) help SEO and readability."
+        fields:
+          - { name: heading, label: "Section heading (H2)", widget: string, required: false }
+          - name: paragraphs
+            label: "Paragraphs"
+            widget: list
       - name: faqs
         label: "Area FAQs"
         widget: list

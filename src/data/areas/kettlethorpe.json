@@ -14,35 +14,52 @@
   "metaDescription": "Dog grooming near Kettlethorpe, Wakefield — a 7-minute drive to Keith's K9 Care home salon in Hall Green WF4. One dog at a time, prices published. Book today.",
   "lead": "A short drive from Kettlethorpe — straight down past Standbridge Lane — Keith's K9 Care is a calm, one-to-one home dog grooming salon.",
   "body": [
-    "Kettlethorpe is a straightforward seven-minute run down to us, past Standbridge Lane and into Hall Green. It's an easy one to fit around the school run or a day's work — drop the dog with Keith, get on with your day, and collect a freshly-groomed dog later. Parking is right outside on Castle Meadows.",
-    "What sets Keith's K9 Care apart from a high-street salon is the calm. It's a home salon: one dog at a time, in a quiet purpose-built room, with no kennels and no other dogs barking through the wall. That suits the puppies, nervous dogs and older dogs who find a busy commercial salon overwhelming, and it means your dog has Keith's full attention from start to finish.",
-    "Keith is IPET-qualified and grooms every coat type — full grooms, puppy first grooms, bath and tidy, nail trims, de-matting and hand stripping. Prices are published with breed examples so you know roughly what to expect, and Keith confirms the figure in person before he starts work.",
-    "Booking your Kettlethorpe dog in is a quick call, WhatsApp or message. A quick chat about your dog first means Keith can set aside the right amount of time for the coat and temperament."
+    {
+      "heading": "Just down Standbridge Lane from Kettlethorpe",
+      "paragraphs": [
+        "If you live around Kettlethorpe High School or the streets off Standbridge Lane, I'm only a short run away — the same lane carries you down through Chapelthorpe and into Hall Green, where I am, in about seven minutes. There's no need to head into the town centre, and there's parking right outside on Castle Meadows.",
+        "It's a corner of WF2 with proper green space on its doorstep, which is lovely for a dog and a little less lovely for a coat. I see plenty of Kettlethorpe dogs come in carrying the evidence of a good walk."
+      ]
+    },
+    {
+      "heading": "Pugneys, Newmillerdam and what they do to a coat",
+      "paragraphs": [
+        "Pugneys Country Park is the obvious local favourite — the waterside paths around the big lake, the quieter nature-reserve lake, and the River Calder running alongside on the way towards Horbury. A dog that's been near that water comes back damp and often smelling of it, and the softer ground churns up after rain.",
+        "Newmillerdam, a little further south, is the woodland one: lakeside and tree-lined trails on earth tracks that turn properly muddy and rutted once the weather sets in. Both throw up the same grooming jobs — mud worked deep into leg feathering and belly fur, twigs and seed heads caught in furnishings, and the damp-dog smell that wants a proper bath rather than a quick wipe. I'll wash it all out, dry the coat down to the skin and check between the pads and toes where grit likes to hide."
+      ]
+    },
+    {
+      "heading": "A calm, one-dog-at-a-time groom",
+      "paragraphs": [
+        "Mine is a home salon in a quiet converted garage: one dog at a time, no kennels and no other dogs around, which suits puppies, older dogs and anyone who finds a busy high-street salon too much.",
+        "I'm IPET-qualified and groom every coat type — full grooms, puppy first grooms, bath and tidy, nail trims, de-matting and hand stripping — and I'll always confirm the price with you before I start. To book, give me a call, a text or a WhatsApp and tell me a bit about your dog so I can set aside the right amount of time."
+      ]
+    }
   ],
   "faqs": [
     {
       "q": "How far is the salon from Kettlethorpe?",
-      "a": "About 2.5 miles — a seven-minute drive down past Standbridge Lane to Castle Meadows in Hall Green (WF4)."
+      "a": "About 2.5 miles — a seven-minute drive down Standbridge Lane through Chapelthorpe to Castle Meadows in Hall Green (WF4)."
     },
     {
-      "q": "Can you fit a groom around the school run?",
-      "a": "Usually, yes — a drop-off and pick-up works well for a lot of our Kettlethorpe families. Keith will agree the timing when you book."
+      "q": "My dog gets filthy at Pugneys — can you sort that out?",
+      "a": "That's a big part of what I do. Lake and riverside walks leave dogs damp, smelly and caked in mud through the legs and belly, so I'll give a full bath, work the dirt out of the feathering and dry the coat right down to the skin rather than just towelling the top off."
+    },
+    {
+      "q": "We walk at Newmillerdam a lot — does the woodland matter for grooming?",
+      "a": "It does. Those earth tracks get muddy and rutted in wet weather, and the trees drop twigs and seed heads that catch in furnishings and behind the ears. I'll comb it all out and check the matting it can cause if it's left."
     },
     {
       "q": "When can my puppy start grooming?",
-      "a": "Usually from around 12 weeks, after the second vaccination. The calm home setup is ideal for a gentle first experience that sets them up for life."
+      "a": "Usually from around 12 weeks, after the second vaccination. The calm, one-dog-at-a-time setup is ideal for a gentle first experience that sets them up for a lifetime of walks around the lakes."
     },
     {
-      "q": "Do you cover the WF2 area around Kettlethorpe?",
-      "a": "Yes, Kettlethorpe and the surrounding WF2 streets are firmly within our patch, and a fair few Kettlethorpe families are regulars. The salon is a seven-minute run down past Standbridge Lane to Hall Green, WF4. No drive into the town centre is needed."
-    },
-    {
-      "q": "Do you hand strip terriers and schnauzers from Kettlethorpe?",
-      "a": "Yes, Keith trained in traditional hand stripping, which preserves the colour and texture of a wire coat far better than clipping. It suits breeds like schnauzers, Border terriers and working cockers. Let him know the breed when booking so the extra time it needs is set aside."
+      "q": "Do you hand strip terriers and schnauzers from around Kettlethorpe?",
+      "a": "Yes — I trained in traditional hand stripping, which keeps the colour and texture of a wire coat far better than clipping does. It suits schnauzers, Border terriers and working cockers. Let me know the breed when you book so I can set aside the extra time it needs."
     },
     {
       "q": "What are your opening hours?",
-      "a": "The salon runs Tuesday to Friday, 9am to 5pm, and Saturday mornings until 2pm, closed Sundays and Mondays. Those hours fit a drop-off around the school run or a working day. They are flexible too, so message 07926 471552 if you need something different."
+      "a": "I groom by appointment rather than fixed opening hours, so I can often fit around work and family. Message or call me on 07926 471552 and I'll confirm a time that works."
     }
   ]
 }

@@ -14,35 +14,52 @@
   "metaDescription": "Dog grooming near Sandal, Wakefield — a 6-minute drive to Keith's K9 Care home salon in Hall Green WF4. IPET-qualified, one dog at a time. See prices and book.",
   "lead": "A short run down from Sandal, Keith's K9 Care is a quiet, one-to-one home dog grooming salon — popular with Sandal owners after a morning walk at Pugneys.",
   "body": [
-    "Sandal and the area around Pugneys Country Park is prime dog-walking territory, and we groom plenty of Sandal regulars. The salon is a six-minute drive south in Hall Green — close enough to be convenient, far enough to be properly quiet. If your dog has spent the morning charging round Pugneys lake, we'll have them bathed, dried and tidy by the afternoon.",
-    "Keith's K9 Care is a home salon built around one idea: one dog at a time. No kennels, no shared dryers, no other dogs in earshot — just your dog and Keith in a calm, purpose-built room. It's the right setup for water-loving spaniels and retrievers, for doodles that mat up after a swim, and for any dog that finds a busy commercial salon a bit much.",
-    "Keith is IPET-qualified and grooms every coat type, with the full menu of services — full grooms, puppy first grooms, bath and tidy, nail trims, de-matting and hand stripping. Pricing is published with breed-by-breed examples, so you know roughly what you'll pay before you arrive, and Keith confirms it in person before starting.",
-    "If your Sandal dog needs a regular groom, a first puppy visit, or rescuing after one swim too many at Pugneys, getting booked in is a quick call, WhatsApp or message away."
+    {
+      "heading": "Straight off the Pugneys path and into a warm bath",
+      "paragraphs": [
+        "If you walk a dog in Sandal, you almost certainly know Pugneys. The two lakes — the big watersports one and the smaller nature reserve — pull in spaniels and retrievers who can't resist a swim, and that lake water leaves coats greasy, flat and faintly pondy. Loop round on the riverside path beside the River Calder towards Horbury and you'll add proper mud to the mix, while the woodland on the witches trail is where I find burrs and seeds worked deep into feathering and tails.",
+        "There's a dog wash on site at Pugneys, but a quick rinse only gets the surface. I take coats right back to clean and properly dry — down to the skin so wet feathering and undercoat don't sit damp and start to smell or knit into mats. A lot of my Sandal regulars book me in straight after a morning round the lake."
+      ]
+    },
+    {
+      "heading": "Sandal Castle, Castle Grove and the climb home",
+      "paragraphs": [
+        "The other big draw is the free climb up to Sandal Castle, the ruined motte-and-bailey that looks down over Pugneys and Castle Grove. The slopes up to the motte and the rougher grass around the old earthworks are grand for a dog, but they pick up clay and dust that dulls a coat, and the steeper, drier ground is hard on pads and claws — something I always check over.",
+        "I'm a short run from all of it. From Barnsley Road — the A61 through Sandal — it's roughly 2.2 miles and about six minutes south to me in Hall Green, so there's no need to head into Wakefield centre for a groom. I see plenty of dogs from Sandal Magna, Agbrigg and Belle Vue too."
+      ]
+    },
+    {
+      "heading": "One dog at a time, the way it should be",
+      "paragraphs": [
+        "My salon is a quiet converted garage at home — one dog at a time, no kennels and no other dogs around, which suits nervous or older dogs and any pup that finds a busy high-street salon too much. I'm IPET-qualified and groom every coat type, with full grooms, puppy first grooms, bath and tidy, nail trims, de-matting and hand stripping, and I'll confirm the price with you before I start.",
+        "Whether your dog needs a regular tidy, a gentle first puppy groom, or rescuing after one swim too many at Pugneys, booking in is a quick call, WhatsApp or message away."
+      ]
+    }
   ],
   "faqs": [
     {
+      "q": "My dog swims at Pugneys — can you sort the lake water out?",
+      "a": "Yes, that's one of the most common reasons Sandal dogs come to me. Lake water leaves a coat flat and a bit smelly, so I bathe, double-rinse and fully dry down to the skin so nothing sits damp. A bath and tidy is usually enough; book a full groom if it needs a trim too."
+    },
+    {
+      "q": "We do the riverside and witches-trail walk — do you get burrs and mud out?",
+      "a": "I do. The Calder riverside path and the wooded witches trail are great for burrs, seeds and caked mud in feathering and tails. I work them out gently rather than dragging at the coat, and if it's badly matted I'll talk you through de-matting versus a tidy clip."
+    },
+    {
       "q": "How far is the salon from Sandal?",
-      "a": "About 2.2 miles — a six-minute drive south to Castle Meadows in Hall Green (WF4). An easy run down the A61."
+      "a": "About 2.2 miles — roughly a six-minute drive south to Castle Meadows in Hall Green (WF4), an easy run down Barnsley Road, the A61. No trip into Wakefield centre needed."
     },
     {
-      "q": "Do you groom dogs after walks at Pugneys?",
-      "a": "Often — a lot of our Sandal customers come straight from a Pugneys walk. Book a bath and tidy or a full groom and we'll sort out the lake water and mud."
+      "q": "Do you cover Sandal Magna, Agbrigg and Belle Vue as well?",
+      "a": "Yes. Sandal and the wider WF2 area are well within my patch and I see regulars from Sandal Magna, Agbrigg and Belle Vue every week. It's the same short hop down the A61 to Hall Green for all of them."
     },
     {
-      "q": "Can I get my Sandal puppy's first groom done with you?",
-      "a": "Yes — the calm home setup is ideal for a puppy's first experience. We keep it short and gentle so they learn the salon is a friendly place. Usually from around 12 weeks, after the second vaccination."
-    },
-    {
-      "q": "Do you cover the WF2 streets around Sandal?",
-      "a": "Yes, Sandal and the wider WF2 area are well within our patch, and we see Sandal regulars every week. The salon is a six-minute run south to Hall Green, WF4, down the A61. No trip into Wakefield centre is needed for a proper groom."
+      "q": "Can you do my Sandal puppy's first groom?",
+      "a": "Happily. The calm one-dog-at-a-time setup is ideal for a first experience — I keep it short and gentle so the pup learns it's a friendly place. Usually from around 12 weeks, after the second vaccination."
     },
     {
       "q": "How do I book my Sandal dog in?",
-      "a": "A quick call, WhatsApp or message to 07926 471552 is all it takes. Keith likes a short chat about your dog's coat, age and temperament first so he can set aside the right amount of time. He will then confirm a drop-off and pick-up that suits you."
-    },
-    {
-      "q": "My doodle mats up after Pugneys, what can you do?",
-      "a": "A full groom will bathe, dry, de-tangle and trim the coat back to comfortable, and Keith works through mats gently rather than rushing. Doodle coats need frequent grooming to stay on top of, so he will advise on a routine that prevents it building up again. Large and doodle grooms start from £60."
+      "a": "A quick call, WhatsApp or message to 07926 471552 is all it takes. I like a short chat about your dog's coat, age and temperament first so I can set aside the right amount of time, then I'll confirm a drop-off and pick-up that suits you."
     }
   ]
 }

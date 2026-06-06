@@ -14,35 +14,52 @@
   "metaDescription": "Dog grooming near Calder Grove — a 6-minute drive to Keith's K9 Care in Hall Green, Wakefield WF4, just off the A636. One dog at a time. Book today.",
   "lead": "Five minutes off the A636, Keith's K9 Care is a calm, one-to-one home dog grooming salon — handy for the Calder Grove side of Crigglestone.",
   "body": [
-    "Calder Grove sits just off the Denby Dale Road, and we're a straightforward six-minute run across via the A636. It's an easy one for anyone on the Calder Grove or western side of Crigglestone — no trip into Wakefield centre, and easy parking right outside the salon on Castle Meadows.",
-    "Keith's K9 Care is a home salon, which for your dog means one thing above all: calm. One dog at a time, in a quiet, purpose-built room — no kennels, no shared dryers, no other dogs barking. It's the right environment for nervous dogs, puppies and seniors, and it means your dog has Keith's undivided attention from arrival to handover.",
-    "Keith is IPET-qualified and grooms every coat and breed — full grooms, puppy first grooms, bath and tidy, nail trims, de-matting and traditional hand stripping. Prices are published in full with breed examples, and confirmed in person before he starts, so you always know what you're paying for.",
-    "For a regular groom or a one-off tidy, getting your Calder Grove dog booked in is a quick call, WhatsApp or message. Keith likes a quick chat about your dog first to set aside the right amount of time."
+    {
+      "heading": "Towpath and riverside walks that follow your dog home",
+      "paragraphs": [
+        "Calder Grove sits where the River Calder and the Calder & Hebble Navigation run side by side, and most local dogs end up on that flat towpath sooner or later — out past the Navigation Inn on Broad Cut Road, which sits on its own island between the river and the canal. It's lovely walking, but canal and river water leaves a coat smelling of silt, and the soft towpath edges churn to mud after rain. If your dog wades in at the bank, that water gets down to the skin and into the feathering on the legs and belly, exactly where it stays damp and starts to smell.",
+        "Follow the towpath far enough and you can reach Pugneys Country Park and its lakes — a popular off-lead loop, and a guaranteed wet, sandy dog by the end. I'll get all of that rinsed out properly and dried right through, not just towelled off."
+      ]
+    },
+    {
+      "heading": "Coxley Valley mud and spring burrs",
+      "paragraphs": [
+        "Plenty of Calder Grove dogs get walked up into Coxley Woods, in the valley running from Horbury Bridge towards Netherton and Middlestown. There's a stream dogs love to paddle and dam-build in, oak and birch overhead, and wet, alder-lined patches that stay claggy long after the path looks dry. In spring it carpets with bluebells and wild garlic — and that undergrowth is where burrs, seeds and twigs work into a longer coat. Bring me a dog that's been crashing through Coxley and I'll de-matt the legs and belly and clear out anything tangled in.",
+        "Closer in, the Crigglestone Viaduct and the field paths off Stocksmoor Lane give muddier, more open going — fine for a quick blast, less fine for a feathered coat in winter."
+      ]
+    },
+    {
+      "heading": "A calm one-dog room, two miles up the A636",
+      "paragraphs": [
+        "I'm a two-mile, six-minute run across the A636 from Calder Grove, with parking right outside on Castle Meadows. It's one dog at a time here in a quiet converted garage — no kennels and no other dogs around — which suits the towpath regulars, nervous rescues and puppies on their first groom.",
+        "I'm IPET-qualified and cover full grooms, bath and tidy, nail trims, de-matting and hand stripping, and I'll confirm the price before I start. To book, give me a quick call or message and tell me a bit about your dog and where they've been walking."
+      ]
+    }
   ],
   "faqs": [
     {
+      "q": "My dog swims in the canal at Broad Cut — can you sort the smell?",
+      "a": "That's a regular one with the towpath dogs near the Navigation. Canal and river water gets right into the undercoat and feathering and leaves that silty smell, so I bath thoroughly, rinse it all out and dry the coat right down to the skin — not just a quick towel-off."
+    },
+    {
+      "q": "Will you clear burrs and matting after Coxley Woods?",
+      "a": "Yes. Coxley Valley undergrowth and the bluebell banks are notorious for working seeds, twigs and burrs into a longer coat, and the stream leaves the legs and belly matted. I'll work it all out gently, de-matt where needed and tidy the feathering."
+    },
+    {
       "q": "How far is the salon from Calder Grove?",
-      "a": "About 2 miles — a six-minute drive across via the A636 to Castle Meadows in Hall Green (WF4)."
-    },
-    {
-      "q": "Is parking easy at the salon?",
-      "a": "Yes — park right outside on Castle Meadows. No high-street traffic and no hunting for a space, unlike a town-centre groomer."
-    },
-    {
-      "q": "Do you do hand stripping for terriers and schnauzers?",
-      "a": "Yes — Keith trained specifically in hand stripping. It keeps a wire coat's colour and texture, and it's the right choice for Border terriers, schnauzers and working cockers."
-    },
-    {
-      "q": "What are your opening hours for Calder Grove?",
-      "a": "Keith grooms Tuesday to Friday, 9am to 5pm, and Saturday until 2pm, closed Sundays and Mondays. As you are a six-minute run across the A636, fitting a groom into the day is no trouble. Hours flex around the appointment, so call or message 07926 471552 to arrange a time."
+      "a": "About two miles — a six-minute drive across the A636 to Castle Meadows in Hall Green, WF4, with parking right outside the door."
     },
     {
       "q": "Do you cover the Calder Grove side of Crigglestone?",
-      "a": "Yes, the Calder Grove and western side of Crigglestone is well within our patch, just off the Denby Dale Road. The salon is a short, direct run via the A636 to Hall Green, WF4, with parking right outside. Plenty of local dogs are on a regular cycle with us."
+      "a": "Yes — Calder Grove and the western side of Crigglestone, just off the Denby Dale Road, are well within my patch. It's a short, direct run across the A636, and plenty of dogs from around here come to me on a regular cycle."
     },
     {
-      "q": "Do you groom nervous or rescue dogs from Calder Grove?",
-      "a": "Yes, the calm one-dog-at-a-time setup is exactly why many nervous and rescue dogs come to us. There are no other dogs barking and no rush, so Keith works at their pace and takes breaks when needed. Tell him the background when you book so he can take it gently."
+      "q": "Do you hand strip wire coats?",
+      "a": "Yes — I trained specifically in hand stripping. It keeps a wire coat's colour and texture, and it's the right choice for terriers, schnauzers and working cockers rather than clipping it off."
+    },
+    {
+      "q": "My dog gets nervous — is it quieter than a busy salon?",
+      "a": "Much quieter. It's one dog at a time in a converted garage with no kennels and no other dogs around, so there's nothing barking and no rush. Tell me the background when you book and I'll work at your dog's pace and take breaks when needed."
     }
   ]
 }
