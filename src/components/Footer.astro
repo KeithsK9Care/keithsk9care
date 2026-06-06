@@ -3,20 +3,19 @@ import site from '../data/site.json';
 import Logo from './Logo.astro';
 const year = new Date().getFullYear();
 
-// Faint paw-print trail in the footer — draws itself as the footer scrolls into view,
-// toed down the page so the walking trail finishes into the footer.
-import { PAW_SHAPES } from '../lib/paw';
+// Faint paw-print trail in the footer — draws itself as the footer scrolls into view.
+const fpawShapes = `<ellipse pathLength="1" cx="32" cy="46" rx="13" ry="10.5"/><ellipse pathLength="1" cx="15" cy="31" rx="5" ry="7"/><ellipse pathLength="1" cx="26" cy="22" rx="5" ry="7.5"/><ellipse pathLength="1" cx="40" cy="22" rx="5" ry="7.5"/><ellipse pathLength="1" cx="50" cy="31" rx="5" ry="7"/>`;
 const fpaws = [
-  { cls: 'fpaw-1', style: 'left:6%;top:26%;width:46px;transform:rotate(126deg)' },
-  { cls: 'fpaw-2', style: 'left:37%;top:62%;width:42px;transform:rotate(144deg)' },
-  { cls: 'fpaw-3', style: 'left:62%;top:22%;width:48px;transform:rotate(122deg)' },
-  { cls: 'fpaw-4', style: 'right:8%;top:64%;width:44px;transform:rotate(138deg)' },
+  { cls: 'fpaw-1', style: 'left:6%;top:26%;width:46px;transform:rotate(-12deg)' },
+  { cls: 'fpaw-2', style: 'left:37%;top:62%;width:42px;transform:rotate(10deg)' },
+  { cls: 'fpaw-3', style: 'left:62%;top:22%;width:48px;transform:rotate(-8deg)' },
+  { cls: 'fpaw-4', style: 'right:8%;top:64%;width:44px;transform:rotate(12deg)' },
 ];
 ---
 <footer class="relative overflow-hidden bg-teal-700 text-teal-50">
   <div class="fpaw-trail absolute inset-0 z-0 pointer-events-none" aria-hidden="true">
     {fpaws.map((p) => (
-      <svg class={`fpaw ${p.cls} absolute text-teal-200 opacity-40`} style={p.style} viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" set:html={PAW_SHAPES} />
+      <svg class={`fpaw ${p.cls} absolute text-teal-200 opacity-40`} style={p.style} viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" set:html={fpawShapes} />
     ))}
   </div>
   <div class="relative z-10 container-wide py-14 grid gap-10 md:grid-cols-4">

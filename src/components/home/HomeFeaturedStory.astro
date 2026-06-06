@@ -4,15 +4,13 @@ import home from '../../data/copy/home.json';
 import StoryCard from '../StoryCard.astro';
 import SectionIntro from '../SectionIntro.astro';
 import Reveal from '../Reveal.astro';
-import PawTrail from '../PawTrail.astro';
 
 const story = stories.find((s: any) => s.featured) || stories[0];
 if (!story) return;
 const fs = home.featuredStory;
 ---
 {story && (
-  <section class="section bg-ink-50/60 relative isolate">
-    <PawTrail variant="right" />
+  <section class="section bg-ink-50/60">
     <div class="container-wide">
       <Reveal class="mb-10">
         <SectionIntro

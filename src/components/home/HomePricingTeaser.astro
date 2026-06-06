@@ -3,13 +3,11 @@ import site from '../../data/site.json';
 import PriceTable from '../PriceTable.astro';
 import Reveal from '../Reveal.astro';
 import SectionIntro from '../SectionIntro.astro';
-import PawTrail from '../PawTrail.astro';
 import copy from '../../data/copy/home.json';
 
 const c = copy.pricingTeaser;
 ---
-<section id="pricing" class="section bg-ink-50/60 relative isolate">
-  <PawTrail variant="right" />
+<section id="pricing" class="section bg-ink-50/60">
   <div class="container-wide">
     <Reveal>
       <SectionIntro eyebrow={c.eyebrow} heading={c.heading} description={c.description} />
