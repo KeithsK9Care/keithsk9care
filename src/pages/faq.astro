@@ -11,6 +11,7 @@ import { faqs } from '../lib/content';
 import { buildFAQSchema, buildBreadcrumbSchema } from '../lib/schemas';
 import ReviewStrip from '../components/ReviewStrip.astro';
 import Section from '../components/Section.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 
 const m = copy.meta;
 const h = copy.hero;
@@ -28,14 +29,16 @@ const general = faqs.filter((f: any) => !used.has(f.q));
 if (general.length) grouped.push({ ...copy.generalGroup, items: general });
 
 const faqSchema = buildFAQSchema(faqs);
-const breadcrumbSchema = buildBreadcrumbSchema([
+const crumbs = [
   { name: "Home", url: `${site.url}/` },
   { name: "FAQ", url: `${site.url}/faq/` },
-]);
+];
+const breadcrumbSchema = buildBreadcrumbSchema(crumbs);
 ---
 <Layout title={m.title} description={m.description} ogImage={m.ogImage} schema={[faqSchema, breadcrumbSchema]}>
 
   <PageHero eyebrow={h.eyebrow} heading={h.heading} body={h.body} align="left" photo={h.photo} photoAlt={h.photoAlt}>
+    <Breadcrumbs crumbs={crumbs} slot="before-eyebrow" />
     <a href={h.ctaPrimaryHref} class="btn-primary">{h.ctaPrimary}</a>
     <a href={h.ctaSecondaryHref} class="btn-secondary">{h.ctaSecondary}</a>
   </PageHero>

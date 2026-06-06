@@ -6,11 +6,12 @@ import LegalPage from '../components/LegalPage.astro';
 import { buildBreadcrumbSchema } from '../lib/schemas';
 
 const m = copy.meta;
-const breadcrumbSchema = buildBreadcrumbSchema([
+const crumbs = [
   { name: "Home", url: `${site.url}/` },
   { name: "Privacy", url: `${site.url}/privacy/` },
-]);
+];
+const breadcrumbSchema = buildBreadcrumbSchema(crumbs);
 ---
 <Layout title={m.title} description={m.description} ogImage={m.ogImage} schema={[breadcrumbSchema]}>
-  <LegalPage copy={copy} />
+  <LegalPage copy={copy} crumbs={crumbs} />
 </Layout>

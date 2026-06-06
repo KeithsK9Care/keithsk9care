@@ -8,6 +8,7 @@ import StoryCard from '../../components/StoryCard.astro';
 import Reveal from '../../components/Reveal.astro';
 import ContactCTASection from '../../components/ContactCTASection.astro';
 import Section from '../../components/Section.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { buildBreadcrumbSchema } from '../../lib/schemas';
 
 const m = copy.meta;
@@ -16,14 +17,16 @@ const cta = copy.contactCta;
 
 const sorted = [...stories].sort((a, b) => (b.date || '').localeCompare(a.date || ''));
 
-const breadcrumbSchema = buildBreadcrumbSchema([
+const crumbs = [
   { name: "Home", url: `${site.url}/` },
   { name: "Groom Stories", url: `${site.url}/groom-stories/` },
-]);
+];
+const breadcrumbSchema = buildBreadcrumbSchema(crumbs);
 ---
 <Layout title={m.title} description={m.description} ogImage={m.ogImage} schema={[breadcrumbSchema]}>
 
   <PageHero eyebrow={h.eyebrow} heading={h.heading} body={h.body} align="left" photo={h.photo} photoAlt={h.photoAlt}>
+    <Breadcrumbs crumbs={crumbs} slot="before-eyebrow" />
     <a href={h.ctaPrimaryHref} class="btn-primary">{h.ctaPrimary}</a>
   </PageHero>
 

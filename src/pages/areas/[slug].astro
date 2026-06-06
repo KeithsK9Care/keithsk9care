@@ -12,6 +12,7 @@ import AreaPill from '../../components/AreaPill.astro';
 import ContactCTASection from '../../components/ContactCTASection.astro';
 import ReviewStrip from '../../components/ReviewStrip.astro';
 import Section from '../../components/Section.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { buildFAQSchema, buildBreadcrumbSchema } from '../../lib/schemas';
 import { seoTitle } from '../../lib/seo';
 import { ogImageFor } from '../../lib/og';
@@ -32,15 +33,17 @@ const description = a.metaDescription
 const others = areas.filter((x: any) => x.slug !== a.slug);
 
 const faqSchema = a.faqs && a.faqs.length ? buildFAQSchema(a.faqs) : null;
-const breadcrumbSchema = buildBreadcrumbSchema([
+const crumbs = [
   { name: "Home", url: `${site.url}/` },
   { name: "Areas we cover", url: `${site.url}/areas/` },
   { name: a.name, url: `${site.url}/areas/${a.slug}/` },
-]);
+];
+const breadcrumbSchema = buildBreadcrumbSchema(crumbs);
 ---
 <Layout title={title} description={description} noindex={!hasContent} ogImage={ogImageFor('areas', a.slug, a.heroPhoto)} ogImageAlt={`Dog grooming in ${a.name} — Keith's K9 Care, Wakefield WF4`} schema={[faqSchema, breadcrumbSchema]}>
 
   <PageHero eyebrow="Areas we cover" heading={`Dog grooming in ${a.name}.`} body={a.lead || a.blurb} align="left">
+    <Breadcrumbs crumbs={crumbs} slot="before-eyebrow" />
     <a href="/book/" class="btn-primary">Book your dog in</a>
     <a href="/pricing/" class="btn-secondary">See prices</a>
   </PageHero>

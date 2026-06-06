@@ -8,6 +8,7 @@ import Section from '../components/Section.astro';
 import ReviewCard from '../components/ReviewCard.astro';
 import Reveal from '../components/Reveal.astro';
 import ContactCTASection from '../components/ContactCTASection.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 import { buildReviewSchema, buildAggregateRatingSchema, buildBreadcrumbSchema } from '../lib/schemas';
 
 const m = copy.meta;
@@ -34,14 +35,16 @@ const reviewSchema = hasReviews ? buildReviewSchema({
   reviews: sorted,
 }) : null;
 const aggregateSchema = hasReviews ? buildAggregateRatingSchema({ businessId, ratings }) : null;
-const breadcrumbSchema = buildBreadcrumbSchema([
+const crumbs = [
   { name: "Home", url: `${site.url}/` },
   { name: "Reviews", url: `${site.url}/reviews/` },
-]);
+];
+const breadcrumbSchema = buildBreadcrumbSchema(crumbs);
 ---
 <Layout title={m.title} description={m.description} ogImage={m.ogImage} schema={[reviewSchema, aggregateSchema, breadcrumbSchema]}>
 
   <PageHero eyebrow={h.eyebrow} heading={heading} body={h.body} align="left" photo={h.photo} photoAlt={h.photoAlt}>
+    <Breadcrumbs crumbs={crumbs} slot="before-eyebrow" />
     <a href={h.ctaPrimaryHref} class="btn-primary">{h.ctaPrimary}</a>
     <a href={h.ctaSecondaryHref} class="btn-secondary">{h.ctaSecondary}</a>
   </PageHero>

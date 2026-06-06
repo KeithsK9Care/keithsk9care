@@ -12,6 +12,7 @@ import ContactCTASection from '../components/ContactCTASection.astro';
 import { buildBreadcrumbSchema } from '../lib/schemas';
 import ReviewStrip from '../components/ReviewStrip.astro';
 import Section from '../components/Section.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 
 const m = copy.meta;
 const h = copy.hero;
@@ -20,14 +21,16 @@ const addOnsIntro = copy.addOnsIntro;
 const how = copy.howPricingWorks;
 const cta = copy.contactCta;
 
-const breadcrumbSchema = buildBreadcrumbSchema([
+const crumbs = [
   { name: "Home", url: `${site.url}/` },
   { name: "Pricing", url: `${site.url}/pricing/` },
-]);
+];
+const breadcrumbSchema = buildBreadcrumbSchema(crumbs);
 ---
 <Layout title={m.title} description={m.description} ogImage={m.ogImage} schema={[breadcrumbSchema]}>
 
   <PageHero eyebrow={h.eyebrow} heading={h.heading} body={h.body} align="left" photo={h.photo} photoAlt={h.photoAlt}>
+    <Breadcrumbs crumbs={crumbs} slot="before-eyebrow" />
     <a href={h.ctaPrimaryHref} class="btn-primary">{h.ctaPrimary}</a>
     <a href={h.ctaSecondaryHref} class="btn-secondary">{h.ctaSecondary}</a>
   </PageHero>

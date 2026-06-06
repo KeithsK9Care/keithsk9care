@@ -1,0 +1,40 @@
+---
+/**
+ * Breadcrumbs — the accessible, VISIBLE trail that mirrors the BreadcrumbList JSON-LD.
+ * Fed the SAME `crumbs` array each page passes to buildBreadcrumbSchema(), so the
+ * visible UI and the schema can never drift. Drop it into a hero's `before-eyebrow`
+ * slot:  <PageHero ...><Breadcrumbs crumbs={crumbs} slot="before-eyebrow" /></PageHero>
+ *
+ * crumb.url is an absolute URL (for the schema); we render the pathname for the link.
+ * The final crumb is the current page — plain text with aria-current="page".
+ */
+export interface Props {
+  crumbs: { name: string; url: string }[];
+  class?: string;
+}
+const { crumbs, class: cls = '' } = Astro.props;
+const href = (u: string) => {
+  try { return new URL(u).pathname; } catch { return u; }
+};
+---
+{crumbs.length > 1 && (
+  <nav aria-label="Breadcrumb" class:list={['mb-4', cls]}>
+    <ol class="flex flex-wrap items-center gap-x-1.5 gap-y-1 text-sm text-ink-600">
+      {crumbs.map((c, i) => {
+        const last = i === crumbs.length - 1;
+        return (
+          <li class="inline-flex items-center gap-1.5">
+            {last ? (
+              <span aria-current="page" class="font-medium text-ink-700">{c.name}</span>
+            ) : (
+              <a href={href(c.url)} class="font-medium text-coral-700 hover:text-coral-800 hover:underline underline-offset-2 transition">{c.name}</a>
+            )}
+            {!last && (
+              <svg aria-hidden="true" class="w-3.5 h-3.5 text-ink-300 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+            )}
+          </li>
+        );
+      })}
+    </ol>
+  </nav>
+)}

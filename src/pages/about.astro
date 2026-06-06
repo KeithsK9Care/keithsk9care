@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import site from '../data/site.json';
 import copy from '../data/copy/about.json';
 import PageHero from '../components/PageHero.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 import SectionIntro from '../components/SectionIntro.astro';
 import Reveal from '../components/Reveal.astro';
 import ContactCTASection from '../components/ContactCTASection.astro';
@@ -42,15 +43,17 @@ const personSchema = buildPersonSchema({
   knowsAbout: ["Dog grooming", "Puppy grooming", "Hand stripping", "De-matting", "Nervous dog handling", "Doodle and cockapoo grooming"],
 });
 
-const breadcrumbSchema = buildBreadcrumbSchema([
+const crumbs = [
   { name: "Home", url: `${site.url}/` },
   { name: "About Keith", url: `${site.url}/about/` },
-]);
+];
+const breadcrumbSchema = buildBreadcrumbSchema(crumbs);
 ---
 <Layout title={m.title} description={m.description} ogImage={m.ogImage} schema={[personSchema, breadcrumbSchema]}>
 
   <!-- HERO -->
   <PageHero eyebrow={h.eyebrow} heading={h.heading} body={h.body} align="left" photo={h.photo} photoAlt={h.photoAlt}>
+    <Breadcrumbs crumbs={crumbs} slot="before-eyebrow" />
     <a href={h.ctaPrimaryHref} class="btn-primary">{h.ctaPrimary}</a>
     <a href={h.ctaSecondaryHref} class="btn-secondary">{h.ctaSecondary}</a>
   </PageHero>

@@ -9,16 +9,18 @@ import AreaPill from '../components/AreaPill.astro';
 import ReviewStrip from '../components/ReviewStrip.astro';
 import ContactCTASection from '../components/ContactCTASection.astro';
 import Section from '../components/Section.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 import { buildBreadcrumbSchema } from '../lib/schemas';
 
 const m = copy.meta;
 const h = copy.hero;
 const overview: string[] = copy.overview ?? [];
 
-const breadcrumbSchema = buildBreadcrumbSchema([
+const crumbs = [
   { name: "Home", url: `${site.url}/` },
   { name: "Areas we cover", url: `${site.url}/areas/` },
-]);
+];
+const breadcrumbSchema = buildBreadcrumbSchema(crumbs);
 ---
 <Layout title={m.title} description={m.description} ogImage={m.ogImage} schema={[breadcrumbSchema]}>
   <PageHero
@@ -29,6 +31,7 @@ const breadcrumbSchema = buildBreadcrumbSchema([
     photo={h.photo}
     photoAlt={h.photoAlt}
   >
+    <Breadcrumbs crumbs={crumbs} slot="before-eyebrow" />
     <a href={h.ctaPrimaryHref} class="btn-primary">{h.ctaPrimary}</a>
     <a href={h.ctaSecondaryHref} class="btn-secondary">{h.ctaSecondary}</a>
   </PageHero>

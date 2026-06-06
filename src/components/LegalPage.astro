@@ -5,12 +5,13 @@
  */
 import site from '../data/site.json';
 import PageHero from './PageHero.astro';
+import Breadcrumbs from './Breadcrumbs.astro';
 import Reveal from './Reveal.astro';
 import Section from './Section.astro';
 import { expandPlaceholders } from '../lib/legal';
 
-interface Props { copy: any; }
-const { copy } = Astro.props;
+interface Props { copy: any; crumbs?: { name: string; url: string }[]; }
+const { copy, crumbs = [] } = Astro.props;
 const h = copy.hero;
 const sections: any[] = copy.sections;
 const ex = (t: string) => expandPlaceholders(t, site);
@@ -19,7 +20,9 @@ const ex = (t: string) => expandPlaceholders(t, site);
   eyebrow={h.eyebrow}
   heading={h.heading}
   body={`${h.body} Last updated ${copy.lastUpdated}.`}
-/>
+>
+  <Breadcrumbs crumbs={crumbs} slot="before-eyebrow" />
+</PageHero>
 
 <Section bg="white">
   <div class="container-tight max-w-2xl">
