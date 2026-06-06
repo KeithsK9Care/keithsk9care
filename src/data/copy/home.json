@@ -39,7 +39,7 @@
       },
       {
         "src": "/assets/photos/cocker-spaniel-after-groom.jpg",
-        "alt": "Cocker spaniel after a hand-stripped groom"
+        "alt": "Cocker spaniel after a full groom"
       },
       {
         "src": "/assets/photos/golden_retriever_happy.jpg",
@@ -61,7 +61,7 @@
   "services": {
     "eyebrow": "Services",
     "heading": "What we do - gently, properly, and at your dog's pace.",
-    "description": "Cockapoos, doodles, terriers, retrievers, small breeds, large breeds- every coat type welcome. From puppy first grooms to senior tidies and hand-stripping."
+    "description": "Cockapoos, doodles, terriers, retrievers, small breeds, large breeds- every coat type welcome. From puppy first grooms to senior tidies and de-matting."
   },
   "pricingTeaser": {
     "eyebrow": "Pricing",
@@ -78,7 +78,7 @@
   "featuredStory": {
     "eyebrow": "Recent Visits",
     "heading": "See some of our most recent customers.",
-    "description": "Before and after walk-throughs of the trickier visits. De-matting, hand-stripping comebacks, first puppy grooms."
+    "description": "Before and after walk-throughs of the trickier visits. De-matting, coat recovery, first puppy grooms."
   },
   "beforeAfter": {
     "eyebrow": "See the difference",

@@ -824,7 +824,7 @@ collections:
       - { name: location,  label: "Where they live",   widget: string,  required: false, hint: "e.g. Newmillerdam" }
       - { name: dog,       label: "Dog's name + breed", widget: string, required: false, hint: "e.g. Bella (cockapoo)" }
       - { name: service,   label: "Service",           widget: select, required: false,
-          options: ["Full Groom","Puppy First Groom","Bath & Tidy","Nail Trim, Ear Clean & Tidy","De-matting & Coat Recovery","Hand Stripping"] }
+          options: ["Full Groom","Puppy First Groom","Bath & Tidy"] }
       - { name: rating,    label: "Stars (1–5)",       widget: number,  min: 1, max: 5, value_type: int, default: 5 }
       - { name: date,      label: "Date",              widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, picker_utc: false }
       - { name: body,      label: "Review",            widget: text,    hint: "What the customer said." }
@@ -849,7 +849,7 @@ collections:
       - { name: dog,         label: "Dog's name",        widget: string,  hint: "e.g. Milo" }
       - { name: breed,       label: "Breed & age",       widget: string,  hint: "e.g. Cockapoo, 3 years" }
       - { name: service,     label: "Service",           widget: select,
-          options: ["Full Groom","Puppy First Groom","Bath & Tidy","Nail Trim, Ear Clean & Tidy","De-matting & Coat Recovery","Hand Stripping","De-matting & Full Groom"] }
+          options: ["Full Groom","Puppy First Groom","Bath & Tidy"] }
       - { name: area,        label: "Where they live",   widget: string,  hint: "e.g. Newmillerdam" }
       - { name: date,        label: "Date of groom",     widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, picker_utc: false }
       - { name: summary,     label: "Short preview",     widget: text,    hint: "1–2 sentences shown on the card." }

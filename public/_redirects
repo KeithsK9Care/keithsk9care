@@ -1,0 +1,8 @@
+# 301s for retired service pages (now surcharges / included in grooms).
+# Keeps any indexed or externally-linked URLs alive. Cloudflare Pages reads this file.
+/services/hand-stripping   /services/   301
+/services/hand-stripping/  /services/   301
+/services/de-matting       /pricing/    301
+/services/de-matting/      /pricing/    301
+/services/nail-trim        /pricing/    301
+/services/nail-trim/       /pricing/    301
