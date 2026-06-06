@@ -25,6 +25,7 @@ pnpm-debug.log*
 # these on every build (locally and on Cloudflare), so keep originals in git, not derivatives.
 public/assets/photos/*.avif
 public/assets/photos/*.webp
+public/assets/photos/*-400.jpg
 public/assets/photos/*-800.jpg
 public/assets/photos/*-1200.jpg
 public/assets/photos/*-1600.jpg
