@@ -11,6 +11,7 @@ import FAQItem from '../../components/FAQItem.astro';
 import AreaPill from '../../components/AreaPill.astro';
 import ContactCTASection from '../../components/ContactCTASection.astro';
 import ReviewStrip from '../../components/ReviewStrip.astro';
+import Section from '../../components/Section.astro';
 import { buildFAQSchema, buildBreadcrumbSchema } from '../../lib/schemas';
 import { seoTitle } from '../../lib/seo';
 import { ogImageFor } from '../../lib/og';
@@ -59,17 +60,17 @@ const breadcrumbSchema = buildBreadcrumbSchema([
 
   <!-- BODY -->
   {hasContent && (
-    <section class="section pt-8">
+    <Section bg="white" class="pt-8">
       <div class="container-tight">
         <Reveal class="space-y-5 text-lg text-ink-700 leading-relaxed">
           {a.body.map((p: string) => <p>{p}</p>)}
         </Reveal>
       </div>
-    </section>
+    </Section>
   )}
 
   <!-- SERVICES -->
-  <section class="section bg-teal-50/60">
+  <Section bg="teal">
     <div class="container-wide">
       <Reveal>
         <SectionIntro
@@ -84,11 +85,11 @@ const breadcrumbSchema = buildBreadcrumbSchema([
         ))}
       </div>
     </div>
-  </section>
+  </Section>
 
   <!-- AREA FAQ -->
   {a.faqs && a.faqs.length > 0 && (
-    <section class="section">
+    <Section bg="white">
       <div class="container-tight">
         <Reveal>
           <SectionIntro eyebrow="Frequently asked" heading={`Grooming in ${a.name} — your questions`} />
@@ -99,11 +100,11 @@ const breadcrumbSchema = buildBreadcrumbSchema([
           ))}
         </div>
       </div>
-    </section>
+    </Section>
   )}
 
   <!-- OTHER AREAS -->
-  <section class="section bg-ink-50/60">
+  <Section bg="ink">
     <div class="container-tight">
       <Reveal>
         <SectionIntro eyebrow="Nearby" heading="Other areas we cover" />
@@ -112,7 +113,7 @@ const breadcrumbSchema = buildBreadcrumbSchema([
         {others.map((x: any) => <AreaPill area={x} />)}
       </Reveal>
     </div>
-  </section>
+  </Section>
 
   <!-- CONTACT CTA -->
   <ContactCTASection heading={`Book a groom near ${a.name}`} body="Drop Keith a quick message about your dog — coat, age, any nerves — and he'll find the right slot." />

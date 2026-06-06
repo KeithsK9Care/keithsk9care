@@ -1,4 +1,5 @@
 ---
+import Section from '../Section.astro';
 import site from '../../data/site.json';
 import PriceTable from '../PriceTable.astro';
 import Reveal from '../Reveal.astro';
@@ -7,7 +8,7 @@ import copy from '../../data/copy/home.json';
 
 const c = copy.pricingTeaser;
 ---
-<section id="pricing" class="section bg-ink-50/60">
+<Section bg="ink" id="pricing">
   <div class="container-wide">
     <Reveal>
       <SectionIntro eyebrow={c.eyebrow} heading={c.heading} description={c.description} />
@@ -24,4 +25,4 @@ const c = copy.pricingTeaser;
       </PriceTable>
     </Reveal>
   </div>
-</section>
+</Section>

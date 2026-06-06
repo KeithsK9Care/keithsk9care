@@ -8,6 +8,7 @@ import Reveal from '../components/Reveal.astro';
 import AreaPill from '../components/AreaPill.astro';
 import ReviewStrip from '../components/ReviewStrip.astro';
 import ContactCTASection from '../components/ContactCTASection.astro';
+import Section from '../components/Section.astro';
 import { buildBreadcrumbSchema } from '../lib/schemas';
 
 const m = copy.meta;
@@ -34,7 +35,7 @@ const breadcrumbSchema = buildBreadcrumbSchema([
 
   <ReviewStrip />
 
-  <section class="section">
+  <Section bg="white">
     <div class="container-wide">
       <Reveal class="flex flex-wrap gap-2">
         {areas.map(a => <AreaPill area={a} />)}
@@ -44,17 +45,17 @@ const breadcrumbSchema = buildBreadcrumbSchema([
         <a href="/book/" class="btn-primary">{copy.ctaText}</a>
       </Reveal>
     </div>
-  </section>
+  </Section>
 
   <!-- COVERAGE OVERVIEW -->
   {overview.length > 0 && (
-    <section class="section bg-teal-50/60">
+    <Section bg="teal">
       <div class="container-tight">
         <div class="space-y-5 text-lg text-ink-700 leading-relaxed">
           {overview.map((p) => <p>{p}</p>)}
         </div>
       </div>
-    </section>
+    </Section>
   )}
 
   <ContactCTASection heading={copy.contactCta.heading} body={copy.contactCta.body} />

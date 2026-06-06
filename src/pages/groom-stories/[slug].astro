@@ -8,6 +8,7 @@ import DetailHero from '../../components/DetailHero.astro';
 import SectionIntro from '../../components/SectionIntro.astro';
 import Reveal from '../../components/Reveal.astro';
 import ContactCTASection from '../../components/ContactCTASection.astro';
+import Section from '../../components/Section.astro';
 import { buildBreadcrumbSchema } from '../../lib/schemas';
 
 export function getStaticPaths() {
@@ -47,7 +48,7 @@ const breadcrumbSchema = buildBreadcrumbSchema([
 
   <!-- BEFORE / AFTER -->
   {s.beforePhoto && s.afterPhoto && (
-    <section class="section">
+    <Section bg="white">
       <div class="container-wide">
         <Reveal>
           <SectionIntro eyebrow="Before & after" heading={`${s.service}`} description={s.summary} />
@@ -67,12 +68,12 @@ const breadcrumbSchema = buildBreadcrumbSchema([
           </Reveal>
         </div>
       </div>
-    </section>
+    </Section>
   )}
 
   <!-- BODY -->
   {s.story && s.story.length > 0 && (
-    <section class="section">
+    <Section bg="teal">
       <div class="container-tight">
         <Reveal>
           <SectionIntro eyebrow="The story" heading={`What we did for ${s.dog}`} />
@@ -81,7 +82,7 @@ const breadcrumbSchema = buildBreadcrumbSchema([
           {s.story.split('\n\n').map((p: string) => <p>{p}</p>)}
         </Reveal>
       </div>
-    </section>
+    </Section>
   )}
 
   <!-- CTA -->

@@ -1,0 +1,28 @@
+---
+// Section — the single source of truth for a page band (background + vertical rhythm).
+//
+// Replaces hand-coded `<section class="section bg-teal-50/60">` wrappers so the
+// alternating-band rhythm lives in ONE place and can't drift (e.g. two same-colour
+// bands back-to-back). `bg` is a NAMED ENUM mapping to STATIC class strings — this is
+// deliberate: there is no Tailwind safelist, so a free-form `bg` string would be
+// purged. Keep the inner container (`container-wide` / `container-tight`) in the caller.
+//
+//   <Section bg="teal">…</Section>            // tinted band
+//   <Section bg="white" id="pricing">…</Section>
+//   <Section bg="ink" class="pt-0">…</Section> // extra classes pass through
+//   <Section bg="none" pad={false}>…</Section> // no band, no default padding
+export interface Props {
+  bg?: 'white' | 'teal' | 'ink' | 'none';
+  id?: string;
+  class?: string;
+  pad?: boolean; // false → omit the default .section padding (caller controls spacing)
+}
+const { bg = 'white', id, class: cls = '', pad = true } = Astro.props;
+const BG: Record<string, string> = {
+  white: '',
+  teal: 'bg-teal-50/60',
+  ink: 'bg-ink-50/60',
+  none: '',
+};
+---
+<section class:list={[pad && 'section', BG[bg], cls]} id={id}><slot /></section>

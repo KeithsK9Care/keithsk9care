@@ -1,4 +1,5 @@
 ---
+import Section from '../Section.astro';
 import copy from '../../data/copy/home.json';
 import Reveal from '../Reveal.astro';
 import BeforeAfterSlider from '../BeforeAfterSlider.astro';
@@ -7,7 +8,7 @@ const ba: any = (copy as any).beforeAfter;
 const show = ba && ba.beforePhoto && ba.afterPhoto;
 ---
 {show && (
-  <section class="section">
+  <Section bg="white">
     <div class="container-tight grid md:grid-cols-5 gap-10 md:gap-12 items-center">
       <Reveal class="md:col-span-2">
         {ba.eyebrow && (
@@ -28,5 +29,5 @@ const show = ba && ba.beforePhoto && ba.afterPhoto;
         />
       </Reveal>
     </div>
-  </section>
+  </Section>
 )}

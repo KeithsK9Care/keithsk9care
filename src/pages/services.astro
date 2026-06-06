@@ -6,6 +6,7 @@ import copy from '../data/copy/services.json';
 import SectionIntro from '../components/SectionIntro.astro';
 import Reveal from '../components/Reveal.astro';
 import ServiceCard from '../components/ServiceCard.astro';
+import Section from '../components/Section.astro';
 import PageHero from '../components/PageHero.astro';
 import ContactCTASection from '../components/ContactCTASection.astro';
 import { buildBreadcrumbSchema } from '../lib/schemas';
@@ -32,7 +33,7 @@ const breadcrumbSchema = buildBreadcrumbSchema([
   <ReviewStrip />
 
   <!-- SERVICES GRID -->
-  <section class="section">
+  <Section bg="white">
     <div class="container-wide">
       <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {services.map((s, i) => (
@@ -42,19 +43,19 @@ const breadcrumbSchema = buildBreadcrumbSchema([
         ))}
       </div>
     </div>
-  </section>
+  </Section>
 
   <!-- OVERVIEW -->
   {overview.length > 0 && (
-    <section class="section pt-0">
+    <Section bg="white" class="pt-0">
       <div class="container-tight space-y-5 text-lg text-ink-700 leading-relaxed">
         {overview.map((p) => <p>{p}</p>)}
       </div>
-    </section>
+    </Section>
   )}
 
   <!-- TRANSPARENCY CALLOUT -->
-  <section class="section bg-teal-50/60">
+  <Section bg="teal">
     <div class="container-tight text-center">
       <Reveal>
         <SectionIntro
@@ -66,7 +67,7 @@ const breadcrumbSchema = buildBreadcrumbSchema([
         <a href={trans.ctaHref} class="btn-primary mt-7">{trans.ctaText}</a>
       </Reveal>
     </div>
-  </section>
+  </Section>
 
   <!-- CONTACT CTA -->
   <ContactCTASection heading={cta.heading} body={cta.body} />

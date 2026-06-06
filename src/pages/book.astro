@@ -6,6 +6,7 @@ import copy from '../data/copy/book.json';
 import SectionIntro from '../components/SectionIntro.astro';
 import PageHero from '../components/PageHero.astro';
 import Reveal from '../components/Reveal.astro';
+import Section from '../components/Section.astro';
 
 const m = copy.meta;
 const h = copy.hero;
@@ -164,7 +165,7 @@ const waMsg = encodeURIComponent(qc.whatsapp.prefilledMessage || "Hi Keith, I'd 
   </section>
 
   <!-- LOCATION -->
-  <section class="section bg-ink-50/60">
+  <Section bg="ink">
     <div class="container-tight">
       <Reveal>
         <SectionIntro eyebrow={loc.eyebrow} heading={loc.heading} />
@@ -195,7 +196,7 @@ const waMsg = encodeURIComponent(qc.whatsapp.prefilledMessage || "Hi Keith, I'd 
         </div>
       </Reveal>
     </div>
-  </section>
+  </Section>
 </Layout>
 
 <script is:inline>

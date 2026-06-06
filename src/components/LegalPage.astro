@@ -6,6 +6,7 @@
 import site from '../data/site.json';
 import PageHero from './PageHero.astro';
 import Reveal from './Reveal.astro';
+import Section from './Section.astro';
 import { expandPlaceholders } from '../lib/legal';
 
 interface Props { copy: any; }
@@ -20,7 +21,7 @@ const ex = (t: string) => expandPlaceholders(t, site);
   body={`${h.body} Last updated ${copy.lastUpdated}.`}
 />
 
-<section class="section">
+<Section bg="white">
   <div class="container-tight max-w-2xl">
     <Reveal class="space-y-6 text-ink-700 leading-relaxed">
       {sections.map((s: any, i: number) => (
@@ -37,4 +38,4 @@ const ex = (t: string) => expandPlaceholders(t, site);
       ))}
     </Reveal>
   </div>
-</section>
+</Section>

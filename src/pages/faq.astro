@@ -10,6 +10,7 @@ import ContactCTASection from '../components/ContactCTASection.astro';
 import { faqs } from '../lib/content';
 import { buildFAQSchema, buildBreadcrumbSchema } from '../lib/schemas';
 import ReviewStrip from '../components/ReviewStrip.astro';
+import Section from '../components/Section.astro';
 
 const m = copy.meta;
 const h = copy.hero;
@@ -43,7 +44,7 @@ const breadcrumbSchema = buildBreadcrumbSchema([
 
   <!-- GROUPED FAQS -->
   {grouped.map((g: any, gi: number) => (
-    <section class:list={["section", gi % 2 === 0 ? '' : 'bg-teal-50/60']}>
+    <Section bg={gi % 2 === 0 ? 'white' : 'teal'}>
       <div class="container-tight">
         <Reveal class="mb-8">
           <SectionIntro eyebrow={g.eyebrow} heading={g.heading} />
@@ -56,7 +57,7 @@ const breadcrumbSchema = buildBreadcrumbSchema([
           ))}
         </div>
       </div>
-    </section>
+    </Section>
   ))}
 
   <!-- CONTACT CTA -->

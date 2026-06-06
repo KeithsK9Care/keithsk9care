@@ -4,6 +4,7 @@ import site from '../data/site.json';
 import { reviews } from '../lib/content';
 import copy from '../data/copy/reviews.json';
 import PageHero from '../components/PageHero.astro';
+import Section from '../components/Section.astro';
 import ReviewCard from '../components/ReviewCard.astro';
 import Reveal from '../components/Reveal.astro';
 import ContactCTASection from '../components/ContactCTASection.astro';
@@ -45,7 +46,7 @@ const breadcrumbSchema = buildBreadcrumbSchema([
     <a href={h.ctaSecondaryHref} class="btn-secondary">{h.ctaSecondary}</a>
   </PageHero>
 
-  <section class="section">
+  <Section bg="white">
     <div class="container-wide">
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {sorted.map((r, i) => (
@@ -55,7 +56,7 @@ const breadcrumbSchema = buildBreadcrumbSchema([
         ))}
       </div>
     </div>
-  </section>
+  </Section>
 
   <ContactCTASection heading={cta.heading} body={cta.body} />
 </Layout>

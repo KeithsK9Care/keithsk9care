@@ -1,4 +1,5 @@
 ---
+import Section from '../Section.astro';
 import FAQItem from '../FAQItem.astro';
 import SectionIntro from '../SectionIntro.astro';
 import Reveal from '../Reveal.astro';
@@ -9,7 +10,7 @@ export interface Props {
 }
 const { faqs } = Astro.props;
 ---
-<section class="section">
+<Section bg="white">
   <div class="container-tight">
     <Reveal class="mb-10">
       <SectionIntro eyebrow={c.eyebrow} heading={c.heading} />
@@ -29,4 +30,4 @@ const { faqs } = Astro.props;
       </p>
     </Reveal>
   </div>
-</section>
+</Section>

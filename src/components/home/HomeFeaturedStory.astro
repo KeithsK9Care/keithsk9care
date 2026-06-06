@@ -1,4 +1,5 @@
 ---
+import Section from '../Section.astro';
 import { stories } from '../../lib/content';
 import home from '../../data/copy/home.json';
 import StoryCard from '../StoryCard.astro';
@@ -10,7 +11,7 @@ if (!story) return;
 const fs = home.featuredStory;
 ---
 {story && (
-  <section class="section bg-ink-50/60">
+  <Section bg="ink">
     <div class="container-wide">
       <Reveal class="mb-10">
         <SectionIntro
@@ -30,5 +31,5 @@ const fs = home.featuredStory;
         </p>
       </Reveal>
     </div>
-  </section>
+  </Section>
 )}

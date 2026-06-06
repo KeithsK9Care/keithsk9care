@@ -1,4 +1,5 @@
 ---
+import Section from '../Section.astro';
 import PhotoGrid from '../PhotoGrid.astro';
 import SectionIntro from '../SectionIntro.astro';
 import Reveal from '../Reveal.astro';
@@ -7,11 +8,11 @@ import copy from '../../data/copy/home.json';
 const c = copy.salon;
 const photos = copy.images.salonPhotos;
 ---
-<section class="section">
+<Section bg="white">
   <div class="container-wide">
     <Reveal class="mb-10">
       <SectionIntro eyebrow={c.eyebrow} heading={c.heading} description={c.description} />
     </Reveal>
     <PhotoGrid photos={photos} cols={3} />
   </div>
-</section>
+</Section>
