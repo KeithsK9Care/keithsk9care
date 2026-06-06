@@ -3,11 +3,13 @@ import { areas } from '../../lib/content';
 import AreaPill from '../AreaPill.astro';
 import SectionIntro from '../SectionIntro.astro';
 import Reveal from '../Reveal.astro';
+import PawTrail from '../PawTrail.astro';
 import copy from '../../data/copy/home.json';
 
 const c = copy.areas;
 ---
-<section class="section bg-teal-50/60">
+<section class="section bg-teal-50/60 relative isolate">
+  <PawTrail variant="left" />
   <div class="container-wide">
     <Reveal>
       <SectionIntro eyebrow={c.eyebrow} heading={c.heading} description={c.description} />

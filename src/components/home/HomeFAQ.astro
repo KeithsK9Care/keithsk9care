@@ -2,6 +2,7 @@
 import FAQItem from '../FAQItem.astro';
 import SectionIntro from '../SectionIntro.astro';
 import Reveal from '../Reveal.astro';
+import PawTrail from '../PawTrail.astro';
 import copy from '../../data/copy/home.json';
 const c = copy.faq;
 export interface Props {
@@ -9,7 +10,8 @@ export interface Props {
 }
 const { faqs } = Astro.props;
 ---
-<section class="section">
+<section class="section relative isolate">
+  <PawTrail variant="right" />
   <div class="container-tight">
     <Reveal class="mb-10">
       <SectionIntro eyebrow={c.eyebrow} heading={c.heading} />

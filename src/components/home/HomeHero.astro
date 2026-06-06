@@ -10,16 +10,17 @@ import StarRating from '../StarRating.astro';
 const reviewCount = reviews.length;
 const avgRating = reviewCount > 0 ? (reviews.reduce((a: number, r: any) => a + r.rating, 0) / reviewCount).toFixed(1) : null;
 
-// Faint paw-print trail in the hero background — draws itself on scroll.
-const pawShapes = `<ellipse pathLength="1" cx="32" cy="46" rx="13" ry="10.5"/><ellipse pathLength="1" cx="15" cy="31" rx="5" ry="7"/><ellipse pathLength="1" cx="26" cy="22" rx="5" ry="7.5"/><ellipse pathLength="1" cx="40" cy="22" rx="5" ry="7.5"/><ellipse pathLength="1" cx="50" cy="31" rx="5" ry="7"/>`;
+// Faint paw-print trail across the lower hero — draws itself on scroll, toed down the page
+// to lead into the walking trail that continues through every section below.
+import { PAW_SHAPES } from '../../lib/paw';
 const paws = [
-  { cls: 'paw-1', style: 'left:4%;top:74%;width:46px;transform:rotate(-14deg)' },
-  { cls: 'paw-2', style: 'left:13%;top:85%;width:42px;transform:rotate(10deg)' },
-  { cls: 'paw-3', style: 'left:23%;top:76%;width:48px;transform:rotate(-8deg)' },
-  { cls: 'paw-4', style: 'left:33%;top:87%;width:42px;transform:rotate(13deg)' },
-  { cls: 'paw-5', style: 'left:43%;top:77%;width:46px;transform:rotate(-6deg)' },
-  { cls: 'paw-6', style: 'left:53%;top:86%;width:44px;transform:rotate(11deg)' },
-  { cls: 'paw-7', style: 'left:63%;top:78%;width:48px;transform:rotate(-5deg)' },
+  { cls: 'paw-1', style: 'left:4%;top:74%;width:46px;transform:rotate(122deg)' },
+  { cls: 'paw-2', style: 'left:13%;top:85%;width:42px;transform:rotate(140deg)' },
+  { cls: 'paw-3', style: 'left:23%;top:76%;width:48px;transform:rotate(118deg)' },
+  { cls: 'paw-4', style: 'left:33%;top:87%;width:42px;transform:rotate(136deg)' },
+  { cls: 'paw-5', style: 'left:43%;top:77%;width:46px;transform:rotate(124deg)' },
+  { cls: 'paw-6', style: 'left:53%;top:86%;width:44px;transform:rotate(142deg)' },
+  { cls: 'paw-7', style: 'left:63%;top:78%;width:48px;transform:rotate(120deg)' },
 ];
 ---
 <section class="relative overflow-hidden bg-gradient-to-b from-teal-50 via-white to-teal-50 border-b border-teal-100/80">
@@ -31,7 +32,7 @@ const paws = [
   <!-- Faint paw-print trail — draws itself on scroll -->
   <div class="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
     {paws.map((p) => (
-      <svg class={`paw ${p.cls} absolute text-coral-300 opacity-50`} style={p.style} viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" set:html={pawShapes} />
+      <svg class={`paw ${p.cls} absolute text-coral-300 opacity-50`} style={p.style} viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" set:html={PAW_SHAPES} />
     ))}
   </div>
 

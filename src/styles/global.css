@@ -176,3 +176,16 @@
     .fpaw-4 > * { animation-range: entry 45% cover 70%; }
   }
 }
+
+/* Section paw-trail — prints "walk down the page", each drawing itself as its section scrolls
+   into view (view timeline). Staggered 1->2->3 so the paws step in sequence. Static + drawn
+   where view timelines are unsupported or motion is reduced. */
+.paw-walk > * { stroke-dasharray: 1; }
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .paw-walk > * { stroke-dashoffset: 1; animation: pawDraw linear both; animation-timeline: view(); }
+    .paw-walk-1 > * { animation-range: entry 8% cover 38%; }
+    .paw-walk-2 > * { animation-range: entry 22% cover 52%; }
+    .paw-walk-3 > * { animation-range: entry 36% cover 66%; }
+  }
+}
