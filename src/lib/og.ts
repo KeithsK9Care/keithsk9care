@@ -5,8 +5,8 @@ import path from 'node:path';
  * Resolve the social-share (og:image) for a per-entry detail page at BUILD time.
  *
  * Prefers the pre-generated branded 1200×630 card. If that card doesn't exist
- * — e.g. a service or area added via the CMS that no one has generated a card
- * for yet — it falls back to the entry's own hero photo, then to the default
+ *, e.g. a service or area added via the CMS that no one has generated a card
+ * for yet, it falls back to the entry's own hero photo, then to the default
  * branded card. The result: a newly CMS-created entry never emits a broken /
  * 404 social-share image; it just gets a sensible branded fallback instead.
  *

@@ -26,9 +26,9 @@ const a: any = area;
 const isHome = a.distanceMiles === 0;
 const hasContent = Array.isArray(a.body) && a.body.length > 0;
 
-const title = seoTitle(`Dog grooming in ${a.name}`, [" — calm home salon, Wakefield", " — home salon, WF4", " — Wakefield WF4"]);
+const title = seoTitle(`Dog grooming in ${a.name}`, [", calm home salon, Wakefield", ", home salon, WF4", ", Wakefield WF4"]);
 const description = a.metaDescription
-  || `IPET-qualified, one-to-one dog grooming a short drive from ${a.name} — a calm home salon in Hall Green, Wakefield WF4. See prices and book your dog in.`;
+  || `IPET-qualified, one-to-one dog grooming a short drive from ${a.name}, a calm home salon in Hall Green, Wakefield WF4. See prices and book your dog in.`;
 
 const others = areas.filter((x: any) => x.slug !== a.slug);
 
@@ -40,7 +40,7 @@ const crumbs = [
 ];
 const breadcrumbSchema = buildBreadcrumbSchema(crumbs);
 ---
-<Layout title={title} description={description} noindex={!hasContent} ogImage={ogImageFor('areas', a.slug, a.heroPhoto)} ogImageAlt={`Dog grooming in ${a.name} — Keith's K9 Care, Wakefield WF4`} schema={[faqSchema, breadcrumbSchema]}>
+<Layout title={title} description={description} noindex={!hasContent} ogImage={ogImageFor('areas', a.slug, a.heroPhoto)} ogImageAlt={`Dog grooming in ${a.name}, Keith's K9 Care, Wakefield WF4`} schema={[faqSchema, breadcrumbSchema]}>
 
   <PageHero eyebrow="Areas we cover" heading={`Dog grooming in ${a.name}.`} body={a.lead || a.blurb} align="left">
     <Breadcrumbs crumbs={crumbs} slot="before-eyebrow" />
@@ -88,7 +88,7 @@ const breadcrumbSchema = buildBreadcrumbSchema(crumbs);
         <SectionIntro
           eyebrow="What we do"
           heading={`Grooming services for ${a.name} dogs`}
-          description="Every coat type welcome — from a puppy's first groom to a full clip and tidy. One dog at a time, in a quiet home salon."
+          description="Every coat type welcome, from a puppy's first groom to a full clip and tidy. One dog at a time, in a quiet home salon."
         />
       </Reveal>
       <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -104,7 +104,7 @@ const breadcrumbSchema = buildBreadcrumbSchema(crumbs);
     <Section bg="white">
       <div class="container-tight">
         <Reveal>
-          <SectionIntro eyebrow="Frequently asked" heading={`Grooming in ${a.name} — your questions`} />
+          <SectionIntro eyebrow="Frequently asked" heading={`Grooming in ${a.name}, your questions`} />
         </Reveal>
         <div class="mt-8 space-y-3">
           {a.faqs.map((f: any, i: number) => (
@@ -128,5 +128,5 @@ const breadcrumbSchema = buildBreadcrumbSchema(crumbs);
   </Section>
 
   <!-- CONTACT CTA -->
-  <ContactCTASection heading={`Book a groom near ${a.name}`} body="Drop Keith a quick message about your dog — coat, age, any nerves — and he'll find the right slot." />
+  <ContactCTASection heading={`Book a groom near ${a.name}`} body="Drop Keith a quick message about your dog, coat, age, any nerves, and he'll find the right slot." />
 </Layout>

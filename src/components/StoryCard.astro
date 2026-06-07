@@ -1,6 +1,6 @@
 ---
 /**
- * StoryCard — a linked groom-story tile.
+ * StoryCard, a linked groom-story tile.
  *  - default: vertical card for the /groom-stories/ grid (h2)
  *  - featured: wide 2-column card for the homepage band (h3 + "Featured" badge)
  */
@@ -12,7 +12,7 @@ interface Props {
 }
 const { story: s, featured = false } = Astro.props;
 const href = `/groom-stories/${s.slug}/`;
-const title = s.title || `${s.dog} — ${s.breed}`;
+const title = s.title || `${s.dog}, ${s.breed}`;
 const blurb = s.description || s.summary;
 ---
 {featured ? (

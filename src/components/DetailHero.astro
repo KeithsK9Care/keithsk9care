@@ -1,6 +1,6 @@
 ---
 /**
- * DetailHero — the split (text + tall image) hero shared by the service-detail
+ * DetailHero, the split (text + tall image) hero shared by the service-detail
  * and groom-story-detail pages. The middle block (price/meta line) and the CTAs
  * are passed as the default slot so each page supplies its own.
  */
@@ -28,10 +28,8 @@ const { backHref, backLabel, heading, image, imageAlt } = Astro.props;
       <h1 class="mt-3 text-4xl md:text-5xl lg:text-6xl leading-[1.05]">{heading}</h1>
       <slot />
     </Reveal>
-    <Reveal delay={120}>
-      <div class="relative rounded-3xl overflow-hidden ring-1 ring-ink-100 shadow-xl shadow-teal-900/10 aspect-[4/5]">
-        {image && <Picture src={image} size={800} alt={imageAlt} width={800} height={1000} priority />}
-      </div>
-    </Reveal>
+    <div class="relative rounded-3xl overflow-hidden ring-1 ring-ink-100 shadow-xl shadow-teal-900/10 aspect-[4/5]">
+      {image && <Picture src={image} size={800} alt={imageAlt} width={800} height={1000} priority />}
+    </div>
   </div>
 </section>

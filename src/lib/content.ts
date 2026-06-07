@@ -3,12 +3,12 @@
  *
  * Each folder under src/data/<collection>/ holds one JSON file per entry (managed
  * in the CMS as a folder collection). This module globs them into ready-to-use,
- * sorted arrays so pages and components import a single named list — exactly as
+ * sorted arrays so pages and components import a single named list, exactly as
  * they did when the data lived in one big array file.
  *
  * Ordering:
- *   services / areas / faqs   — by an explicit `order` field (editable in the CMS)
- *   reviews / groom-stories   — newest first, by `date`
+ *   services / areas / faqs  , by an explicit `order` field (editable in the CMS)
+ *   reviews / groom-stories  , newest first, by `date`
  */
 
 type Entry = Record<string, any>;

@@ -1,9 +1,9 @@
 ---
-// Section — the single source of truth for a page band (background + vertical rhythm).
+// Section, the single source of truth for a page band (background + vertical rhythm).
 //
 // Replaces hand-coded `<section class="section bg-teal-50/60">` wrappers so the
 // alternating-band rhythm lives in ONE place and can't drift (e.g. two same-colour
-// bands back-to-back). `bg` is a NAMED ENUM mapping to STATIC class strings — this is
+// bands back-to-back). `bg` is a NAMED ENUM mapping to STATIC class strings, this is
 // deliberate: there is no Tailwind safelist, so a free-form `bg` string would be
 // purged. Keep the inner container (`container-wide` / `container-tight`) in the caller.
 //

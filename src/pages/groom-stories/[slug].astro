@@ -20,13 +20,13 @@ const { story } = Astro.props;
 const s = story;
 const matchedService = services.find((sv: any) => sv.name === s.service);
 
-const title = `${s.title || `${s.dog} — ${s.service}`} | Keith's K9 Care`;
-const description = (s.description || `${s.dog} (${s.breed}) — ${s.summary}`).substring(0, 167);
+const title = `${s.title || `${s.dog}, ${s.service}`} | Keith's K9 Care`;
+const description = (s.description || `${s.dog} (${s.breed}), ${s.summary}`).substring(0, 167);
 
 const crumbs = [
   { name: "Home", url: `${site.url}/` },
   { name: "Groom Stories", url: `${site.url}/groom-stories/` },
-  { name: `${s.dog} — ${s.service}`, url: `${site.url}/groom-stories/${s.slug}/` },
+  { name: `${s.dog}, ${s.service}`, url: `${site.url}/groom-stories/${s.slug}/` },
 ];
 const breadcrumbSchema = buildBreadcrumbSchema(crumbs);
 ---
@@ -60,13 +60,13 @@ const breadcrumbSchema = buildBreadcrumbSchema(crumbs);
           <Reveal>
             <div class="relative rounded-2xl overflow-hidden aspect-square ring-1 ring-ink-100">
               <span class="absolute top-3 left-3 z-10 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-ink-800 ring-1 ring-ink-100">Before</span>
-              <Picture src={s.beforePhoto} size={800} alt={`${s.dog} before — ${s.service}`} width={800} height={800} />
+              <Picture src={s.beforePhoto} size={800} alt={`${s.dog} before, ${s.service}`} width={800} height={800} />
             </div>
           </Reveal>
           <Reveal delay={100}>
             <div class="relative rounded-2xl overflow-hidden aspect-square ring-1 ring-ink-100">
               <span class="absolute top-3 left-3 z-10 rounded-full bg-coral-700 text-white px-3 py-1 text-xs font-semibold">After</span>
-              <Picture src={s.afterPhoto} size={800} alt={`${s.dog} after — ${s.service}`} width={800} height={800} />
+              <Picture src={s.afterPhoto} size={800} alt={`${s.dog} after, ${s.service}`} width={800} height={800} />
             </div>
           </Reveal>
         </div>

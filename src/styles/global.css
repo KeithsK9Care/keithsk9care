@@ -32,7 +32,7 @@
   .container-wide {
     @apply mx-auto max-w-6xl px-5 md:px-8;
   }
-  /* Primary CTA — coral gradient, coloured shadow, lift on hover, scale on press */
+  /* Primary CTA, coral gradient, coloured shadow, lift on hover, scale on press */
   .btn-primary {
     @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 font-semibold text-white relative overflow-hidden
            bg-gradient-to-br from-coral-600 to-coral-800
@@ -51,7 +51,7 @@
   }
   .btn-primary > * { @apply relative; }
 
-  /* Secondary CTA — translucent glass + teal border, lift on hover */
+  /* Secondary CTA, translucent glass + teal border, lift on hover */
   .btn-secondary {
     @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-teal-500 px-6 py-3 font-semibold text-teal-700
            bg-white/70 backdrop-blur-sm
@@ -62,7 +62,7 @@
            transition-all duration-200 ease-out;
   }
 
-  /* Ghost / text-link CTA — animated underline + arrow */
+  /* Ghost / text-link CTA, animated underline + arrow */
   .btn-ghost {
     @apply inline-flex items-center gap-2 font-semibold text-teal-700
            hover:text-coral-700
@@ -80,7 +80,7 @@
   .section {
     @apply py-16 md:py-24;
   }
-  /* Frosted glass surface — translucent white + blur. For floating mobile UI (sticky CTA). */
+  /* Frosted glass surface, translucent white + blur. For floating mobile UI (sticky CTA). */
   .glass {
     background: rgba(255, 255, 255, 0.75);
     -webkit-backdrop-filter: blur(24px) saturate(180%);
@@ -114,13 +114,13 @@
   }
 }
 
-/* Hero motion — gentle Ken Burns drift on the hero photo + a staggered trust-pill entrance. */
+/* Hero motion, gentle Ken Burns drift on the hero photo + a staggered trust-pill entrance. */
 @keyframes kenburns { from { transform: scale(1); } to { transform: scale(1.06); } }
 .kenburns { animation: kenburns 24s ease-in-out infinite alternate; will-change: transform; }
 @keyframes heroPillIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 .hero-pill-in { animation: heroPillIn 0.5s ease-out both; }
 
-/* Before/After slider — scroll-coupled reveal via CSS scroll-driven animation.
+/* Before/After slider, scroll-coupled reveal via CSS scroll-driven animation.
    Zero scroll-JS; degrades to a static, draggable 50% slider where unsupported,
    and dragging adds .ba-dragged to hand control back to the user. */
 @property --ba-pos { syntax: '<percentage>'; inherits: true; initial-value: 50%; }
@@ -135,7 +135,7 @@
   }
 }
 
-/* Soft FAQ accordion — gently animate open/close where supported (Chromium ::details-content);
+/* Soft FAQ accordion, gently animate open/close where supported (Chromium ::details-content);
    degrades to a clean instant toggle where not. */
 @media (prefers-reduced-motion: no-preference) {
   details.faq-item { interpolate-size: allow-keywords; }
@@ -148,7 +148,7 @@
   details.faq-item[open]::details-content { block-size: auto; }
 }
 
-/* Hero paw-print trail — faint prints that "draw" themselves as you scroll (pure CSS scroll-driven).
+/* Hero paw-print trail, faint prints that "draw" themselves as you scroll (pure CSS scroll-driven).
    Where scroll timelines aren't supported (or motion is reduced) they sit static + fully drawn. */
 .paw > * { stroke-dasharray: 1; }
 @supports (animation-timeline: scroll()) {
@@ -165,7 +165,7 @@
 }
 @keyframes pawDraw { to { stroke-dashoffset: 0; } }
 
-/* Footer paw-print trail — draws as the footer scrolls into view (view timeline, not page scroll). */
+/* Footer paw-print trail, draws as the footer scrolls into view (view timeline, not page scroll). */
 .fpaw > * { stroke-dasharray: 1; }
 @supports (animation-timeline: view()) {
   @media (prefers-reduced-motion: no-preference) {

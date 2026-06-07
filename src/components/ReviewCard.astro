@@ -13,6 +13,7 @@ export interface Props {
   compact?: boolean;
 }
 const { review: r, compact = false } = Astro.props;
+const meta = [r.dog, r.location, r.service].filter(Boolean).join(' · ');
 ---
 <article class="rounded-2xl bg-white ring-1 ring-ink-100 p-6 h-full flex flex-col">
   <StarRating rating={r.rating} class="gap-1 mb-2" />
@@ -21,8 +22,6 @@ const { review: r, compact = false } = Astro.props;
   </blockquote>
   <footer class="mt-4 pt-4 border-t border-ink-100 text-sm">
     <p class="font-display font-semibold text-ink-900">{r.author}</p>
-    <p class="text-xs text-ink-600 mt-0.5">
-      {r.dog ? `${r.dog} · ` : ''}{r.location || ''}{r.service ? ` · ${r.service}` : ''}
-    </p>
+    <p class="text-xs text-ink-600 mt-0.5">{meta}</p>
   </footer>
 </article>

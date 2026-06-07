@@ -1,4 +1,4 @@
-# Sveltia CMS — content editor for Keith's K9 Care
+# Sveltia CMS, content editor for Keith's K9 Care
 # Logs in via GitHub (the repo owner / any collaborator).
 # Edits become git commits to main; Cloudflare Pages auto-rebuilds + deploys.
 
@@ -61,7 +61,7 @@ collections:
             fields:
               - { name: title,       label: "Page title (SEO)",     widget: string }
               - { name: description, label: "Meta description",     widget: text }
-              - { name: ogImage,     label: "Social share image (og:image)", widget: image, hint: "Picked from photo library. Pick a striking one — this is what shows in WhatsApp / Facebook previews." }
+              - { name: ogImage,     label: "Social share image (og:image)", widget: image, hint: "Picked from photo library. Pick a striking one, this is what shows in WhatsApp / Facebook previews." }
           - name: hero
             label: "Hero section"
             widget: object
@@ -78,7 +78,7 @@ collections:
           - name: images
             label: "Images"
             widget: object
-            hint: "Pick photos for the hero, about teaser and salon grid. Filenames are stubs — Picture wraps WebP+JPG variants at the right size."
+            hint: "Pick photos for the hero, about teaser and salon grid. Filenames are stubs, Picture wraps WebP+JPG variants at the right size."
             fields:
               - { name: heroPhoto,    label: "Hero photo (filename)", widget: image }
               - { name: heroPhotoAlt, label: "Hero photo alt text", widget: string }
@@ -179,7 +179,7 @@ collections:
             fields:
               - { name: title,       label: "Page title (SEO)",     widget: string }
               - { name: description, label: "Meta description",     widget: text }
-              - { name: ogImage,     label: "Social share image (og:image)", widget: image, hint: "Picked from photo library. Pick a striking one — this is what shows in WhatsApp / Facebook previews." }
+              - { name: ogImage,     label: "Social share image (og:image)", widget: image, hint: "Picked from photo library. Pick a striking one, this is what shows in WhatsApp / Facebook previews." }
           - name: hero
             label: "Hero section"
             widget: object
@@ -203,7 +203,7 @@ collections:
                 label: "Body paragraphs"
                 widget: list
           - name: whyKeith
-            label: "Why Keith — trust pillars"
+            label: "Why Keith, trust pillars"
             widget: object
             fields:
               - { name: eyebrow,    widget: string }
@@ -282,13 +282,19 @@ collections:
             fields:
               - { name: title,       widget: string }
               - { name: description, widget: text }
-              - { name: ogImage,     label: "Social share image (og:image)", widget: image, hint: "Picked from photo library. Pick a striking one — this is what shows in WhatsApp / Facebook previews." }
+              - { name: ogImage,     label: "Social share image (og:image)", widget: image, hint: "Picked from photo library. Pick a striking one, this is what shows in WhatsApp / Facebook previews." }
           - name: hero
             widget: object
             fields:
               - { name: eyebrow, widget: string }
               - { name: heading, widget: string }
               - { name: body,    widget: text }
+              - { name: ctaPrimary,       label: "Primary CTA label", widget: string }
+              - { name: ctaPrimaryHref,   label: "Primary CTA link",  widget: string }
+              - { name: ctaSecondary,     label: "Secondary CTA label", widget: string }
+              - { name: ctaSecondaryHref, label: "Secondary CTA link", widget: string }
+              - { name: photo,            label: "Hero photo", widget: image, hint: "The large photo at the top of the page. Picked from the photo library." }
+              - { name: photoAlt,         label: "Hero photo alt text", widget: string }
           - name: overview
             label: "Overview paragraphs (under the service grid)"
             widget: list
@@ -319,13 +325,19 @@ collections:
             fields:
               - { name: title,       widget: string }
               - { name: description, widget: text }
-              - { name: ogImage,     label: "Social share image (og:image)", widget: image, hint: "Picked from photo library. Pick a striking one — this is what shows in WhatsApp / Facebook previews." }
+              - { name: ogImage,     label: "Social share image (og:image)", widget: image, hint: "Picked from photo library. Pick a striking one, this is what shows in WhatsApp / Facebook previews." }
           - name: hero
             widget: object
             fields:
               - { name: eyebrow, widget: string }
               - { name: heading, widget: string }
               - { name: body,    widget: text }
+              - { name: ctaPrimary,       label: "Primary CTA label", widget: string }
+              - { name: ctaPrimaryHref,   label: "Primary CTA link",  widget: string }
+              - { name: ctaSecondary,     label: "Secondary CTA label", widget: string }
+              - { name: ctaSecondaryHref, label: "Secondary CTA link", widget: string }
+              - { name: photo,            label: "Hero photo", widget: image, hint: "The large photo at the top of the page. Picked from the photo library." }
+              - { name: photoAlt,         label: "Hero photo alt text", widget: string }
           - { name: ctaText, label: "Button text (under the area list)", widget: string }
           - name: overview
             label: "Overview paragraphs (the teal band at the bottom)"
@@ -343,13 +355,19 @@ collections:
             fields:
               - { name: title,       widget: string }
               - { name: description, widget: text }
-              - { name: ogImage,     label: "Social share image (og:image)", widget: image, hint: "Picked from photo library. Pick a striking one — this is what shows in WhatsApp / Facebook previews." }
+              - { name: ogImage,     label: "Social share image (og:image)", widget: image, hint: "Picked from photo library. Pick a striking one, this is what shows in WhatsApp / Facebook previews." }
           - name: hero
             widget: object
             fields:
               - { name: eyebrow, widget: string }
               - { name: heading, widget: string }
               - { name: body,    widget: text }
+              - { name: ctaPrimary,       label: "Primary CTA label", widget: string }
+              - { name: ctaPrimaryHref,   label: "Primary CTA link",  widget: string }
+              - { name: ctaSecondary,     label: "Secondary CTA label", widget: string }
+              - { name: ctaSecondaryHref, label: "Secondary CTA link", widget: string }
+              - { name: photo,            label: "Hero photo", widget: image, hint: "The large photo at the top of the page. Picked from the photo library." }
+              - { name: photoAlt,         label: "Hero photo alt text", widget: string }
           - name: addOns
             label: "Add-ons & surcharges"
             widget: list
@@ -389,13 +407,19 @@ collections:
             fields:
               - { name: title,       widget: string }
               - { name: description, widget: text }
-              - { name: ogImage,     label: "Social share image (og:image)", widget: image, hint: "Picked from photo library. Pick a striking one — this is what shows in WhatsApp / Facebook previews." }
+              - { name: ogImage,     label: "Social share image (og:image)", widget: image, hint: "Picked from photo library. Pick a striking one, this is what shows in WhatsApp / Facebook previews." }
           - name: hero
             widget: object
             fields:
               - { name: eyebrow, widget: string }
               - { name: heading, widget: string }
               - { name: body,    widget: text }
+              - { name: ctaPrimary,       label: "Primary CTA label", widget: string }
+              - { name: ctaPrimaryHref,   label: "Primary CTA link",  widget: string }
+              - { name: ctaSecondary,     label: "Secondary CTA label", widget: string }
+              - { name: ctaSecondaryHref, label: "Secondary CTA link", widget: string }
+              - { name: photo,            label: "Hero photo", widget: image, hint: "The large photo at the top of the page. Picked from the photo library." }
+              - { name: photoAlt,         label: "Hero photo alt text", widget: string }
           - name: groups
             label: "FAQ section groups"
             widget: list
@@ -426,7 +450,7 @@ collections:
             fields:
               - { name: title,       widget: string }
               - { name: description, widget: text }
-              - { name: ogImage,     label: "Social share image (og:image)", widget: image, hint: "Picked from photo library. Pick a striking one — this is what shows in WhatsApp / Facebook previews." }
+              - { name: ogImage,     label: "Social share image (og:image)", widget: image, hint: "Picked from photo library. Pick a striking one, this is what shows in WhatsApp / Facebook previews." }
           - name: hero
             widget: object
             fields:
@@ -486,7 +510,7 @@ collections:
             fields:
               - { name: title,       widget: string }
               - { name: description, widget: text }
-              - { name: ogImage,     label: "Social share image (og:image)", widget: image, hint: "Picked from photo library. Pick a striking one — this is what shows in WhatsApp / Facebook previews." }
+              - { name: ogImage,     label: "Social share image (og:image)", widget: image, hint: "Picked from photo library. Pick a striking one, this is what shows in WhatsApp / Facebook previews." }
           - name: hero
             widget: object
             fields:
@@ -508,7 +532,7 @@ collections:
             fields:
               - { name: title,       widget: string }
               - { name: description, label: "Meta description", widget: text }
-              - { name: ogImage,     label: "Social share image (og:image)", widget: image, hint: "Picked from photo library. Pick a striking one — this is what shows in WhatsApp / Facebook previews." }
+              - { name: ogImage,     label: "Social share image (og:image)", widget: image, hint: "Picked from photo library. Pick a striking one, this is what shows in WhatsApp / Facebook previews." }
           - name: hero
             widget: object
             fields:
@@ -520,6 +544,8 @@ collections:
               - { name: ctaPrimaryHref,                widget: string }
               - { name: ctaSecondary,                  widget: string }
               - { name: ctaSecondaryHref,              widget: string }
+              - { name: photo,            label: "Hero photo", widget: image, hint: "The large photo at the top of the page. Picked from the photo library." }
+              - { name: photoAlt,         label: "Hero photo alt text", widget: string }
           - name: contactCta
             widget: object
             fields:
@@ -536,7 +562,7 @@ collections:
             fields:
               - { name: title,       widget: string }
               - { name: description, widget: text }
-              - { name: ogImage,     label: "Social share image (og:image)", widget: image, hint: "Picked from photo library. Pick a striking one — this is what shows in WhatsApp / Facebook previews." }
+              - { name: ogImage,     label: "Social share image (og:image)", widget: image, hint: "Picked from photo library. Pick a striking one, this is what shows in WhatsApp / Facebook previews." }
           - name: hero
             widget: object
             fields:
@@ -545,6 +571,8 @@ collections:
               - { name: body,            widget: text }
               - { name: ctaPrimary,      widget: string }
               - { name: ctaPrimaryHref,  widget: string }
+              - { name: photo,            label: "Hero photo", widget: image, hint: "The large photo at the top of the page. Picked from the photo library." }
+              - { name: photoAlt,         label: "Hero photo alt text", widget: string }
           - name: contactCta
             widget: object
             fields:
@@ -561,7 +589,7 @@ collections:
             fields:
               - { name: title,       widget: string }
               - { name: description, widget: text }
-              - { name: ogImage,     label: "Social share image (og:image)", widget: image, hint: "Picked from photo library. Pick a striking one — this is what shows in WhatsApp / Facebook previews." }
+              - { name: ogImage,     label: "Social share image (og:image)", widget: image, hint: "Picked from photo library. Pick a striking one, this is what shows in WhatsApp / Facebook previews." }
           - name: hero
             widget: object
             fields:
@@ -723,7 +751,7 @@ collections:
     sortable_fields: [order, name, fromPrice]
     fields:
       - { name: order,          label: "Display order", widget: number, value_type: int, hint: "Lower numbers show first across the site. 1, 2, 3…" }
-      - { name: slug,           label: "URL slug", widget: string, hint: "Lower-case with hyphens — becomes /services/<slug>/. Don't change it on an existing service or its links break." }
+      - { name: slug,           label: "URL slug", widget: string, hint: "Lower-case with hyphens, becomes /services/<slug>/. Don't change it on an existing service or its links break." }
       - { name: name,           label: "Service name", widget: string }
       - { name: summary,        label: "Summary (card text)", widget: text }
       - { name: fromPrice,      label: "From £ (number)", widget: number, value_type: int }
@@ -782,7 +810,7 @@ collections:
     sortable_fields: [order, name, distanceMiles]
     fields:
       - { name: order,           label: "Display order", widget: number, value_type: int, hint: "Lower numbers show first. 1, 2, 3…" }
-      - { name: slug,            label: "URL slug", widget: string, hint: "Lower-case with hyphens — becomes /areas/<slug>/. Don't change it on an existing area or its links break." }
+      - { name: slug,            label: "URL slug", widget: string, hint: "Lower-case with hyphens, becomes /areas/<slug>/. Don't change it on an existing area or its links break." }
       - { name: name,            label: "Area name", widget: string }
       - { name: postcodePrefix,  label: "Postcode prefix", widget: string }
       - { name: distanceMiles,   label: "Distance (miles)", widget: number, value_type: float }
@@ -832,7 +860,7 @@ collections:
       - name: tags
         label: "Tags"
         widget: list
-        hint: "Which sections this FAQ appears in — e.g. home, puppy, nervous, pricing, contact, trust, about. 'home' shows it on the homepage FAQ block."
+        hint: "Which sections this FAQ appears in, e.g. home, puppy, nervous, pricing, contact, trust, about. 'home' shows it on the homepage FAQ block."
 
   # ─────────────────────────────────────────────────────
   - name: reviews
@@ -845,7 +873,7 @@ collections:
     create: true
     slug: "{{fields.author}}-{{fields.dog}}"
     identifier_field: author
-    summary: "{{fields.author}} — {{fields.dog}}"
+    summary: "{{fields.author}}, {{fields.dog}}"
     sortable_fields: [date, author, rating]
     fields:
       - { name: author,    label: "Customer name",     widget: string,  hint: "e.g. Sarah M." }
@@ -869,7 +897,7 @@ collections:
     create: true
     slug: "{{fields.slug}}"
     identifier_field: title
-    summary: "{{fields.dog}} — {{fields.service}}"
+    summary: "{{fields.dog}}, {{fields.service}}"
     sortable_fields: [date, dog]
     fields:
       - { name: title,       label: "Story title",       widget: string,  hint: "Short, descriptive. e.g. 'Milo's coat recovery after a wet summer'" }

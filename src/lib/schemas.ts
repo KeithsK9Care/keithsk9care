@@ -5,7 +5,7 @@
  * and per-page in index.astro etc. for FAQPage / BreadcrumbList / Person /
  * Service / Offer schema.
  *
- * All builders return plain objects — stringify at the call site.
+ * All builders return plain objects, stringify at the call site.
  */
 
 interface SiteShape {
@@ -104,7 +104,7 @@ export function buildLocalBusinessSchema(site: SiteShape, services: ServiceShape
 }
 
 /**
- * FAQPage schema — used on homepage (5 FAQs) and the /faq/ page (all 10).
+ * FAQPage schema, used on homepage (5 FAQs) and the /faq/ page (all 10).
  */
 export function buildFAQSchema(faqs: { q: string; a: string }[]) {
   return {
@@ -118,7 +118,7 @@ export function buildFAQSchema(faqs: { q: string; a: string }[]) {
 }
 
 /**
- * BreadcrumbList schema — for non-home pages.
+ * BreadcrumbList schema, for non-home pages.
  * crumbs is an ordered list from root to current page.
  */
 export function buildBreadcrumbSchema(crumbs: { name: string; url: string }[]) {
@@ -135,7 +135,7 @@ export function buildBreadcrumbSchema(crumbs: { name: string; url: string }[]) {
 
 
 /**
- * Person schema for the /about/ page — Keith's profile.
+ * Person schema for the /about/ page, Keith's profile.
  */
 export function buildPersonSchema(opts: {
   url: string;
@@ -255,7 +255,7 @@ export function buildAggregateRatingSchema(opts: {
 }
 
 /**
- * WebSite entity for the homepage @graph — completes the SOP home archetype
+ * WebSite entity for the homepage @graph, completes the SOP home archetype
  * (LocalBusiness/Organization + WebSite). `publisher` links to the business node.
  */
 export function buildWebSiteSchema(opts: { url: string; name: string; businessId: string }) {

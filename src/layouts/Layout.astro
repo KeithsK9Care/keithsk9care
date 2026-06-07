@@ -21,7 +21,7 @@ export interface Props {
   ogImageAlt?: string;
   noindex?: boolean;
   hideWhatsApp?: boolean;
-  heroPreload?: string;   // path under /assets/photos/ — preloads webp + jpg for the LCP image
+  heroPreload?: string;   // path under /assets/photos/, preloads webp + jpg for the LCP image
   schema?: Array<object | null | false>;  // page-specific JSON-LD entities, merged into one @graph
 }
 
@@ -30,7 +30,7 @@ const {
   description,
   canonical = new URL(Astro.url.pathname, Astro.site).toString(),
   ogImage = '/assets/og/default.jpg',
-  ogImageAlt = "Keith's K9 Care — friendly local dog grooming in Hall Green, Wakefield WF4",
+  ogImageAlt = "Keith's K9 Care: friendly local dog grooming in Hall Green, Wakefield WF4",
   noindex = false,
   hideWhatsApp = false,
   heroPreload,
@@ -104,7 +104,7 @@ if (heroPreload) {
 
   <script type="application/ld+json" set:html={JSON.stringify(graph)} />
 
-  {/* Inter + Fraunces are self-hosted via @fontsource-variable (bundled into the CSS) — no third-party font request. */}
+  {/* Inter + Fraunces are self-hosted via @fontsource-variable (bundled into the CSS), no third-party font request. */}
 
   {/* Preload the hero image (LCP): the AVIF srcset the hero <picture> actually serves. */}
   {heroAvifSrcset && (

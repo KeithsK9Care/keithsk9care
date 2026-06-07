@@ -28,13 +28,20 @@ const heading = hasReviews
   : h.headingWithoutReviews;
 
 const businessId = `${site.url}/#business`;
-const reviewSchema = hasReviews ? buildReviewSchema({
+// Google's review-snippet guidelines forbid Review / AggregateRating markup for
+// ratings sourced from a third-party platform. These reviews are reposted from the
+// Google Business profile, so we DISPLAY them as social proof but do NOT emit review
+// structured data. That would risk a "spammy structured markup" manual action. Flip
+// to true only if reviews are ever collected first-party; visible content (the cards,
+// the star strip and the "x.x from N reviews" line) is unaffected either way.
+const EMIT_REVIEW_SCHEMA = false;
+const reviewSchema = (EMIT_REVIEW_SCHEMA && hasReviews) ? buildReviewSchema({
   url: `${site.url}/reviews/`,
   businessId,
   businessName: site.name,
   reviews: sorted,
 }) : null;
-const aggregateSchema = hasReviews ? buildAggregateRatingSchema({ businessId, ratings }) : null;
+const aggregateSchema = (EMIT_REVIEW_SCHEMA && hasReviews) ? buildAggregateRatingSchema({ businessId, ratings }) : null;
 const crumbs = [
   { name: "Home", url: `${site.url}/` },
   { name: "Reviews", url: `${site.url}/reviews/` },

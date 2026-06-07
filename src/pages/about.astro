@@ -39,7 +39,7 @@ const personSchema = buildPersonSchema({
   alumniOf: site.academyName,
   worksFor: site.name,
   worksForUrl: site.url,
-  image: `${site.url}/assets/photos/${h.photo}-800.jpg`,
+  image: `${site.url}${h.photo}`,
   knowsAbout: ["Dog grooming", "Puppy grooming", "De-matting", "Nervous dog handling", "Doodle and cockapoo grooming"],
 });
 
@@ -72,7 +72,7 @@ const breadcrumbSchema = buildBreadcrumbSchema(crumbs);
     </div>
   </Section>
 
-  <!-- WHY KEITH — trust-pillar grid -->
+  <!-- WHY KEITH, trust-pillar grid -->
   <Section bg="teal">
     <div class="container-wide">
       <Reveal class="mb-10">

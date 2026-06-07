@@ -1,12 +1,12 @@
 ---
 /**
- * Breadcrumbs — the accessible, VISIBLE trail that mirrors the BreadcrumbList JSON-LD.
+ * Breadcrumbs, the accessible, VISIBLE trail that mirrors the BreadcrumbList JSON-LD.
  * Fed the SAME `crumbs` array each page passes to buildBreadcrumbSchema(), so the
  * visible UI and the schema can never drift. Drop it into a hero's `before-eyebrow`
  * slot:  <PageHero ...><Breadcrumbs crumbs={crumbs} slot="before-eyebrow" /></PageHero>
  *
  * crumb.url is an absolute URL (for the schema); we render the pathname for the link.
- * The final crumb is the current page — plain text with aria-current="page".
+ * The final crumb is the current page, plain text with aria-current="page".
  */
 export interface Props {
   crumbs: { name: string; url: string }[];

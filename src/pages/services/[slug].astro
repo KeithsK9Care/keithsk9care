@@ -26,7 +26,7 @@ export function getStaticPaths() {
 const { service } = Astro.props;
 const s = service;
 
-const title = seoTitle(s.name, [" — dog grooming in Wakefield WF4", " — dog grooming, Wakefield", " in Wakefield WF4", " in Wakefield"]);
+const title = seoTitle(s.name, [", dog grooming in Wakefield WF4", ", dog grooming, Wakefield", " in Wakefield WF4", " in Wakefield"]);
 const description = s.metaDescription || `${s.name} from £${s.fromPrice} at Keith's K9 Care, Hall Green Wakefield WF4. ${s.summary}`;
 
 // Find related services
@@ -51,7 +51,7 @@ const crumbs = [
 ];
 const breadcrumbSchema = buildBreadcrumbSchema(crumbs);
 ---
-<Layout title={title} description={description} ogImage={ogImageFor('services', s.slug, s.heroPhoto)} ogImageAlt={`${s.name} — Keith's K9 Care, Wakefield WF4`} schema={[serviceSchema, faqSchema, breadcrumbSchema]}>
+<Layout title={title} description={description} ogImage={ogImageFor('services', s.slug, s.heroPhoto)} ogImageAlt={`${s.name}, Keith's K9 Care, Wakefield WF4`} schema={[serviceSchema, faqSchema, breadcrumbSchema]}>
 
   <!-- HERO -->
   <DetailHero
@@ -164,6 +164,6 @@ const breadcrumbSchema = buildBreadcrumbSchema(crumbs);
   )}
 
   <!-- CONTACT CTA -->
-  <ContactCTASection heading={`Book a ${s.name.toLowerCase()} for your dog`} body="Keith likes a quick chat first — coat, age, any nerves — so he can pick the right slot." />
+  <ContactCTASection heading={`Book a ${s.name.toLowerCase()} for your dog`} body="Keith likes a quick chat first, coat, age, any nerves, so he can pick the right slot." />
 
 </Layout>
