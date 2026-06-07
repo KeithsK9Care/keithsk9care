@@ -718,6 +718,7 @@ collections:
           - { name: email,         label: "Email",                    widget: string }
           - { name: facebook,      label: "Facebook URL",             widget: string, required: false }
           - { name: instagram,     label: "Instagram URL",            widget: string, required: false }
+          - { name: googleReviewsUrl, label: "Google reviews link", widget: string, required: false, hint: "Paste your Google reviews link (or your 'leave a review' link). Shows as a button on the Reviews page. Find it in your Google Business Profile under 'Get more reviews', or by sharing your Google Maps listing." }
           - { name: priceRange,    label: "Price range (£/££/£££)",   widget: string }
           - name: hours
             label: "Opening hours"
@@ -885,6 +886,7 @@ collections:
       - { name: date,      label: "Date",              widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, picker_utc: false }
       - { name: body,      label: "Review",            widget: text,    hint: "What the customer said." }
       - { name: featured,  label: "Show on every page?", widget: boolean, default: false, hint: "Featured reviews appear in the strip under every page hero. Pick your 3 best." }
+      - { name: sourceUrl, label: "Google review link", widget: string, required: false, hint: "Optional. The share link to this review on Google. Adds a 'View on Google' link to the card." }
 
   # ─────────────────────────────────────────────────────
   - name: groom-stories

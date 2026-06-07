@@ -65,6 +65,11 @@ const breadcrumbSchema = buildBreadcrumbSchema(crumbs);
           </Reveal>
         ))}
       </div>
+      {site.googleReviewsUrl && (
+        <div class="mt-10 text-center">
+          <a href={site.googleReviewsUrl} target="_blank" rel="noopener" class="btn-secondary">Read our reviews on Google</a>
+        </div>
+      )}
     </div>
   </Section>
 
