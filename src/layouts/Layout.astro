@@ -71,6 +71,8 @@ if (heroPreload) {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  {/* Canonical-host guard: bounce the production pages.dev URL to the apex (canonicals already de-dupe it; this catches direct human hits). Preview deploys (hash.pages.dev) are left alone. */}
+  <script is:inline>if(location.hostname==='keithsk9care.pages.dev')location.replace('https://keithsk9care.co.uk'+location.pathname+location.search+location.hash)</script>
   <meta name="theme-color" content="#007090" />
   <title>{title}</title>
   <meta name="description" content={description} />
