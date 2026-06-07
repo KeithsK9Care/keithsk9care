@@ -1,13 +1,13 @@
 {
   "meta": {
     "title": "Dog grooming prices in Hall Green | Keith's K9 Care",
-    "description": "Full published price guide with breed examples - small dogs from £40, medium from £50, large or doodles from £60 for a full groom. Hall Green, Wakefield WF4.",
+    "description": "Full published price guide with breed examples. Small dogs from £40, medium from £50, large or doodles from £60 for a full groom. Hall Green, Wakefield WF4.",
     "ogImage": "/assets/photos/keith_dalmatian_beano_groomed.jpg"
   },
   "hero": {
     "eyebrow": "Pricing",
-    "heading": "Clear pricing, no surprises.",
-    "body": "I'm proud to publish my prices upfront. Competitive rates, no hidden fees, and I always confirm the final price before we start.",
+    "heading": "Clear, published pricing.",
+    "body": "I publish my prices upfront. The rates are competitive, there are no hidden fees, and I always confirm the final price with you before we start.",
     "photo": "cockapoo-portrait",
     "photoAlt": "A happy, freshly groomed cockapoo",
     "ctaPrimary": "Book a Groom",
@@ -39,7 +39,7 @@
     {
       "label": "Severe matting strip-clip (welfare-first)",
       "from": 60,
-      "note": "honestly assessed on the day"
+      "note": "assessed properly on the day"
     },
     {
       "label": "Extra time for heavy coats or long gaps between grooms",
@@ -49,8 +49,8 @@
   ],
   "addOnsIntro": {
     "eyebrow": "Add-ons & surcharges",
-    "heading": "Anything extra is added honestly.",
-    "description": "If a coat needs more time than the standard tier, we'll say so up-front. Nothing's a surprise on the bill."
+    "heading": "Anything extra is added openly.",
+    "description": "If a coat needs more time than the standard tier, we'll tell you up front. The final bill won't catch you out."
   },
   "howPricingWorks": {
     "eyebrow": "How pricing works",
@@ -58,11 +58,11 @@
     "cards": [
       {
         "t": "Quoted before we start",
-        "b": "After meeting your dog and assessing the coat, Keith will confirm the price before the bath begins. No surprises after."
+        "b": "After meeting your dog and assessing the coat, Keith will confirm the price before the bath begins, so the bill stays the same."
       },
       {
         "t": "By coat, not stopwatch",
-        "b": "Two cockapoos can be £20 apart — one might be a tangle, one might be perfect. We price the work, not the diary slot."
+        "b": "Two cockapoos can be £20 apart. One might be a tangle and the other in lovely condition. We price the actual work in front of us rather than the diary slot."
       },
       {
         "t": "Welfare wins",

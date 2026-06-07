@@ -1,5 +1,6 @@
 ---
 import site from '../data/site.json';
+import global from '../data/global.json';
 const pathname = Astro.url.pathname;
 const isActive = (p: string) => pathname === p || (p !== '/' && pathname.startsWith(p));
 
@@ -33,7 +34,7 @@ const links = [
         <svg aria-hidden="true" class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
         {site.phone}
       </a>
-      <a href="/book/" class="hidden md:inline-flex btn-primary !py-2 !px-5 text-sm whitespace-nowrap">Book a Groom</a>
+      <a href="/book/" class="hidden md:inline-flex btn-primary !py-2 !px-5 text-sm whitespace-nowrap">{global.cta.book}</a>
       <button id="kk9-nav-toggle" type="button" class="lg:hidden p-2 -mr-2 rounded-lg hover:bg-ink-50 focus:outline-none focus:ring-2 focus:ring-coral-400 relative z-[60]" aria-label="Open menu" aria-expanded="false" aria-controls="kk9-nav-drawer">
         <svg id="kk9-nav-icon-open" aria-hidden="true" class="w-6 h-6 text-ink-800" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
         <svg id="kk9-nav-icon-close" aria-hidden="true" class="hidden w-6 h-6 text-ink-800" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
@@ -75,7 +76,7 @@ const links = [
       ))}
     </div>
     <div class="mt-6 flex flex-col sm:flex-row gap-3 pointer-events-auto">
-      <a href="/book/" data-kk9-nav-link class="btn-primary justify-center">Book a Groom</a>
+      <a href="/book/" data-kk9-nav-link class="btn-primary justify-center">{global.cta.book}</a>
       <a href={`tel:${site.phoneIntl}`} data-kk9-nav-link class="btn-secondary justify-center">Call {site.phone}</a>
       <a href={`https://wa.me/${site.whatsappIntl}`} target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 rounded-full bg-whatsapp px-6 py-3 font-semibold text-white text-sm">WhatsApp</a>
     </div>

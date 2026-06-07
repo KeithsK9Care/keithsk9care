@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Dog grooming FAQs — Hall Green, Wakefield WF4 | Keith's K9 Care",
-    "description": "Everything dog owners ask before their first appointment at Keith's K9 Care — pricing, puppy first grooms, nervous dogs, qualifications. Hall Green, Wakefield.",
+    "title": "Dog grooming FAQs, Hall Green, Wakefield WF4 | Keith's K9 Care",
+    "description": "The questions dog owners ask before their first appointment at Keith's K9 Care, covering pricing, puppy first grooms, nervous dogs and qualifications. Hall Green, Wakefield.",
     "ogImage": "/assets/photos/cockapoo-portrait.jpg"
   },
   "hero": {
@@ -49,6 +49,6 @@
   },
   "contactCta": {
     "heading": "Still got a question?",
-    "body": "Keith is happy to answer anything about your dog — coat, age, behaviour, breed — before you book."
+    "body": "Keith is happy to answer anything about your dog before you book, whether it's about their coat, age, behaviour or breed."
   }
 }

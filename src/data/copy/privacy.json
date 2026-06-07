@@ -72,7 +72,7 @@
         "Withdraw consent for anything we publish about you or your dog",
         "Complain to the <a href=\"https://ico.org.uk/\" target=\"_blank\" rel=\"noopener\" class=\"text-teal-700 font-semibold\">Information Commissioner's Office (ICO)</a> if you think we've handled your information badly"
       ],
-      "outro": [ "To exercise any of these rights, drop us a line at {email} — we'll respond within a month." ]
+      "outro": [ "To exercise any of these rights, drop us a line at {email} and we'll respond within a month." ]
     },
     {
       "heading": "Cookies",

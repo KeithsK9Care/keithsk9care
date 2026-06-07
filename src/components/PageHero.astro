@@ -7,6 +7,7 @@
  * /book/ and the area detail pages. The HOMEPAGE hero is bespoke (HomeHero.astro).
  */
 import Picture from './Picture.astro';
+import HeroBlobs from './HeroBlobs.astro';
 
 export interface Props {
   eyebrow: string;
@@ -14,16 +15,18 @@ export interface Props {
   body?: string;
   align?: 'left' | 'center';
   surface?: 'gradient' | 'plain';
+  decorative?: boolean;
   photo?: string;
   photoAlt?: string;
 }
-const { eyebrow, heading, body, align = 'center', surface = 'gradient', photo, photoAlt = '' } = Astro.props;
+const { eyebrow, heading, body, align = 'center', surface = 'gradient', decorative = true, photo, photoAlt = '' } = Astro.props;
 const surfaceCls = surface === 'gradient' ? 'bg-gradient-to-b from-teal-50 via-white to-white' : '';
 const hasPhoto = !!photo;
 const alignCls = align === 'center' ? 'text-center mx-auto' : '';
 ---
-<section class:list={['section', surfaceCls]}>
-  <div class="container-tight">
+<section class:list={['section relative overflow-hidden', surfaceCls]}>
+  {decorative && <HeroBlobs />}
+  <div class="container-tight relative">
     {hasPhoto ? (
       <div class="grid md:grid-cols-5 gap-10 md:gap-14 items-center">
         <div class="md:col-span-3">

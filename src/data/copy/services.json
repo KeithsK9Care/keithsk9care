@@ -7,7 +7,7 @@
   "hero": {
     "eyebrow": "Services",
     "heading": "What we do.",
-    "body": "Three core dog grooming services — a gentle 45-minute puppy intro, a full groom, and a quick bath and tidy in between. Every coat type welcome, every dog at their own pace.",
+    "body": "Three core dog grooming services: a gentle 45-minute puppy intro, a full groom, and a quick bath and tidy for in between. Every coat type is welcome, and every dog is treated as an individual.",
     "photo": "keith_golden_retriever_grooming_table_ringo",
     "photoAlt": "Keith grooming a golden retriever on the salon table",
     "ctaPrimary": "Book a Groom",
@@ -16,19 +16,19 @@
     "ctaSecondaryHref": "/pricing/"
   },
   "overview": [
-    "Every dog that comes to Keith's K9 Care is groomed one at a time, in a calm home salon — no kennels, no other dogs barking through the wall, and no production line. That setup is the reason nervous dogs, puppies and older dogs settle here, and it lets Keith work at your dog's pace rather than the clock's.",
-    "Not sure which service your dog needs? As a rough guide: a full groom (bath, dry, clip and full tidy) every six to eight weeks suits most coats; a bath and tidy is the lighter in-between visit; puppies start with a gentle first groom; and a quick nail, ear or de-matting visit covers everything between. If you're unsure, send Keith a photo of your dog's coat and he'll tell you honestly what will suit them.",
-    "Every price is published in full on the pricing page, with breed examples — and confirmed in person before any work starts, so there are never surprises on the bill."
+    "Every dog that comes to Keith's K9 Care is groomed one at a time, in a calm home salon. There are no kennels, your dog won't hear others barking through the wall, and there's no production line. That setup is why nervous dogs, puppies and older dogs settle here, and it lets Keith work at your dog's pace rather than the clock's.",
+    "Not sure which service your dog needs? As a rough guide: a full groom (bath, dry, clip and full tidy) every six to eight weeks suits most coats, a bath and tidy is the lighter in-between visit, puppies start with a gentle first groom, and a quick nail, ear or de-matting visit covers everything in between. If you're not sure, send Keith a photo of your dog's coat and he'll tell you straight what will suit them.",
+    "Every price is published in full on the pricing page, with breed examples, and confirmed in person before any work starts. That way the bill never catches you out."
   ],
   "transparency": {
-    "eyebrow": "No surprises",
+    "eyebrow": "Published prices",
     "heading": "All our prices are published.",
-    "description": "Most local groomers won't tell you what they charge until you ring. We do — small dogs from £40, medium from £50, large or doodles from £60 for a full groom. Surcharges are listed too.",
+    "description": "Most local groomers won't tell you what they charge until you ring. We do: small dogs from £40, medium from £50, large or doodles from £60 for a full groom. The surcharges are listed too.",
     "ctaText": "See the full price guide",
     "ctaHref": "/pricing/"
   },
   "contactCta": {
     "heading": "Not sure which service is right for your dog?",
-    "body": "Drop Keith a quick message — he'll help you pick the right slot based on coat, age and any nerves."
+    "body": "Drop Keith a quick message and he'll help you pick the right slot based on coat, age and any nerves."
   }
 }

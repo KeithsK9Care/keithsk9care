@@ -1,14 +1,14 @@
 {
   "meta": {
     "title": "Dog Grooming in Newmillerdam & Hall Green | Keith's K9 Care",
-    "description": "IPET-qualified home dog grooming in Hall Green near Newmillerdam, Wakefield WF4 — one dog at a time in a quiet home. See prices and book your dog in.",
+    "description": "IPET-qualified home dog grooming in Hall Green near Newmillerdam, Wakefield WF4. One dog at a time in a quiet home. See prices and book your dog in.",
     "ogImage": "/assets/og/default.jpg"
   },
   "hero": {
     "locationPill": "Hall Green · WF4 3QJ",
     "headingHtml": "Friendly local dog grooming in <span class=\"text-teal-600\">Newmillerdam</span>,<br class=\"hidden md:block\" /> <span class=\"text-coral-500\">Crigglestone</span> & across Wakefield.",
-    "bodyPara1": "Your dog deserves to look and feel their best. Whether they've been rolling through Newmillerdam Country Park or turned the garden into a mud bath, Keith's K9 Care is here to get them back to their brilliant best.",
-    "bodyPara2": "Professional and calm, with a fully equipped home salon and just one dog at a time. Your dog gets my full attention, every visit.",
+    "bodyPara1": "Your dog deserves to look and feel their best. If they've been rolling through Newmillerdam Country Park or turning the garden into a mud bath, I'll get them clean, comfortable and looking smart again.",
+    "bodyPara2": "It's a calm, professional setup in a fully equipped home salon with one dog at a time. Your dog gets my full attention, every visit.",
     "ctaPrimary": "Book a Groom",
     "ctaPrimaryHref": "/book/",
     "ctaSecondary": "See Prices",
@@ -17,7 +17,7 @@
   },
   "images": {
     "heroPhoto": "/assets/photos/golden-puppy-woodland-1.jpg",
-    "heroPhotoAlt": "Golden retriever puppy near Newmillerdam Country Park — Keith's K9 Care, Hall Green WF4",
+    "heroPhotoAlt": "Golden retriever puppy near Newmillerdam Country Park, Keith's K9 Care, Hall Green WF4",
     "aboutPhoto": "/assets/photos/keith_with_golden_retriever_bath.jpg",
     "aboutPhotoAlt": "Keith Kershaw with a golden retriever in his home grooming salon",
     "salonPhotos": [
@@ -49,41 +49,41 @@
   },
   "about": {
     "eyebrow": "Meet Keith",
-    "heading": "From the law to the grooming table.",
+    "heading": "I swapped the law for the grooming table.",
     "paragraphs": [
-      "I set up Keith's K9 Care, a professional dog grooming service in Wakefield, after spending more than 30 years working as a solicitor - making the decision to swap the courtroom for the dog spa and work with dogs full-time.",
-      "My love of dogs began with the arrival of our golden retriever, Ringo, during lockdown. What started as a new addition quickly grew into something much bigger, and it wasn't long before Ringo was joined by Rolo, whose lively and playful personality is the perfect contrast to Ringo's calm and gentle nature.",
-      "Today, I provide a calm, one-to-one dog grooming experience in Wakefield from my purpose-built home dog spa. Every dog I care for has my full attention, with no other animals present during appointments, creating a relaxed, safe and stress-free environment - ideal for nervous or anxious dogs."
+      "I set up Keith's K9 Care, a professional dog grooming service in Wakefield, after more than 30 years working as a solicitor. I decided to swap the courtroom for the dog spa and work with dogs full-time.",
+      "My love of dogs began when our golden retriever, Ringo, arrived during lockdown. What started as a new addition to the family quickly grew into something much bigger, and before long Ringo was joined by Rolo, whose lively, playful streak is the perfect contrast to Ringo's calm and gentle nature.",
+      "These days I run a calm, one-to-one dog grooming service in Wakefield from my purpose-built home spa. Every dog I care for has my full attention, with no other animals around during their appointment. It makes for a relaxed, safe and stress-free room, which suits nervous or anxious dogs especially well."
     ],
     "ctaText": "Read Keith's full story",
     "ctaHref": "/about/"
   },
   "services": {
     "eyebrow": "Services",
-    "heading": "What we do - gently, properly, and at your dog's pace.",
-    "description": "Cockapoos, doodles, terriers, retrievers, small breeds, large breeds- every coat type welcome. From puppy first grooms to senior tidies and de-matting."
+    "heading": "What we do, gently and properly.",
+    "description": "Cockapoos, doodles, terriers, retrievers, small breeds and large breeds are all welcome here, whatever the coat type. I do puppy first grooms, senior tidies and de-matting too."
   },
   "pricingTeaser": {
     "eyebrow": "Pricing",
-    "heading": "Clear pricing, no surprises.",
-    "description": "I'm proud to publish my prices upfront. Competitive rates, no hidden fees, and I always confirm the final price before we start.",
+    "heading": "Clear, published pricing.",
+    "description": "I publish my prices upfront. The rates are competitive, there are no hidden fees, and I always confirm the final price with you before we start.",
     "linkText": "See full price guide",
     "linkHref": "/pricing/"
   },
   "salon": {
     "eyebrow": "The salon",
-    "heading": "A purpose-built salon in the heart of Hall Green.",
-    "description": "A home salon in a converted garage, with no kennels and no other dogs barking through the wall. Fully equipped, calm and set up around your dog's comfort."
+    "heading": "A purpose-built salon in Hall Green.",
+    "description": "It's a home salon in a converted garage. There are no kennels and your dog won't hear other dogs barking through the wall. Fully equipped, calm, and set up around your dog's comfort."
   },
   "featuredStory": {
     "eyebrow": "Recent Visits",
     "heading": "See some of our most recent customers.",
-    "description": "Before and after walk-throughs of the trickier visits. De-matting, coat recovery, first puppy grooms."
+    "description": "Before and after walk-throughs of some of the trickier visits, like de-matting, coat recovery and first puppy grooms."
   },
   "beforeAfter": {
     "eyebrow": "See the difference",
     "heading": "See the transformation.",
-    "description": "Before and after — the same dog, one calm visit. Real grooms, no filters.",
+    "description": "Before and after photos of the same dog from one calm visit. These are real grooms with no filters.",
     "beforePhoto": "/assets/photos/keith_golden_retriever_bathing.jpg",
     "beforeAlt": "Golden retriever being bathed before its groom at Keith's K9 Care",
     "afterPhoto": "/assets/photos/golden_retriever_happy.jpg",
@@ -92,7 +92,7 @@
   "areas": {
     "eyebrow": "Areas we cover",
     "heading": "Local to Hall Green & Newmillerdam, serving the wider Wakefield area.",
-    "description": "If you've searched for a dog groomer in Newmillerdam, Crigglestone, Sandal, Hall Green or anywhere across the Wakefield WF4 villages - you're in our area. Most customers live within a 5-minute drive.",
+    "description": "If you've searched for a dog groomer in Newmillerdam, Crigglestone, Sandal, Hall Green or anywhere across the Wakefield WF4 villages, you're in our area. Most customers live within a 5-minute drive.",
     "linkText": "See all areas and what we do there",
     "linkHref": "/areas/"
   },
@@ -102,6 +102,6 @@
   },
   "contactCta": {
     "heading": "Ready to get your pup looking their best?",
-    "body": "Give Keith a call or message, he's always happy to have a quick chat about your dog before booking. No bots, no answering service."
+    "body": "Give Keith a call or message. He's always happy to have a quick chat about your dog before you book, and you'll be talking to Keith himself rather than a bot or an answering service."
   }
 }

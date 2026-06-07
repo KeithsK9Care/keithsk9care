@@ -1,13 +1,13 @@
 {
   "meta": {
     "title": "Book a groom | Keith's K9 Care",
-    "description": "Book Keith's K9 Care — call, WhatsApp, or send the booking form. Home grooming salon in Hall Green, Wakefield WF4 3QJ.",
+    "description": "Book Keith's K9 Care. Call, WhatsApp, or send the booking form. Home grooming salon in Hall Green, Wakefield WF4 3QJ.",
     "ogImage": "/assets/photos/keith-with-chihuahua.jpg"
   },
   "hero": {
     "eyebrow": "Book a groom",
     "heading": "Get in touch with Keith.",
-    "body": "Keith likes a quick chat about your dog before the first booking — coat type, age, any nerves — so he can pick the right slot. Use the form below, or jump straight to call / WhatsApp.",
+    "body": "Keith likes a quick chat about your dog before the first booking (coat type, age, any nerves) so he can pick the right slot. Use the form below, or jump straight to call or WhatsApp.",
     "photo": "keith-with-cockapoo",
     "photoAlt": "Keith with a cockapoo at the salon"
   },
@@ -32,11 +32,11 @@
   "form": {
     "eyebrow": "Or use the form",
     "heading": "Tell Keith about your dog.",
-    "description": "The more we know up front — breed, coat, age, any nerves — the better we can prep the slot. Keith reads every message and replies personally.",
+    "description": "The more we know up front about breed, coat, age and any nerves, the better we can prep the slot. Keith reads every message and replies personally.",
     "submitLabel": "Send to Keith",
     "submitLoadingLabel": "Sending…",
     "privacyNote": "By submitting, you agree we can use your details to reply about your booking.",
-    "reassurance": "Keith reads and replies to every message himself — no bots, no answering service."
+    "reassurance": "Keith reads and replies to every message himself. There's no bot or answering service in the way."
   },
   "location": {
     "eyebrow": "Find us",

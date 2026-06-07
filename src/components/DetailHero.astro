@@ -6,6 +6,7 @@
  */
 import Picture from './Picture.astro';
 import Reveal from './Reveal.astro';
+import HeroBlobs from './HeroBlobs.astro';
 
 interface Props {
   backHref: string;
@@ -16,8 +17,9 @@ interface Props {
 }
 const { backHref, backLabel, heading, image, imageAlt } = Astro.props;
 ---
-<section class="section bg-gradient-to-b from-teal-50 via-white to-white">
-  <div class="container-tight grid md:grid-cols-2 gap-12 items-center">
+<section class="section relative overflow-hidden bg-gradient-to-b from-teal-50 via-white to-white">
+  <HeroBlobs />
+  <div class="container-tight relative grid md:grid-cols-2 gap-12 items-center">
     <Reveal>
       <slot name="before-eyebrow" />
       <p class="text-sm font-semibold uppercase tracking-wider text-coral-700">

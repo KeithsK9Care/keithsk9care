@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Terms of service | Keith's K9 Care",
-    "description": "The plain-English terms for booking a dog groom with Keith's K9 Care — pricing, cancellations and dog welfare. Hall Green, Wakefield WF4.",
+    "description": "The plain-English terms for booking a dog groom with Keith's K9 Care, covering pricing, cancellations and dog welfare. Hall Green, Wakefield WF4.",
     "ogImage": "/assets/photos/golden-puppy-woodland-1.jpg"
   },
   "hero": {
@@ -19,7 +19,7 @@
       "heading": "Pricing",
       "intro": [
         "Prices listed on this website are <strong>starting prices</strong>. The final price for your dog's groom may vary depending on coat condition, size, behaviour, and how long it's been since their last groom. Keith will always confirm the price with you in person before starting the appointment.",
-        "Surcharges are listed on the <a href=\"/pricing/\" class=\"text-teal-700 font-semibold\">pricing page</a> — matted coats, anxious dogs, extra-large coats and so on. Nothing is a surprise on the bill."
+        "Surcharges are listed on the <a href=\"/pricing/\" class=\"text-teal-700 font-semibold\">pricing page</a>, covering matted coats, anxious dogs, extra-large coats and so on. You'll know about any of these before we start, so the bill always matches what we agreed."
       ]
     },
     {
@@ -34,10 +34,10 @@
       "heading": "Your dog's welfare",
       "intro": [ "This one matters most." ],
       "bullets": [
-        "If your dog becomes too distressed during a groom for the work to safely continue, we'll stop, look after them, and call you. We'll always charge for the time taken honestly — never for a full session we couldn't complete.",
+        "If your dog becomes too distressed during a groom for the work to safely continue, we'll stop, look after them, and call you. We'll only charge for the time actually taken, never for a full session we couldn't complete.",
         "If your dog's coat is so matted that brushing it out would be painful or unsafe, the kindest option is a fresh start with a clip-down. Keith will always discuss this with you in person <em>before</em> picking up the clippers.",
         "If we spot something during the groom that suggests a vet visit (skin condition, ear infection, lumps), we'll tell you. We're groomers, not vets, so we'll always defer to your vet for a diagnosis.",
-        "Please be honest about your dog's vaccination status, any bites/aggression history, and any medical conditions when you book. We can almost always help — but we need to know."
+        "Please be straight with us about your dog's vaccination status, any bites or aggression history, and any medical conditions when you book. We can almost always help, but we need to know."
       ]
     },
     {
@@ -46,11 +46,11 @@
     },
     {
       "heading": "Photos & reviews",
-      "intro": [ "We love a photo of your dog looking smart. We'll always ask before posting anything featuring your dog (with name or breed) on this website or on social media — usually a quick \"okay if we share this?\" by message. You can always change your mind later and we'll take it down." ]
+      "intro": [ "We love a photo of your dog looking smart. We'll always ask before posting anything featuring your dog (with name or breed) on this website or on social media, usually a quick \"okay if we share this?\" by message. You can always change your mind later and we'll take it down." ]
     },
     {
       "heading": "Complaints",
-      "intro": [ "If anything's not right, please tell Keith straight away — most of the time we can put it right on the spot or at your next visit. Drop us a line at {email}, call on {phone}, or message Keith on WhatsApp." ]
+      "intro": [ "If anything's not right, please tell Keith straight away. Most of the time we can put it right on the spot or at your next visit. Drop us a line at {email}, call on {phone}, or message Keith on WhatsApp." ]
     },
     {
       "heading": "Privacy",

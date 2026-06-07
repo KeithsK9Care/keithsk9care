@@ -1,6 +1,7 @@
 ---
 import site from '../data/site.json';
 import Logo from './Logo.astro';
+import global from '../data/global.json';
 const year = new Date().getFullYear();
 
 // Faint paw-print trail in the footer — draws itself as the footer scrolls into view.
@@ -27,22 +28,22 @@ const fpaws = [
       <p class="text-teal-100 text-sm leading-relaxed">{site.tagline}</p>
       <p class="mt-4 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-coral-300">
         <svg aria-hidden="true" class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-        IPET Qualified
+        {global.footer.ipetBadge}
       </p>
     </div>
 
     <div>
-      <h2 class="font-display text-white text-lg mb-3">Contact</h2>
+      <h2 class="font-display text-white text-lg mb-3">{global.footer.contactHeading}</h2>
       <address class="not-italic text-sm space-y-2 text-teal-100">
         <p>{site.address.street}<br/>{site.address.locality}, {site.address.region}<br/>{site.address.postcode}</p>
         <p><a href={`tel:${site.phoneIntl}`} class="hover:text-white">{site.phone}</a></p>
-        <p><a href={`https://wa.me/${site.whatsappIntl}`} target="_blank" rel="noopener" class="hover:text-white">WhatsApp Keith</a></p>
+        <p><a href={`https://wa.me/${site.whatsappIntl}`} target="_blank" rel="noopener" class="hover:text-white">{global.footer.whatsappLinkLabel}</a></p>
         <p><a href={`mailto:${site.email}`} class="hover:text-white break-all">{site.email}</a></p>
       </address>
     </div>
 
     <div>
-      <h2 class="font-display text-white text-lg mb-3">Explore</h2>
+      <h2 class="font-display text-white text-lg mb-3">{global.footer.exploreHeading}</h2>
       <ul class="text-sm space-y-2 text-teal-100">
         <li><a href="/services/" class="hover:text-white">Services</a></li>
         <li><a href="/pricing/" class="hover:text-white">Pricing</a></li>
@@ -56,7 +57,7 @@ const fpaws = [
     </div>
 
     <div>
-      <h2 class="font-display text-white text-lg mb-3">Hours</h2>
+      <h2 class="font-display text-white text-lg mb-3">{global.footer.hoursHeading}</h2>
       <ul class="text-sm space-y-1 text-teal-100">
         {site.hours.map(h => (
           <li class="flex justify-between gap-4"><span>{h.day}</span><span>{h.open}–{h.close}</span></li>

@@ -1,13 +1,13 @@
 {
   "meta": {
-    "title": "Dog grooming reviews — Wakefield WF4 | Keith's K9 Care",
+    "title": "Dog grooming reviews in Wakefield WF4 | Keith's K9 Care",
     "description": "Real dog grooming reviews from dog owners in Hall Green, Newmillerdam and Wakefield. See what people are saying about Keith's K9 Care.",
     "ogImage": "/assets/photos/keith_dalmatian_beano_groomed.jpg"
   },
   "hero": {
     "eyebrow": "Reviews",
     "body": "Real dog grooming reviews from dog owners in Hall Green, Newmillerdam and Wakefield. See what people are saying about Keith's K9 Care.",
-    "headingWithReviewsTemplate": "{avg} out of 5 — from {n} dog {nounOwners}.",
+    "headingWithReviewsTemplate": "{avg} out of 5, from {n} dog {nounOwners}.",
     "headingWithoutReviews": "Reviews coming soon.",
     "ctaPrimary": "Book your dog in",
     "ctaPrimaryHref": "/book/",
@@ -18,6 +18,6 @@
   },
   "contactCta": {
     "heading": "Want to leave a review?",
-    "body": "If Keith's groomed your dog, drop him a message — he'll send you the Google review link and (with permission) feature your words here too."
+    "body": "If Keith's groomed your dog, drop him a message and he'll send you the Google review link. With your permission, he'll feature your words here too."
   }
 }

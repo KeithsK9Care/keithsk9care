@@ -22,7 +22,7 @@ const webSiteSchema = buildWebSiteSchema({ url: site.url, name: site.name, busin
 
 const m = copy.meta;
 ---
-<Layout title={m.title} description={m.description} ogImage={m.ogImage} heroPreload="golden-puppy-woodland-1-800" schema={[webSiteSchema, faqSchema]}>
+<Layout title={m.title} description={m.description} ogImage={m.ogImage} heroPreload={copy.images.heroPhoto} schema={[webSiteSchema, faqSchema]}>
 
   <HomeHero />
   <ReviewStrip />

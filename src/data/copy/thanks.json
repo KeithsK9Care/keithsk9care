@@ -1,13 +1,13 @@
 {
   "meta": {
-    "title": "Thanks — we'll be in touch | Keith's K9 Care",
+    "title": "Thanks, we'll be in touch | Keith's K9 Care",
     "description": "Thanks for your booking enquiry. Keith will reply personally, usually within an hour during opening times.",
     "ogImage": "/assets/photos/golden-puppy-woodland-2.jpg"
   },
   "hero": {
     "eyebrow": "Thanks!",
     "heading": "Message received.",
-    "body": "Keith will reply personally — usually within an hour during opening times (Tuesday to Saturday). For anything urgent, call or WhatsApp.",
+    "body": "Keith will reply personally, usually within an hour during opening times (Tuesday to Saturday). For anything urgent, call or WhatsApp.",
     "ctaPrimary": "Back to home",
     "ctaPrimaryHref": "/",
     "ctaSecondary": "Browse services",

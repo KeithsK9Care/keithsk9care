@@ -1,13 +1,13 @@
 {
   "meta": {
-    "title": "Before-and-after groom stories — Wakefield | Keith's K9 Care",
-    "description": "Real grooming case studies — before & after, what Keith did and why. From de-matting and coat recovery to a calm first puppy groom in Hall Green, Wakefield.",
+    "title": "Before-and-after groom stories, Wakefield | Keith's K9 Care",
+    "description": "Real grooming case studies with before and after photos, plus what Keith did and why. De-matting, coat recovery and calm first puppy grooms in Hall Green, Wakefield.",
     "ogImage": "/assets/photos/cockapoo-after-groom.jpg"
   },
   "hero": {
     "eyebrow": "Groom Stories",
-    "heading": "Real grooms. Honest stories.",
-    "body": "Before & after walk-throughs of the trickier visits — de-matting, coat recovery, first puppy grooms. The work, in Keith's own words.",
+    "heading": "Real grooms, told straight.",
+    "body": "Before and after walk-throughs of the trickier visits, covering de-matting, coat recovery and first puppy grooms. The work, in Keith's own words.",
     "ctaPrimary": "Book your dog in",
     "ctaPrimaryHref": "/book/",
     "photo": "border-terrier-after-groom",
@@ -15,6 +15,6 @@
   },
   "contactCta": {
     "heading": "Got a tricky coat or a nervous dog?",
-    "body": "Send Keith a photo or two and he'll honestly walk you through what to expect before you book."
+    "body": "Send Keith a photo or two and he'll talk you through what to expect before you book."
   }
 }

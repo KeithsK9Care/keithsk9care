@@ -1,0 +1,20 @@
+{
+  "cta": {
+    "book": "Book a Groom",
+    "callKeith": "Call Keith"
+  },
+  "whatsapp": {
+    "ariaLabel": "Chat with Keith on WhatsApp",
+    "replyTime": "Typically replies within an hour",
+    "greeting": "Hi! Have a question or want to book your dog in for a groom? Send Keith a quick WhatsApp.",
+    "startChatLabel": "Start chat on WhatsApp",
+    "prefilledMessage": "Hi Keith, I'd like to book a groom for my dog."
+  },
+  "footer": {
+    "ipetBadge": "IPET Qualified",
+    "contactHeading": "Contact",
+    "exploreHeading": "Explore",
+    "hoursHeading": "Hours",
+    "whatsappLinkLabel": "WhatsApp Keith"
+  }
+}

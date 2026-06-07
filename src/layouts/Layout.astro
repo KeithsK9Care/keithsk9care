@@ -10,6 +10,8 @@ import site from '../data/site.json';
 import { services } from '../lib/content';
 import { buildLocalBusinessSchema, buildGraph } from '../lib/schemas';
 import { ClientRouter } from 'astro:transitions';
+import fs from 'node:fs';
+import path from 'node:path';
 
 export interface Props {
   title: string;
@@ -46,6 +48,23 @@ const localBusiness = buildLocalBusinessSchema(site, services);
 // Every page emits exactly one JSON-LD <script>: the sitewide LocalBusiness plus
 // whatever entities the page passes, combined into a single @graph (Gold Standard #5).
 const graph = buildGraph([localBusiness, ...schema]);
+
+// Hero LCP preload: preload the exact AVIF srcset the hero <picture> actually serves
+// (same widths + sizes as Picture.astro), so the largest-contentful-paint image is
+// fetched immediately. heroPreload may be a filename stub OR a /assets/photos/... path.
+const heroSizes = '(max-width: 640px) 100vw, 800px';
+let heroAvifSrcset = '';
+if (heroPreload) {
+  const stub = (heroPreload.startsWith('/') ? heroPreload.replace(/^\/assets\/photos\//, '') : heroPreload)
+    .replace(/\.[^.]+$/, '')
+    .replace(/-(?:400|800|1200|1600)$/, '');
+  let avail: Set<string>;
+  try { avail = new Set(fs.readdirSync(path.join(process.cwd(), 'public/assets/photos'))); } catch { avail = new Set(); }
+  heroAvifSrcset = [400, 800, 1200, 1600]
+    .filter((w) => avail.has(`${stub}-${w}.avif`))
+    .map((w) => `/assets/photos/${stub}-${w}.avif ${w}w`)
+    .join(', ');
+}
 ---
 <!DOCTYPE html>
 <html lang="en-GB">
@@ -87,12 +106,9 @@ const graph = buildGraph([localBusiness, ...schema]);
 
   {/* Inter + Fraunces are self-hosted via @fontsource-variable (bundled into the CSS) — no third-party font request. */}
 
-  {/* Preload the hero image (LCP) — only if the page passes a heroPreload */}
-  {heroPreload && (
-    <>
-      <link rel="preload" as="image" type="image/webp" href={`/assets/photos/${heroPreload}.webp`} fetchpriority="high" />
-      <link rel="preload" as="image" type="image/jpeg" href={`/assets/photos/${heroPreload}.jpg`} fetchpriority="high" />
-    </>
+  {/* Preload the hero image (LCP): the AVIF srcset the hero <picture> actually serves. */}
+  {heroAvifSrcset && (
+    <link rel="preload" as="image" type="image/avif" imagesrcset={heroAvifSrcset} imagesizes={heroSizes} fetchpriority="high" />
   )}
 </head>
 <body class="font-sans">

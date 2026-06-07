@@ -23,6 +23,34 @@ collections:
   - name: page-copy
     label: "Page copy (editable text on each page)"
     files:
+      - file: src/data/global.json
+        label: "Site chrome (nav, footer, WhatsApp widget)"
+        name: global
+        fields:
+          - name: cta
+            label: "Buttons"
+            widget: object
+            fields:
+              - { name: book, label: "Book button label", widget: string, hint: "Shown in the header and the sticky mobile bar." }
+              - { name: callKeith, label: "Call button label (mobile bar)", widget: string }
+          - name: whatsapp
+            label: "WhatsApp popup"
+            widget: object
+            fields:
+              - { name: ariaLabel, label: "Bubble accessibility label", widget: string }
+              - { name: replyTime, label: "Reply-time line", widget: string, hint: "e.g. Typically replies within an hour" }
+              - { name: greeting, label: "Greeting message", widget: text }
+              - { name: startChatLabel, label: "Start-chat button label", widget: string }
+              - { name: prefilledMessage, label: "Pre-filled WhatsApp message", widget: text, hint: "Typed into WhatsApp when a visitor taps through." }
+          - name: footer
+            label: "Footer headings"
+            widget: object
+            fields:
+              - { name: ipetBadge, label: "Qualification badge", widget: string }
+              - { name: contactHeading, label: "Contact column heading", widget: string }
+              - { name: exploreHeading, label: "Explore column heading", widget: string }
+              - { name: hoursHeading, label: "Hours column heading", widget: string }
+              - { name: whatsappLinkLabel, label: "WhatsApp link text", widget: string }
       - file: src/data/copy/home.json
         label: "Homepage"
         name: home
