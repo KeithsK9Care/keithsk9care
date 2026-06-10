@@ -15,11 +15,19 @@ export interface Props {
 }
 const { review: r, compact = false } = Astro.props;
 const meta = [r.dog, r.location, r.service].filter(Boolean).join(' · ');
+// In the sitewide reel (compact) render only a short EXCERPT. The full review text
+// lives once, on /reviews/. Repeating every full review on every page would be a
+// duplicate / thin-content footprint (the reel ships on ~27 pages). Full-size cards
+// (the /reviews/ page) always render the whole body.
+const EXCERPT = 150;
+const text = compact && r.body.length > EXCERPT + 10
+  ? r.body.slice(0, EXCERPT).replace(/\s+\S*$/, '').trimEnd() + '…'
+  : r.body;
 ---
 <article class="rounded-2xl bg-white ring-1 ring-ink-100 p-6 h-full flex flex-col">
   <StarRating rating={r.rating} class="gap-1 mb-2" />
-  <blockquote class:list={['text-ink-800 leading-relaxed flex-1', compact ? 'text-sm line-clamp-5' : '']}>
-    "{r.body}"
+  <blockquote class:list={['text-ink-800 leading-relaxed flex-1', compact ? 'text-sm line-clamp-4' : '']}>
+    "{text}"
   </blockquote>
   <footer class="mt-4 pt-4 border-t border-ink-100 text-sm">
     <p class="font-display font-semibold text-ink-900">{r.author}</p>
